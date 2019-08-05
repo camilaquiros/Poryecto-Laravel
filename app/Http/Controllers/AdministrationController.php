@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class AdministrationController extends Controller
 {
@@ -28,6 +29,7 @@ class AdministrationController extends Controller
 
     public function listProducts()
     {
+      $products = Product::all();
       return view('administration.products.list');
     }
 
