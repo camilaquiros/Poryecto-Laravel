@@ -1,0 +1,486 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Kurale|Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Paytone+One|Carrois+Gothic+SC|Lalezar|Russo+One|Boogaloo|Staatliches|Viga&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Work Sans';
+}
+
+body, .index {
+  font-family: 'Nunito';
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+.containerIndex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 1000px;
+}
+
+nav {
+  width: 100%;
+}
+
+.menutop-header {
+  font-weight: 600;
+  font-size: 0.8em;
+  /*background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);*/
+  display: inline-block;
+  background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
+  align-items: center;
+  justify-content: center;
+}
+
+.menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
+  display: flex;
+  flex-direction: column;
+}
+
+.listaContinuacion {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.listaContinuacion li {
+  justify-content: center;
+}
+
+.listaContinuacion a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listaContinuacion img {
+  border-radius: 100%;
+  width: 5%;
+  display: block;
+  margin: 5px;
+}
+
+.downProfile .dropdown-toggle {
+  cursor: pointer;
+}
+
+.downProfile a {
+  color: white !important;
+}
+
+.downProfile .dropdown-item {
+  color: black !important;
+}
+
+.menutop-header li a, #text {
+  color: white;
+}
+
+/*segundo menu de la nav*/
+.menu-header {
+  font-size: 0.9em;
+  box-shadow: 1px 2px 8px -2px rgba(0, 77, 64, 1);
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+.menu-header li a {
+  background-color: rgba(102, 187, 106, 0, 5);
+  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+.menu-header li a:hover {
+  font-weight: bold;
+  color: white;
+  background: -webkit-linear-gradient(left, #95ca3e 0%, rgb(149, 202, 62, 0.6) 40%, rgb(133, 198, 56, 0.6) 50%);
+  transition: 0.3s;
+}
+
+.searchBar {
+  margin-top: 1em;
+  width: 300px;
+}
+
+.searchBar button {
+  background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+  border-radius: 0 !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  color: white !important;
+}
+
+.homeLogo a img {
+  height: 6em;
+}
+
+.slider {
+  display: none;
+}
+
+/*Cartas presentacion*/
+.cartas-presentacion {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contenedor-productosgato {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  align-self: center;
+  height: 350px;
+}
+
+.contenedor-productosgato:hover {
+  box-shadow: 7px 8px 11px 3px rgba(120, 144, 156, 0.6);
+}
+
+.contenedor-productosgato img {
+  width: 100%;
+  height: 100%;
+}
+
+.descripcion-carta {
+  position: absolute;
+  font-weight: bold;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  transform: translateY(-50%);
+  top: 20%;
+}
+
+.centrado {
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.mas-Productos {
+  position: absolute;
+  bottom: 10%;
+  right: 35%;
+}
+
+.mas-Productos a, .verTodosServicios {
+  background-color: rgba(76, 175, 80, 0.8);
+  padding: 8px;
+  border-radius: 3%;
+  color: #fff;
+  font-family: "Staatliches";
+  transition: all 0.2s;
+}
+
+.verTodosServicios:hover, .mas-Productos a:hover {
+  color: rgba(38, 50, 56, 1);
+  text-decoration: none;
+}
+
+/*cajas productos novedades*/
+.head-novedades {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.option-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.option-list li {
+  list-style: none;
+  background-color: rgba(76, 175, 80, 1);
+  color: #fff;
+  font-family: "Paytone One";
+  padding: 5px 10px;
+  transition: all 0.2s;
+}
+
+.option-list li:hover {
+  background-color: rgba(76, 175, 80, 0.7);
+  padding: 5px 40px;
+}
+
+.oneproduct-card {
+  background-color: transparent;
+  padding: 1em;
+}
+
+.cardsProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: solid grey 1px;
+}
+
+.nextPrevFlechas {
+  display: none;
+}
+
+.oneproduct-card img {
+  width: 100%;
+}
+
+.oneproduct-card-body {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#producto3, #producto4 {
+  display: none;
+}
+
+.mas-productosNovedades {
+  border: 1.5px solid rgba(0, 150, 136, 1);
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+  color: rgba(84, 110, 122, 1);
+  transition: all 0.2s;
+}
+
+.mas-productosNovedades:hover {
+  background-color: rgba(0, 150, 136, 1);
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+
+/*servicios*/
+.content {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.seccionServiciosImagenes {
+  display: flex;
+  justify-content: center;
+}
+
+.servicioCard {
+  height: 100%;
+  background-image: url("../img/dogexamination.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 15px;
+  padding-top: 10px;
+}
+
+.servicioCard {
+  color: black;
+  text-align: center;
+}
+
+.seccionServiciosImagenes {
+  padding: 1em;
+}
+
+.servicioCard {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.tituloServicios {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.nuestrosServicios {
+  margin-bottom: 5em;
+}
+
+#servicio2, #servicio3 {
+  display: none;
+}
+
+footer {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menutop-header li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .menutop-header li, .menutop-header a, #text {
+    text-decoration: none;
+    color: black;
+  }
+
+  .listaContinuacion {
+    width: 30%;
+  }
+
+  .listaContinuacion img{
+    width: 20%;
+  }
+
+  .menu-header {
+    padding: 16px 0 16px 32px;
+    margin: 0;
+  }
+
+  .slider {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .slider img {
+    width: 100%;
+  }
+
+  .slider p {
+    position: absolute;
+    background-color: rgba(38, 50, 56, 0.2);
+    font-family: "Paytone One";
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-size: 1.15em;
+    text-align: center;
+    color: #fff;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cartas-presentacion {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .contenedor-productosgato {
+    width: 32%;
+  }
+
+  .nextPrevFlechas {
+    display: block;
+    font-size: 40px;
+  }
+
+  .oneproduct-card {
+    width: 22%;
+  }
+
+  .seccionServiciosImagenes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tituloServicios {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2.5em 2em 1.5em 2em;
+  }
+
+  .head-novedades {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  .head-novedades h4 {
+    margin-bottom: 15px;
+  }
+
+  .head-novedades ul {
+    display: flex;
+    justify-content: space-around;
+    ,
+    text-align: center;
+  }
+
+  .option-list li {
+    list-style: none;
+    background-color: rgba(76, 175, 80, 1);
+    color: #fff;
+    font-family: "Paytone One";
+    padding: 5px 10px;
+    transition: all 0.2s;
+    display: inline-flex;
+  }
+
+  .option-list li:hover {
+    background-color: rgba(76, 175, 80, 0.7);
+    ;
+    padding: 5px 40px;
+  }
+
+  #servicio2 {
+    display: block;
+    background-image: linear-gradient(rgba(189, 189, 189, 0.6), rgba(189, 189, 189, 0.6)), url("../img/peluqueriacanina.jpg");
+  }
+}
+
+@media only screen and (min-width : 1000px) {
+
+
+  .slider p {
+    font-size: 1.5em;
+  }
+
+  #producto3, #producto4 {
+    display: block;
+  }
+
+  #servicio3 {
+    display: block;
+    background-image: linear-gradient(rgba(189, 189, 189, 0.6), rgba(189, 189, 189, 0.6)), url("../img/estudios.jpg");
+  }
+}
