@@ -1,0 +1,25 @@
+.btn-green {
+  background: -webkit-linear-gradient(right, #95ca3e 100%, #95ca3e 100%, #85c638 100%);
+  font-family: 'Poppins';
+}
+
+.btn-green:hover {
+  background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 0%, #85c638 100%);
+  box-shadow: 2px 2px 10px 4px rgba(189, 189, 189, 0.7);
+}
+
+.loginSection {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding: 1em;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid rgba(1, 1, 1, 0.15);
+}
+
+.containerLogin {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
