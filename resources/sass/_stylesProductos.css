@@ -155,7 +155,7 @@ header {
 
 footer {
   padding-bottom: 20px;
-  background-image: url(../img/footer.jpg);
+  background-image: url('/img/footer.jpg');
   background-size: cover;
   repeat: no-repeat;
   align-self: flex-end;

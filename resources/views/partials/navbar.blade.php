@@ -26,7 +26,7 @@
       </div>
       <form class="searchBar" action="index.html" method="post">
         <div class="input-group">
-          <input type="text" name="" value="" class="form-control">
+          <input type="text" name="" vaMEJORESlue="" class="form-control">
           <button type="button" name="button" class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>

@@ -7,8 +7,6 @@
 @section('pageTitle', 'Inicio')
 {{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
 
-@section('cssLink', '/css/bootstrap.min.css')
-
 @section('mainContent')
 
   <div class="containerIndex">
