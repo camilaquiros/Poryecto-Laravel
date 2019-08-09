@@ -30,6 +30,7 @@ class AdministrationController extends Controller
     public function listProducts()
     {
       $products = Product::all();
+      $vac = compact("products");
       return view('administration.products.list');
     }
 
