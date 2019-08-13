@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{-- Para usar la plantilla template.blade.php --}}
 @extends('template')
 
@@ -11,6 +12,18 @@
 
 @section('mainContent')
 
+=======
+<!DOCTYPE html>
+<?php
+require_once "_productos_datos.php";
+$pageTitle = "Productos";
+?>
+<html lang="en" dir="ltr">
+
+<head>
+  <?php require_once "partials/header.php"; ?>
+</head>
+>>>>>>> cf04c6a67ec4dcf635275d5a4ef3a43e7faa7e74
 
 <body class="bodyProductos">
   <!-- HEADER -->
@@ -43,7 +56,15 @@
       <?php endforeach; ?>
     </section>
   </div>
+<<<<<<< HEAD
 </body>
 @endsection
+=======
+  <!-- FOOTER -->
+  <footer>
+    <?php require_once "partials/footer.php"; ?>
+  </footer>
+</body>
+>>>>>>> cf04c6a67ec4dcf635275d5a4ef3a43e7faa7e74
 
 </html>

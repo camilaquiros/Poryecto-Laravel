@@ -32,6 +32,7 @@ nav {
 }
 
 .menutop-header {
+  margin-bottom: 0;
   font-weight: 600;
   font-size: 0.8em;
   /*background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);*/
@@ -288,7 +289,7 @@ nav {
 
 .servicioCard {
   height: 100%;
-  background-image: url("../img/dogexamination.jpg");
+  background-image: url("/img/dogexamination.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -442,7 +443,6 @@ footer {
   .head-novedades ul {
     display: flex;
     justify-content: space-around;
-    ,
     text-align: center;
   }
 
@@ -464,7 +464,7 @@ footer {
 
   #servicio2 {
     display: block;
-    background-image: linear-gradient(rgba(189, 189, 189, 0.6), rgba(189, 189, 189, 0.6)), url("../img/peluqueriacanina.jpg");
+    background-image: linear-gradient(rgba(189, 189, 189, 0.6), rgba(189, 189, 189, 0.6)), url("/img/peluqueriacanina.jpg");
   }
 }
 
@@ -481,6 +481,6 @@ footer {
 
   #servicio3 {
     display: block;
-    background-image: linear-gradient(rgba(189, 189, 189, 0.6), rgba(189, 189, 189, 0.6)), url("../img/estudios.jpg");
+    background-image: linear-gradient(rgba(189, 189, 189, 0.6), rgba(189, 189, 189, 0.6)), url("/img/estudios.jpg");
   }
 }

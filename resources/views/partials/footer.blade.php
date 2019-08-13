@@ -1,10 +1,10 @@
 <footer>
 <div class="menu">
   <ul>
-    <li><a href="_index.php">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="_productos_lista.php">Productos</a></li>
     <li><a href="#">Servicios</a></li>
-    <li><a href="_preguntas_frecuentes.php">Preguntas Frecuentes</a></li>
+    <li><a href="/faqs">Preguntas Frecuentes</a></li>
     <li><a href="_registro.php">Registro</a></li>
   </ul>
 </div>

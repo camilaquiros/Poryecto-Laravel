@@ -22,17 +22,17 @@
   <nav class="navprincipal">
     <ul class="menutop-header">
       <div class="logoNv">
-        <li class="homeLogo"><a href="../html/_index.php"><img src="img/Logo-Patitas.png"></a></li>
+        <li class="homeLogo"><a href="/"><img src="img/Logo-Patitas.png"></a></li>
       </div>
       <form class="searchBar" action="index.html" method="post">
         <div class="input-group">
-          <input type="text" name="" value="" class="form-control">
+          <input type="text" name="" vaMEJORESlue="" class="form-control">
           <button type="button" name="button" class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>
       <?php if(isset($_SESSION['userLogged'])): ?>
       <div class="listaContinuacion">
-        <li><a href="_preguntas_frecuentes.php">Ayuda</a>
+        <li><a href="/faqs">Ayuda</a>
         </li>
         <li>
           <div class="dropdown downProfile">
@@ -49,19 +49,19 @@
       </div>
       <?php else: ?>
       <div class="listaContinuacion">
-        <li><a href="_preguntas_frecuentes.php">Ayuda</a></li>
-        <li><a href="_registro.php">Registrarse</a></li>
-        <li><a class="login" href="_login.php">Iniciar Sesión <i class="fas fa-user"></i></a></li>
+        <li><a href="/faqs">Ayuda</a></li>
+        <li><a href="authregister">Registrarse</a></li>
+        <li><a class="login" href="auth.login">Iniciar Sesión <i class="fas fa-user"></i></a></li>
       </div>
       <?php endif; ?>
     </ul>
     <ul class="menu-header">
       <li><a href="#">Mascotas</a></li>
       <li><a href="#">Servicios</a></li>
-      <li><a href="_productos_lista.php">Productos</a></li>
+      <li><a href="/productos">Productos</a></li>
       <li><a href="#">Ofertas</a></li>
       <li><a href="#">Nosotros</a></li>
-      <li><a href="_preguntas_frecuentes.php">FAQ</a></li>
+      <li><a href="/faqs">FAQ</a></li>
     </ul>
   </nav>
 </header>
