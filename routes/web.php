@@ -3,13 +3,10 @@
 
 Route::get('/', function () {
     return view('index');
-<<<<<<< HEAD
-=======
 });
 
 Route::get('/faqs', function () {
     return view('faqs');
->>>>>>> cf04c6a67ec4dcf635275d5a4ef3a43e7faa7e74
 });
 
 Auth::routes();

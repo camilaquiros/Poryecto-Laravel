@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-{{-- Para usar la plantilla template.blade.php --}}
-@extends('template')
-
-{{-- Llenando de información los @yield() --}}
-{{-- @section('bodyClass', 'class=bg-olive') --}}
-
-@section('pageTitle', 'Inicio')
-{{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
-
-@section('cssLink', '/css/bootstrap.min.css')
-
-@section('mainContent')
-
-=======
 <!DOCTYPE html>
 <?php
 require_once "_productos_datos.php";
@@ -23,7 +8,6 @@ $pageTitle = "Productos";
 <head>
   <?php require_once "partials/header.php"; ?>
 </head>
->>>>>>> cf04c6a67ec4dcf635275d5a4ef3a43e7faa7e74
 
 <body class="bodyProductos">
   <!-- HEADER -->
@@ -56,15 +40,10 @@ $pageTitle = "Productos";
       <?php endforeach; ?>
     </section>
   </div>
-<<<<<<< HEAD
-</body>
-@endsection
-=======
   <!-- FOOTER -->
   <footer>
     <?php require_once "partials/footer.php"; ?>
   </footer>
 </body>
->>>>>>> cf04c6a67ec4dcf635275d5a4ef3a43e7faa7e74
 
 </html>
