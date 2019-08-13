@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('pageTitle')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,7 +19,7 @@
       <div class="admin-sidebar">
         <ul>
           <li><a href="/administration/products">Productos</a></li>
-          <li><a href="/administration/products/new">Nuevo Producto</a></li>
+          <li><a href="/administration/products/new">Crear producto</a></li>
           <li><a href="#">SubCategorias</a></li>
         </ul>
       </div>

@@ -37,6 +37,7 @@ class CreateAllTables extends Migration
 
         // Alter Table
         Schema::table('products', function (Blueprint $table) {
+            //para que funcionen los seeder tengo que dejar lasfk nullables//
             $table->unsignedBigInteger('category_id')->after('offer')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
 
@@ -55,7 +56,7 @@ class CreateAllTables extends Migration
         Schema::table('products', function (Blueprint $table) {
           $table->dropForeign('subcategory_id');
           $table->dropColumn('subcategory_id');
-          
+
           $table->dropForeign('category_id');
           $table->dropColumn('category_id');
         });

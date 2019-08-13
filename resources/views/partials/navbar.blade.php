@@ -50,15 +50,15 @@
       <?php else: ?>
       <div class="listaContinuacion">
         <li><a href="/faqs">Ayuda</a></li>
-        <li><a href="_registro.php">Registrarse</a></li>
-        <li><a class="login" href="_login.php">Iniciar Sesión <i class="fas fa-user"></i></a></li>
+        <li><a href="authregister">Registrarse</a></li>
+        <li><a class="login" href="auth.login">Iniciar Sesión <i class="fas fa-user"></i></a></li>
       </div>
       <?php endif; ?>
     </ul>
     <ul class="menu-header">
       <li><a href="#">Mascotas</a></li>
       <li><a href="#">Servicios</a></li>
-      <li><a href="_productos_lista.php">Productos</a></li>
+      <li><a href="/productos">Productos</a></li>
       <li><a href="#">Ofertas</a></li>
       <li><a href="#">Nosotros</a></li>
       <li><a href="/faqs">FAQ</a></li>

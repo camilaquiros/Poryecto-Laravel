@@ -20,7 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/administration', 'AdministrationController@index')->name('administration');
 Route::get('/administration/products', 'AdministrationController@listProducts')->name('listProducts');
-Route::get('/administration/products/new', 'AdministrationController@newProduct')->name('newProduct');
+Route::get('/administration/products/new', 'AdministrationController@newProduct');
+Route::post('/administration/products/new', 'AdministrationController@store');
 Route::get('/faqs', function () {
     return view('faqs');
 });
