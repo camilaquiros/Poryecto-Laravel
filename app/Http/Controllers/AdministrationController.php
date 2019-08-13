@@ -49,7 +49,7 @@ class AdministrationController extends Controller
 			'title' => 'required',
 			'description' => 'required',
 			'category_id' => 'required',
-      'offer' => 'required | boolean',
+      'offer' => 'required',
       'price' => 'required | numeric',
 			'image' => 'required | image',
 			'image' => 'required | mimes:jpg,png,jpeg',
@@ -58,47 +58,51 @@ class AdministrationController extends Controller
 			'title.required' => 'El nombre del producto es obligatorio',
       'description.required' => 'El producto debe tener una descripcion',
 			'category_id.required' => 'Selecciona una categoria',
+      'subcategory_id.required' => 'Selecciona la subcategoria del producto',
+      'image.mimes' => 'El producto debe ser un formato jpg,png o jpeg',
 			'price.numeric' => 'El precio solo admite números',
+      'price.required' => 'El campo precio es obligatorio',
+      'image.required' => 'El producto debe tener una imagen',
+      'offer.required' => '¿Tiene el producto una oferta?'
 		]);
 
-		// Guardar en DB
-
-		// Forma para guardar #1
-		// $movie = new Movie;
-		// $movie->title = $request['title'];
-		// $movie->rating = $request['rating'];
-		// $movie->awards = $request['awards'];
-		// $movie->length = $request['length'];
-		// $movie->release_date = $request['release_date'];
-		// $movie->genre_id = $request['genre_id'];
-		// $movie->save();
-
-		// Forma para guardar #2
-		// Movie::create([
-		// 	'title' => $request['title'],
-		// 	'rating' => $request['rating'],
-		// 	'awards' => $request['awards'],
-		// 	'length' => $request['length'],
-		// 	'release_date' => $request['release_date'],
-		// 	'genre_id' => $request['genre_id']
-		// ]);
-
-		// Forma para guardar #3
 		$productSaved = Product::create($request->all());
-
 		$imagen = $request["image"];
-
-		// Armo un nombre único para este archivo
 		$imagenFinal = uniqid("img_") . "." . $imagen->extension();
-
-		// Subo el archivo en la carpeta elegida
-		$imagen->storePubliclyAs("public/img/Productos", $imagenFinal);
-
-		// Le asigno la imagen a la película que guardamos
+    $request->file('image')->move(public_path('/img/Productos'),$imagenFinal); //(arreglar)//
+		// Le asigno la imagen al producto que guardamos
 		$productSaved->image = $imagenFinal;
 		$productSaved->save();
 
 		// Redireccionamos
 		return redirect('/administration/products');
     }
+
+    public function editProduct ($id)
+	  {
+      $productToEdit = Product::find($id);
+      $subcategories = SubCategory::orderBy('name')->get();
+      $categories = Category::orderBy('name')->get();
+		  return view('administration.products.edit', compact('productToEdit', 'categories', 'subcategories'));
+	 }
+
+   public function updateProduct ($id, Request $request)
+	 {
+		$productToUpdate = Product::find($id);
+		$productToUpdate->title = $request['title'];
+		$productToUpdate->description = $request['description'];
+		$productToUpdate->category_id = $request['category_id'];
+		$productToUpdate->subcategory_id = $request['subcategory_id'];
+		$productToUpdate->offer = $request['offer'];
+		$productToUpdate->price = $request['price'];
+		$productToUpdate->save();
+		return redirect('/administration/products');
+	}
+
+  public function deleteProduct ($id){
+    $productToDelete = Product::find($id);
+    $productToDelete->delete();
+
+    return redirect('/administration/products');
+  }
 }

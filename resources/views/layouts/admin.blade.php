@@ -17,6 +17,7 @@
 <body>
   <div class="admin-view">
       <div class="admin-sidebar">
+        <img src="/img/Logo-Patitas.png" alt="">
         <ul>
           <li><a href="/administration/products">Productos</a></li>
           <li><a href="/administration/products/new">Crear producto</a></li>
