@@ -12,7 +12,7 @@
     </div>
 
     <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <a class="card-header" href="#">Servicios</a>
+        <a class="card-header" href="/administration/services">Servicios</a>
     </div>
 
     <div class="card border-dark mb-3" style="max-width: 18rem;">

@@ -19,9 +19,11 @@
       <div class="admin-sidebar">
         <img src="/img/Logo-Patitas.png" alt="">
         <ul>
-          <li><a href="/administration/products">Productos</a></li>
-          <li><a href="/administration/products/new">Crear producto</a></li>
-          <li><a href="#">SubCategorias</a></li>
+          <li><a href="/administration/products">Productos</a> - <a href="/administration/products/new">Crear producto</a></li>
+
+          <li><a href="/administration/services">Servicios</a></li>
+          <li><a href="/administration/categories">Categorias</a></li>
+          <li><a href="/administration/subcategories">Subcategorias</a></li>
         </ul>
       </div>
       <div class="admin-content">
