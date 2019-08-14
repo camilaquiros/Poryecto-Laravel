@@ -24,9 +24,9 @@
       <div class="logoNv">
         <li class="homeLogo"><a href="/"><img src="img/Logo-Patitas.png"></a></li>
       </div>
-      <form class="searchBar" action="index.html" method="post">
+      <form class="searchBar" action="/" method="post">
         <div class="input-group">
-          <input type="text" name="" vaMEJORESlue="" class="form-control">
+          <input type="text" name="" value="" class="form-control">
           <button type="button" name="button" class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>
@@ -50,8 +50,8 @@
       <?php else: ?>
       <div class="listaContinuacion">
         <li><a href="/faqs">Ayuda</a></li>
-        <li><a href="authregister">Registrarse</a></li>
-        <li><a class="login" href="auth.login">Iniciar Sesión <i class="fas fa-user"></i></a></li>
+        <li><a href="/register">Registrarse</a></li>
+        <li><a class="login" href="/login">Iniciar Sesión <i class="fas fa-user"></i></a></li>
       </div>
       <?php endif; ?>
     </ul>

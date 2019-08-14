@@ -4,7 +4,7 @@
 {{-- Llenando de información los @yield() --}}
 {{-- @section('bodyClass', 'class=bg-olive') --}}
 
-@section('pageTitle', 'Inicio')
+@section('pageTitle', 'Faqs')
 {{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
 
 @section('cssLink', '/css/bootstrap.min.css')
@@ -69,7 +69,7 @@
           <!-- RESPUESTA 3 -->
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
             <div class="card-body">
-              Para registrarte y comenzar a disfrutar de nuestra comunidad tenés que completar los datos de tu cuenta en la sección de <a href="registro.php">Registro</a>
+              Para registrarte y comenzar a disfrutar de nuestra comunidad tenés que completar los datos de tu cuenta en la sección de <a href="/register">Registro</a>
             </div>
           </div>
         </div>
