@@ -1,14 +1,15 @@
-@extends('layouts.app')
+@extends('template')
 
-@section('content')
+@section('mainContent')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                <div class="card-body registro">
+
+                    <!-- <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -68,8 +69,102 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                    <div class="row">
+                      <!-- ESPACIO PARA NOMBRE COMPLETO -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Nombre completo:</b></label>
+                          <input type="text" name="fullName" class="form-control  @error('fullName') is-invalid @enderror">
+                          @error('fullName')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                        </div>
+                      </div>
+                      <!-- ESPACIO PARA USUARIO -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Usuario:</b></label>
+                          <input type="text" name="userName" class="form-control  @error('userName') is-invalid @enderror">
+                          <div class="invalid-feedback">
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ESPACIO PARA PAIS -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>País de origen:</b></label>
+                          <select name="country" class="form-control  @error('country') is-invalid @enderror">
+                            <option value="">Seleccione un país</option>
+
+                          </select>
+                          <div class="invalid-feedback">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ESPACIO PARA CORREO ELECTRONICO -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Correo electrónico:</b></label>
+                          <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror">
+                          <div class="invalid-feedback">
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ESPACIO PARA EDAD -->
+                      <!-- ESPACIO PARA CONTRASEÑA -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Password:</b></label>
+                          <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror ">
+
+                          @error('password')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                        </div>
+                      </div>
+                      <!-- ESPACIO PARA REPETIR CONTRASEÑA -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Repetir contraseña:</b></label>
+                          <input type="password" name="rePassword" class="form-control  @error('rePassword') is-invalid @enderror">
+                          @error('rePassword')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                        </div>
+                      </div>
+                      <!-- ESPACIO PARA AVATAR -->
+                      <div class="col-md-6">
+                        <label><b>Imagen de perfil:</b></label>
+                        <!-- Button trigger modal -->
+                        <div class="avatarbutton">
+                          <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                          Seleccioná tu avatar!
+                          </button>
+                        </div>
+                        <div class="invalid-feedback">
+
+                        </div>
+                      </div>
+                        <!-- Modal -->
+
+
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-success">Registrarse</button>
+                      </div>
+                      </form>
                 </div>
+
             </div>
         </div>
     </div>
