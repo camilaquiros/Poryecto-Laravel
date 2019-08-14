@@ -57,4 +57,4 @@
 #54 C:\\Chivi\\Digital House\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\Chivi\\Digital House\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\Chivi\\\\Digita...')
 #56 {main}
-"} 
+"}

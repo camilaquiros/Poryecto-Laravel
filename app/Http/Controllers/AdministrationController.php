@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
 use App\SubCategory;
-
+use App\Service;
 
 class AdministrationController extends Controller
 {
@@ -30,6 +30,7 @@ class AdministrationController extends Controller
         return view('administration.index');
     }
 
+    //productos ADMIN
     public function listProducts()
     {
       $products = Product::all();
@@ -105,4 +106,12 @@ class AdministrationController extends Controller
 
     return redirect('/administration/products');
   }
+
+  //servicios ADMIN
+  public function listServices()
+  {
+    $services = Service::all();
+    return view('administration.services.list', compact("services"));
+  }
+
 }

@@ -42,6 +42,6 @@ Route::put('/administration/products/{id}', 'AdministrationController@updateProd
 //ELIMINAR un producto//
 Route::get('/administration/products/delete/{id}', 'AdministrationController@deleteProduct')->name('deleteProduct');
 
-//USUARIO FINAL//
-//listado productos//
-Route::get('/products', 'ProductController@listProducts');
+//ADMINISTRADOR//
+//listado servicios//
+Route::get('/administration/services', 'AdministrationController@listServices');

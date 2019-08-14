@@ -14,6 +14,7 @@
 </head>
 
 <body @yield('bodyClass')>
+    
     {{-- La función @include() ya sabe que está buscando un archivo dentro de resources/views --}}
     @include('partials.navbar')
     {{-- @include('partials/navbar.blade.php') --}}
