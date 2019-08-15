@@ -1,13 +1,17 @@
 @extends('template')
 
 @section('mainContent')
-<div class="container">
+<div class="container" >
+  <br>
+<h1>Registro </h1>
+  <h5>¡Si todavía no sos parte, sumate a nuestra comunidad!</h5>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <!-- <div class="card-header"> </div> -->
 
                 <div class="card-body registro">
+
 
                     <!-- <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -90,9 +94,11 @@
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
                           <input type="text" name="userName" class="form-control  @error('userName') is-invalid @enderror">
-                          <div class="invalid-feedback">
-
-                          </div>
+                               @error('userName')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                       </div>
                       <!-- ESPACIO PARA PAIS -->
@@ -103,8 +109,11 @@
                             <option value="">Seleccione un país</option>
 
                           </select>
-                          <div class="invalid-feedback">
-                          </div>
+                          @error('country')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
                         </div>
                       </div>
                       <!-- ESPACIO PARA CORREO ELECTRONICO -->
@@ -112,12 +121,13 @@
                         <div class="form-group">
                           <label><b>Correo electrónico:</b></label>
                           <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror">
-                          <div class="invalid-feedback">
-
-                          </div>
+                          @error('email')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
                         </div>
                       </div>
-                      <!-- ESPACIO PARA EDAD -->
                       <!-- ESPACIO PARA CONTRASEÑA -->
                       <div class="col-md-6">
                         <div class="form-group">
@@ -135,7 +145,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Repetir contraseña:</b></label>
-                          <input type="password" name="rePassword" class="form-control  @error('rePassword') is-invalid @enderror">
+                          <input type="password" name="password_confirmation" class="form-control  @error('rePassword') is-invalid @enderror">
                           @error('rePassword')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -152,9 +162,7 @@
                           Seleccioná tu avatar!
                           </button>
                         </div>
-                        <div class="invalid-feedback">
 
-                        </div>
                       </div>
                         <!-- Modal -->
 
