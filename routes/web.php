@@ -60,3 +60,23 @@ Route::put('/administration/services/{id}', 'AdministrationController@updateServ
 
 //ELIMINAR//
 Route::get('/administration/services/delete/{id}', 'AdministrationController@deleteService')->name('deleteService');
+
+
+//ADMINISTRADOR - CATEGORIAS//
+//LISTADO//
+Route::get('/administration/categories', 'AdministrationController@listCategories');
+
+//CREAR//
+Route::get('/administration/categories/new', 'AdministrationController@newCategory');
+
+//CREAR y GUARDAR//
+Route::post('/administration/categories/new', 'AdministrationController@storeCategory');
+
+//EDITAR//
+Route::get('/administration/categories/{id}', 'AdministrationController@editCategory')->name('editCategory');
+
+//EDITAR y GUARDAR//
+Route::put('/administration/categories/{id}', 'AdministrationController@updateCategory')->name('updateCategory');
+
+//ELIMINAR//
+Route::get('/administration/categories/delete/{id}', 'AdministrationController@deleteCategory')->name('deleteCategory');

@@ -121,7 +121,7 @@ class AdministrationController extends Controller
   }
 
   public function storeService(Request $request){
-    // Validamos
+
   $request->validate([
     'name' => 'required',
     'description' => 'required',
@@ -144,7 +144,6 @@ class AdministrationController extends Controller
   $serviceSaved->image = $imagenFinal;
   $serviceSaved->save();
 
-  // Redireccionamos
   return redirect('/administration/services');
   }
 
@@ -171,6 +170,57 @@ public function deleteService ($id){
 
   return redirect('/administration/services');
 }
+
+//categories ADMIN//
+
+public function listCategories (){
+  $categories = Category::all();
+  return view('administration.categories.list', compact('categories'));
+}
+
+public function newCategory()
+{
+  return view('administration.categories.new');
+}
+
+public function storeCategory(Request $request){
+
+$request->validate([
+  'name' => 'required',
+], [
+  'name.required' => 'El nombre de la categoria es obligatoria',
+]);
+
+$categorySaved = Category::create($request->all());
+$categorySaved->save();
+
+return redirect('/administration/categories');
+}
+
+public function editCategory ($id)
+{
+  $categoryToEdit = Category::find($id);
+  return view('administration.categories.edit', compact('categoryToEdit'));
+}
+
+public function updateCategory ($id, Request $request)
+{
+$categoryToUpdate = Category::find($id);
+$categoryToUpdate->name = $request['name'];
+$categoryToUpdate->save();
+return redirect('/administration/categories');
+}
+
+public function deleteCategory ($id){
+$categoryToDelete = Category::find($id);
+$categoryToDelete->delete();
+
+return redirect('/administration/categories');
+}
+
+
+
+
 
 
 

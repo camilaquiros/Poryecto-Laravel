@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('pageTitle', 'Editando el servicio: {{$serviceToEdit->name}}')
+@section('pageTitle', 'Admin - Editar servicio')
 
 @section('content')
 

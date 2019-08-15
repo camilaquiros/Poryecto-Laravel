@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('pageTitle', 'Listado de mis servicios')
+@section('pageTitle', 'Admin - Listado de servicios')
 @section('content')
 <h1>Servicios de Patitas</h1>
 <table class="table table-striped">

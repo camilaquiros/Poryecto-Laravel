@@ -22,7 +22,7 @@
           <li><a href="/administration/products">Productos</a> - <a href="/administration/products/new">Crear producto</a></li>
 
           <li><a href="/administration/services">Servicios</a> -  <a href="/administration/services/new">Crear servicio</a></li>
-          <li><a href="/administration/categories">Categorias</a> - <a href="/administration/category/new">Crear categoria</a></li>
+          <li><a href="/administration/categories">Categorias</a> - <a href="/administration/categories/new">Crear categoria</a></li>
           <li><a href="/administration/subcategories">Subcategorias</a> - <a href="/administration/subcategory/new">Crear subcategoria</a></li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('pageTitle', 'Listado de mis productos')
+@section('pageTitle', 'Admin - Listado de productos')
 @section('content')
 <h1>Productos</h1>
 <table class="table table-striped">

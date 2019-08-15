@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('pageTitle', 'Producto nuevo')
+@section('pageTitle', 'Admin - Editar producto')
 
 @section('content')
 
