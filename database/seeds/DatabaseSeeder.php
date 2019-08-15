@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //creamos 10 productos FAKE)
-        factory(Product::class)->times(10)->create();
+        //creamos 4 productos FAKE)
+        factory(Product::class)->times(4)->create();
         //creamos 2 categorias)
         factory(Category::class)->times(2)->create();
         //cramos 5 subcategorias

@@ -14,5 +14,6 @@ $factory->define(Service::class, function (Faker $faker) {
         'Estudios especiales'
       ]),
       "description" => $faker->sentence(2),
+      "image" => $faker->imageUrl($width = 640, $height = 480),
     ];
 });
