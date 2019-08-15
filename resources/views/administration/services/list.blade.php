@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Servicio</th>
+      <th scope="col">Nombre del servicio</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Opciones</th>
     </tr>

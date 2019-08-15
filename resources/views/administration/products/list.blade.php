@@ -7,6 +7,7 @@
     <tr>
       <th scope="col">Producto</th>
       <th scope="col">Precio</th>
+      <th scope="col">Categoria</th>
       <th scope="col">Opciones</th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
     <tr>
       <td>{{$product->title}}</td>
       <td>{{$product->price}}</td>
+      <td>{{$product->category_id}}</td>
       <td><a href="/administration/products/{{$product->id}}">Editar</a> <a href="/administration/products/delete/{{$product->id}}">Eliminar</a> </td>
     </tr>
     @endforeach

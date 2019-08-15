@@ -114,4 +114,64 @@ class AdministrationController extends Controller
     return view('administration.services.list', compact("services"));
   }
 
+  public function newService()
+  {
+    $categories = Category::orderBy('name')->get();
+    return view('administration.services.new',compact('categories'));
+  }
+
+  public function storeService(Request $request){
+    // Validamos
+  $request->validate([
+    'name' => 'required',
+    'description' => 'required',
+    'category_id' => 'required',
+    'image' => 'required | image',
+    'image' => 'required | mimes:jpg,png,jpeg',
+  ], [
+    'name.required' => 'El nombre del servicio es obligatorio',
+    'description.required' => 'El servicio debe tener una breve descripcion',
+    'category_id.required' => 'Seleccione la categoria a la que pertenece el servicio nuevo',
+    'image.mimes' => 'La imagen debe ser un formato jpg, png o jpeg',
+    'image.required' => 'El servicio debe tener una imagen principal',
+  ]);
+
+  $serviceSaved = Service::create($request->all());
+  $imagen = $request["image"];
+  $imagenFinal = uniqid("img_") . "." . $imagen->extension();
+  $request->file('image')->move(public_path('/img/Servicios'),$imagenFinal); //(arreglar)//
+  // Le asigno la imagen al servicio que guardamos
+  $serviceSaved->image = $imagenFinal;
+  $serviceSaved->save();
+
+  // Redireccionamos
+  return redirect('/administration/services');
+  }
+
+  public function editService ($id)
+  {
+    $serviceToEdit = Service::find($id);
+    $categories = Category::orderBy('name')->get();
+    return view('administration.services.edit', compact('serviceToEdit', 'categories'));
+ }
+
+ public function updateService ($id, Request $request)
+ {
+  $serviceToUpdate = Service::find($id);
+  $serviceToUpdate->name = $request['name'];
+  $serviceToUpdate->description = $request['description'];
+  $serviceToUpdate->category_id = $request['category_id'];
+  $serviceToUpdate->save();
+  return redirect('/administration/services');
+}
+
+public function deleteService ($id){
+  $serviceToDelete = Service::find($id);
+  $serviceToDelete->delete();
+
+  return redirect('/administration/services');
+}
+
+
+
 }

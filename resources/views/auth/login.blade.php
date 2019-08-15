@@ -62,7 +62,7 @@
 <div class="ingreso">
   <div class="registroLogin">
     <p>¿Aún no tenés cuenta?</p>
-    <a href="_registro.php">Registrate</a>
+    <a href="/register">Registrate</a>
   </div>
   <button type="submit" class="btn btn-green float-right">Ingresar <i class="fas fa-sign-in-alt"></i></button>
 </div>
