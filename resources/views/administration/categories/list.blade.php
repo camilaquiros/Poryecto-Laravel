@@ -12,12 +12,17 @@
     </tr>
   </thead>
   <tbody>
-    @foreach ($categories as $categorie)
+    @foreach ($categories as $category)
     <tr>
-      <td>{{$categorie->name}}</td>
-      <td>Listado productos</td>
+      <td>{{$category->name}}</td>
+        @forelse ($category->products as $product)
+          <td>{{ $product->gettitle() }}</td> <br>
+        @empty
+          <td>No tiene productos relacionados</td>
+        @endforelse
+      
       <td>Listado servicios</td>
-      <td><a href="/administration/categories/{{$categorie->id}}">Editar</a> <a href="/administration/categories/delete/{{$categorie->id}}">Eliminar</a> </td>
+      <td><a href="/administration/categories/{{$category->id}}">Editar</a> <a href="/administration/categories/delete/{{$category->id}}">Eliminar</a> </td>
     </tr>
     @endforeach
   </tbody>

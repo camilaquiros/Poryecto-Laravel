@@ -16,6 +16,8 @@ $factory->define(App\Product::class, function (Faker $faker) {
       "description" => $faker->sentence(3),
       "image" => $faker->imageUrl($width = 640, $height = 480),
       "price" => $faker->randomNumber(2),
-      "offer" => false
+      "offer" => false,
+      "rating" => $faker->numberBetween($min = 0, $max = 5),
+      "nonrating" => $faker->numberBetween($min = 0, $max = 5),
     ];
 });
