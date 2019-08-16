@@ -1,49 +1,38 @@
-<!DOCTYPE html>
-<?php
-require_once "_productos_datos.php";
-$pageTitle = "Productos";
-?>
-<html lang="en" dir="ltr">
+{{-- Para usar la plantilla template.blade.php --}}
+@extends('template')
 
-<head>
-  <?php require_once "partials/header.php"; ?>
-</head>
+{{-- Llenando de información los @yield() --}}
+{{-- @section('bodyClass', 'class=bg-olive') --}}
 
-<body class="bodyProductos">
-  <!-- HEADER -->
-  <header>
-    <?php require_once "partials/navbar.php"; ?>
-  </header>
+@section('pageTitle', 'Productos')
+{{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
+
+@section('mainContent')
+
   <div class="containerProductos">
     <!-- PRODUCTOS -->
     <section class="productosLista">
-      <?php foreach ($productos as $unProducto): ?>
+      @foreach($products as $product)
       <div class="lista">
-        <a class="imagenLista" href="_producto_detalle.php?id=<?= $unProducto["id"] ?>"><img src="<?=$unProducto["imagen"]?>" alt="<?= $unProducto["nombre"] ?>"></a>
+        <a class="imagenLista" href="/products/{{ $product['id'] }}"><img src="{{ $product['imagen'] }}"></a>
         <div class="ratingTotal">
           <!-- RATING -->
           <div class="rating">
-            <?php for ($i = 1; $i <= $unProducto["rating"]; $i++): ?>
+            @for ($i = 1; $i <= $product["rating"]; $i++)
             <i class="fas fa-paw"></i>
-            <?php endfor; ?>
+            @endfor
           </div>
           <div class="noRating">
-            <?php for ($i = 1; $i <= $unProducto["noRating"]; $i++): ?>
+            @for ($i = 1; $i <= $product["noRating"]; $i++)
             <i class="fas fa-paw"></i>
-            <?php endfor; ?>
+            @endfor
           </div>
         </div>
         <!-- REDIRECCION A DETALLES DE PRODUCTO -->
-        <a class="titulo" href="_producto_detalle.php?id=<?= $unProducto["id"] ?>"> <?= $unProducto["nombre"] ?> </a>
-        <p>$<?php echo $unProducto["precio"]; ?></p>
+        <a class="titulo" href="/products/{{ $product['id'] }}"> {{ $product['nombre'] }} </a>
+        <p>${{$product["precio"]}}</p>
       </div>
-      <?php endforeach; ?>
+      @endforeach
     </section>
   </div>
-  <!-- FOOTER -->
-  <footer>
-    <?php require_once "partials/footer.php"; ?>
-  </footer>
-</body>
-
-</html>
+@endsection
