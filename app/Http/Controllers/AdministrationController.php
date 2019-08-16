@@ -71,11 +71,9 @@ class AdministrationController extends Controller
 		$imagen = $request["image"];
 		$imagenFinal = uniqid("img_") . "." . $imagen->extension();
     $request->file('image')->move(public_path('/img/Productos'),$imagenFinal); //(arreglar)//
-		// Le asigno la imagen al producto que guardamos
 		$productSaved->image = $imagenFinal;
 		$productSaved->save();
 
-		// Redireccionamos
 		return redirect('/administration/products');
     }
 
@@ -140,7 +138,6 @@ class AdministrationController extends Controller
   $imagen = $request["image"];
   $imagenFinal = uniqid("img_") . "." . $imagen->extension();
   $request->file('image')->move(public_path('/img/Servicios'),$imagenFinal); //(arreglar)//
-  // Le asigno la imagen al servicio que guardamos
   $serviceSaved->image = $imagenFinal;
   $serviceSaved->save();
 
@@ -217,6 +214,54 @@ $categoryToDelete->delete();
 
 return redirect('/administration/categories');
 }
+
+//sub-categories ADMIN//
+
+public function listSubcategories (){
+  $subcategories = SubCategory::all();
+  return view('administration.subcategories.list', compact('subcategories'));
+}
+
+public function newSubcategory()
+{
+  return view('administration.subcategories.new');
+}
+
+public function storeSubcategory(Request $request){
+
+$request->validate([
+  'name' => 'required',
+], [
+  'name.required' => 'El nombre de la subcategoria es obligatorio',
+]);
+
+$subcategorySaved = Category::create($request->all());
+$subcategorySaved->save();
+
+return redirect('/administration/subcategories');
+}
+
+public function editSubcategory ($id)
+{
+  $subcategoryToEdit = SubCategory::find($id);
+  return view('administration.subcategories.edit', compact('subcategoryToEdit'));
+}
+
+public function updateSubcategory ($id, Request $request)
+{
+$subcategoryToUpdate = SubCategory::find($id);
+$subcategoryToUpdate->name = $request['name'];
+$subcategoryToUpdate->save();
+return redirect('/administration/subcategories');
+}
+
+public function deleteSubcategory ($id){
+$subcategoryToDelete = SubCategory::find($id);
+$subcategoryToDelete->delete();
+
+return redirect('/administration/subcategories');
+}
+
 
 
 
