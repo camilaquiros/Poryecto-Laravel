@@ -14,10 +14,10 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'Casa perrito jardin'
       ]),
       "description" => $faker->sentence(3),
-      "image" => $faker->imageUrl($width = 640, $height = 480),
-      "price" => $faker->randomNumber(2),
-      "offer" => false,
-      "rating" => $faker->numberBetween($min = 0, $max = 5),
-      "nonrating" => $faker->numberBetween($min = 0, $max = 5),
+      "image" => $faker->imageUrl($width = 480, $height = 480),
+      "price" => $faker->randomFloat(2, 0, 7),
+      "offer" => $faker->boolean(30),
+      "rating" => $faker->numberBetween(0, 5),
+      "nonrating" => $faker->numberBetween(0, 5),
     ];
 });

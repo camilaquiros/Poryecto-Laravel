@@ -4,6 +4,7 @@ use App\Product;
 use App\Category;
 use App\SubCategory;
 use App\Service;
+use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -21,7 +22,8 @@ class DatabaseSeeder extends Seeder
             'services',
             'categories',
             'subcategories',
-            'products_users'
+            'products_users',
+            'users'
         ]);
 
         // Ejecutar los seeders:
@@ -29,6 +31,7 @@ class DatabaseSeeder extends Seeder
         factory(Category::class)->times(2)->create();
         factory(SubCategory::class)->times(5)->create();
         factory(Service::class)->times(4)->create();
+        factory(User::class)->times(10)->create();
 
     }
 
