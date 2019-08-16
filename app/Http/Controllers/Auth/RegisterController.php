@@ -50,11 +50,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'fullName' => ['required', 'string', 'max:255'],
-            'userName' => ['required', 'string', 'max:255', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'country' => [],
+            'userName' => ['required', 'string', 'max:255', 'unique:users,username'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'string', 'min:8', 'confirmed']
+            'password_confirmation' => ['required', 'string', 'min:8']
         ], [
           'required' => 'El campo :attribute es obligatorio',
           'string' => 'El campo :attribute debe ser en formato texto',
@@ -63,11 +62,8 @@ class RegisterController extends Controller
           'unique:users' => 'Este :atribute ya se encuentra registrado',
           'confirmed' => 'Las contraseñas no coinciden',
           'min' => 'El campo :attribute debe tener como mínimo :min caracteres ',
-
-
-
-
         ]);
+
     }
 
     /**
@@ -80,7 +76,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'full_name' => $data['fullName'],
-            'user_name' => $data['userName'],
+            'username' => $data['userName'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
