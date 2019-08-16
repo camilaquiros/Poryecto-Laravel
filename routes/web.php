@@ -62,21 +62,21 @@ Route::put('/administration/services/{id}', 'AdministrationController@updateServ
 Route::get('/administration/services/delete/{id}', 'AdministrationController@deleteService')->name('deleteService');
 
 
-//ADMINISTRADOR - CATEGORIAS//
+//ADMINISTRADOR - SUBCATEGORIAS//
 //LISTADO//
-Route::get('/administration/categories', 'AdministrationController@listCategories');
+Route::get('/administration/subcategories', 'AdministrationController@listSubcategories');
 
 //CREAR//
-Route::get('/administration/categories/new', 'AdministrationController@newCategory');
+Route::get('/administration/subcategories/new', 'AdministrationController@newSubcategory');
 
 //CREAR y GUARDAR//
-Route::post('/administration/categories/new', 'AdministrationController@storeCategory');
+Route::post('/administration/subcategories/new', 'AdministrationController@storeSubcategory');
 
 //EDITAR//
-Route::get('/administration/categories/{id}', 'AdministrationController@editCategory')->name('editCategory');
+Route::get('/administration/subcategories/{id}', 'AdministrationController@editSubcategory')->name('editSubcategory');
 
 //EDITAR y GUARDAR//
-Route::put('/administration/categories/{id}', 'AdministrationController@updateCategory')->name('updateCategory');
+Route::put('/administration/subcategories/{id}', 'AdministrationController@updateSubcategory')->name('updateSubcategory');
 
 //ELIMINAR//
-Route::get('/administration/categories/delete/{id}', 'AdministrationController@deleteCategory')->name('deleteCategory');
+Route::get('/administration/subcategories/delete/{id}', 'AdministrationController@deleteSubcategory')->name('deleteSubcategory');
