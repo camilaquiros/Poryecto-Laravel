@@ -20,8 +20,7 @@ class CreateAllTables extends Migration
             $table->text('description');
             $table->decimal('price', 8, 2); // 999.999,99
             $table->smallInteger('offer'); // 0 ó 1
-            $table->integer('rating')->after('price')->nullable()->change();
-            $table->integer('nonrating')->after('rating')->nullable()->change();
+            $table->smallInteger('rating');
             $table->timestamps();
         });
 
