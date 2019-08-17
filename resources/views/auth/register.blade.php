@@ -1,8 +1,14 @@
+{{-- Para usar la plantilla template.blade.php --}}
 @extends('template')
 
+{{-- Llenando de información los @yield() --}}
+{{-- @section('bodyClass', 'class=bg-olive') --}}
+
+@section('pageTitle', 'Registro')
+{{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
+
 @section('mainContent')
-<div class="container" >
-  <br>
+<div class="containerRegistro" >
 <h1>Registro </h1>
   <h5>¡Si todavía no sos parte, sumate a nuestra comunidad!</h5>
     <div class="row justify-content-center">
@@ -11,8 +17,6 @@
                 <!-- <div class="card-header"> </div> -->
 
                 <div class="card-body registro">
-
-
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -133,13 +137,11 @@
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                @foreach(DB::table('avatars')->get() as $avatars)
-                                @foreach($avatars as $avatar)
+                                @foreach(DB::table('avatars')->get() as $avatars => $avatar)
                                 <label>
-                                  <input type="radio" name="avatar" value="<?=$avatar?>">
-                                  <img src="<?=$avatar?>" alt="">
+                                  <input type="radio" name="avatar" value="{{$avatar->code}}">
+                                  <img src="{{$avatar->url}}" alt="">
                                 </label>
-                                  @endforeach
                                 @endforeach
                                 </div>
                                 <div class="modal-footer">
@@ -159,6 +161,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <script type="text/javascript">
   $(document).ready(function(){

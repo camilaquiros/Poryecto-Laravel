@@ -32,8 +32,8 @@ nav {
   /*background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);*/
   display: inline-block;
   background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
-  align-items: center;
-  justify-content: center;
+  align-items:center;
+  justify-content: space-around;
 }
 
 .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
@@ -44,8 +44,8 @@ nav {
 .listaContinuacion {
   align-items: center;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .listaContinuacion li {
@@ -346,7 +346,7 @@ footer {
   }
 
   .listaContinuacion {
-    width: 30%;
+    width: auto;
   }
 
   .listaContinuacion img{
@@ -1050,18 +1050,20 @@ footer li a:hover {
   }
 }
 .containerRegistro {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .registro {
   width: 95%;
 }
 
-.registro h1 {
+.containerRegistro h1 {
+  text-align: center;
   width: 100%;
 }
 
