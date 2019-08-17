@@ -76,15 +76,22 @@
               </div> -->
         </div>
       </li>
-      <li><a href="#">Servicios</a></li>
+      <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="clinica">Clinica Veterinaria</a>
+          <a class="dropdown-item" href="peluqueria">Peluqueria canina</a>
+          <a class="dropdown-item" href="estudios">Estudios</a>
+          <a class="dropdown-item" href="/servicios">Ver todos</a>
+        </div>
+      </li>
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="/products">Ver todos los productos</a>
           <a class="dropdown-item" href="food">Alimentos</a>
           <a class="dropdown-item" href="accesories">Accesorios</a>
           <a class="dropdown-item" href="hygiene">Estetica e higiene</a>
           <a class="dropdown-item" href="health">Salud</a>
           <a class="dropdown-item" href="snacks">Snacks</a>
+          <a class="dropdown-item" href="/products">Ver todos los productos</a>
         </div>
       </li>
       <li><a href="#">Ofertas</a></li>

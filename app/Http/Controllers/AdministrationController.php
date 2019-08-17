@@ -7,6 +7,7 @@ use App\Product;
 use App\Category;
 use App\SubCategory;
 use App\Service;
+use Auth;
 
 class AdministrationController extends Controller
 {
@@ -39,6 +40,12 @@ class AdministrationController extends Controller
 
     public function newProduct()
     {
+      /** $usuarioLog = Auth::user(),
+      *if($usuarioLog == null){
+      *  return view('index');
+    *}
+    */
+
       $subcategories = SubCategory::orderBy('name')->get();
       $categories = Category::orderBy('name')->get();
       return view('administration.products.new',compact('categories', 'subcategories'));
@@ -261,12 +268,5 @@ $subcategoryToDelete->delete();
 
 return redirect('/administration/subcategories');
 }
-
-
-
-
-
-
-
 
 }
