@@ -105,14 +105,10 @@ Route::put('/administration/subcategories/{id}', 'AdministrationController@updat
 Route::get('/administration/subcategories/delete/{id}', 'AdministrationController@deleteSubcategory')->name('deleteSubcategory');
 
 
+//Ruta lista producto
 Route::get('/products', 'ProductsController@index')->name('products');
 
 
 
 //Ruta detalle producto
-//Route::get('/products/{id}', 'ProductsController@show')->name('show');
-
-
-Route::get('/products/{"id"}', function () {
-    return view('productDetail');
-});
+Route::get('/products/{id}', 'ProductsController@show')->name('show');

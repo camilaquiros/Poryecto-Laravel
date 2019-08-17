@@ -12,24 +12,19 @@
   <div class="containerProductos">
     <!-- PRODUCTOS -->
     <section class="productosLista">
-      @foreach($products as $product)
+      @foreach ($products as $product)
       <div class="lista">
-        <a class="imagenLista" href="/products/{{ $product['id'] }}"><img src="{{ $product['imagen'] }}"></a>
+        <a class="imagenLista" href="{{route('show', $product->id)}}"><img src="{{ $product->image }}"></a>
         <div class="ratingTotal">
           <!-- RATING -->
           <div class="rating">
-            @for ($i = 1; $i <= $product["rating"]; $i++)
-            <i class="fas fa-paw"></i>
-            @endfor
-          </div>
-          <div class="noRating">
-            @for ($i = 1; $i <= $product["noRating"]; $i++)
+            @for($i = 0; $i<=$product["rating"]; $i++)
             <i class="fas fa-paw"></i>
             @endfor
           </div>
         </div>
         <!-- REDIRECCION A DETALLES DE PRODUCTO -->
-        <a class="titulo" href="/products/{{ $product['id'] }}"> {{ $product['nombre'] }} </a>
+        <a class="titulo" href="{{route('show', $product->id)}}"> {{ $product->title }} </a>
         <p>${{$product["precio"]}}</p>
       </div>
       @endforeach
