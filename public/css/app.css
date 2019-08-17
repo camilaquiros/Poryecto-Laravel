@@ -849,6 +849,7 @@ header {
   width: 90%;
   box-shadow: 10px 5px 10px -5px rgba(0, 0, 0, 0.2);
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .imagen img {
@@ -872,6 +873,7 @@ header {
   background-color: transparent;
   margin-top: 10px;
   margin-bottom: 15px;
+  color: rgba(0, 150, 136, 1);
 }
 
 .error {
