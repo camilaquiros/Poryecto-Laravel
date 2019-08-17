@@ -10,11 +10,10 @@
 @section('mainContent')
 
     <!-- TRAIGO INFORMACION DE PRODUCTOS -->
-    @if($_GET["id"] <= count($productos) )
     <section class="productosDetalle">
       <div class="imagen">
         <!-- TRAIGO IMAGEN -->
-        <img src="/storage/images/{{ $productToFind->image }}" alt="dasdad">
+        <img src="{{ $productToFind->image }}" alt="dasdad">
       </div>
       <!-- TRAIGO DATOS -->
       <div class="detalles">
@@ -26,24 +25,10 @@
             <i class="fas fa-paw"></i>
             @endfor
           </div>
-          <div class="noRating">
-            @for ($i = 1; $i <= $productToFind->nonrating; $i++)
-            <i class="fas fa-paw"></i>
-            @endfor
-          </div>
         </div>
-        <p><?= $productos[$id]["detalle"] ?></p>
-        <h4>$ <?php echo $productos[$id]["precio"]; ?></h4>
+        <p>{{ $productToFind->description }}</p>
+        <h4>$ {{ $productToFind->price }}</h4>
       </div>
     </section>
-    <!-- SI NO EXISTE PRODUCTO -->
-    @else
-    <div class="error">
-      <img src="img/404.png" alt="">
-      <h1>OH NO!</h1>
-      <h2>No encontramos tu producto<i class="fas fa-heart-broken"></i></h2>
-      <a href="_index.html">VOLVER AL HOME</a>
-    </div>
-    @endif
-  </div>
+
 @endsection
