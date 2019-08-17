@@ -2,7 +2,7 @@
   <nav class="navprincipal">
     <ul class="menutop-header">
       <div class="logoNv">
-        <li class="homeLogo"><a href="/"><img src="img/Logo-Patitas.png"></a></li>
+        <li class="homeLogo"><a href="/"><img src="/img/Logo-Patitas.png"></a></li>
       </div>
       <form class="searchBar" action="/" method="post">
         <div class="input-group">
