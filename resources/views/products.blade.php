@@ -14,18 +14,16 @@
     <section class="productosLista">
       @foreach ($products as $product)
       <div class="lista">
-        <a class="imagenLista" href="{{route('show', $product->id)}}"><img src="{{ $product->image }}"></a>
+        <a class="imagenLista" href="{{route('show', $product->id)}}"><img src="/img/Productos/{{ $product->image }}"></a>
         <div class="ratingTotal">
           <!-- RATING -->
-          <div class="rating">
-            @for($i = 0; $i<=$product["rating"]; $i++)
+            @for($i = 1; $i<=$product["rating"]; $i++)
             <i class="fas fa-paw"></i>
             @endfor
-          </div>
         </div>
         <!-- REDIRECCION A DETALLES DE PRODUCTO -->
         <a class="titulo" href="{{route('show', $product->id)}}"> {{ $product->title }} </a>
-        <p>${{$product["precio"]}}</p>
+        <p>${{$product->price}}</p>
       </div>
       @endforeach
     </section>

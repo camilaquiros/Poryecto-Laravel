@@ -16,14 +16,14 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {  
         $this->truncateTables([
-            'products',
+            //'products',
             'services',
             'categories',
             'subcategories',
             'products_users',
-            'users'
+            //'users'
         ]);
 
         // Ejecutar los seeders:
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         factory(Category::class)->times(2)->create();
         factory(SubCategory::class)->times(5)->create();
         factory(Service::class)->times(4)->create();
-        factory(User::class)->times(10)->create();
+        //factory(User::class)->times(10)->create();
 
     }
 

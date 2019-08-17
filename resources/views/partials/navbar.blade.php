@@ -56,9 +56,37 @@
       <?php endif; ?>
     </ul>
     <ul class="menu-header">
-      <li><a href="#">Mascotas</a></li>
+      <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
+        <div class="dropdown-menu dropright" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item " href="dogs">Perros</a>
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Alimentos</a>
+              <a class="dropdown-item" href="#">Accesorios</a>
+              <a class="dropdown-item" href="#">Estetica e higiene</a>
+              <a class="dropdown-item" href="#">Salud</a>
+              <a class="dropdown-item" href="#">Snacks</a>
+              </div> -->
+          <a class="dropdown-item" href="cats">Gatos</a>
+              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Alimentos</a>
+              <a class="dropdown-item" href="#">Accesorios</a>
+              <a class="dropdown-item" href="#">Estetica e higiene</a>
+              <a class="dropdown-item" href="#">Salud</a>
+              <a class="dropdown-item" href="#">Snacks</a>
+              </div> -->
+        </div>
+      </li>
       <li><a href="#">Servicios</a></li>
-      <li><a href="/productos">Productos</a></li>
+      <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/products">Ver todos los productos</a>
+          <a class="dropdown-item" href="food">Alimentos</a>
+          <a class="dropdown-item" href="accesories">Accesorios</a>
+          <a class="dropdown-item" href="hygiene">Estetica e higiene</a>
+          <a class="dropdown-item" href="health">Salud</a>
+          <a class="dropdown-item" href="snacks">Snacks</a>
+        </div>
+      </li>
       <li><a href="#">Ofertas</a></li>
       <li><a href="#">Nosotros</a></li>
       <li><a href="/faqs">FAQ</a></li>

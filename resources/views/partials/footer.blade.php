@@ -2,10 +2,10 @@
 <div class="menu">
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="_productos_lista.php">Productos</a></li>
+    <li><a href="/products">Productos</a></li>
     <li><a href="#">Servicios</a></li>
     <li><a href="/faqs">Preguntas Frecuentes</a></li>
-    <li><a href="_registro.php">Registro</a></li>
+    <li><a href="/register">Registro</a></li>
   </ul>
 </div>
 <div class="contactoRedes">

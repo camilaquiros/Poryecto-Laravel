@@ -4,7 +4,7 @@
 {{-- Llenando de información los @yield() --}}
 {{-- @section('bodyClass', 'class=bg-olive') --}}
 
-@section('pageTitle', '$productToFind->title')
+@section('pageTitle', $productToFind->title)
 {{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
 
 @section('mainContent')
@@ -20,11 +20,9 @@
         <h2 class="tituloProducto">{{ $productToFind->title }}</h2>
         <!-- TRAIGO RATING -->
         <div class="ratingTotalDetalle">
-          <div class="rating">
             @for ($i = 1; $i <= $productToFind->rating; $i++)
             <i class="fas fa-paw"></i>
             @endfor
-          </div>
         </div>
         <p>{{ $productToFind->description }}</p>
         <h4>$ {{ $productToFind->price }}</h4>

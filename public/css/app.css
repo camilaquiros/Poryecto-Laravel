@@ -803,9 +803,8 @@ header {
 }
 
 .lista img {
-  display: inline-flex;
-  max-width: 100%;
-  max-height: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .titulo {
@@ -826,20 +825,16 @@ header {
   text-align: center;
 }
 
-.ratingTotal, .ratingTotal i {
+.ratingTotal {
   display: inline-flex;
   flex-direction: row;
   font-size: 15px;
   justify-content: center;
-}
-
-.rating, .rating i {
   color: rgba(0, 150, 136, 1);
-  margin-right: 2px
 }
 
-.noRating, .noRating i {
-  color: rgb(162, 175, 181)
+.ratingTotal i {
+  margin-right: 5px;
 }
 
 .productosDetalle {
@@ -1164,5 +1159,3 @@ footer li a:hover {
     min-width: 1000px !important;
   }
 }
-
-

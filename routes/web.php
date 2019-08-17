@@ -105,10 +105,31 @@ Route::put('/administration/subcategories/{id}', 'AdministrationController@updat
 Route::get('/administration/subcategories/delete/{id}', 'AdministrationController@deleteSubcategory')->name('deleteSubcategory');
 
 
+
+//PRODUCTOS:
 //Ruta lista producto
 Route::get('/products', 'ProductsController@index')->name('products');
 
-
-
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
+
+//filter perros
+Route::get('/dogs' , 'ProductsController@dogs')->name('dogs');
+
+//filter gatos
+Route::get('/cats' , 'ProductsController@cats')->name('cats');
+
+//filter alimentos
+Route::get('/food' , 'ProductsController@food')->name('food');
+
+//filter accesorios
+Route::get('/accesories' , 'ProductsController@accesories')->name('accesories');
+
+//filter higiene
+Route::get('/hygiene' , 'ProductsController@hygiene')->name('hygiene');
+
+//filter salud
+Route::get('/health' , 'ProductsController@health')->name('health');
+
+//filter Snacks
+Route::get('/snacks' , 'ProductsController@snacks')->name('snacks');
