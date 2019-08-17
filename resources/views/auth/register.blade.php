@@ -45,7 +45,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>País de origen:</b></label>
-                          <select name="country" class="form-control  @error('country') is-invalid @enderror">
+                          <select id="country-list" name="country" class="form-control  @error('country') is-invalid @enderror">
                             <option value="">Seleccione un país</option>
 
                           </select>
@@ -56,11 +56,28 @@
                           @enderror
                         </div>
                       </div>
+
+                      <!--PROVINCIAS -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Provincia:</b></label>
+                          <select id="state-list" name="state" class="form-control  @error('state') is-invalid @enderror">
+                            <option value="">Seleccione una provincia</option>
+
+                          </select>
+                          @error('state')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                        </div>
+                      </div>
+
                       <!-- ESPACIO PARA CORREO ELECTRONICO -->
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Correo electrónico:</b></label>
-                          <input type="email" name="email" class="form-control  @error('email') is-invalid @enderror">
+                          <input type="text" name="email" class="form-control  @error('email') is-invalid @enderror">
                           @error('email')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -71,7 +88,7 @@
                       <!-- ESPACIO PARA CONTRASEÑA -->
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label><b>Password:</b></label>
+                          <label><b>Contraseña:</b></label>
                           <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror ">
 
                           @error('password')
@@ -85,8 +102,8 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Repetir contraseña:</b></label>
-                          <input type="password" name="password_confirmation" class="form-control  @error('rePassword') is-invalid @enderror">
-                          @error('rePassword')
+                          <input type="password" name="password_confirmation" class="form-control  @error('password_confirmation') is-invalid @enderror">
+                          @error('password_confirmation')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
@@ -143,4 +160,44 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    const countryList = document.getElementById('country-list');
+    fetch('https://restcountries.eu/rest/v2/regionalbloc/usan')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(countries) {
+      for (var i = 0; i < countries.length; i++) {
+        var optionCountry = document.createElement('option');
+        optionCountry.innerHTML = countries[i].name;
+        optionCountry.value = countries[i].alpha2Code;
+        countryList.appendChild(optionCountry);
+      }
+    });
+
+    countryList.addEventListener('change', function(e){
+      let stateList = document.getElementById('state-list');
+      if (e.target.value == 'AR') {
+          stateList.disabled = false;
+          fetch('https://dev.digitalhouse.com/api/getProvincias')
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(statesArgentina) {
+            const states = statesArgentina.data;
+            for (var i = 0; i < states.length; i++) {
+              var optionState = document.createElement('option');
+              optionState.innerHTML = states[i].state;
+              optionState.value = states[i].state;
+              stateList.appendChild(optionState);
+            }
+          });
+      } else {
+        stateList.disabled = true;
+      }
+    })
+
+  })
+</script>
 @endsection
