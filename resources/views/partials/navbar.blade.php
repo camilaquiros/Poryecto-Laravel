@@ -58,7 +58,7 @@
     <ul class="menu-header">
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
         <div class="dropdown-menu dropright" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item " href="dogs">Perros</a>
+          <a class="dropdown-item " href="/dogs">Perros</a>
               <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Alimentos</a>
               <a class="dropdown-item" href="#">Accesorios</a>
@@ -66,7 +66,7 @@
               <a class="dropdown-item" href="#">Salud</a>
               <a class="dropdown-item" href="#">Snacks</a>
               </div> -->
-          <a class="dropdown-item" href="cats">Gatos</a>
+          <a class="dropdown-item" href="/cats">Gatos</a>
               <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Alimentos</a>
               <a class="dropdown-item" href="#">Accesorios</a>
