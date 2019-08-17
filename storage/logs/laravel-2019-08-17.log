@@ -43,7 +43,7 @@
 #40 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #41 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #42 {main}
-"} 
+"}
 [2019-08-17 00:20:23] local.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:44)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(1124): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}('')
@@ -64,7 +64,7 @@
 #15 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
 #16 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #17 {main}
-"} 
+"}
 [2019-08-17 00:20:28] local.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:44)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(1124): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}('')
@@ -110,7 +110,7 @@
 #40 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #41 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #42 {main}
-"} 
+"}
 [2019-08-17 00:20:28] local.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:44)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(1124): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}('')
@@ -131,7 +131,7 @@
 #15 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
 #16 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #17 {main}
-"} 
+"}
 [2019-08-17 00:23:13] local.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:44)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(1124): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}('')
@@ -177,7 +177,7 @@
 #40 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #41 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #42 {main}
-"} 
+"}
 [2019-08-17 00:23:13] local.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:44)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(1124): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}('')
@@ -198,7 +198,7 @@
 #15 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
 #16 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #17 {main}
-"} 
+"}
 [2019-08-17 00:23:30] local.ERROR: Undefined variable: movie (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): Undefined variable: movie (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:11, ErrorException(code: 0): Undefined variable: movie at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:11)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
@@ -258,7 +258,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:25:42] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
@@ -318,7 +318,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:26:02] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
@@ -378,7 +378,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:26:15] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
@@ -438,7 +438,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:26:17] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ';' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
@@ -498,7 +498,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:26:46] local.ERROR: syntax error, unexpected '<' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '<' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '<' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
@@ -558,7 +558,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:27:12] local.ERROR: Undefined variable: movie (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): Undefined variable: movie (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, ErrorException(code: 0): Undefined variable: movie at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
@@ -618,7 +618,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 00:27:20] local.ERROR: Undefined variable: i (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): Undefined variable: i (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15, ErrorException(code: 0): Undefined variable: i at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(45): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 1)
@@ -678,8 +678,171 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
-[2019-08-17 01:08:05] local.ERROR: syntax error, unexpected '<', expecting ')' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\productDetail.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '<', expecting ')' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\productDetail.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\c752aec1251780c79bc54c77fbd3c74a7603147f.php:1, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '<', expecting ')' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\c752aec1251780c79bc54c77fbd3c74a7603147f.php:1)
+"}
+[2019-08-17 01:49:41] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'age' in 'field list' (SQL: insert into `users` (`full_name`, `username`, `country`, `email`, `age`, `shipping_address`, `email_verified_at`, `password`, `avatar`, `remember_token`, `updated_at`, `created_at`) values (Tito Trantow, monahan, Niger, hilda65@example.com, 6, 9994 Allison Mountains, 2019-08-17 01:49:41, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, https://lorempixel.com/480/480/?28505, 4dzBg8CJFg, 2019-08-17 01:49:41, 2019-08-17 01:49:41)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'age' in 'field list' (SQL: insert into `users` (`full_name`, `username`, `country`, `email`, `age`, `shipping_address`, `email_verified_at`, `password`, `avatar`, `remember_token`, `updated_at`, `created_at`) values (Tito Trantow, monahan, Niger, hilda65@example.com, 6, 9994 Allison Mountains, 2019-08-17 01:49:41, $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi, https://lorempixel.com/480/480/?28505, 4dzBg8CJFg, 2019-08-17 01:49:41, 2019-08-17 01:49:41)) at /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'age' in 'field list' at /home/luispereira/Proyecto-Laravel/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:63, PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'age' in 'field list' at /home/luispereira/Proyecto-Laravel/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:61)
+[stacktrace]
+#0 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
+#2 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `us...', Array)
+#3 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `us...', Array)
+#4 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2663): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `us...', Array, 'id')
+#5 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1353): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(839): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(804): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(667): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php(206): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Support/Collection.php(475): Illuminate\\Database\\Eloquent\\FactoryBuilder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\User), 0)
+#11 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php(207): Illuminate\\Support\\Collection->each(Object(Closure))
+#12 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php(185): Illuminate\\Database\\Eloquent\\FactoryBuilder->store(Object(Illuminate\\Database\\Eloquent\\Collection))
+#13 /home/luispereira/Proyecto-Laravel/database/seeds/DatabaseSeeder.php(34): Illuminate\\Database\\Eloquent\\FactoryBuilder->create()
+#14 [internal function]: DatabaseSeeder->run()
+#15 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#16 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(122): Illuminate\\Container\\Container->call(Array)
+#20 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#21 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#22 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#23 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#24 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#25 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 /home/luispereira/Proyecto-Laravel/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 /home/luispereira/Proyecto-Laravel/vendor/symfony/console/Application.php(921): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /home/luispereira/Proyecto-Laravel/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /home/luispereira/Proyecto-Laravel/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/luispereira/Proyecto-Laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"}
+[2019-08-17 03:42:34] local.ERROR: syntax error, unexpected ')', expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected ')', expecting ']' at /home/luispereira/Proyecto-Laravel/app/Http/Controllers/Auth/RegisterController.php:91)
+[stacktrace]
+#0 /home/luispereira/Proyecto-Laravel/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/home/luisperei...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Http\\\\Contro...')
+#2 [internal function]: spl_autoload_call('App\\\\Http\\\\Contro...')
+#3 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(790): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#4 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#5 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#6 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#7 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('App\\\\Http\\\\Contro...')
+#8 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#9 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#10 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(693): Illuminate\\Routing\\Route->gatherMiddleware()
+#11 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(673): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#12 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#13 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#14 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#15 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#16 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /home/luispereira/Proyecto-Laravel/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 /home/luispereira/Proyecto-Laravel/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 /home/luispereira/Proyecto-Laravel/server.php(21): require_once('/home/luisperei...')
+#37 {main}
+"}
+[2019-08-17 04:18:30] local.ERROR: syntax error, unexpected ''max'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected ''max'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' at /home/luispereira/Proyecto-Laravel/app/Http/Controllers/Auth/RegisterController.php:62)
+[stacktrace]
+#0 /home/luispereira/Proyecto-Laravel/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/home/luisperei...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Http\\\\Contro...')
+#2 [internal function]: spl_autoload_call('App\\\\Http\\\\Contro...')
+#3 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(790): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#4 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#5 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#6 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#7 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('App\\\\Http\\\\Contro...')
+#8 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#9 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#10 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(693): Illuminate\\Routing\\Route->gatherMiddleware()
+#11 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(673): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#12 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#13 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#14 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#15 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#16 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /home/luispereira/Proyecto-Laravel/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 /home/luispereira/Proyecto-Laravel/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 /home/luispereira/Proyecto-Laravel/server.php(21): require_once('/home/luisperei...')
+#37 {main}
+"}
+[2019-08-17 04:18:57] local.ERROR: syntax error, unexpected ''max'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected ''max'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' at /home/luispereira/Proyecto-Laravel/app/Http/Controllers/Auth/RegisterController.php:62)
+[stacktrace]
+#0 /home/luispereira/Proyecto-Laravel/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/home/luisperei...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Http\\\\Contro...')
+#2 [internal function]: spl_autoload_call('App\\\\Http\\\\Contro...')
+#3 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(790): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#4 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#5 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(615): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#6 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(767): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#7 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('App\\\\Http\\\\Contro...')
+#8 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#9 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#10 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(693): Illuminate\\Routing\\Route->gatherMiddleware()
+#11 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(673): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#12 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#13 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#14 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#15 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#16 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /home/luispereira/Proyecto-Laravel/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 /home/luispereira/Proyecto-Laravel/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 /home/luispereira/Proyecto-Laravel/server.php(21): require_once('/home/luisperei...')
+[2019-08-17 01:08:05] local.ERROR: syntax error, unexpected '<', expecting ')' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\productDetail.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '<', expecting ')' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\
+esources\\views\\productDetail.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\c752aec1251780c79bc54c77fbd3c74a7603147f.php:1, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '<', expecting ')' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\c752aec1251780c79bc54c77fbd3c74a7603147f.php:1)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
@@ -738,7 +901,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 01:35:18] local.ERROR: Cannot write to directory "/img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"/img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('/img/Productos', 480)
@@ -779,7 +942,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:36:33] local.ERROR: Cannot write to directory "Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('Productos', 480)
@@ -820,7 +983,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:38:43] local.ERROR: Cannot write to directory "/public/img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"/public/img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('/public/img/Pro...', 480, 480)
@@ -861,7 +1024,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:39:28] local.ERROR: Cannot write to directory "\img\Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"\\img\\Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('\\\\img\\\\Productos', 480, 480)
@@ -902,7 +1065,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:40:38] local.ERROR: Cannot write to directory "../../../public/img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"../../../public/img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('../../../public...', 480, 480)
@@ -943,7 +1106,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:41:00] local.ERROR: Cannot write to directory "../../public/img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"../../public/img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('../../public/im...', 480, 480)
@@ -984,7 +1147,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:41:21] local.ERROR: Cannot write to directory "../img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"../img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('../img/Producto...', 480, 480)
@@ -1025,7 +1188,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:41:57] local.ERROR: Cannot write to directory "../../img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"../../img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('../../img/Produ...', 480, 480)
@@ -1066,7 +1229,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 01:42:21] local.ERROR: Cannot write to directory "../../public/img/Productos" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"../../public/img/Productos\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('../../public/im...', 480, 480)
@@ -1107,7 +1270,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 02:01:38] local.ERROR: syntax error, unexpected '"price"' (T_CONSTANT_ENCAPSED_STRING), expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '\"price\"' (T_CONSTANT_ENCAPSED_STRING), expecting ']' at C:\\xampp\\htdocs\\Proyecto-Laravel\\database\\factories\\ProductFactory.php:18)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factory.php(68): Illuminate\\Database\\Eloquent\\Factory->load('C:\\\\xampp\\\\htdocs...')
@@ -1143,7 +1306,7 @@
 #30 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #31 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #32 {main}
-"} 
+"}
 [2019-08-17 02:01:53] local.ERROR: syntax error, unexpected '"price"' (T_CONSTANT_ENCAPSED_STRING), expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '\"price\"' (T_CONSTANT_ENCAPSED_STRING), expecting ']' at C:\\xampp\\htdocs\\Proyecto-Laravel\\database\\factories\\ProductFactory.php:18)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factory.php(68): Illuminate\\Database\\Eloquent\\Factory->load('C:\\\\xampp\\\\htdocs...')
@@ -1179,7 +1342,7 @@
 #30 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #31 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #32 {main}
-"} 
+"}
 [2019-08-17 02:02:02] local.ERROR: Cannot write to directory "public/img/Avatars" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"public/img/Avatars\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('public/img/Avat...', 480, 480)
@@ -1220,7 +1383,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 02:03:21] local.ERROR: Cannot write to directory "public/images/Avatars" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"public/images/Avatars\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('public/images/A...', 480, 480)
@@ -1261,7 +1424,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 02:03:39] local.ERROR: Cannot write to directory "storage/public/images/Avatars" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"storage/public/images/Avatars\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('storage/public/...', 480, 480)
@@ -1302,7 +1465,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 02:04:35] local.ERROR: Cannot write to directory "storage/public/images/Avatars" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"storage/public/images/Avatars\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('storage/public/...', 480, 480)
@@ -1343,7 +1506,7 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
+"}
 [2019-08-17 02:05:38] local.ERROR: Cannot write to directory "storage/images/Avatars" {"exception":"[object] (InvalidArgumentException(code: 0): Cannot write to directory \"storage/images/Avatars\" at C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\fzaninotto\\faker\\src\\Faker\\Provider\\Image.php:69)
 [stacktrace]
 #0 [internal function]: Faker\\Provider\\Image::image('storage/images/...', 480, 480)
@@ -1384,8 +1547,9 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #37 {main}
-"} 
-[2019-08-17 02:07:50] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:22, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:22)
+"}
+[2019-08-17 02:07:50] local.ERROR: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' (View: C:\xampp\htdocs\Proyecto-Laravel\resources\views\products.blade.php) {"exception":"[object] (ErrorException(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' (View: C:\\xampp\\htdocs\\Proyecto-Laravel\
+esources\\views\\products.blade.php) at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:22, Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' at C:\\xampp\\htdocs\\Proyecto-Laravel\\storage\\framework\\views\\74d8bca9be0b26e4e523ce18c671a6d15141dec3.php:22)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(47): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError), 1)
 #1 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
@@ -1444,7 +1608,7 @@
 #54 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #55 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #56 {main}
-"} 
+"}
 [2019-08-17 05:44:02] local.ERROR: syntax error, unexpected '}', expecting ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '}', expecting ';' at C:\\xampp\\htdocs\\Proyecto-Laravel\\app\\Http\\Controllers\\ProductsController.php:29)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\Proyecto-Laravel\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
@@ -1485,4 +1649,4 @@
 #35 C:\\xampp\\htdocs\\Proyecto-Laravel\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\xampp\\htdocs\\Proyecto-Laravel\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #37 {main}
-"} 
+"}

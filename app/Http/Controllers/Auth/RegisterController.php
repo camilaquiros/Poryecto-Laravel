@@ -49,19 +49,22 @@ class RegisterController extends Controller
     public function validator(array $data)
     {
         return Validator::make($data, [
-            'fullName' => ['required', 'string', 'max:255'],
-            'userName' => ['required', 'string', 'max:255', 'unique:users,username'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'string', 'min:8']
+            'fullName' => ['required', 'alpha', 'max:255'],
+            'userName' => ['required', 'alpha_dash', 'max:20', 'unique:users,username'],
+            'email' => ['required', 'email', 'unique:users,email'],
+            'password' => ['required', 'min:8'],
+            'password_confirmation' => ['required',  'min:8', 'confirmed'],
+            'country' => ['required']
         ], [
-          'required' => 'El campo :attribute es obligatorio',
-          'string' => 'El campo :attribute debe ser en formato texto',
-          'max' => 'El campo :attribute puede tener como máximo :max caracteres ',
-          'email' => 'El campo :attribute debe tener un formato de email válido',
-          'unique:users' => 'Este :atribute ya se encuentra registrado',
+          'required' => 'Completá este dato',
+          'alpha' => 'Este dato debe contener solo letras',
+          'alpha_dash' => 'Este dato solo puede contener letras, numeros, guiones o guiones bajos',
+          'max' => 'Este dato puede tener como máximo :max caracteres',
+          'email' => 'Usá el formato nombre@ejemplo.com.',
+          'unique:users,email' => 'Este correo electronico ya se encuentra registrado',
+          'unique:users,username' => 'Este usuario ya se encuentra registrado',
           'confirmed' => 'Las contraseñas no coinciden',
-          'min' => 'El campo :attribute debe tener como mínimo :min caracteres ',
+          'min' => 'Ingresá al menos :min caracteres',
         ]);
 
     }
@@ -79,6 +82,7 @@ class RegisterController extends Controller
             'username' => $data['userName'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'country' => $data['country'],
         ]);
     }
 }
