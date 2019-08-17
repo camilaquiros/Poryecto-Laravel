@@ -14,7 +14,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'Casa perrito jardin'
       ]),
       "description" => $faker->sentence(3),
-      "image" => $faker->imageUrl(480, 480, 'cats'),
+      "image" => $faker->image("public/img/Productos", 480, 480, 'cats', false),
       "price" => $faker->randomFloat(2, 0, 7),
       "offer" => $faker->boolean(30),
       "rating" => $faker->numberBetween(0, 5),
