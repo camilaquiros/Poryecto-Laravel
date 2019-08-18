@@ -22,7 +22,7 @@
             @endfor
         </div>
         <!-- REDIRECCION A DETALLES DE PRODUCTO -->
-        <a class="titulo" href="{{route('show', $product->id)}}"> {{ $product->title }} </a>
+        <a class="titulo" href="/{{route('show', $product->id)}}"> {{ $product->title }} </a>
         <p>${{$product->price}}</p>
       </div>
       @endforeach

@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
         $this->truncateTables([
             //'products',
             'services',
@@ -27,11 +28,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Ejecutar los seeders:
-        //factory(Product::class)->times(4)->create();
-        factory(Category::class)->times(2)->create();
-        factory(SubCategory::class)->times(5)->create();
+        $products = factory(Product::class)->times(4)->create();
+        $categories = factory(Category::class)->times(2)->create();
+        $subcategories = factory(SubCategory::class)->times(5)->create();
         factory(Service::class)->times(4)->create();
         //factory(User::class)->times(10)->create();
+
+        foreach ($products as $oneProduct) {
+        $oneProduct->category()->associate($categories->random(1)->first()->id);
+        $oneProduct->subcategory()->associate($subcategories->random(1)->first()->id);
+        $oneProduct->save();
+      };
 
     }
 

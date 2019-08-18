@@ -1,8 +1,14 @@
+{{-- Para usar la plantilla template.blade.php --}}
 @extends('template')
 
+{{-- Llenando de información los @yield() --}}
+{{-- @section('bodyClass', 'class=bg-olive') --}}
+
+@section('pageTitle', 'Registro')
+{{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
+
 @section('mainContent')
-<div class="container" >
-  <br>
+<div class="containerRegistro" >
 <h1>Registro </h1>
   <h5>¡Si todavía no sos parte, sumate a nuestra comunidad!</h5>
     <div class="row justify-content-center">
@@ -12,8 +18,6 @@
 
                 <div class="card-body registro">
 
-
-
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                     <div class="row">
@@ -21,7 +25,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Nombre completo:</b></label>
-                          <input type="text" name="fullName" class="form-control  @error('fullName') is-invalid @enderror" value="{{ old('fullName') }}">
+                          <input type="text" name="fullName" value= "{{old("fullName")}}" class="form-control  @error('fullName') is-invalid @enderror">
                           @error('fullName')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -33,7 +37,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
-                          <input type="text" name="userName" class="form-control  @error('userName') is-invalid @enderror" value="{{ old('userName') }}">
+                          <input type="text" name="userName" value= "{{old("userName")}}"class="form-control  @error('userName') is-invalid @enderror">
                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -45,23 +49,23 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>País de origen:</b></label>
-                          <select id="country-list" name="country" class="form-control  @error('country') is-invalid @enderror">
+                          <select id="country-list" name="country" value= "{{old("country")}}" class="form-control  @error('country') is-invalid @enderror">
                             <option value="">Seleccione un país</option>
-
-                          </select>
-                          @error('country')
+                            </select>
+                            @error('country')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
-                          @enderror
+                            @enderror
                         </div>
                       </div>
+
 
                       <!--PROVINCIAS -->
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Provincia:</b></label>
-                          <select id="state-list" name="state" class="form-control  @error('state') is-invalid @enderror">
+                          <select id="state-list" name="state" value= "{{old("state")}}" class="form-control  @error('state') is-invalid @enderror">
                             <option value="">Seleccione una provincia</option>
 
                           </select>
@@ -85,12 +89,12 @@
                           @enderror
                         </div>
                       </div>
+
                       <!-- ESPACIO PARA CONTRASEÑA -->
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Contraseña:</b></label>
                           <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror ">
-
                           @error('password')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -118,6 +122,11 @@
                           <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
                           Seleccioná tu avatar!
                           </button>
+                          @error('avatar')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
                         </div>
 
                       </div>
@@ -135,7 +144,7 @@
                                 <div class="modal-body">
                                 @foreach(DB::table('avatars')->get() as $avatar)
                                 <label>
-                                  <input type="radio" name="avatar" value="{{ $avatar->url }}">
+                                  <input type="radio" name="avatar" value="{{ $avatar->code }}">
                                   <img src="{{ $avatar->url}}" alt="">
                                 </label>
                                 @endforeach
@@ -157,6 +166,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <script type="text/javascript">
   $(document).ready(function(){

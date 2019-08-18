@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,22 +49,24 @@ class RegisterController extends Controller
     public function validator(array $data)
     {
         return Validator::make($data, [
-            'fullName' => ['required', 'alpha', 'max:255'],
-            'userName' => ['required', 'alpha_dash', 'max:20', 'unique:users,username'],
-            'email' => ['required', 'email', 'unique:users,email'],
-            'password' => ['required', 'min:8'],
-            'password_confirmation' => ['required',  'min:8', 'same:password', 'required_with:password'],
-            'country' => ['required']
+            'fullName' => ['required', 'string', 'max:255'],
+            'userName' => ['required', 'alpha_dash', 'max:20', 'unique:users'],
+            'email' => ['required', 'email', 'unique:users'],
+            'password' => ['required', 'min:8', 'confirmed'],
+            'password_confirmation' => ['required',  'min:8'],
+            //'password_confirmation' => ['required',  'min:8', 'same:password', 'required_with:password'],
+            'country' => ['required'],
+            'avatar' => ['required']
         ], [
-          'required' => 'Completá este dato',
-          'alpha' => 'Este dato debe contener solo letras',
-          'alpha_dash' => 'Este dato solo puede contener letras, numeros, guiones o guiones bajos',
-          'max' => 'Este dato puede tener como máximo :max caracteres',
+          'required' => 'Este campo es obligatorio',
+          'alpha' => 'Este campo debe contener solo letras',
+          'numeric'=> 'Este campo debe contener solo números',
+          'alpha_dash' => 'Este campo solo puede contener letras, numeros, guiones o guiones bajos',
+          'max' => 'Este campo puede tener como máximo :max caracteres',
           'email' => 'Usá el formato nombre@ejemplo.com.',
-          'unique:users,email' => 'Este correo electronico ya se encuentra registrado',
-          'unique:users,username' => 'Este usuario ya se encuentra registrado',
-          'required_with' => 'Las contraseñas no coinciden',
-          'min' => 'Ingresá al menos :min caracteres',
+          'unique:users' => 'Este dato ya se encuentra registrado',
+          'confirmed' => 'Las contraseñas no coinciden',
+          'min' => 'Este campo debe tener como mínimo :min caracteres'
         ]);
 
     }
@@ -78,22 +80,15 @@ class RegisterController extends Controller
     public function create(array $data)
     {
 
-        $userSaved = User::create([
+        $user = User::create([
             'full_name' => $data['fullName'],
             'username' => $data['userName'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country' => $data['country'],
+            'avatar' => $data['avatar'],
         ]);
 
-        $avatar = $request["avatar"];
-        $avatarName = uniqid("img_") . "." . $imagen->extension();
-        $request->file('image')->move(public_path('/img/Productos'),$imagenFinal); //(arreglar)//
-        $productSaved->image = $imagenFinal;
-        $productSaved->save();
-
-        return redirect('/administration/products');
-
-        return redirect('/login');
+        return $user;
     }
 }
