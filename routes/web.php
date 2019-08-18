@@ -5,6 +5,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/search', 'ProductsController@search');
+
 Route::get('/faqs', function () {
     return view('faqs');
 });

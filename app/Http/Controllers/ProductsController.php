@@ -16,6 +16,11 @@ class ProductsController extends Controller
 		return view('products', compact('products'));
 	}
 
+  public function search(){
+    $products = Product::where('title', 'like', '%' . $_GET['query'] . '%')->get();
+    return view('products', compact('products'));
+  }
+
   public function show ($id)
   {
   $productToFind = Product::find($id);

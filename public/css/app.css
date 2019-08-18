@@ -359,6 +359,7 @@ footer {
   }
 
   .slider {
+    margin-top: 1em;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;

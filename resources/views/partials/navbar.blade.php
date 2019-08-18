@@ -4,10 +4,10 @@
       <div class="logoNv">
         <li class="homeLogo"><a href="/"><img src="/img/Logo-Patitas.png"></a></li>
       </div>
-      <form class="searchBar" action="/" method="post">
+      <form class="searchBar" action="/search" method="GET">
         <div class="input-group">
-          <input type="text" name="" value="" class="form-control">
-          <button type="button" name="button" class="btn"><i class="fas fa-search"></i></button>
+          <input type="text" name="query" value="" class="form-control">
+          <button type="submit" class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>
       @guest
