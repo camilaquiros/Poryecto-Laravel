@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
   public $table = "users";
   public $fillable = [
-      'full_name', 'username', 'country','age', 'email', 'password', 'avatar'
+      'full_name', 'userName', 'country','age', 'email', 'password', 'avatar'
   ];
     use Notifiable;
 
