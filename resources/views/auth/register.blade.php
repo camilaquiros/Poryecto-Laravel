@@ -25,7 +25,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Nombre completo:</b></label>
-                          <input type="text" name="fullName" class="form-control  @error('fullName') is-invalid @enderror">
+                          <input type="text" name="fullName" value= "{{old("fullName")}}" class="form-control  @error('fullName') is-invalid @enderror">
                           @error('fullName')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -37,7 +37,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
-                          <input type="text" name="userName" class="form-control  @error('userName') is-invalid @enderror">
+                          <input type="text" name="userName" value= "{{old("userName")}}"class="form-control  @error('userName') is-invalid @enderror">
                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -49,7 +49,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>País de origen:</b></label>
-                          <select id="country-list" name="country" class="form-control  @error('country') is-invalid @enderror">
+                          <select id="country-list" name="country" value= "{{old("country")}}" class="form-control  @error('country') is-invalid @enderror">
                             <option value="">Seleccione un país</option>
 
                           </select>
@@ -65,7 +65,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Provincia:</b></label>
-                          <select id="state-list" name="state" class="form-control  @error('state') is-invalid @enderror">
+                          <select id="state-list" name="state" value= "{{old("state")}}" class="form-control  @error('state') is-invalid @enderror">
                             <option value="">Seleccione una provincia</option>
 
                           </select>
@@ -81,7 +81,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Correo electrónico:</b></label>
-                          <input type="text" name="email" class="form-control  @error('email') is-invalid @enderror">
+                          <input type="text" name="email" value= "{{old("email")}}" class="form-control  @error('email') is-invalid @enderror">
                           @error('email')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -89,6 +89,20 @@
                           @enderror
                         </div>
                       </div>
+                        <!-- ESPACIO PARA EDAD -->
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label><b>Edad:</b></label>
+                          <input type="number" name="age" value= "{{old("age")}}" class="form-control  @error('age') is-invalid @enderror">
+                          @error('age')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                        </div>
+                      </div>
+
                       <!-- ESPACIO PARA CONTRASEÑA -->
                       <div class="col-md-6">
                         <div class="form-group">
@@ -137,12 +151,21 @@
                                   </button>
                                 </div>
                                 <div class="modal-body">
+<<<<<<< HEAD
+                                  @foreach(DB::table('avatars')->get() as $avatars => $avatar)
+                                    <label>
+                                      <input type="radio" name="avatar" value="{{$avatar->code}}">
+                                      <img src="{{$avatar->url}}" alt="">
+                                    </label>
+                                    @endforeach
+=======
                                 @foreach(DB::table('avatars')->get() as $avatars => $avatar)
                                 <label>
                                   <input type="radio" name="avatar" value="{{$avatar->code}}">
                                   <img src="{{$avatar->url}}" alt="">
                                 </label>
                                 @endforeach
+>>>>>>> c0ac818b9e45ecfffb8949546c55e285d7095eec
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-outline-success" data-dismiss="modal">Guardar</button>
