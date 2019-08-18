@@ -59,7 +59,7 @@
         <div class="contenedor-productosgato">
           <img src="img/gatitoo.jpeg" alt="imagen de gato">
           <span class="descripcion-carta">Hacé feliz a tu gato</span>
-          <span class="mas-Productos"><a href="#">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/cats">Ver productos</a></span>
         </div>
         <div class="contenedor-productosgato">
           <img src="img/pañueloyellow.jpeg" alt="imagen de gato">
@@ -69,7 +69,7 @@
         <div class="contenedor-productosgato">
           <img src="img/perrito.jpeg" alt="imagen de gato">
           <span class="descripcion-carta">Productos para tu perro</span>
-          <span class="mas-Productos"><a href="#">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/dogs">Ver productos</a></span>
         </div>
       </section>
 
@@ -91,7 +91,7 @@
             <div class="oneproduct-card-body">
               <p class="card-title">Colchon</p>
               <p class="card-text">$800</p>
-              <a href="_producto_detalle.php?id=1" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <a href="/products/1" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
           <!-- PRODUCTOS DESTACADOS -->
@@ -100,7 +100,7 @@
             <div class="oneproduct-card-body">
               <p class="card-title">Collar con pañuelo</p>
               <p class="card-text">$350</p>
-              <a href="_producto_detalle.php?id=2" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <a href="/products/2" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
 
@@ -109,7 +109,7 @@
             <div class="oneproduct-card-body">
               <p class="card-title">Correa</p>
               <p class="card-text">$950</p>
-              <a href="_producto_detalle.php?id=3" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <a href="/products/3" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
 
@@ -118,7 +118,7 @@
             <div class="oneproduct-card-body">
               <p class="card-title">Cucha</p>
               <p class="card-text">$1750</p>
-              <a href="_producto_detalle.php?id=4" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <a href="/products/4" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-right flechas"></i></div>
