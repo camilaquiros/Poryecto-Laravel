@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {  
+    {
         $this->truncateTables([
             //'products',
             'services',
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Ejecutar los seeders:
-        factory(Product::class)->times(4)->create();
+        //factory(Product::class)->times(4)->create();
         factory(Category::class)->times(2)->create();
         factory(SubCategory::class)->times(5)->create();
         factory(Service::class)->times(4)->create();

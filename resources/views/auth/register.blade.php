@@ -21,7 +21,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Nombre completo:</b></label>
-                          <input type="text" name="fullName" class="form-control  @error('fullName') is-invalid @enderror">
+                          <input type="text" name="fullName" class="form-control  @error('fullName') is-invalid @enderror" value="{{ old('fullName') }}">
                           @error('fullName')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -33,7 +33,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
-                          <input type="text" name="userName" class="form-control  @error('userName') is-invalid @enderror">
+                          <input type="text" name="userName" class="form-control  @error('userName') is-invalid @enderror" value="{{ old('userName') }}">
                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -77,7 +77,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Correo electrónico:</b></label>
-                          <input type="text" name="email" class="form-control  @error('email') is-invalid @enderror">
+                          <input type="text" name="email" class="form-control  @error('email') is-invalid @enderror" value="{{ old('email') }}">
                           @error('email')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -133,13 +133,11 @@
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                @foreach(DB::table('avatars')->get() as $avatars)
-                                @foreach($avatars as $avatar)
+                                @foreach(DB::table('avatars')->get() as $avatar)
                                 <label>
-                                  <input type="radio" name="avatar" value="<?=$avatar?>">
-                                  <img src="<?=$avatar?>" alt="">
+                                  <input type="radio" name="avatar" value="{{ $avatar->url }}">
+                                  <img src="{{ $avatar->url}}" alt="">
                                 </label>
-                                  @endforeach
                                 @endforeach
                                 </div>
                                 <div class="modal-footer">

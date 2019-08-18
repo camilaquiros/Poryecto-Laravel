@@ -53,7 +53,7 @@ class RegisterController extends Controller
             'userName' => ['required', 'alpha_dash', 'max:20', 'unique:users,username'],
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:8'],
-            'password_confirmation' => ['required',  'min:8', 'confirmed'],
+            'password_confirmation' => ['required',  'min:8', 'same:password', 'required_with:password'],
             'country' => ['required']
         ], [
           'required' => 'Completá este dato',
@@ -63,7 +63,7 @@ class RegisterController extends Controller
           'email' => 'Usá el formato nombre@ejemplo.com.',
           'unique:users,email' => 'Este correo electronico ya se encuentra registrado',
           'unique:users,username' => 'Este usuario ya se encuentra registrado',
-          'confirmed' => 'Las contraseñas no coinciden',
+          'required_with' => 'Las contraseñas no coinciden',
           'min' => 'Ingresá al menos :min caracteres',
         ]);
 
@@ -77,12 +77,23 @@ class RegisterController extends Controller
      */
     public function create(array $data)
     {
-        return User::create([
+
+        $userSaved = User::create([
             'full_name' => $data['fullName'],
             'username' => $data['userName'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country' => $data['country'],
         ]);
+
+        $avatar = $request["avatar"];
+        $avatarName = uniqid("img_") . "." . $imagen->extension();
+        $request->file('image')->move(public_path('/img/Productos'),$imagenFinal); //(arreglar)//
+        $productSaved->image = $imagenFinal;
+        $productSaved->save();
+
+        return redirect('/administration/products');
+
+        return redirect('/login');
     }
 }

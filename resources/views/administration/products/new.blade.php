@@ -87,6 +87,16 @@
 				</div>
 
 				<div class="col-6">
+					<div class="form-group">
+						<label>Rating:</label>
+						<input type="text" name="rating" class="form-control">
+						@error ('rating')
+							<i style="color: red;"> {{ $errors->first('rating') }}</i>
+						@enderror
+					</div>
+				</div>
+
+				<div class="col-6">
 					<label>Imagen del producto:</label>
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" name="image">

@@ -61,7 +61,8 @@ class AdministrationController extends Controller
       'price' => 'required | numeric',
 			'image' => 'required | image',
 			'image' => 'required | mimes:jpg,png,jpeg',
-      'subcategory_id' => 'required'
+      'subcategory_id' => 'required',
+      'rating' => 'required'
 		], [
 			'title.required' => 'El nombre del producto es obligatorio',
       'description.required' => 'El producto debe tener una descripcion',
@@ -72,6 +73,7 @@ class AdministrationController extends Controller
       'price.required' => 'El campo precio es obligatorio',
       'image.required' => 'El producto debe tener una imagen',
       'offer.required' => '¿Tiene el producto una oferta?'
+
 		]);
 
 		$productSaved = Product::create($request->all());
@@ -101,6 +103,7 @@ class AdministrationController extends Controller
 		$productToUpdate->subcategory_id = $request['subcategory_id'];
 		$productToUpdate->offer = $request['offer'];
 		$productToUpdate->price = $request['price'];
+    $productToUpdate->rating = $request['rating'];
 		$productToUpdate->save();
 		return redirect('/administration/products');
 	}
