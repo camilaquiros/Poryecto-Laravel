@@ -77,78 +77,39 @@
       <section class="seccion-novedades">
         <div class="head-novedades">
           <h4>Productos Destacados</h4>
-          <ul class="option-list">
-            <li>PERROS</li>
-            <li>GATOS</li>
-          </ul>
         </div>
 
         <!-- PRODUCTOS NOVEDADES -->
         <div class="cardsProduct">
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-left flechas"></i></div>
+          @foreach ($productsEnIndex as $product)
           <article class="oneproduct-card">
-            <img src="img/Productos/colchon.jpg" alt="Card image cap">
+            <img src="/img/Productos/{{$product->image}}" alt="Card image cap">
             <div class="oneproduct-card-body">
-              <p class="card-title">Colchon</p>
-              <p class="card-text">$800</p>
-              <a href="/products/1" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <p class="card-title">{{$product->title}}</p>
+              <p class="card-text">{{$product->price}}</p>
+              <a href="/products/{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
-          <!-- PRODUCTOS DESTACADOS -->
-          <article class="oneproduct-card">
-            <img src="img/Productos/collar_bandana.jpg" alt="Card image cap">
-            <div class="oneproduct-card-body">
-              <p class="card-title">Collar con pañuelo</p>
-              <p class="card-text">$350</p>
-              <a href="/products/2" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
-            </div>
-          </article>
-
-          <article class="oneproduct-card" id="producto3">
-            <img src="img/Productos/correa.jpg" alt="Card image cap">
-            <div class="oneproduct-card-body">
-              <p class="card-title">Correa</p>
-              <p class="card-text">$950</p>
-              <a href="/products/3" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
-            </div>
-          </article>
-
-          <article class="oneproduct-card" id="producto4">
-            <img src="img/Productos/cucha.jpg" alt="Card image cap">
-            <div class="oneproduct-card-body">
-              <p class="card-title">Cucha</p>
-              <p class="card-text">$1750</p>
-              <a href="/products/4" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
-            </div>
-          </article>
-          <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-right flechas"></i></div>
+          @endforeach
         </div>
+
         <!-- SERVICIOS -->
         <section class="nuestrosServicios">
           <div class="tituloServicios">
             <h3>Nuestros Servicios</h3>
-            <a href="#" class="verTodosServicios">Ver todos</a>
+            <a href="/services" class="verTodosServicios">Ver todos</a>
           </div>
 
           <div class="seccionServiciosImagenes">
-            <div class="servicioCard">
+            @foreach ($servicesEnIndex as $service)
+            <div class="servicioCard" id="servicio">
               <div class="content">
-                <h3>Clinica Veterinaria</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                <h3>{{$service->name}}</h3>
+                <p>{{$service->decription}}</p>
               </div>
             </div>
-            <div class="servicioCard" id="servicio2">
-              <div class="content">
-                <h3>Peluqueria Canina</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-              </div>
-            </div>
-            <div class="servicioCard" id="servicio3">
-              <div class="content">
-                <h3>Estudios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-              </div>
-            </div>
+            @endforeach
           </div>
         </section>
     </div>

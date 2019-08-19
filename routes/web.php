@@ -1,9 +1,7 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@productsIndex')->name('index');
 
 Route::get('/search', 'ProductsController@search');
 
@@ -19,11 +17,12 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/services', function () {
+    return view('services');
+});
+
 Auth::routes();
 // Route::post('/register', 'RegisterController@create');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 //ADMINISTRADOR-PRODUCTO//
 Route::get('/administration', 'AdministrationController@index')->name('administration');
