@@ -1,9 +1,7 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@productsIndex')->name('index');
 
 Route::get('/search', 'ProductsController@search');
 
@@ -19,11 +17,24 @@ Route::get('/profile', function () {
     return view('profile');
 })->middleware('user');
 
+Route::get('/services', function () {
+    return view('services');
+});
+
+Route::get('/peluqueria', function () {
+    return view('peluqueria');
+});
+
+Route::get('/estudios', function () {
+    return view('estudios');
+});
+
+Route::get('/entrenamiento', function () {
+    return view('entrenamiento');
+});
+
 Auth::routes();
 // Route::post('/register', 'RegisterController@create');
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 //ADMINISTRADOR-PRODUCTO//
 Route::get('/administration', 'AdministrationController@index')->name('administration')->middleware('admin');
@@ -113,7 +124,7 @@ Route::get('/administration/subcategories/delete/{id}', 'AdministrationControlle
 Route::get('/products', 'ProductsController@index')->name('products');
 
 //Buscar un producto
-Route::get('/product/search', 'ProductsController@search');
+Route::get('/product/search', 'ProductsController@search')->name('searchBy');
 
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('show');

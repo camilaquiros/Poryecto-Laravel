@@ -1,4 +1,4 @@
-@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);@import url(https://fonts.googleapis.com/css?family=Kurale|Nunito&display=swap);@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap);@import url(https://fonts.googleapis.com/css?family=Paytone+One|Carrois+Gothic+SC|Lalezar|Russo+One|Boogaloo|Staatliches|Viga&display=swap);@import url(https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300&display=swap);@import url(https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);* {
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);@import url(https://fonts.googleapis.com/css?family=Kurale|Nunito&display=swap);@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap);@import url(https://fonts.googleapis.com/css?family=Paytone+One|Carrois+Gothic+SC|Lalezar|Russo+One|Boogaloo|Staatliches|Viga&display=swap);@import url(https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300&display=swap);@import url(https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);* {
   box-sizing: border-box;
   font-family: 'Work Sans';
 }
@@ -772,13 +772,41 @@ body {
   flex-direction: row;
   margin: 20px auto;
   justify-content: space-around;
-
   max-width: 1200px;
   margin-bottom: 20px;
 }
 
-ul, ol, li, a {
+.leftNav{
+  width: 25%;
+  font-weight: 400;
+}
+
+.leftNav div{
+  margin: 20px 0px 0px 50px;
+}
+
+.leftNav a{
+  color: rgba(0, 150, 136, 1);
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.leftNav a:hover{
+  background-color: rgba(82,199,107,0.5);
+  color: rgba(1,1,1,0.8);
+  border-radius: 3px;
+}
+
+.leftNav li{
+  font-family: "Livvic";
+  color: rgba(1, 1, 1, 0.8);
+}
+
+ul, ol, li, a {
+  text-decoration: none !important;
   padding: 0;
   margin: 0;
   list-style-type: none;
