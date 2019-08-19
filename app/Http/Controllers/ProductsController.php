@@ -13,30 +13,35 @@ class ProductsController extends Controller
   public function index()
 	{
 		$products = Product::all();
-		return view('products', compact('products'));
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+		return view('products', compact('products', 'subcategories'));
 	}
 
   public function search(){
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where('title', 'like', '%' . $_GET['query'] . '%')->get();
-    return view('products', compact('products'));
+    return view('products', compact('products', 'subcategories'));
   }
 
   public function show ($id)
   {
+  $subcategories = SubCategory::orderBy('name', 'ASC')->get();
   $productToFind = Product::find($id);
-  return view('productDetail', compact('productToFind'));
+  return view('productDetail', compact('productToFind', 'subcategories'));
   }
 
   public function dogs() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("category_id", "=", "1")
       ->get();
-    return view('products', compact('products'));
+    return view('products', compact('products', 'subcategories'));
   }
 
   public function cats() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("category_id", "=", "2")
       ->get();
-    return view('products', compact('products'));
+    return view('products', compact('products', 'subcategories'));
   }
 
   public function food() {

@@ -113,7 +113,7 @@ Route::get('/administration/subcategories/delete/{id}', 'AdministrationControlle
 Route::get('/products', 'ProductsController@index')->name('products');
 
 //Buscar un producto
-Route::get('/product/search', 'ProductsController@search');
+Route::get('/product/search', 'ProductsController@search')->name('searchBy');
 
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
