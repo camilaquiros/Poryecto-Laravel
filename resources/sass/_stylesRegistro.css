@@ -1,5 +1,5 @@
 .containerRegistro {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -10,10 +10,10 @@
   width: 95%;
 }
 
-.registro h1 {
+.containerRegistro h1 {
+  text-align: center;
   width: 100%;
 }
-
 .avatarRegistro {
   margin: 0;
   width: 50%;

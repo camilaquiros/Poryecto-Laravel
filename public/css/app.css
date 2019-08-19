@@ -32,7 +32,7 @@ nav {
   /*background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);*/
   display: inline-block;
   background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
-  align-items:center;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -89,6 +89,7 @@ nav {
   align-items: center;
   padding: 20px 0;
   margin-top: 10px;
+  background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
   /*background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);*/
 }
 
@@ -507,7 +508,7 @@ footer {
   position: relative;
   padding: 1em;
   display: inline-block;
-  background-image: url('/img/3.png');
+   background-image: url('/img/3.png');
   background-position: bottom;
   width: 100%;
   background-size: contain;
@@ -831,7 +832,6 @@ header {
   flex-direction: row;
   font-size: 15px;
   justify-content: center;
-  color: rgba(0, 150, 136, 1);
 }
 
 .ratingTotal i {
@@ -1056,7 +1056,6 @@ footer li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .registro {
@@ -1067,7 +1066,6 @@ footer li a:hover {
   text-align: center;
   width: 100%;
 }
-
 .avatarRegistro {
   margin: 0;
   width: 50%;
@@ -1164,3 +1162,5 @@ footer li a:hover {
     min-width: 1000px !important;
   }
 }
+
+

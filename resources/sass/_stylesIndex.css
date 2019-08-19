@@ -39,7 +39,7 @@ nav {
   display: inline-block;
   background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
@@ -50,8 +50,8 @@ nav {
 .listaContinuacion {
   align-items: center;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .listaContinuacion li {
@@ -95,6 +95,7 @@ nav {
   align-items: center;
   padding: 20px 0;
   margin-top: 10px;
+  background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
   /*background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);*/
 }
 
@@ -352,7 +353,7 @@ footer {
   }
 
   .listaContinuacion {
-    width: 30%;
+    width: auto;
   }
 
   .listaContinuacion img{
@@ -365,6 +366,7 @@ footer {
   }
 
   .slider {
+    margin-top: 1em;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;

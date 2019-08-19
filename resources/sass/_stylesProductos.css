@@ -44,9 +44,8 @@ header {
 }
 
 .lista img {
-  display: inline-flex;
-  max-width: 100%;
-  max-height: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .titulo {
@@ -67,20 +66,15 @@ header {
   text-align: center;
 }
 
-.ratingTotal, .ratingTotal i {
+.ratingTotal {
   display: inline-flex;
   flex-direction: row;
   font-size: 15px;
   justify-content: center;
 }
 
-.rating, .rating i {
-  color: rgba(0, 150, 136, 1);
-  margin-right: 2px
-}
-
-.noRating, .noRating i {
-  color: rgb(162, 175, 181)
+.ratingTotal i {
+  margin-right: 5px;
 }
 
 .productosDetalle {
@@ -95,6 +89,7 @@ header {
   width: 90%;
   box-shadow: 10px 5px 10px -5px rgba(0, 0, 0, 0.2);
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .imagen img {
@@ -118,6 +113,7 @@ header {
   background-color: transparent;
   margin-top: 10px;
   margin-bottom: 15px;
+  color: rgba(0, 150, 136, 1);
 }
 
 .error {

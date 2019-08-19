@@ -108,26 +108,31 @@ Route::get('/administration/subcategories/delete/{id}', 'AdministrationControlle
 //Ruta lista producto
 Route::get('/products', 'ProductsController@index')->name('products');
 
+//Buscar un producto
+Route::get('/product/search', 'ProductsController@search');
+
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
+
+
 //filter perros
-Route::get('/dogs' , 'ProductsController@dogs')->name('dogs');
+Route::get('/dogs', 'ProductsController@dogs')->name('dogs');
 
 //filter gatos
-Route::get('/cats' , 'ProductsController@cats')->name('cats');
+Route::get('/cats', 'ProductsController@cats')->name('cats');
 
 //filter alimentos
-Route::get('/food' , 'ProductsController@food')->name('food');
+Route::get('/food', 'ProductsController@food')->name('food');
 
 //filter accesorios
-Route::get('/accesories' , 'ProductsController@accesories')->name('accesories');
+Route::get('/accesories', 'ProductsController@accesories')->name('accesories');
 
 //filter higiene
-Route::get('/hygiene' , 'ProductsController@hygiene')->name('hygiene');
+Route::get('/hygiene', 'ProductsController@hygiene')->name('hygiene');
 
 //filter salud
-Route::get('/health' , 'ProductsController@health')->name('health');
+Route::get('/health', 'ProductsController@health')->name('health');
 
 //filter Snacks
-Route::get('/snacks' , 'ProductsController@snacks')->name('snacks');
+Route::get('/snacks', 'ProductsController@snacks')->name('snacks');
