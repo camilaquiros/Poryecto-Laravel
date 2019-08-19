@@ -11,6 +11,10 @@ Route::get('/faqs', function () {
     return view('faqs');
 });
 
+Route::get('/nosotros', function () {
+    return view('nosotros');
+});
+
 Route::get('/profile', function () {
     return view('profile');
 });
