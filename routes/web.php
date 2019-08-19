@@ -21,6 +21,18 @@ Route::get('/services', function () {
     return view('services');
 });
 
+Route::get('/peluqueria', function () {
+    return view('peluqueria');
+});
+
+Route::get('/estudios', function () {
+    return view('estudios');
+});
+
+Route::get('/entrenamiento', function () {
+    return view('entrenamiento');
+});
+
 Auth::routes();
 // Route::post('/register', 'RegisterController@create');
 

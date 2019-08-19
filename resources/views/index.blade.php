@@ -88,7 +88,7 @@
             <div class="oneproduct-card-body">
               <p class="card-title">{{$product->title}}</p>
               <p class="card-text">{{$product->price}}</p>
-              <a href="/products/{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
           @endforeach
