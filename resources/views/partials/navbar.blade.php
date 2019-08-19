@@ -83,7 +83,7 @@
         </div>
       </li>
       <li><a href="#">Ofertas</a></li>
-      <li><a href="#">Nosotros</a></li>
+      <li><a href="/nosotros">Nosotros</a></li>
       <li><a href="/faqs">FAQ</a></li>
     </ul>
   </nav>
