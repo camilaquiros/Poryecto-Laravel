@@ -30,13 +30,13 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/banner3.jpg" class="d-block w-100" alt="slider">
+        <img src="img/gatito.jpg" class="d-block w-100" alt="slider">
         <div class="carousel-caption d-none d-md-block">
-          <p>¡OFRECEMOS EL MEJOR SERVICIO PARA TUS MASCOTAS!"</p>
+          <p>¡OFRECEMOS EL MEJOR SERVICIO PARA TUS MASCOTAS!</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="img/banner1.jpg" class="d-block w-100" alt="peluqueria">
+        <img src="img/perrito.jpg" class="d-block w-100" alt="peluqueria">
         <div class="carousel-caption d-none d-md-block">
         <p>¡LOS CUIDAMOS COMO SI ESTUVIERAN EN SU CASA!</p>
         </div>

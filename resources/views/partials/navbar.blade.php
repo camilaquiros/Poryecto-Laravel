@@ -4,7 +4,7 @@
       <div class="logoNv">
         <li class="homeLogo"><a href="/"><img src="/img/Logo-Patitas.png"></a></li>
       </div>
-      <form class="searchBar" action="/search" method="GET">
+      <form class="searchBar" action="/product/search" method="GET">
         <div class="input-group">
           <input type="text" name="query" value="" class="form-control">
           <button type="submit" class="btn"><i class="fas fa-search"></i></button>
