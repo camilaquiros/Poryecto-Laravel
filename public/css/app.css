@@ -1,4 +1,4 @@
-@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);@import url(https://fonts.googleapis.com/css?family=Kurale|Nunito&display=swap);@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap);@import url(https://fonts.googleapis.com/css?family=Paytone+One|Carrois+Gothic+SC|Lalezar|Russo+One|Boogaloo|Staatliches|Viga&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);* {
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);@import url(https://use.fontawesome.com/releases/v5.8.2/css/all.css);@import url(https://fonts.googleapis.com/css?family=Kurale|Nunito&display=swap);@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap);@import url(https://fonts.googleapis.com/css?family=Paytone+One|Carrois+Gothic+SC|Lalezar|Russo+One|Boogaloo|Staatliches|Viga&display=swap);@import url(https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300&display=swap);@import url(https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap);@import url(https://fonts.googleapis.com/css?family=Nunito);* {
   box-sizing: border-box;
   font-family: 'Work Sans';
 }
@@ -98,8 +98,10 @@ nav {
   border-radius: 4px;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: rgba(1,1,1,0.7);
   list-style: none;
+  font-family: "Livvic";
+  font-weight: 400;
 }
 
 .menu-header li a:hover {
@@ -766,10 +768,10 @@ body {
 
 .containerProductos {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  margin: 20px auto;
+  justify-content: space-around;
+
   max-width: 1200px;
   margin-bottom: 20px;
 }
@@ -794,24 +796,60 @@ header {
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 70%;
+  align-items: center;
 }
 
-.lista {
+.productosLista .priceCard{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.productosListaInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ratingTotal {
+  display: flex;
+  justify-content: center;
+}
+
+.productCard {
+  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 45%;
-  margin: 1%;
+  width: 30% !important;
+  border: 0.5px solid rgba(1,1,1,0.1);
+  border-radius: 4px;
+  justify-content: center;
 }
 
-.lista img {
-  display: flex;
-  width: 100%;
+.btn-patitas {
+  background: #52c76b;
+  border: 1px solid #3aac4f;
+  color: white;
+}
+
+.productCard img {
+  width: 70%;
+  height: 200px;
+}
+
+.productCard a{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productCard h5 a {
+  font-family: 'Livvic';
+  font-weight: 400;
 }
 
 .titulo {
   font-size: 15px;
-  font-weight: bold;
   text-align: center;
   display: inline-flex;
   justify-content: center;
@@ -822,7 +860,7 @@ header {
   text-decoration: none;
 }
 
-.lista p {
+.productCard p {
   font-size: 15px;
   text-align: center;
 }
@@ -830,7 +868,7 @@ header {
 .ratingTotal {
   display: inline-flex;
   flex-direction: row;
-  font-size: 15px;
+  font-size: 12px;
   justify-content: center;
 }
 
