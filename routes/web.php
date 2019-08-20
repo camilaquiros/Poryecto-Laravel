@@ -15,7 +15,7 @@ Route::get('/nosotros', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-});
+})->middleware('user');
 
 Route::get('/services', function () {
     return view('services');
@@ -37,85 +37,85 @@ Auth::routes();
 // Route::post('/register', 'RegisterController@create');
 
 //ADMINISTRADOR-PRODUCTO//
-Route::get('/administration', 'AdministrationController@index')->name('administration');
+Route::get('/administration', 'AdministrationController@index')->name('administration')->middleware('admin');
 
 //LISTADO//
-Route::get('/administration/products', 'AdministrationController@listProducts')->name('listProducts');
+Route::get('/administration/products', 'AdministrationController@listProducts')->name('listProducts')->middleware('admin');
 
 //CREAR//
-Route::get('/administration/products/new', 'AdministrationController@newProduct');
+Route::get('/administration/products/new', 'AdministrationController@newProduct')->middleware('admin');
 
 //CREAR y GUARDAR/
-Route::post('/administration/products/new', 'AdministrationController@store');
+Route::post('/administration/products/new', 'AdministrationController@store')->middleware('admin');
 
 //EDITAR//
-Route::get('/administration/products/{id}', 'AdministrationController@editProduct')->name('editProduct');
+Route::get('/administration/products/{id}', 'AdministrationController@editProduct')->name('editProduct')->middleware('admin');
 
 //EDITAR y GUARDAR//
-Route::put('/administration/products/{id}', 'AdministrationController@updateProduct')->name('updateProduct');
+Route::put('/administration/products/{id}', 'AdministrationController@updateProduct')->name('updateProduct')->middleware('admin');
 
 //ELIMINAR//
-Route::get('/administration/products/delete/{id}', 'AdministrationController@deleteProduct')->name('deleteProduct');
+Route::get('/administration/products/delete/{id}', 'AdministrationController@deleteProduct')->name('deleteProduct')->middleware('admin');
 
 
 //ADMINISTRADOR - SERVICIOS//
 //LISTADO//
-Route::get('/administration/services', 'AdministrationController@listServices');
+Route::get('/administration/services', 'AdministrationController@listServices')->middleware('admin');
 
 //CREAR//
-Route::get('/administration/services/new', 'AdministrationController@newService');
+Route::get('/administration/services/new', 'AdministrationController@newService')->middleware('admin');
 
 //CREAR y GUARDAR//
-Route::post('/administration/services/new', 'AdministrationController@storeService');
+Route::post('/administration/services/new', 'AdministrationController@storeService')->middleware('admin');
 
 //EDITAR//
-Route::get('/administration/services/{id}', 'AdministrationController@editService')->name('editService');
+Route::get('/administration/services/{id}', 'AdministrationController@editService')->name('editService')->middleware('admin');
 
 //EDITAR y GUARDAR//
-Route::put('/administration/services/{id}', 'AdministrationController@updateService')->name('updateService');
+Route::put('/administration/services/{id}', 'AdministrationController@updateService')->name('updateService')->middleware('admin');
 
 //ELIMINAR//
-Route::get('/administration/services/delete/{id}', 'AdministrationController@deleteService')->name('deleteService');
+Route::get('/administration/services/delete/{id}', 'AdministrationController@deleteService')->name('deleteService')->middleware('admin');
 
 
 //ADMINISTRADOR - CATEGORIAS//
 //LISTADO//
-Route::get('/administration/categories', 'AdministrationController@listCategories');
+Route::get('/administration/categories', 'AdministrationController@listCategories')->middleware('admin');
 
 //CREAR//
-Route::get('/administration/categories/new', 'AdministrationController@newCategory');
+Route::get('/administration/categories/new', 'AdministrationController@newCategory')->middleware('admin');
 
 //CREAR y GUARDAR//
-Route::post('/administration/categories/new', 'AdministrationController@storeCategory');
+Route::post('/administration/categories/new', 'AdministrationController@storeCategory')->middleware('admin');
 
 //EDITAR//
-Route::get('/administration/categories/{id}', 'AdministrationController@editCategory')->name('editCategory');
+Route::get('/administration/categories/{id}', 'AdministrationController@editCategory')->name('editCategory')->middleware('admin');
 
 //EDITAR y GUARDAR//
-Route::put('/administration/categories/{id}', 'AdministrationController@updateCategory')->name('updateCategory');
+Route::put('/administration/categories/{id}', 'AdministrationController@updateCategory')->name('updateCategory')->middleware('admin');
 
 //ELIMINAR//
-Route::get('/administration/categories/delete/{id}', 'AdministrationController@deleteCategory')->name('deleteCategory');
+Route::get('/administration/categories/delete/{id}', 'AdministrationController@deleteCategory')->name('deleteCategory')->middleware('admin');
 
 
 //ADMINISTRADOR - SUBCATEGORIAS//
 //LISTADO//
-Route::get('/administration/subcategories', 'AdministrationController@listSubcategories');
+Route::get('/administration/subcategories', 'AdministrationController@listSubcategories')->middleware('admin');
 
 //CREAR//
-Route::get('/administration/subcategories/new', 'AdministrationController@newSubcategory');
+Route::get('/administration/subcategories/new', 'AdministrationController@newSubcategory')->middleware('admin');
 
 //CREAR y GUARDAR//
-Route::post('/administration/subcategories/new', 'AdministrationController@storeSubcategory');
+Route::post('/administration/subcategories/new', 'AdministrationController@storeSubcategory')->middleware('admin');
 
 //EDITAR//
-Route::get('/administration/subcategories/{id}', 'AdministrationController@editSubcategory')->name('editSubcategory');
+Route::get('/administration/subcategories/{id}', 'AdministrationController@editSubcategory')->name('editSubcategory')->middleware('admin');
 
 //EDITAR y GUARDAR//
-Route::put('/administration/subcategories/{id}', 'AdministrationController@updateSubcategory')->name('updateSubcategory');
+Route::put('/administration/subcategories/{id}', 'AdministrationController@updateSubcategory')->name('updateSubcategory')->middleware('admin');
 
 //ELIMINAR//
-Route::get('/administration/subcategories/delete/{id}', 'AdministrationController@deleteSubcategory')->name('deleteSubcategory');
+Route::get('/administration/subcategories/delete/{id}', 'AdministrationController@deleteSubcategory')->name('deleteSubcategory')->middleware('admin');
 
 
 
