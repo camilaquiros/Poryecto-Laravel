@@ -12,7 +12,27 @@ class ProductsController extends Controller
 {
   public function index()
 	{
-		$products = Product::all();
+    if (isset($_GET['orderBy'])) {
+      switch ($_GET['orderBy']) {
+        case 'PRICE_DESC':
+          $products = Product::orderBy('price', 'ASC')->get();
+          break;
+        case 'PRICE_ASC':
+          $products = Product::orderBy('price', 'DESC')->get();
+          break;
+        case 'RATING_ASC':
+          $products = Product::orderBy('rating', 'ASC')->get();
+          break;
+        case 'RATING_DESC':
+          $products = Product::orderBy('rating', 'DESC')->get();
+          break;
+        default:
+          $products = Product::all();
+        break;
+      }
+    } else {
+      $products = Product::all();
+    }
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
 		return view('products', compact('products', 'subcategories'));
 	}
@@ -33,7 +53,8 @@ class ProductsController extends Controller
   public function dogs() {
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("category_id", "=", "1")
-      ->get();
+    ->orderBy('price', 'ASC')
+    ->get();
     return view('products', compact('products', 'subcategories'));
   }
 
