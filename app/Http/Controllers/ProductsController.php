@@ -100,4 +100,74 @@ class ProductsController extends Controller
     return view('products', compact('products', 'subcategories'));
   }
 
+  public function dogsFood() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "1") ->where ("subcategory_id", "=", "1")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function dogsAccesories() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "1") ->where ("subcategory_id", "=", "2")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function dogsSnacks() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "1") ->where ("subcategory_id", "=", "3")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function dogsHygiene() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "1") ->where ("subcategory_id", "=", "4")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function dogsHealth() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "1") ->where ("subcategory_id", "=", "5")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function catsFood() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "2") ->where ("subcategory_id", "=", "1")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function catsAccesories() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "2") ->where ("subcategory_id", "=", "2")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function catsSnacks() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "2") ->where ("subcategory_id", "=", "3")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function catsHygiene() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "2") ->where ("subcategory_id", "=", "4")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
+  public function catsHealth() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("category_id", "=", "2") ->where ("subcategory_id", "=", "5")
+      ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
 }
