@@ -34,11 +34,11 @@ class DatabaseSeeder extends Seeder
         factory(Service::class)->times(4)->create();
         //factory(User::class)->times(10)->create();
 
-        foreach ($products as $oneProduct) {
+        /*foreach ($products as $oneProduct) {
         $oneProduct->category()->associate($categories->random(1)->first()->id);
         $oneProduct->subcategory()->associate($subcategories->random(1)->first()->id);
         $oneProduct->save();
-      };
+      };*/
 
     }
 
