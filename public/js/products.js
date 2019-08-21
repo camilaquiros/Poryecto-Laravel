@@ -1,4 +1,3 @@
-
 window.onload = function(){
   //cambia orden productos
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -16,6 +15,6 @@ window.onload = function(){
   perros.addEventListener("hover", function() {
 
   })
-    
+
   }
 };
