@@ -18,7 +18,7 @@
 
                 <div class="card-body registro">
 
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" class="formulario">
                         @csrf
                     <div class="row">
                       <!-- ESPACIO PARA NOMBRE COMPLETO -->
@@ -26,6 +26,9 @@
                         <div class="form-group">
                           <label><b>Nombre completo:</b></label>
                           <input type="text" name="fullName" value= "{{old("fullName")}}" class="form-control  @error('fullName') is-invalid @enderror">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                         </div>
                           @error('fullName')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -38,6 +41,9 @@
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
                           <input type="text" name="username" value= "{{old("username")}}"class="form-control  @error('userName') is-invalid @enderror">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                         </div>
                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -169,5 +175,7 @@
 </div>
 </div>
 @endsection
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/register.js" ></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/register.js" ></script>
+<script src="js/validacionRegister.js"></script>
