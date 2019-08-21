@@ -79,7 +79,7 @@ class AdministrationController extends Controller
 		$productSaved = Product::create($request->all());
 		$imagen = $request["image"];
 		$imagenFinal = uniqid("img_") . "." . $imagen->extension();
-    $request->file('image')->move(public_path('/img/Productos'),$imagenFinal); //(arreglar)//
+    $imagen->storePubliclyAs("public/productos", $imagenFinal); //(arreglar)//
 		$productSaved->image = $imagenFinal;
 		$productSaved->save();
 

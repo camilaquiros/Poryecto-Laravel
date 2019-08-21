@@ -12,7 +12,7 @@
 <div class="profileBox">
 
   <div class="dataImage">
-    <img src="{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
+    <img src="/storage/Avatars/{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
   </div>
   <div class="dataTitle">
     <h2>Hola, {{ Auth::user()->full_name }}.</h2>

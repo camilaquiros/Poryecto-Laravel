@@ -133,9 +133,19 @@ Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
 //filter perros
 Route::get('/dogs', 'ProductsController@dogs')->name('dogs');
+Route::get('/dogs/accesories', 'ProductsController@dogsAccesories')->name('dogsAccesories');
+Route::get('/dogs/food', 'ProductsController@dogsFood')->name('dogsFood');
+Route::get('/dogs/hygiene', 'ProductsController@dogsHygiene')->name('dogsHygiene');
+Route::get('/dogs/health', 'ProductsController@dogsHealth')->name('dogsHealth');
+Route::get('/dogs/snacks', 'ProductsController@dogsSnacks')->name('dogsSnacks');
 
 //filter gatos
 Route::get('/cats', 'ProductsController@cats')->name('cats');
+Route::get('/cats/accesories', 'ProductsController@catsAccesories')->name('catsAccesories');
+Route::get('/cats/food', 'ProductsController@catsFood')->name('catsFood');
+Route::get('/cats/hygiene', 'ProductsController@catsHygiene')->name('catsHygiene');
+Route::get('/cats/health', 'ProductsController@catsHealth')->name('catsHealth');
+Route::get('/cats/snacks', 'ProductsController@catsSnacks')->name('catsSnacks');
 
 //filter alimentos
 Route::get('/food', 'ProductsController@food')->name('food');

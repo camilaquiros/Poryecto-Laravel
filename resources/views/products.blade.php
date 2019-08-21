@@ -15,9 +15,17 @@
       <div class="">
         <a href="/dogs" class="d-flex justify-content-between align-items-center">Perros <i class="fas fa-chevron-right"></i></a>
           <ul class="list-group list-group-flush">
-            @foreach ($subcategories as $subcategorie)
-              <li class="list-group-item d-flex justify-content-between align-items-center"> {{ $subcategorie->name}}</li>
-            @endforeach
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/accesories">Accesorios</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/food">Alimentos</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/hygiene">Estetica e higiene</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/health">Salud</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/snacks">Snacks</a></li>
+
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <select class="custom-select" id="selectOrder">
                   <option>Ordenar</option>
@@ -33,17 +41,24 @@
           <div class="">
             <a href="/cats" class="d-flex justify-content-between align-items-center">Gatos <i class="fas fa-chevron-right"></i></a>
               <ul class="list-group list-group-flush">
-                @foreach ($subcategories as $subcategorie)
-                  <li class="list-group-item d-flex justify-content-between align-items-center"> {{ $subcategorie->name}}</li>
-                @endforeach
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a class="dropdown-item" href="/cats/accesories">Accesorios</a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a class="dropdown-item" href="/cats/food">Alimentos</a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a class="dropdown-item" href="/cats/hygiene">Estetica e higiene</a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a class="dropdown-item" href="/cats/health">Salud</a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a class="dropdown-item" href="/cats/snacks">Snacks</a></li>
               </ul>
           </div>
     </div>
     <!-- PRODUCTOS -->
     <section class="productosLista">
             @foreach ($products as $product)
-            <div class="productCard card-deck">
-                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/img/Productos/{{ $product->image }}"></a>
+            <div class="productCard card-deck lista">
+                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/Productos/{{ $product->image }}"></a>
                 <div class="productosListaInfo">
                   <div class="ratingTotal">
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor
@@ -62,14 +77,5 @@
 </div>
 @endsection
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      /* Empieza */
-
-      let selectOrder = document.getElementById('selectOrder');
-      selectOrder.addEventListener('change', function(e){
-        window.location.href = window.location.pathname+'?orderBy='+e.target.value;
-      })
-      /* Termina */
-    });
-</script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src=/js/products.js></script>

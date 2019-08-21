@@ -8,20 +8,19 @@ body {
 
 .containerProductos {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  margin: 20px auto;
+  margin: 20px;
   justify-content: space-around;
   max-width: 1200px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .leftNav{
   width: 25%;
   font-weight: 400;
-}
-
-.leftNav div{
-  margin: 20px 0px 0px 50px;
+  display: none;
 }
 
 .leftNav a{
@@ -40,9 +39,10 @@ body {
   border-radius: 3px;
 }
 
-.leftNav li{
+.list-group-item a{
   font-family: "Livvic";
   color: rgba(1, 1, 1, 0.8);
+  text-transform: none;
 }
 
 ul, ol, li, a {
@@ -63,10 +63,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 70%;
-  align-items: center;
+  width: 90%;
 }
 
 .productosLista .priceCard{
@@ -76,8 +73,14 @@ header {
 
 .productosListaInfo {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+}
+
+.card-footer {
+  width: 100%;
 }
 
 .ratingTotal {
@@ -86,14 +89,16 @@ header {
 }
 
 .productCard {
-  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 30% !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
   border: 0.5px solid rgba(1,1,1,0.1);
   border-radius: 4px;
-  justify-content: center;
+  margin-bottom: 20PX;
+
 }
 
 .btn-patitas {
@@ -104,7 +109,12 @@ header {
 
 .productCard img {
   width: 70%;
-  height: 200px;
+}
+
+.productCard img:hover {
+  transform: scale(2);
+  border: solid #3aac4f 1px;
+  border-radius: 4px;
 }
 
 .productCard a{
@@ -297,12 +307,34 @@ footer li a:hover {
 }
 
 @media (min-width:600px) {
+
+  .leftNav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 25%;
+  }
+
+  .leftNav div{
+    width: 90%;
+    font-weight: 200;
+  }
+
   .lista {
     width: 30%;
   }
 
   .imagen {
     width: 100%;
+  }
+
+  .productosLista {
+    width: 70%;
+  }
+
+  .productCard {
+    width: 30%;
+    margin: 5px;
   }
 
   .detalles {
@@ -338,6 +370,10 @@ footer li a:hover {
 @media (min-width: 800px) {
   .containerProductos {
     max-width: 1200px;
+  }
+
+  .leftNav div{
+    margin: 20px 0px 0px 50px;
   }
 
   .lista {
