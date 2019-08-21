@@ -5,6 +5,7 @@ use App\Category;
 use App\SubCategory;
 use App\Service;
 use App\User;
+use App\Avatar;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -24,7 +25,8 @@ class DatabaseSeeder extends Seeder
             'categories',
             'subcategories',
             'products_users',
-            //'users'
+            //'users',
+            'avatars',
         ]);
 
         // Ejecutar los seeders:
@@ -33,6 +35,7 @@ class DatabaseSeeder extends Seeder
         $subcategories = factory(SubCategory::class)->times(5)->create();
         factory(Service::class)->times(4)->create();
         //factory(User::class)->times(10)->create();
+        $avatars = factory(Avatar::class)->times(13)->create();
 
       //   foreach ($products as $oneProduct) {
       //   $oneProduct->category()->associate($categories->random(1)->first()->id);
