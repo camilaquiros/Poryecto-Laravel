@@ -18,6 +18,15 @@
             @foreach ($subcategories as $subcategorie)
               <li class="list-group-item d-flex justify-content-between align-items-center"> {{ $subcategorie->name}}</li>
             @endforeach
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <select class="custom-select" id="selectOrder">
+                  <option>Ordenar</option>
+                  <option value="PRICE_DESC">Precio menor a mayor</option>
+                  <option value="PRICE_ASC">Precio mayor a menor</option>
+                  <option value="RATING_ASC">Rating menor a mayor</option>
+                  <option value="RATING_DESC">Rating mayor a menor</option>
+                </select>
+              </li>
           </ul>
       </div>
 
@@ -34,7 +43,7 @@
     <section class="productosLista">
             @foreach ($products as $product)
             <div class="productCard card-deck">
-                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/img/Productos/{{ $product->image }}"></a>
+                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $product->image }}"></a>
                 <div class="productosListaInfo">
                   <div class="ratingTotal">
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor
@@ -52,3 +61,15 @@
     </section>
 </div>
 @endsection
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      /* Empieza */
+
+      let selectOrder = document.getElementById('selectOrder');
+      selectOrder.addEventListener('change', function(e){
+        window.location.href = window.location.pathname+'?orderBy='+e.target.value;
+      })
+      /* Termina */
+    });
+</script>

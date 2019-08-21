@@ -37,7 +37,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
-                          <input type="text" name="userName" value= "{{old("userName")}}"class="form-control  @error('userName') is-invalid @enderror">
+                          <input type="text" name="username" value= "{{old("username")}}"class="form-control  @error('userName') is-invalid @enderror">
                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
