@@ -43,7 +43,7 @@
     <section class="productosLista">
             @foreach ($products as $product)
             <div class="productCard card-deck">
-                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $product->image }}"></a>
+                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/Productos/{{ $product->image }}"></a>
                 <div class="productosListaInfo">
                   <div class="ratingTotal">
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor

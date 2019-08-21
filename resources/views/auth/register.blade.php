@@ -145,7 +145,7 @@
                                 @foreach(DB::table('avatars')->get() as $avatar)
                                 <label>
                                   <input type="radio" name="avatar" value="{{ $avatar->url }}">
-                                  <img src="/img/Avatars/{{ $avatar->url}}" alt="">
+                                  <img src="/storage/Avatars/{{ $avatar->url}}" alt="">
                                 </label>
                                 @endforeach
                                 </div>
