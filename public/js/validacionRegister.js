@@ -66,7 +66,7 @@ window.addEventListener('load', function(){
 					if ( this.value.length < 8 ) {
 						this.classList.add('invalid-feedback');
 						divError.style.display = 'block';
-						divError.innerText = `El nombre de usuario debe contener como mínimo 8 caracteres`;
+						divError.innerText = `El usuario debe contener como mínimo 8 caracteres`;
 						errores[this.name] = true;
 					} else {
 						this.classList.remove('invalid-feedback');
