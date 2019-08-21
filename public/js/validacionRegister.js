@@ -9,6 +9,8 @@ window.addEventListener('load', function(){
 
 	var regexEmail = /\S+@\S+\.\S+/;
 	var errores = {};
+	var contrasena = null;
+
 	losCampos.forEach(function (unCampo) {
 	var divError = null;
 	if (unCampo.type !== 'file') {
@@ -34,32 +36,14 @@ window.addEventListener('load', function(){
 				divError.innerText = '';
 				delete errores[this.name];
 
-				// if (this.name === 'email') {
-				// 	if (!regexEmail.test(valorDelCampo)) {
-				// 		this.classList.add('invalid-feedback');
-				// 		divError.style.display = 'block';
-				// 		divError.innerText = `Ingresá un email válido`;
-				// 		errores[this.name] = true;
-				// 	} else {
-				// 		this.classList.remove('invalid-feedback');
-				// 		divError.style.display = 'none';
-				// 		divError.innerText = '';
-				// 	}
-				// }
 				if (this.name === 'email') {
-					// valido que el texto sea un formato de email válido
-					if (!regexEmail.test(valorDelCampo)) {
-						this.classList.add('invalid-feedback'); // agrego clase is-invalid
-						divError.style.display = 'block'; // muestro el div del error
-						divError.innerText = `Ingresá un email válido`; // seteo el texto del error en si
 
-						// Sumar una key al objeto de errores
+					if (!regexEmail.test(valorDelCampo)) {
+						this.classList.add('invalid-feedback');
+						divError.style.display = 'block';
+						divError.innerText = `Ingresá un email válido`;
+
 						errores[this.name] = true;
-					} else {
-						// Si es un formato de email válido
-						this.classList.remove('is-invalid');
-						divError.style.display = 'none';
-						divError.innerText = '';
 					}
 				}
 				if (this.name === 'username' ) {
@@ -68,10 +52,6 @@ window.addEventListener('load', function(){
 						divError.style.display = 'block';
 						divError.innerText = `El usuario debe contener como mínimo 8 caracteres`;
 						errores[this.name] = true;
-					} else {
-						this.classList.remove('invalid-feedback');
-						divError.style.display = 'none';
-						divError.innerText = '';
 					}
 				}
 	      if (this.name === 'password') {
@@ -80,25 +60,22 @@ window.addEventListener('load', function(){
 						divError.style.display = 'block';
 						divError.innerText = `La contraseña debe contener como mínimo 8 caracteres`;
 						errores[this.name] = true;
-					} else {
-						this.classList.remove('invalid-feedback');
-						divError.style.display = 'none';
-						divError.innerText = '';
 					}
+					contrasena = this.value;
 				}
-				if (this.name === 'password_confirmation' ) {
-					if ( this.value.length < 8 ) {
-						this.classList.add('invalid-feedback');
-						divError.style.display = 'block';
-						divError.innerText = `La contraseña debe contener como mínimo 8 caracteres`;
-						errores[this.name] = true;
-					} else {
-						this.classList.remove('invalid-feedback');
-						divError.style.display = 'none';
-						divError.innerText = '';
+
+				if (this.name === 'password_confirmation' && contrasena !== null) {
+					if (this.value !== contrasena) {
+							this.classList.add('invalid-feedback');
+							divError.style.display = 'block';
+							divError.innerText = `Las contraseñas no coinciden`;
+							console.log(this.value);
 					}
+				
 				}
 }
+
+console.log(contrasena);
 
 
 			console.log(errores);
