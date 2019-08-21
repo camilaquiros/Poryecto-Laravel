@@ -84,7 +84,7 @@
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-left flechas"></i></div>
           @foreach ($productsEnIndex as $product)
           <article class="oneproduct-card">
-            <img src="/img/Productos/{{$product->image}}" alt="Card image cap">
+            <img src="/storage/productos/{{$product->image}}" alt="Card image cap">
             <div class="oneproduct-card-body">
               <p class="card-title">{{$product->title}}</p>
               <p class="card-text">{{$product->price}}</p>
@@ -106,7 +106,7 @@
             <div class="servicioCard" id="servicio">
               <div class="content">
                 <h3>{{$service->name}}</h3>
-                <p>{{$service->decription}}</p>
+                <p>{{$service->description}}</p>
               </div>
             </div>
             @endforeach
