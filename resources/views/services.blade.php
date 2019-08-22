@@ -24,7 +24,7 @@
               </div>
               <div class="serviciocard" id="servicio{{$service->id}}">
                   <h3>{{$service->name}}</h3>
-                  <p>{{$service->description}}</p>
+                  <p>{{$service->longDescription}}</p>
               </div>
               @endforeach
             </div>
