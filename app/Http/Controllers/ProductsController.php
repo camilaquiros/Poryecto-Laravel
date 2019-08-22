@@ -50,7 +50,7 @@ class ProductsController extends Controller
   return view('productDetail', compact('productToFind', 'subcategories'));
   }
 
-  public function searchOffer() {
+  public function offer() {
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("offer", "=", "1")
     ->orderBy('price', 'ASC')

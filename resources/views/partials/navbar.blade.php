@@ -134,7 +134,7 @@
           <a class="dropdown-item" href="/products">Ver todos los productos</a>
         </div>
       </li>
-      <li><a href="/products/searchOffer">Ofertas</a></li>
+      <li><a href="/products/offer">Ofertas</a></li>
       <li><a href="/nosotros">Nosotros</a></li>
       <li><a href="/faqs">FAQ</a></li>
     </ul>
