@@ -132,8 +132,6 @@ Route::get('/products/offer', 'ProductsController@offer')->name('offer');
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
 
-
-
 //filter perros
 Route::get('/dogs', 'ProductsController@dogs')->name('dogs');
 Route::get('/dogs/accesories', 'ProductsController@dogsAccesories')->name('dogsAccesories');

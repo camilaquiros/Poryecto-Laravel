@@ -56,8 +56,9 @@ class RegisterController extends Controller
             'password_confirmation' => ['required',  'min:8'],
             //'password_confirmation' => ['required',  'min:8', 'same:password', 'required_with:password'],
             'country' => ['required'],
-            'avatar' => ['required']
-        ], [
+            'avatar' => ['required'],
+        ],
+        [
           'required' => 'Este campo es obligatorio',
           'alpha' => 'Este campo debe contener solo letras',
           'numeric'=> 'Este campo debe contener solo números',
