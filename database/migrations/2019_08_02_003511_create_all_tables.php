@@ -55,10 +55,10 @@ class CreateAllTables extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-          $table->dropForeign('subcategory_id');
+          $table->dropForeign('products_subcategory_id_foreign');
           $table->dropColumn('subcategory_id');
 
-          $table->dropForeign('category_id');
+          $table->dropForeign('products_category_id_foreign');
           $table->dropColumn('category_id');
         });
         Schema::dropIfExists('subcategories');
