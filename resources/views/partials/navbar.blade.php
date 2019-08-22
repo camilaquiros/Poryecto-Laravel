@@ -10,6 +10,51 @@
           <button type="submit" class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>
+      <div class="celular">
+      <div class="hamburger">
+        <a id="hamburger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+        <div class="dropdown-menu">
+        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
+            <div class="dropdown-menu dropright">
+              <a id = "perros" class="dropdown-item" href="/dogs" data-toggle="dropdown">Perros</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="/dogs/food">Alimentos</a>
+                  <a class="dropdown-item" href="/dogs/accesories">Accesorios</a>
+                  <a class="dropdown-item" href="/dogs/hygiene">Estetica e higiene</a>
+                  <a class="dropdown-item" href="/dogs/health">Salud</a>
+                  <a class="dropdown-item" href="/dogs/snack">Snacks</a>
+                  </div>
+              <a class="dropdown-item" href="/cats" data-toggle="dropdown">Gatos</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Alimentos</a>
+                  <a class="dropdown-item" href="#">Accesorios</a>
+                  <a class="dropdown-item" href="#">Estetica e higiene</a>
+                  <a class="dropdown-item" href="#">Salud</a>
+                  <a class="dropdown-item" href="#">Snacks</a>
+                  </div>
+            </div>
+          <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/services">Clinica veterinaria</a>
+              <a class="dropdown-item" href="/services">Peluqueria canina</a>
+              <a class="dropdown-item" href="/services">Estudios clínicos</a>
+              <a class="dropdown-item" href="/services">Paseador personal</a>
+              <a class="dropdown-item" href="/services">Ver todos</a>
+            </div>
+          <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/food">Alimentos</a>
+              <a class="dropdown-item" href="/accesories">Accesorios</a>
+              <a class="dropdown-item" href="/hygiene">Estetica e higiene</a>
+              <a class="dropdown-item" href="/health">Salud</a>
+              <a class="dropdown-item" href="/snacks">Snacks</a>
+              <a class="dropdown-item" href="/products">Ver todos los productos</a>
+            </div>
+          <a href="#">Ofertas</a>
+          <a href="/nosotros">Nosotros</a>
+          <a href="/faqs">FAQ</a>
+      </div>
+    </div>
       @guest
       <div class="listaContinuacion">
         <li><a href="/faqs">Ayuda</a></li>
@@ -40,6 +85,7 @@
             </div>
           </div>
         </li>
+      </div>
       </div>
       @endguest
     </ul>
