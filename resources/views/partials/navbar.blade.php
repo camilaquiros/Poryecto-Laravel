@@ -1,3 +1,4 @@
+
 <header class="indexhead">
   <nav class="navprincipal">
     <ul class="menutop-header">
@@ -10,6 +11,8 @@
           <button type="submit" class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>
+<!-- BARRA DE NAVEGACION CELULAR -->
+
       <div class="celular">
       <div class="hamburger">
         <a id="hamburger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
@@ -50,7 +53,7 @@
               <a class="dropdown-item" href="/snacks">Snacks</a>
               <a class="dropdown-item" href="/products">Ver todos los productos</a>
             </div>
-          <a href="#">Ofertas</a>
+          <a href="/products/searchOffer">Ofertas</a>
           <a href="/nosotros">Nosotros</a>
           <a href="/faqs">FAQ</a>
       </div>
@@ -89,6 +92,8 @@
       </div>
       @endguest
     </ul>
+
+    <!-- BARRA DE NAVEGACION DESKTOP Y TABLET -->
     <ul class="menu-header">
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
         <div class="dropdown-menu dropright">
@@ -129,7 +134,7 @@
           <a class="dropdown-item" href="/products">Ver todos los productos</a>
         </div>
       </li>
-      <li><a href="#">Ofertas</a></li>
+      <li><a href="/products/searchOffer">Ofertas</a></li>
       <li><a href="/nosotros">Nosotros</a></li>
       <li><a href="/faqs">FAQ</a></li>
     </ul>
