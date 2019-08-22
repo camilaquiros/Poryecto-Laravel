@@ -17,10 +17,10 @@
           </div>
             <div class="servicios">
               @foreach ($services as $service)
-              <div class="servicio">
+              <div class="servicio" id='{{$service->name}}'>
               <div class="servicioImagen">
                 <!-- TRAIGO IMAGEN -->
-                <img src="/storage/Servicios/{{ $service->image }}" alt="dasdad">
+                <img src="/storage/Servicios/{{ $service->image }}" alt="imagenServicios">
               </div>
               <div class="servicioTexto">
                   <h3>{{$service->name}}</h3>
