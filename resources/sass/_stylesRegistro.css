@@ -9,7 +9,9 @@
 .registro {
   width: 95%;
 }
-
+.divError {
+  display: none;
+}
 .containerRegistro h1 {
   text-align: center;
   width: 100%;

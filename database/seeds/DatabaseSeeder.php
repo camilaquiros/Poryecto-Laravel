@@ -37,11 +37,17 @@ class DatabaseSeeder extends Seeder
         //factory(User::class)->times(10)->create();
         $avatars = factory(Avatar::class)->times(13)->create();
 
+        /*foreach ($products as $oneProduct) {
+        $oneProduct->category()->associate($categories->random(1)->first()->id);
+        $oneProduct->subcategory()->associate($subcategories->random(1)->first()->id);
+        $oneProduct->save();
+      };*/
+
       //   foreach ($products as $oneProduct) {
       //   $oneProduct->category()->associate($categories->random(1)->first()->id);
       //   $oneProduct->subcategory()->associate($subcategories->random(1)->first()->id);
       //   $oneProduct->save();
-      // };
+      // };c9b1c36c8caeabda8347106e58f70033dd0265ca
 
     }
 

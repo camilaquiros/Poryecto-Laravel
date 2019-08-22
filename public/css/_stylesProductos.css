@@ -8,20 +8,19 @@ body {
 
 .containerProductos {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  margin: 20px auto;
+  margin: 20px;
   justify-content: space-around;
   max-width: 1200px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .leftNav{
   width: 25%;
   font-weight: 400;
-}
-
-.leftNav div{
-  margin: 20px 0px 0px 50px;
+  display: none;
 }
 
 .leftNav a{
@@ -40,9 +39,10 @@ body {
   border-radius: 3px;
 }
 
-.leftNav li{
+.list-group-item a{
   font-family: "Livvic";
   color: rgba(1, 1, 1, 0.8);
+  text-transform: none;
 }
 
 ul, ol, li, a {
@@ -63,21 +63,24 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 70%;
-  align-items: center;
+  width: 90%;
 }
 
-.productosLista .priceCard{
+.priceCard{
   font-size: 1.2em;
   font-weight: bold;
 }
 
 .productosListaInfo {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+}
+
+.card-footer {
+  width: 100%;
 }
 
 .ratingTotal {
@@ -86,14 +89,14 @@ header {
 }
 
 .productCard {
-  margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 30% !important;
-  border: 0.5px solid rgba(1,1,1,0.1);
-  border-radius: 4px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 20px;
+
 }
 
 .btn-patitas {
@@ -104,12 +107,16 @@ header {
 
 .productCard img {
   width: 70%;
-  height: 200px;
+  transition: 0.2s;
+}
+
+.productCard img:hover {
+  transform: scale(2);
 }
 
 .productCard a{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .productCard h5 a {
@@ -130,7 +137,7 @@ header {
 }
 
 .productCard p {
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -151,17 +158,6 @@ header {
   flex-direction: column;
   width: 90%;
   align-items: center;
-}
-
-.imagen {
-  width: 90%;
-  box-shadow: 10px 5px 10px -5px rgba(0, 0, 0, 0.2);
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.imagen img {
-  width: 100%;
 }
 
 .detalles {
@@ -297,12 +293,34 @@ footer li a:hover {
 }
 
 @media (min-width:600px) {
+
+  .leftNav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 25%;
+  }
+
+  .leftNav div{
+    width: 90%;
+    font-weight: 200;
+  }
+
   .lista {
     width: 30%;
   }
 
   .imagen {
     width: 100%;
+  }
+
+  .productosLista {
+    width: 70%;
+  }
+
+  .productCard {
+    width: 30%;
+    margin: 10px;
   }
 
   .detalles {
@@ -340,6 +358,10 @@ footer li a:hover {
     max-width: 1200px;
   }
 
+  .leftNav div{
+    margin: 20px 0px 0px 50px;
+  }
+
   .lista {
     width: 22%;
   }
@@ -349,11 +371,43 @@ footer li a:hover {
     justify-content: space-around;
   }
 
+  .productCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 1em;
+    background-color: white;
+    box-shadow: 1px 2px 3px -2px #1c3643;
+  }
+
+  .productCard img{
+     width: 70%;
+     height: 160px;
+  }
+
+  .productosLista{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    align-items: center;
+  }
+
+  .titleCard a{
+    font-size: 1em;
+  }
+
   .imagen {
     width: 40%;
   }
 
   .detalles {
     width: 50%;
+  }
+
+  .cardFooter{
+    background: -webkit-linear-gradient(0deg #1c3643 0, #273b47 40%, #1e5372);
   }
 }

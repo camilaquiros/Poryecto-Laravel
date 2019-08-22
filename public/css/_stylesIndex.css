@@ -46,7 +46,7 @@ nav {
   justify-content: space-around;
 }
 
-.menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
+.menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .tituloServicios {
   display: flex;
   flex-direction: column;
 }
@@ -283,6 +283,7 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
 }
 
 .tituloServicios {
@@ -310,7 +311,7 @@ nav {
 .serviciocard {
   background-size: cover;
   height: 200px;
-  width: 45%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,6 +326,8 @@ nav {
   background: -webkit-linear-gradient(left, #95ca3e 0%, rgb(149, 202, 62, 0.6) 40%, rgb(133, 198, 56, 0.6) 50%);
   color: white;
   font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
 
 }
 
@@ -342,7 +345,7 @@ nav {
 }
 
 #servicio4{
-  background-image: url("/img/gatoExamen.jpg");
+  background-image: linear-gradient(to left, rgba(63,81,181,0.4), rgba(255, 255, 255, 0)), url("/img/gatoExamen.jpg");
 }
 
 footer {
@@ -472,7 +475,16 @@ footer {
     padding: 1em 1em;
   }
 
-  .seccionServiciosImagenes{
+  .seccionServiciosImagenes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .ServiciosImagenes{
     justify-content: center;
     width: 70%;
   }
@@ -483,6 +495,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 45%;
   }
 }
 

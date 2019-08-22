@@ -64,6 +64,14 @@
             </div>
           </div>
         </section>
+        <section class= "ubicacion">
+          <h3>¡Vení a visitarnos! </h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.139598054828!2d-58.4922454!3d-34.603279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12bc7b7917141a3f!2s%22Patitas%22+Pet+Shop!5e0!3m2!1ses-419!2sar!4v1566414196584!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<br>
+<br>
+        </section>
+
+
     </div>
   </div>
   @endsection

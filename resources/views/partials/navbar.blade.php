@@ -14,7 +14,7 @@
       <div class="listaContinuacion">
         <li><a href="/faqs">Ayuda</a></li>
         <li><a href="/register">Registrarse</a></li>
-        <li><a class="login" href="/login">Iniciar Sesión <i class="fas fa-user"></i></a></li>
+        <li><a class="login" href="/login">Iniciar Sesión <br><i class="fas fa-user"></i></a></li>
       </div>
       @else
       <div class="listaContinuacion">
@@ -28,7 +28,7 @@
         <li>
           <div class="dropdown downProfile">
             <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:220px">
-                <img src="{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
+                <img src="/storage/Avatars/{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
                 Hola, {{ Auth::user()->username }}!
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -45,23 +45,23 @@
     </ul>
     <ul class="menu-header">
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
-        <div class="dropdown-menu dropright" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item " href="/dogs">Perros</a>
-              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu dropright">
+          <a id = "perros" class="dropdown-item" href="/dogs" data-toggle="dropdown">Perros</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/dogs/food">Alimentos</a>
+              <a class="dropdown-item" href="/dogs/accesories">Accesorios</a>
+              <a class="dropdown-item" href="/dogs/hygiene">Estetica e higiene</a>
+              <a class="dropdown-item" href="/dogs/health">Salud</a>
+              <a class="dropdown-item" href="/dogs/snack">Snacks</a>
+              </div>
+          <a class="dropdown-item" href="/cats" data-toggle="dropdown">Gatos</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">Alimentos</a>
               <a class="dropdown-item" href="#">Accesorios</a>
               <a class="dropdown-item" href="#">Estetica e higiene</a>
               <a class="dropdown-item" href="#">Salud</a>
               <a class="dropdown-item" href="#">Snacks</a>
-              </div> -->
-          <a class="dropdown-item" href="/cats">Gatos</a>
-              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Alimentos</a>
-              <a class="dropdown-item" href="#">Accesorios</a>
-              <a class="dropdown-item" href="#">Estetica e higiene</a>
-              <a class="dropdown-item" href="#">Salud</a>
-              <a class="dropdown-item" href="#">Snacks</a>
-              </div> -->
+              </div>
         </div>
       </li>
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
