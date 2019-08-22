@@ -13,12 +13,14 @@ window.addEventListener('load', function(){
 
 	losCampos.forEach(function (unCampo) {
 	var divError = null;
-	if (unCampo.type !== 'file') {
+	if (unCampo.name !== 'boton-avatar') {
 			divError = unCampo.nextElementSibling;
 			console.log()
 		} else {
-			divError = unCampo.parentElement.nextElementSibling;
-		}
+		// 	//divError = unCampo.parentElement.nextElementSibling;
+		// 	var avatar = document.querySelector('#avatar')
+		// 	console.log(avatar)
+		// }
 
 		unCampo.addEventListener('blur', function () {
 			var valorDelCampo = unCampo.value.trim();
@@ -71,7 +73,7 @@ window.addEventListener('load', function(){
 							divError.innerText = `Las contraseñas no coinciden`;
 							console.log(this.value);
 					}
-				
+
 				}
 }
 
