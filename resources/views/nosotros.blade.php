@@ -22,9 +22,9 @@
           </div>
         <div class="contenedor-img">
           <br>
-          <img src="img/medic-vet4.jpg" alt="imagen veterinario">
-          <img src="img/medic-vet7.jpg" alt="imagen veterinaria">
-          <img src="img/medic-vet8.jpg" alt="imagen clinica">
+          <img src="/storage/Servicios/medic-vet4.jpg" alt="imagen veterinario">
+          <img src="/storage/Servicios/medic-vet7.jpg" alt="imagen veterinaria">
+          <img src="/storage/Servicios/medic-vet8.jpg" alt="imagen clinica">
           <br>
         </div>
 
