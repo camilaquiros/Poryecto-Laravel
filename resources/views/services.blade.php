@@ -9,26 +9,24 @@
 
 @section('mainContent')
 
-  <div class="containerIndex">
+  <div class="containerServicios">
 
         <!-- SERVICIOS -->
-        <section class="nuestrosServicios">
           <div class="tituloServicios">
             <h3>Todos Nuestros Servicios</h3>
           </div>
-            <div class="seccionServiciosImagenes">
+            <div class="servicios">
               @foreach ($services as $service)
-              <div class="imagen">
+              <div class="servicioImagen">
                 <!-- TRAIGO IMAGEN -->
-                <img src="/storage/Servicios/{{ $services->image }}" alt="dasdad">
+                <img src="/storage/Servicios/{{ $service->image }}" alt="dasdad">
               </div>
-              <div class="serviciocard" id="servicio{{$service->id}}">
+              <div class="servicioTexto">
                   <h3>{{$service->name}}</h3>
                   <p>{{$service->description}}</p>
               </div>
               @endforeach
             </div>
-          </section>
       </div>
 
   @endsection
