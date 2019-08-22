@@ -16,7 +16,7 @@
       <div class="celular">
       <div class="hamburger">
         <a id="hamburger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu dropright">
         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
             <div class="dropdown-menu dropright">
               <a id = "perros" class="dropdown-item" href="/dogs" data-toggle="dropdown">Perros</a>
