@@ -129,6 +129,8 @@ Route::get('/product/search', 'ProductsController@search')->name('searchBy');
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
+//Buscar lista productos con oferta
+Route::get('/products/offer', 'ProductsController@searchOffer')->name('searchOffer');
 
 
 //filter perros

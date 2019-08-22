@@ -50,6 +50,14 @@ class ProductsController extends Controller
   return view('productDetail', compact('productToFind', 'subcategories'));
   }
 
+  public function searchOffer() {
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::where("offer", "=", "1")
+    ->orderBy('price', 'ASC')
+    ->get();
+    return view('products', compact('products', 'subcategories'));
+  }
+
   public function dogs() {
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("category_id", "=", "1")
