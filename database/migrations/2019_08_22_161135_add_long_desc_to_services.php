@@ -14,7 +14,7 @@ class AddLongDescToServices extends Migration
     public function up()
     {
         Schema::table('services', function (Blueprint $table) {
-            $table->string('longDescription')->after('description');
+            $table->text('longDescription')->after('description');
         });
     }
 
