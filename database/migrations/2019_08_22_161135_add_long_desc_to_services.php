@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddNullableFromUsers extends Migration
+class AddLongDescToServices extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddNullableFromUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('state')->after('country')->nullable()->change();
+        Schema::table('services', function (Blueprint $table) {
+            $table->string('longDescription')->after('description');
         });
     }
 
@@ -25,8 +25,8 @@ class AddNullableFromUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('state')->after('country')->change();
+        Schema::table('services', function (Blueprint $table) {
+            $table->dropColumn('longDescription');
         });
     }
 }

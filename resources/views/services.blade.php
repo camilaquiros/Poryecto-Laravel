@@ -18,6 +18,10 @@
           </div>
             <div class="seccionServiciosImagenes">
               @foreach ($services as $service)
+              <div class="imagen">
+                <!-- TRAIGO IMAGEN -->
+                <img src="/storage/Servicios/{{ $services->image }}" alt="dasdad">
+              </div>
               <div class="serviciocard" id="servicio{{$service->id}}">
                   <h3>{{$service->name}}</h3>
                   <p>{{$service->description}}</p>

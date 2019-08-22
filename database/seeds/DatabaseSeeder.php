@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
 
         $this->truncateTables([
             //'products',
-            'services',
+            //'services',
             'categories',
             'subcategories',
             'products_users',
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         //$products = factory(Product::class)->times(4)->create();
         $categories = factory(Category::class)->times(2)->create();
         $subcategories = factory(SubCategory::class)->times(5)->create();
-        factory(Service::class)->times(4)->create();
+        //factory(Service::class)->times(4)->create();
         //factory(User::class)->times(10)->create();
         $avatars = factory(Avatar::class)->times(13)->create();
 

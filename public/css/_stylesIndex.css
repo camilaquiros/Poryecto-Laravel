@@ -332,20 +332,20 @@ nav {
 }
 
 #servicio1{
-  background-image: linear-gradient(to right, rgba(229,115,115 ,0.5), rgba(255, 255, 255, 0)), url("/img/clinicaVet.jpg");
+  background-image: linear-gradient(to right, rgba(229,115,115 ,0.5), rgba(255, 255, 255, 0)), url("/storage/Servicios/clinicaVet.jpg");
   filter:brightness(0.9);
 }
 
 #servicio2{
-  background-image: linear-gradient(to top, rgba(192,202,51 ,0.6), rgba(255, 255, 255, 0)), url("/img/paseo-perro.jpg");
+  background-image: linear-gradient(to top, rgba(192,202,51 ,0.6), rgba(255, 255, 255, 0)), url("/storage/Servicios/gatoExamen.jpg");
 }
 
 #servicio3 {
-  background-image: linear-gradient(to left, rgba(38,198,218 ,0.4), rgba(255, 255, 255, 0)), url("/img/Peluqueria.jpg");
+  background-image: linear-gradient(to left, rgba(38,198,218 ,0.4), rgba(255, 255, 255, 0)), url("/storage/Servicios/paseo-perro.jpg");
 }
 
 #servicio4{
-  background-image: linear-gradient(to left, rgba(63,81,181,0.4), rgba(255, 255, 255, 0)), url("/img/gatoExamen.jpg");
+  background-image: linear-gradient(to left, rgba(63,81,181,0.4), rgba(255, 255, 255, 0)), url("/storage/Servicios/Peluqueria.jpg");
 }
 
 footer {
