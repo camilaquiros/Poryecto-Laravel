@@ -68,7 +68,7 @@
                       <p class="card-text priceCard">$ {{$product->price}}</p>
                   </div>
                   <div class="card-footer text-center">
-                      <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
+                      <input type="hidden" id="product_id" value="" class="btn btn-patitas" value="{{$product->id}}"><a href="#" id="agregar-favoritos">Agregar a favoritos</a>
                   </div>
                 </div>
             </div>
