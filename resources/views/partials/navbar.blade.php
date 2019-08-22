@@ -66,10 +66,10 @@
       </li>
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="/services">Clinica veterinaria</a>
-          <a class="dropdown-item" href="/services">Peluqueria canina</a>
-          <a class="dropdown-item" href="/services">Estudios clínicos</a>
-          <a class="dropdown-item" href="/services">Paseador personal</a>
+          <a class="dropdown-item" href="/services/#Clinica veterinaria">Clinica veterinaria</a>
+          <a class="dropdown-item" href="/services/#Estudios especiales">Estudios especiales</a>
+          <a class="dropdown-item" href="/services/#Entrenador personal para tu mascota">Entrenador personal para tu mascota</a>
+          <a class="dropdown-item" href="/services/#Peluqueria Canina">Peluqueria canina</a>
           <a class="dropdown-item" href="/services">Ver todos</a>
         </div>
       </li>

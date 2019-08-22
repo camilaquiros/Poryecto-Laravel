@@ -46,8 +46,9 @@
             <div class="seccionServiciosImagenes">
               @foreach ($services as $service)
               <div class="serviciocard" id="servicio{{$service->id}}">
-                  <h3>{{$service->name}}</h3>
-                  <p>{{$service->description}}</p>
+                <a href="/services/#{{$service->name}}">
+                <h3>{{$service->name}}</h3>
+                </a>
               </div>
               @endforeach
             </div>
