@@ -403,6 +403,9 @@ footer li a:hover {
     width: 40%;
   }
 
+  .imagen img{
+  width: 100%;
+}
   .detalles {
     width: 50%;
   }

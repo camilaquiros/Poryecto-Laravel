@@ -16,39 +16,17 @@
           <div class="tituloServicios">
             <h3>Todos Nuestros Servicios</h3>
           </div>
-          <div class="seccionServiciosImagenes">
-            <div class="serviciocard">
-              <div class="content">
-                <h3>Clinica Veterinaria</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-                </div>
-            </div>
-            <div class="servicioCard" id="servicio2">
-              <div class="content">
-                <h3>Peluqueria Canina</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <div class="seccionServiciosImagenes">
+              @foreach ($services as $service)
+              <div class="serviciocard" id="servicio{{$service->id}}">
+                  <h3>{{$service->name}}</h3>
+                  <p>{{$service->description}}</p>
               </div>
+              @endforeach
             </div>
-            <div class="servicioCard" id="servicio3">
-              <div class="content">
-                <h3>Estudios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-            <div class="servicioCard" id="servicio4">
-              <div class="content">
-                <h3>Entrenamiento personal</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-              </div>
-            <div class="servicioCard" id="servicio5">
-              <div class="content">
-                  <h3>Entrenamiento personal</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </section>
-    </div>
-  </div>
+          </section>
+      </div>
+
   @endsection
 {{-- Cuando sabemos que lo que vamos a mandar al yield() es contenido real html, estamos obligados a pasarlo de esta manera --}}
 </body>

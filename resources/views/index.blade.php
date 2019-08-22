@@ -103,18 +103,11 @@
           </div>
 
           <div class="seccionServiciosImagenes">
-            <div class="serviciocard" id="servicio1">
-                <h3>Clinica Veterinaria</h3>
+            @foreach ($servicesIndex as $service)
+            <div class="serviciocard" id="servicio{{$service->id}}">
+                <h3>{{$service->name}}</h3>
             </div>
-            <div class="servicioCard" id="servicio2">
-                <h3>Paseador personal para perros</h3>
-            </div>
-            <div class="servicioCard" id="servicio3">
-                <h3>Peluqueria Canina</h3>
-            </div>
-            <div class="servicioCard" id="servicio4">
-                <h3>Estudios medicos</h3>
-            </div>
+            @endforeach
           </div>
         </section>
     </div>

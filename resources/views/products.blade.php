@@ -67,19 +67,18 @@
                       <h5 class="card-title titleCard"><a class="titulo" href="/{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
                       <p class="card-text priceCard">$ {{$product->price}}</p>
                   </div>
-<<<<<<< HEAD
+
                   <div class="card-footer text-center">
                       <input type="hidden" id="product_id" value="" class="btn btn-patitas" value="{{$product->id}}"><a href="#" id="agregar-favoritos">Agregar a favoritos</a>
-=======
+                    </div>
                   <div class="card-footer text-center cardFooter">
                       <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
->>>>>>> 1e74db9c4b2d7f11e5289796c71cccd174787d72
+                    </div>
                   </div>
                 </div>
-            </div>
             @endforeach
+            </div>
     </section>
-</div>
 @endsection
 
 <script type="text/javascript" src="/js/jquery.min.js"></script>

@@ -17,9 +17,9 @@ Route::get('/profile', function () {
     return view('profile');
 })->middleware('user');
 
-Route::get('/services', function () {
-    return view('services');
-});
+Route::get('/services', 'servicesController@services')->name('services');
+
+Route::get('/nosotros', 'servicesController@servicesUs')->name('servicesUs');
 
 Route::get('/peluqueria', function () {
     return view('peluqueria');

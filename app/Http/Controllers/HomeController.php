@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function productsIndex(){
       $productsIndex = Product::orderBy('id')->take(4)
       ->get();
-      $servicesIndex = Service::orderBy('name')
+      $servicesIndex = Service::orderBy('name')->take(4)
       ->get();
       return view ('index', compact('productsIndex', 'servicesIndex' ));
     }

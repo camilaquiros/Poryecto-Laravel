@@ -43,36 +43,26 @@
             <h3>Nuestros Servicios</h3>
           </div>
 
-          <div class="seccionServiciosImagenes">
-            <div class="servicioCard">
-              <div class="content">
-                <h3>Clinica Veterinaria</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <div class="seccionServiciosImagenes">
+              @foreach ($services as $service)
+              <div class="serviciocard" id="servicio{{$service->id}}">
+                  <h3>{{$service->name}}</h3>
+                  <p>{{$service->description}}</p>
               </div>
+              @endforeach
             </div>
-            <div class="servicioCard" id="servicio2">
-              <div class="content">
-                <h3>Peluqueria Canina</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-              </div>
-            </div>
-            <div class="servicioCard" id="servicio3">
-              <div class="content">
-                <h3>Estudios</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+      </div>
+
         <section class= "ubicacion">
+          <br>
+          <br>
           <h3>¡Vení a visitarnos! </h3>
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.139598054828!2d-58.4922454!3d-34.603279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12bc7b7917141a3f!2s%22Patitas%22+Pet+Shop!5e0!3m2!1ses-419!2sar!4v1566414196584!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 <br>
 <br>
         </section>
 
-
-    </div>
   </div>
   @endsection
 {{-- Cuando sabemos que lo que vamos a mandar al yield() es contenido real html, estamos obligados a pasarlo de esta manera --}}
