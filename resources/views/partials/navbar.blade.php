@@ -38,10 +38,10 @@
             </div>
           <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/services">Clinica veterinaria</a>
-              <a class="dropdown-item" href="/services">Peluqueria canina</a>
-              <a class="dropdown-item" href="/services">Estudios clínicos</a>
-              <a class="dropdown-item" href="/services">Paseador personal</a>
+              <a class="dropdown-item" href="/services/#Clinica veterinaria">Clinica veterinaria</a>
+              <a class="dropdown-item" href="/services/#Estudios especiales">Estudios especiales</a>
+              <a class="dropdown-item" href="/services/#Entrenador personal para tu mascota">Entrenador personal para tu mascota</a>
+              <a class="dropdown-item" href="/services/#Peluqueria Canina">Peluqueria canina</a>
               <a class="dropdown-item" href="/services">Ver todos</a>
             </div>
           <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
@@ -53,7 +53,7 @@
               <a class="dropdown-item" href="/snacks">Snacks</a>
               <a class="dropdown-item" href="/products">Ver todos los productos</a>
             </div>
-          <a href="/products/searchOffer">Ofertas</a>
+          <a href="/products/offer">Ofertas</a>
           <a href="/nosotros">Nosotros</a>
           <a href="/faqs">FAQ</a>
       </div>
@@ -134,7 +134,7 @@
           <a class="dropdown-item" href="/products">Ver todos los productos</a>
         </div>
       </li>
-      <li><a href="/products/searchOffer">Ofertas</a></li>
+      <li><a href="/products/offer">Ofertas</a></li>
       <li><a href="/nosotros">Nosotros</a></li>
       <li><a href="/faqs">FAQ</a></li>
     </ul>
