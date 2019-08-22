@@ -17,6 +17,7 @@
           </div>
             <div class="servicios">
               @foreach ($services as $service)
+              <div class="servicio">
               <div class="servicioImagen">
                 <!-- TRAIGO IMAGEN -->
                 <img src="/storage/Servicios/{{ $service->image }}" alt="dasdad">
@@ -24,6 +25,7 @@
               <div class="servicioTexto">
                   <h3>{{$service->name}}</h3>
                   <p>{{$service->longDescription}}</p>
+              </div>
               </div>
               @endforeach
             </div>
