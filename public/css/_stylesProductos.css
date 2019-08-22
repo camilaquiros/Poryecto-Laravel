@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  max-width: 100vw;
+  min-height: 100vh
+}
+
+.containerProductos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.leftNav{
+  width: 25%;
+  font-weight: 400;
+  display: none;
+}
+
+.leftNav a{
+  color: rgba(0, 150, 136, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.leftNav a:hover{
+  background-color: rgba(82,199,107,0.5);
+  color: rgba(1,1,1,0.8);
+  border-radius: 3px;
+}
+
+.list-group-item a{
+  font-family: "Livvic";
+  color: rgba(1, 1, 1, 0.8);
+  text-transform: none;
+}
+
+ul, ol, li, a {
+  text-decoration: none !important;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: black;
+}
+
+header {
+  width: 100%;
+  align-self: flex-start;
+}
+
+.productosLista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.priceCard{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.productosListaInfo {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-footer {
+  width: 100%;
+}
+
+.ratingTotal {
+  display: flex;
+  justify-content: center;
+}
+
+.productCard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 20px;
+
+}
+
+.btn-patitas {
+  background: #52c76b;
+  border: 1px solid #3aac4f;
+  color: white;
+}
+
+.productCard img {
+  width: 70%;
+  transition: 0.2s;
+}
+
+.productCard img:hover {
+  transform: scale(2);
+}
+
+.productCard a{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.productCard h5 a {
+  font-family: 'Livvic';
+  font-weight: 400;
+}
+
+.titulo {
+  font-size: 15px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.titulo:hover {
+  color: rgb(149, 202, 62);
+  text-decoration: none;
+}
+
+.productCard p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.ratingTotal {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: center;
+}
+
+.ratingTotal i {
+  margin-right: 5px;
+}
+
+.productosDetalle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+
+.detalles {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.ratingTotalDetalle, .ratingTotalDetalle i {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 15px;
+  justify-content: flex-start;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: rgba(0, 150, 136, 1);
+}
+
+.error {
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.error h1, .error h2 {
+  margin: 15px;
+  padding: 0;
+}
+
+.error h2 {
+  margin-bottom: 50px;
+}
+
+.error img {
+  width: 40%;
+}
+
+.error a {
+  background-color: rgb(0, 150, 136);
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 35px;
+  display: flex;
+}
+
+footer {
+  padding-bottom: 20px;
+  background-image: url('/img/footer.jpg');
+  background-size: cover;
+  repeat: no-repeat;
+  align-self: flex-end;
+  width: 100%;
+}
+
+footer li {
+  text-decoration: none;
+}
+
+footer li a {
+  color: black;
+}
+
+footer li a:hover {
+  color: rgb(149, 202, 62);
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+}
+
+.menu ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu li {
+  display: inline-flex;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.menu a {
+  text-align: center;
+}
+
+.contactoRedes {
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.contactoRedes h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.contactoRedes ul {
+  display: flex;
+  align-items: center;
+}
+
+.contactoRedes i {
+  padding: 15px;
+  background-color: rgb(149, 202, 62);
+  color: white;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 15px;
+}
+
+@media (min-width:600px) {
+
+  .leftNav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 25%;
+  }
+
+  .leftNav div{
+    width: 90%;
+    font-weight: 200;
+  }
+
+  .lista {
+    width: 30%;
+  }
+
+  .imagen {
+    width: 100%;
+  }
+
+  .productosLista {
+    width: 70%;
+  }
+
+  .productCard {
+    width: 30%;
+    margin: 10px;
+  }
+
+  .detalles {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%%;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+  }
+
+  .contactoRedes {
+    display: flex;
+    margin: 5px;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .containerProductos {
+    max-width: 1200px;
+  }
+
+  .leftNav div{
+    margin: 20px 0px 0px 50px;
+  }
+
+  .lista {
+    width: 22%;
+  }
+
+  .productosDetalle {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .productCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 1em;
+    background-color: white;
+    box-shadow: 1px 2px 3px -2px #1c3643;
+  }
+
+  .productCard img{
+     width: 70%;
+     height: 160px;
+  }
+
+  .productosLista{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+    align-items: center;
+  }
+
+  .titleCard a{
+    font-size: 1em;
+  }
+
+  .imagen {
+    width: 40%;
+  }
+
+  .detalles {
+    width: 50%;
+  }
+
+  .cardFooter{
+    background: -webkit-linear-gradient(0deg #1c3643 0, #273b47 40%, #1e5372);
+  }
+}

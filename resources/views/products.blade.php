@@ -58,17 +58,22 @@
     <section class="productosLista">
             @foreach ($products as $product)
             <div class="productCard card-deck lista">
-                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/Productos/{{ $product->image }}"></a>
+                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $product->image }}"></a>
                 <div class="productosListaInfo">
                   <div class="ratingTotal">
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor
                   </div>
                   <div class="card-body text-center">
-                      <h5 class="card-title"><a class="titulo" href="/{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
+                      <h5 class="card-title titleCard"><a class="titulo" href="/{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
                       <p class="card-text priceCard">$ {{$product->price}}</p>
                   </div>
+<<<<<<< HEAD
                   <div class="card-footer text-center">
                       <input type="hidden" id="product_id" value="" class="btn btn-patitas" value="{{$product->id}}"><a href="#" id="agregar-favoritos">Agregar a favoritos</a>
+=======
+                  <div class="card-footer text-center cardFooter">
+                      <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
+>>>>>>> 1e74db9c4b2d7f11e5289796c71cccd174787d72
                   </div>
                 </div>
             </div>

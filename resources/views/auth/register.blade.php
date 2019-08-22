@@ -18,7 +18,7 @@
 
                 <div class="card-body registro">
 
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" class="formulario">
                         @csrf
                     <div class="row">
                       <!-- ESPACIO PARA NOMBRE COMPLETO -->
@@ -26,6 +26,9 @@
                         <div class="form-group">
                           <label><b>Nombre completo:</b></label>
                           <input type="text" name="fullName" value= "{{old("fullName")}}" class="form-control  @error('fullName') is-invalid @enderror">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                         </div>
                           @error('fullName')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -38,6 +41,9 @@
                         <div class="form-group">
                           <label><b>Usuario:</b></label>
                           <input type="text" name="username" value= "{{old("username")}}"class="form-control  @error('userName') is-invalid @enderror">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                         </div>
                                @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -50,6 +56,10 @@
                         <div class="form-group">
                           <label><b>País de origen:</b></label>
                           <select id="country-list" name="country" value= "{{old("country")}}" class="form-control  @error('country') is-invalid @enderror">
+                            <div class="invalid-feedback">
+                             <!-- Mensaje de error -->
+                            </div>
+
                             <option value="">Seleccione un país</option>
                             </select>
                             @error('country')
@@ -66,6 +76,10 @@
                         <div class="form-group">
                           <label><b>Provincia:</b></label>
                           <select id="state-list" name="state" value= "{{old("state")}}" class="form-control  @error('state') is-invalid @enderror">
+                            <div class="invalid-feedback">
+                             <!-- Mensaje de error -->
+                            </div>
+
                             <option value="">Seleccione una provincia</option>
 
                           </select>
@@ -82,6 +96,10 @@
                         <div class="form-group">
                           <label><b>Correo electrónico:</b></label>
                           <input type="text" name="email" class="form-control  @error('email') is-invalid @enderror" value="{{ old('email') }}">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                          </div>
+
                           @error('email')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -95,6 +113,10 @@
                         <div class="form-group">
                           <label><b>Contraseña:</b></label>
                           <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror ">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                          </div>
+
                           @error('password')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -107,6 +129,10 @@
                         <div class="form-group">
                           <label><b>Repetir contraseña:</b></label>
                           <input type="password" name="password_confirmation" class="form-control  @error('password_confirmation') is-invalid @enderror">
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                          </div>
+
                           @error('password_confirmation')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -122,6 +148,10 @@
                           <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
                           Seleccioná tu avatar!
                           </button>
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                          </div>
+
                           @error('avatar')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -169,5 +199,7 @@
 </div>
 </div>
 @endsection
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/register.js" ></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/register.js" ></script>
+<script src="/js/validacionRegister.js"></script>
