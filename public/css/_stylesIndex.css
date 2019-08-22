@@ -42,7 +42,7 @@ nav {
   /*background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);*/
   display: inline-block;
   background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
-  align-items: center;
+  */align-items: center;
   justify-content: space-around;
 }
 

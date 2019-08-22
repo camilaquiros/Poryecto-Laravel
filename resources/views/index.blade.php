@@ -82,7 +82,7 @@
         <!-- PRODUCTOS NOVEDADES -->
         <div class="cardsProduct">
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-left flechas"></i></div>
-          @foreach ($productsEnIndex as $product)
+          @foreach ($productsIndex as $product)
           <article class="oneproduct-card">
             <img src="/storage/productos/{{$product->image}}" alt="Card image cap">
             <div class="oneproduct-card-body">
@@ -93,6 +93,7 @@
           </article>
           @endforeach
         </div>
+      </section>
 
         <!-- SERVICIOS -->
         <section class="nuestrosServicios">
@@ -102,14 +103,18 @@
           </div>
 
           <div class="seccionServiciosImagenes">
-            @foreach ($servicesEnIndex as $service)
-            <div class="servicioCard" id="servicio">
-              <div class="content">
-                <h3>{{$service->name}}</h3>
-                <p>{{$service->description}}</p>
-              </div>
+            <div class="serviciocard" id="servicio1">
+                <h3>Clinica Veterinaria</h3>
             </div>
-            @endforeach
+            <div class="servicioCard" id="servicio2">
+                <h3>Paseador personal para perros</h3>
+            </div>
+            <div class="servicioCard" id="servicio3">
+                <h3>Peluqueria Canina</h3>
+            </div>
+            <div class="servicioCard" id="servicio4">
+                <h3>Estudios medicos</h3>
+            </div>
           </div>
         </section>
     </div>

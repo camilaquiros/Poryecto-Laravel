@@ -28,7 +28,7 @@
         <li>
           <div class="dropdown downProfile">
             <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:220px">
-                <img src="/img/Avatars/{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
+                <img src="{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
                 Hola, {{ Auth::user()->username }}!
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

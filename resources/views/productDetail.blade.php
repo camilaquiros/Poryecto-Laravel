@@ -13,7 +13,7 @@
     <section class="productosDetalle">
       <div class="imagen">
         <!-- TRAIGO IMAGEN -->
-        <img src="/img/Productos/{{ $productToFind->image }}" alt="dasdad">
+        <img src="/storage/productos/{{ $productToFind->image }}" alt="dasdad">
       </div>
       <!-- TRAIGO DATOS -->
       <div class="detalles">
