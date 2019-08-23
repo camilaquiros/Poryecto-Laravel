@@ -80,6 +80,8 @@
         </div>
 
         <!-- PRODUCTOS NOVEDADES -->
+
+
         <div class="cardsProduct">
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-left flechas"></i></div>
           @foreach ($productsIndex as $product)
