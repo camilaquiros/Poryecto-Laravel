@@ -96,7 +96,24 @@
           @endforeach
         </div>
       </section>
+      <!-- Inicio de carrousel falta logica -->
+      <!-- <div class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
 
+             <div class="carousel-item active">
+                 <div class="row">
+                     <div class="col"><img src=".." alt="1 slide"></div>
+                     <div class="col"><img src=".." alt="2 slide"></div>
+                     <div class="col"><img src=".." alt="3 slide"></div>
+                 </div>
+                 <div class="row">
+                     <div class="col"><img src=".." alt="4 slide"></div>
+                     <div class="col"><img src=".." alt="5 slide"></div>
+                     <div class="col"><img src=".." alt="6 slide"></div>
+                 </div>
+             </div>
+         </div>
+      </div>  -->
         <!-- SERVICIOS -->
         <section class="nuestrosServicios">
           <div class="tituloServicios">

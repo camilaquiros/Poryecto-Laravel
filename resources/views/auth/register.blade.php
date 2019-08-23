@@ -174,7 +174,7 @@
                                 <div class="modal-body">
                                 @foreach(DB::table('avatars')->get() as $avatar)
                                 <label>
-                                  <input type="radio" name="avatar" id="avatar" value="{{ $avatar->url }}">
+                                  <input type="radio" name="avatar" value="{{ $avatar->url }}">
                                   <img src="/storage/Avatars/{{ $avatar->url}}" alt="">
                                 </label>
                                 @endforeach
