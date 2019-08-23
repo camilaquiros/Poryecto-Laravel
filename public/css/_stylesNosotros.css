@@ -1,0 +1,24 @@
+.containerNosotros {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  width: 100vw;
+}
+
+.tituloNosotros {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.nosotros-presentacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nosotros {
+  flex-wrap: wrap;
+  width: 95%;
+  justify-content: center;
+}

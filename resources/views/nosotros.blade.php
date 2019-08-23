@@ -9,18 +9,19 @@
 
 @section('mainContent')
 
-  <div class="containerIndex">
+  <div class="containerNosotros">
       <!-- CARTA PRESENTACION DE MARCA-->
       <section class="nosotros-presentacion">
-        <div class="contenedor-nosotros">
-          <br>
-          <br>
+        <div class="nosotros">
+          <div class="tituloNosotros">
+            <h1>Sobre Nosotros</h1>
+          </div>
           <p><strong>Patitas de Ciudad </strong> dedica todo su esfuerzo en la salud de nuestros pacientes en el orden médico y humano.
              Contando con el apoyo de la última tecnología del medio veterinario. No solo encontrán una clínica para su integrante de la familia,
              sino profesionales especialistas en dermatología, radiología,
              oftalmología, neurología, odontología, traumatología y cardiología.</p>
           </div>
-        <div class="contenedor-img">
+        <div class="nosotros-img">
           <br>
           <img src="/storage/Servicios/medic-vet4.jpg" alt="imagen veterinario">
           <img src="/storage/Servicios/medic-vet7.jpg" alt="imagen veterinaria">
@@ -28,7 +29,7 @@
           <br>
         </div>
 
-        <div class="contenedor-nosotrosExtra">
+        <div class="nosotrosExtra">
           <br>
           Puede consultar por el accesoramiento personalizado en caso de viaje o traslado,
           cuidado y trato del animal durante el mismo.
@@ -53,7 +54,7 @@
               @endforeach
             </div>
           </section>
-      </div>
+
 
         <section class= "ubicacion">
           <br>
@@ -66,7 +67,3 @@
 
   </div>
   @endsection
-{{-- Cuando sabemos que lo que vamos a mandar al yield() es contenido real html, estamos obligados a pasarlo de esta manera --}}
-</body>
-
-</html>

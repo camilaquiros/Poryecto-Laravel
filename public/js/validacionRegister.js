@@ -1,9 +1,15 @@
 window.addEventListener('load', function(){
-	console.log('hola');
+	//console.log('hola');
 	var elFormulario = document.querySelector('.formulario');
-	console.log(elFormulario);
-	var losCampos = Array.from(elFormulario.elements);
-	console.log(losCampos);
+	//console.log(elFormulario);
+	var losCampos = Array.from(elFormulario.elements).filter(function (unCampo) {
+		return unCampo.name != "avatar";
+	});
+	// console.log(losCampos);
+
+	losCampos.pop();
+	losCampos.pop();
+	losCampos.pop();
 	losCampos.pop();
 	console.log(losCampos);
 
@@ -13,15 +19,14 @@ window.addEventListener('load', function(){
 
 	losCampos.forEach(function (unCampo) {
 	var divError = null;
-	if (unCampo.type !== 'file') {
+	if (unCampo.name !== 'null') {
 			divError = unCampo.nextElementSibling;
-			console.log()
-		} else {
-			divError = unCampo.parentElement.nextElementSibling;
 		}
 
 		unCampo.addEventListener('blur', function () {
 			var valorDelCampo = unCampo.value.trim();
+
+			console.log(this);
 
 			if (valorDelCampo === '') {
 				this.classList.add('invalid-feedback');
@@ -69,16 +74,22 @@ window.addEventListener('load', function(){
 							this.classList.add('invalid-feedback');
 							divError.style.display = 'block';
 							divError.innerText = `Las contraseñas no coinciden`;
-							console.log(this.value);
+							//console.log(this.value);
 					}
-				
+
+				}
+				if(this.name === 'boton-avatar') {
+
+					// console.log('hola')
+					// var avatar = document.querySelector('input[name="avatar"]');
+					// console.log(avatar.value);
 				}
 }
 
-console.log(contrasena);
+//console.log(contrasena);
 
 
-			console.log(errores);
+	//		console.log(errores);
 		});
 
 	});
@@ -95,7 +106,7 @@ console.log(contrasena);
 
 		if (Object.keys(errores).length > 0) {
 			alert('Campos vacíos');
-			console.log(errores);
+			//console.log(errores);
 			event.preventDefault();
 		}
 	})

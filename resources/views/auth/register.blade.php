@@ -145,7 +145,7 @@
                         <label><b>Imagen de perfil:</b></label>
                         <!-- Button trigger modal -->
                         <div class="avatarbutton">
-                          <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
+                          <button name ="boton-avatar" type="button" id="boton-avatar"class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModalCenter">
                           Seleccioná tu avatar!
                           </button>
                           <div class="invalid-feedback">

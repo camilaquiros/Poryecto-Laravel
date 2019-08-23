@@ -122,7 +122,8 @@ nav {
   align-items: center;
   padding: 20px 0;
   margin-top: 10px;
-  background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
+  /*background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);*/
+  background-color: white;
 }
 
 .menu-header li a {
@@ -368,11 +369,16 @@ footer {
 }
 
 @media (min-width: 600px) {
-  .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes{
+  .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .menu-header{
+    justify-content: flex-start;
+    flex-direction: row;
   }
 
   .menutop-header li {
