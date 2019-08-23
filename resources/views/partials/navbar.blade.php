@@ -16,7 +16,7 @@
       <div class="celular">
       <div class="hamburger">
         <a id="hamburger" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu dropright">
         <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
             <div class="dropdown-menu dropright">
               <a id = "perros" class="dropdown-item" href="/dogs" data-toggle="dropdown">Perros</a>
@@ -99,38 +99,31 @@
         <div class="dropdown-menu dropright">
           <a id = "perros" class="dropdown-item" href="/dogs" data-toggle="dropdown">Perros</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/dogs/food">Alimentos</a>
-              <a class="dropdown-item" href="/dogs/accesories">Accesorios</a>
-              <a class="dropdown-item" href="/dogs/hygiene">Estetica e higiene</a>
-              <a class="dropdown-item" href="/dogs/health">Salud</a>
-              <a class="dropdown-item" href="/dogs/snack">Snacks</a>
+              @foreach ($subcategories as $subcategory)
+              <a class="dropdown-item" href="/dogs/{{$subcategory->name}}">{{$subcategory->name}}</a>
+              @endforeach
               </div>
           <a class="dropdown-item" href="/cats" data-toggle="dropdown">Gatos</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Alimentos</a>
-              <a class="dropdown-item" href="#">Accesorios</a>
-              <a class="dropdown-item" href="#">Estetica e higiene</a>
-              <a class="dropdown-item" href="#">Salud</a>
-              <a class="dropdown-item" href="#">Snacks</a>
+              @foreach ($subcategories as $subcategory)
+              <a class="dropdown-item" href="#">{{$subcategory->name}}</a>
+              @endforeach
               </div>
         </div>
       </li>
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="/services/#Clinica veterinaria">Clinica veterinaria</a>
-          <a class="dropdown-item" href="/services/#Estudios especiales">Estudios especiales</a>
-          <a class="dropdown-item" href="/services/#Entrenador personal para tu mascota">Entrenador personal para tu mascota</a>
-          <a class="dropdown-item" href="/services/#Peluqueria Canina">Peluqueria canina</a>
+          @foreach ($services as $service)
+          <a class="dropdown-item" href="/services/#{{$service->name}}">{{$service->name}}</a>
+          @endforeach
           <a class="dropdown-item" href="/services">Ver todos</a>
         </div>
       </li>
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="/food">Alimentos</a>
-          <a class="dropdown-item" href="/accesories">Accesorios</a>
-          <a class="dropdown-item" href="/hygiene">Estetica e higiene</a>
-          <a class="dropdown-item" href="/health">Salud</a>
-          <a class="dropdown-item" href="/snacks">Snacks</a>
+          @foreach ($subcategories as $subcategory)
+          <a class="dropdown-item" href="/{{$subcategory->name}}">{{$subcategory->name}}</a>
+          @endforeach
           <a class="dropdown-item" href="/products">Ver todos los productos</a>
         </div>
       </li>
