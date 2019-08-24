@@ -9,21 +9,21 @@ use App\SubCategory;
 
 class SubCategoryController extends Controller
 {
-    public function productsFood(){
+    public function productsAlimentos(){
       $subcategories = SubCategory::orderBy('name', 'ASC')->get();
       $products = Product::where("subcategory_id", "=", "1")
         ->get();
       return view('products', compact('products', 'subcategories'));
     }
 
-    public function productsAccesories() {
+    public function productsAccesorios() {
       $subcategories = SubCategory::orderBy('name', 'ASC')->get();
       $products = Product::where("subcategory_id", "=", "2")
         ->get();
       return view('products', compact('products', 'subcategories'));
     }
 
-    public function productsCare() {
+    public function productsEstetica() {
       $subcategories = SubCategory::orderBy('name', 'ASC')->get();
       $products = Product::where("subcategory_id", "=", "4")
         ->get();
@@ -37,7 +37,7 @@ class SubCategoryController extends Controller
       return view('products', compact('products', 'subcategories'));
     }
 
-    public function productsHealth() {
+    public function productsSalud() {
       $subcategories = SubCategory::orderBy('name', 'ASC')->get();
       $products = Product::where("subcategory_id", "=", "5")
         ->get();

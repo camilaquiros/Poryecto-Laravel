@@ -121,34 +121,34 @@ Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
 //filter perros
 Route::get('/dogs', 'ProductsController@dogs')->name('dogs');
-Route::get('/dogs/accesories', 'ProductsController@dogsAccesories')->name('dogsAccesorios');
-Route::get('/dogs/food', 'ProductsController@dogsFood')->name('dogsAlimentos');
-Route::get('/dogs/Estetica e higiene', 'ProductsController@dogsHygiene')->name('dogsEstetica e higiene');
-Route::get('/dogs/Salud', 'ProductsController@dogsHealth')->name('dogsSalud');
+Route::get('/dogs/Accesorios', 'ProductsController@dogsAccesorios')->name('dogsAccesorios');
+Route::get('/dogs/Alimentos', 'ProductsController@dogsAlimentos')->name('dogsAlimentos');
+Route::get('/dogs/Estetica', 'ProductsController@dogsEstetica')->name('dogsEstetica');
+Route::get('/dogs/Salud', 'ProductsController@dogsSalud')->name('dogsSalud');
 Route::get('/dogs/Snacks', 'ProductsController@dogsSnacks')->name('dogsSnacks');
 
 //filter gatos
 Route::get('/cats', 'ProductsController@cats')->name('cats');
 Route::get('/cats/Accesorios', 'ProductsController@catsAccesorios')->name('catsAccesorios');
 Route::get('/cats/Alimentos', 'ProductsController@catsAlimentos')->name('catsAlimentos');
-Route::get('/cats/Estetica e higiene', 'ProductsController@catsEstetica e higiene')->name('catsEstetica e higiene');
+Route::get('/cats/Estetica', 'ProductsController@catsEstetica')->name('catsEstetica');
 Route::get('/cats/Salud', 'ProductsController@catsSalud')->name('catsSalud');
 Route::get('/cats/Snacks', 'ProductsController@catsSnacks')->name('catsSnacks');
 
 //filter alimentos
-Route::get('/Alimentos', 'SubCategoryController@productsFood')->name('alimentos');
+Route::get('/Alimentos', 'SubCategoryController@productsAlimentos')->name('Alimentos');
 
 //filter accesorios
-Route::get('/Accesorios', 'SubCategoryController@productsAccesories')->name('accesorios');
+Route::get('/Accesorios', 'SubCategoryController@productsAccesorios')->name('Accesorios');
 
-//filter higiene
-Route::get('/Etetica e higiene', 'SubCategoryController@productsCare')->name('esteticaHigiene');
+//filter estetica
+Route::get('/Estetica', 'SubCategoryController@productsEstetica')->name('Estetica');
 
 //filter salud
-Route::get('/Salud', 'SubCategoryController@productsHealth')->name('salud');
+Route::get('/Salud', 'SubCategoryController@productsSalud')->name('Salud');
 
 //filter Snacks
-Route::get('/Snacks', 'SubCategoryController@productsSnacks')->name('snacks');
+Route::get('/Snacks', 'SubCategoryController@productsSnacks')->name('Snacks');
 
 //SERVICIOS:
 //Ruta lista Servicios

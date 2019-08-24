@@ -15,16 +15,10 @@
       <div class="">
         <a href="/dogs" class="d-flex justify-content-between align-items-center">Perros <i class="fas fa-chevron-right"></i></a>
           <ul class="list-group list-group-flush">
+            @foreach ($subcategories as $subcategory)
               <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/accesories">Accesorios</a></li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/food">Alimentos</a></li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/hygiene">Estetica e higiene</a></li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/health">Salud</a></li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/snacks">Snacks</a></li>
+              <a class="dropdown-item" href="/dogs/{{$subcategory->name}}">{{$subcategory->name}}</a></li>
+              @endforeach
 
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <select class="custom-select" id="selectOrder">
@@ -41,16 +35,10 @@
           <div class="">
             <a href="/cats" class="d-flex justify-content-between align-items-center">Gatos <i class="fas fa-chevron-right"></i></a>
               <ul class="list-group list-group-flush">
+                @foreach ($subcategories as $subcategory)
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/accesories">Accesorios</a></li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/food">Alimentos</a></li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/hygiene">Estetica e higiene</a></li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/health">Salud</a></li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/snacks">Snacks</a></li>
+                <a class="dropdown-item" href="/cats/{{$subcategory->name}}">{{$subcategory->name}}</a></li>
+                @endforeach
               </ul>
           </div>
     </div>
