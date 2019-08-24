@@ -112,6 +112,8 @@ header {
 
 .productCard img:hover {
   transform: scale(2);
+  border: solid 1px rgba(76, 175, 80, 1);
+  border-radius: 5px;
 }
 
 .productCard a{
@@ -167,6 +169,15 @@ header {
   flex-direction: column;
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+.imagen {
+  width: 95%;
+  z-index: -1;
+}
+
+.imagen img {
+  width: 100%;
 }
 
 .ratingTotalDetalle, .ratingTotalDetalle i {
@@ -311,6 +322,11 @@ footer li a:hover {
   }
 
   .imagen {
+    width: 95%;
+    z-index: -1;
+  }
+
+  .imagen img {
     width: 100%;
   }
 

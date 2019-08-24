@@ -4,10 +4,11 @@
   max-width: 1200px;
   margin-bottom: 20px;
   width: 100vw;
+  justify-content: center;
 }
 
 .tituloNosotros {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -17,8 +18,75 @@
   justify-content: center;
 }
 
-.nosotros {
+.nosotros, .nosotrosExtra {
   flex-wrap: wrap;
   width: 95%;
   justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nosotros-img{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.nosotros-img img{
+  border-radius: 100%;
+  width: 33%;
+  display: block;
+  border: solid #95ca3e 5px;
+}
+
+#imagen2{
+  transform: translateX(-25%);
+  border-color: #FFD36B;
+}
+
+#imagen3{
+  transform: translateX(-50%);
+}
+
+.serviciosNosotros {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 90%;
+}
+
+.ubicacion {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+iframe {
+  width: 300px;
+  height: 225px;
+}
+
+@media (min-width:600px) {
+  .tituloNosotros{
+    font-size: 30px;
+  }
+
+  .serviciosNosotros h3{
+    font-size: 50px;
+    text-align: left;
+  }
+
+  .ubicacion h3{
+    font-size: 50px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  iframe {
+    width: 600px;
+    height: 450px;
+  }
 }

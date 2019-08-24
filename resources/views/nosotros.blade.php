@@ -23,9 +23,9 @@
           </div>
         <div class="nosotros-img">
           <br>
-          <img src="/storage/Servicios/medic-vet4.jpg" alt="imagen veterinario">
-          <img src="/storage/Servicios/medic-vet7.jpg" alt="imagen veterinaria">
-          <img src="/storage/Servicios/medic-vet8.jpg" alt="imagen clinica">
+          <img id="imagen1" src="/storage/Servicios/medic-vet2.jpg" alt="imagen veterinario">
+          <img id="imagen2" src="/storage/Servicios/medic-vet5.jpg" alt="imagen veterinaria">
+          <img id="imagen3" src="/storage/Servicios/medic-vet3.jpg" alt="imagen clinica">
           <br>
         </div>
 
@@ -39,8 +39,7 @@
       </section>
 
         <!-- SERVICIOS -->
-        <section class="nuestrosServicios">
-          <div class="tituloServicios">
+          <div class="serviciosNosotros">
             <h3>Nuestros Servicios</h3>
           </div>
 
@@ -53,17 +52,16 @@
               </div>
               @endforeach
             </div>
-          </section>
 
 
-        <section class= "ubicacion">
+        <div class= "ubicacion">
           <br>
           <br>
           <h3>¡Vení a visitarnos! </h3>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.139598054828!2d-58.4922454!3d-34.603279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12bc7b7917141a3f!2s%22Patitas%22+Pet+Shop!5e0!3m2!1ses-419!2sar!4v1566414196584!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3284.0083463745127!2d-58.49264154564297!3d-34.60395045486275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12bc7b7917141a3f!2s%22Patitas%22+Pet+Shop!5e0!3m2!1ses-419!2sar!4v1566539914722!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 <br>
 <br>
-        </section>
+</div>
 
   </div>
   @endsection
