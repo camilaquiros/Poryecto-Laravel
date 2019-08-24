@@ -1,6 +1,5 @@
 {{-- Para usar la plantilla template.blade.php --}}
 @extends('template')
-
 {{-- Llenando de información los @yield() --}}
 {{-- @section('bodyClass', 'class=bg-olive') --}}
 
