@@ -249,7 +249,7 @@ ul, ol, li, a {
 
   .showUserInformationBox {
     width: 100%;
-    margin: 2em 0 1em 3em;
+    margin: 4em 6em;
   }
 
   .personalInformation{
@@ -260,7 +260,6 @@ ul, ol, li, a {
     justify-content: space-around;
     border: 3px solid #e3e4e6;
     border-radius: 3px;
-
   }
 
   .personalInformation div{
@@ -270,6 +269,7 @@ ul, ol, li, a {
     font-family: "Quicksand";
     font-size: 1.1em;
     margin-top: 5%;
+    margin-bottom: 2%;
   }
   .personalInformation label{
     margin-bottom: 0;
@@ -279,7 +279,7 @@ ul, ol, li, a {
   }
 
   .personalInformation input{
-    width: 40%;
+    width: 100%;
     border: none;
     font-size: 1em;
     font-weight: 400;
@@ -302,6 +302,22 @@ ul, ol, li, a {
     background-color: rgba(76, 175, 80, 0.6);
     border-radius: 5px;
     }
+
+  .personalInformationEdit{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .personalInformationEdit label{
+    font-weight: 600;
+    font-family: "Quicksand";
+    color: black;
+  }
+
+  .personalInformationEdit button{
+    width: 100%;
+  }
 
   }
 
