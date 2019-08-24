@@ -99,7 +99,7 @@
     </div>
     <div class="">
       <label> Dirección de envio </label>
-      <input type="text" name="" value={{ Auth::user()->shippingAdress }}>
+      <input type="text" name="" value={{ Auth::user()->shipping_address }}>
     </div>
     <div class="">
       <label> Telefono personal </label>

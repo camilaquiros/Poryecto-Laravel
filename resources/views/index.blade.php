@@ -77,7 +77,7 @@
         <!-- PRODUCTOS NOVEDADES -->
 
 
-        <div class="cardsProduct">
+        <!-- <div class="cardsProduct">
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-left flechas"></i></div>
           @foreach ($productsIndex as $product)
           <article class="oneproduct-card">
@@ -90,25 +90,90 @@
           </article>
           @endforeach
         </div>
-      </section>
-      <!-- Inicio de carrousel falta logica -->
-      <!-- <div class="carousel slide" data-ride="carousel">
-         <div class="carousel-inner">
+      </section> -->
 
-             <div class="carousel-item active">
-                 <div class="row">
-                     <div class="col"><img src=".." alt="1 slide"></div>
-                     <div class="col"><img src=".." alt="2 slide"></div>
-                     <div class="col"><img src=".." alt="3 slide"></div>
-                 </div>
-                 <div class="row">
-                     <div class="col"><img src=".." alt="4 slide"></div>
-                     <div class="col"><img src=".." alt="5 slide"></div>
-                     <div class="col"><img src=".." alt="6 slide"></div>
-                 </div>
-             </div>
-         </div>
-      </div>  -->
+
+      <!-- carrousel celular-->
+
+      <div class="containerCarouselCelular">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
+      <p class="card-title">{{$product->title}}</p>
+      <p class="card-text">{{$product->price}}</p>
+      <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+    </div>
+    @foreach ($productsIndexCelu as $product)
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
+      <p class="card-title">{{$product->title}}</p>
+      <p class="card-text">{{$product->price}}</p>
+      <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+    </div>
+    @endforeach
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+      <!-- carrousel tablet y desktop-->
+
+      <div class="containerCarouselDesktop">
+
+        <div class="carousel slide" data-ride="carousel" id="multi_item">
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="row">
+                @foreach ($productsIndex as $product)
+                <div class="col-sm oneproduct-card-body"><img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
+                  <p class="card-title">{{$product->title}}</p>
+                  <p class="card-text">{{$product->price}}</p>
+                  <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+                </div>
+                @endforeach
+
+
+              </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                @foreach ($productsIndex2 as $product)
+                <div class="col-sm oneproduct-card-body"><img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
+                  <p class="card-title">{{$product->title}}</p>
+                  <p class="card-text">{{$product->price}}</p>
+                  <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+                </div>
+                @endforeach
+              </div>
+
+            </div>
+
+          </div>
+
+          <a class="carousel-control-prev" href="#multi_item" role="button" data-slide="prev">
+            <div class="carousel-control-prev-icon" aria-hidden="true"></div>
+            <div class="sr-only">Previous</div>
+          </a>
+          <a class="carousel-control-next" href="#multi_item" role="button" data-slide="next">
+            <div class="carousel-control-next-icon" aria-hidden="true"></div>
+            <div class="sr-only">Next</div>
+          </a>
+        </div>
+
+      </div>
+
+
+
         <!-- SERVICIOS -->
         <section class="nuestrosServicios">
           <div class="tituloServicios">
@@ -127,7 +192,3 @@
     </div>
   </div>
   @endsection
-{{-- Cuando sabemos que lo que vamos a mandar al yield() es contenido real html, estamos obligados a pasarlo de esta manera --}}
-</body>
-
-</html>
