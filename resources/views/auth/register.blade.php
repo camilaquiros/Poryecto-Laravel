@@ -75,7 +75,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label><b>Provincia:</b></label>
-                          <select id="state-list" name="state" value= "{{old("state")}}" class="form-control  @error('state') is-invalid @enderror">
+                          <select id="state-list" name="state" value= "{{old("state")}}" class="form-control  @error('state') is-invalid @enderror" >
                             <div class="invalid-feedback">
                              <!-- Mensaje de error -->
                             </div>
