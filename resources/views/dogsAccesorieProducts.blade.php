@@ -1,12 +1,5 @@
-{{-- Para usar la plantilla template.blade.php --}}
 @extends('template')
-
-{{-- Llenando de información los @yield() --}}
-{{-- @section('bodyClass', 'class=bg-olive') --}}
-
 @section('pageTitle', 'Productos')
-{{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
-
 @section('mainContent')
 
 
@@ -15,10 +8,16 @@
       <div class="">
         <a href="/dogs" class="d-flex justify-content-between align-items-center">Perros <i class="fas fa-chevron-right"></i></a>
           <ul class="list-group list-group-flush">
-            @foreach ($subcategories as $subcategory)
               <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/{{$subcategory->name}}">{{$subcategory->name}}</a></li>
-              @endforeach
+              <a class="dropdown-item" href="/dogs/accesories">Accesorios</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/food">Alimentos</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/hygiene">Estetica e higiene</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/health">Salud</a></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a class="dropdown-item" href="/dogs/snacks">Snacks</a></li>
 
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <select class="custom-select" id="selectOrder">
@@ -31,16 +30,6 @@
               </li>
           </ul>
       </div>
-
-          <div class="">
-            <a href="/cats" class="d-flex justify-content-between align-items-center">Gatos <i class="fas fa-chevron-right"></i></a>
-              <ul class="list-group list-group-flush">
-                @foreach ($subcategories as $subcategory)
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/{{$subcategory->name}}">{{$subcategory->name}}</a></li>
-                @endforeach
-              </ul>
-          </div>
     </div>
     <!-- PRODUCTOS -->
     <section class="productosLista">

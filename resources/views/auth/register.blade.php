@@ -44,7 +44,7 @@
                           <div class="invalid-feedback">
                            <!-- Mensaje de error -->
                          </div>
-                               @error('userName')
+                               @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

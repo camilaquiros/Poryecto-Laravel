@@ -50,8 +50,8 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'fullName' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'alpha_dash', 'max:20', 'min:8', 'unique:users'],
-            'email' => ['required', 'email', 'unique:users'],
+            'username' => ['required', 'alpha_dash', 'max:20', 'min:8', 'unique:users,username'],
+            'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:8', 'confirmed'],
             'password_confirmation' => ['required',  'min:8'],
             //'password_confirmation' => ['required',  'min:8', 'same:password', 'required_with:password'],
@@ -65,7 +65,7 @@ class RegisterController extends Controller
           'alpha_dash' => 'Este campo solo puede contener letras, numeros, guiones o guiones bajos',
           'max' => 'Este campo puede tener como máximo :max caracteres',
           'email' => 'Usá el formato nombre@ejemplo.com.',
-          'unique:users' => 'Este dato ya se encuentra registrado',
+          'unique' => 'Este dato ya se encuentra registrado',
           'confirmed' => 'Las contraseñas no coinciden',
           'min' => 'Este campo debe tener como mínimo :min caracteres'
         ]);
@@ -88,7 +88,8 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'country' => $data['country'],
             'avatar' => $data['avatar'],
-        ]);
+            'state' =>$data['state']
+                  ]);
 
         return $user;
     }

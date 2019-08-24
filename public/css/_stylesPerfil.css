@@ -1,4 +1,5 @@
  @import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap');
 
 .profileBox::before {
   content: "";
@@ -67,7 +68,6 @@
 
 .showUserInformationBox {
   width: 100%;
-  margin: 2em;
 }
 
 .listMenuProfile li:hover {
@@ -246,7 +246,80 @@ ul, ol, li, a {
     width: 50%;
     margin-bottom: 0;
   }
-}
+
+  .showUserInformationBox {
+    width: 100%;
+    margin: 4em 6em;
+  }
+
+  .personalInformation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-around;
+    border: 3px solid #e3e4e6;
+    border-radius: 3px;
+  }
+
+  .personalInformation div{
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Quicksand";
+    font-size: 1.1em;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .personalInformation label{
+    margin-bottom: 0;
+    font-weight: 400;
+    font-family: "Quicksand";
+    color: black;
+  }
+
+  .personalInformation input{
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: #555;
+  }
+
+  .editProfile{
+    text-align: right;
+  }
+
+  .editProfile a{
+    width: 30%;
+    color: rgba(76, 175, 80, 0.8);
+    padding: 10px;
+    transition: 0.3s;
+  }
+
+  .editProfile a:hover {
+    color: #fff;
+    background-color: rgba(76, 175, 80, 0.6);
+    border-radius: 5px;
+    }
+
+  .personalInformationEdit{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .personalInformationEdit label{
+    font-weight: 600;
+    font-family: "Quicksand";
+    color: black;
+  }
+
+  .personalInformationEdit button{
+    width: 100%;
+  }
+
+  }
 
 @media (min-width:800px) {
   .loginSection {

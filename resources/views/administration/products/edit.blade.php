@@ -124,8 +124,6 @@
 				</div>
 			</div>
 
-			</div>
-
 			<button type="submit" class="btn btn-success">GUARDAR</button>
 		</form>
 	</div>

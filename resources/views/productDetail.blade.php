@@ -11,9 +11,9 @@
 
     <!-- TRAIGO INFORMACION DE PRODUCTOS -->
     <section class="productosDetalle">
-      <div class="imagen">
+      <div class= "img-magnifier-container">
         <!-- TRAIGO IMAGEN -->
-        <img src="/storage/productos/{{ $productToFind->image }}" alt="dasdad">
+        <img src="/storage/productos/{{ $productToFind->image }}" alt="dasdad" class = "imagen-producto">
       </div>
       <!-- TRAIGO DATOS -->
       <div class="detalles">
@@ -30,3 +30,4 @@
     </section>
 
 @endsection
+<script src="/js/detailproducts.js"></script>
