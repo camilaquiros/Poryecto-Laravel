@@ -404,6 +404,11 @@ footer {
     width: auto;
   }
 
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+
   .listaContinuacion img{
     width: 20%;
   }

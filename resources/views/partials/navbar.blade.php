@@ -65,10 +65,10 @@
 
     <!-- BARRA DE NAVEGACION DESKTOP Y TABLET -->
     <ul class="menu-header">
-      <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
+      <li class="dropdown"><a href="#" data-toggle="dropdown">Mascotas</a>
         <div class="dropdown-menu dropright">
           @foreach ($categories as $category)
-          <a id = "perros" class="dropdown-item" href="/products/category/{{$category->id}}" data-toggle="dropdown">{{$category->name}}</a>
+          <a class="dropdown-item" href="/products/category/{{$category->id}}">{{$category->name}}</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               @foreach ($subcategories as $subcategory)
               <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a>
@@ -77,7 +77,7 @@
           @endforeach
         </div>
       </li>
-      <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+      <li class="dropdown"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           @foreach ($services as $service)
           <a class="dropdown-item" href="/services/#{{$service->name}}">{{$service->name}}</a>
@@ -85,7 +85,7 @@
           <a class="dropdown-item" href="/services">Ver todos</a>
         </div>
       </li>
-      <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+      <li class="dropdown"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           @foreach ($subcategories as $subcategory)
           <a class="dropdown-item" href="/products/subcategory/{{$subcategory->id}}">{{$subcategory->name}}</a>
