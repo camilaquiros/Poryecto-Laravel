@@ -30,11 +30,15 @@ class HomeController extends Controller
         return view('index');
     }
     public function productsIndex(){
-      $productsIndex = Product::orderBy('id')->take(4)
+      $productsIndex = Product::orderBy('id')->take(3)
+      ->get();
+      $productsIndex2 = Product::orderBy('id')->where('id', '>', 3)->take(3)
+      ->get();
+      $productsIndexCelu = Product::orderBy('id')->where('id', '>', 1)->take(8)
       ->get();
       $servicesIndex = Service::orderBy('name')->take(4)
       ->get();
-      return view ('index', compact('productsIndex', 'servicesIndex' ));
+      return view ('index', compact('productsIndex', 'productsIndex2','productsIndexCelu', 'servicesIndex' ));
     }
 
 }
