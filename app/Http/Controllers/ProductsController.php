@@ -37,6 +37,24 @@ class ProductsController extends Controller
 		return view('products', compact('products', 'subcategories'));
 	}
 
+
+  public function listSubCategory($SubCategoryID){
+    $products = Product::where('subcategory_id', '=', $SubCategoryID)->get();
+    return view('products', compact('products')); 
+  }
+
+  public function listCategory($categoryID){
+    $products = Product::where('category_id', '=', $categoryID)->get();
+    return view('products', compact('products'));  
+  }
+
+  public function listSubCategoryProducts($categoryID, $SubCategoryID){
+    $products = Product::where('subcategory_id','=',$SubCategoryID)
+      //->where("category_id", "=", $categoryID) // NO func
+      ->get();
+    return view('products', compact('products'));
+  }
+
   public function search(){
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where('title', 'like', '%' . $_GET['query'] . '%')->get();

@@ -238,17 +238,15 @@ public function newSubcategory()
 }
 
 public function storeSubcategory(Request $request){
+  $request->validate([
+    'name' => 'required',
+  ], [
+    'name.required' => 'El nombre de la subcategoria es obligatorio',
+  ]);
+  $subcategorySaved = SubCategory::create($request->all());
+  $subcategorySaved->save();
 
-$request->validate([
-  'name' => 'required',
-], [
-  'name.required' => 'El nombre de la subcategoria es obligatorio',
-]);
-
-$subcategorySaved = Category::create($request->all());
-$subcategorySaved->save();
-
-return redirect('/administration/subcategories');
+  return redirect('/administration/subcategories');
 }
 
 public function editSubcategory ($id)
