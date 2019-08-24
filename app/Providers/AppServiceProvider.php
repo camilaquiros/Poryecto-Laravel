@@ -4,6 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Product;
+use App\Service;
+use App\Category;
+use App\SubCategory;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,10 +19,10 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
       view()->composer('partials.navbar', function($view){
-        $products = \App\Product::all();
-        $services = \App\Service::all();
-        $categories = \App\Category::all();
-        $subcategories = \App\Subcategory::all();
+        $products = Product::all();
+        $services = Service::all();
+        $categories = Category::all();
+        $subcategories = SubCategory::all();
         //attach the categories to the view.
         $view->with(compact('products', 'services', 'categories','subcategories'));
       });

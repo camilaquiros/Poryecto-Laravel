@@ -19,7 +19,7 @@ Route::get('/nosotros', function () {
 });
 
 //LISTADO DE SERVICIOS//
-Route::get('/nosotros', 'servicesController@servicesUs')->name('servicesUs');
+Route::get('/nosotros', 'ServicesController@servicesUs')->name('servicesUs');
 
 Auth::routes();
 // Route::post('/register', 'RegisterController@create');
@@ -152,4 +152,4 @@ Route::get('/Snacks', 'ProductsController@Snacks')->name('Snacks');
 
 //SERVICIOS:
 //Ruta lista Servicios
-Route::get('/services', 'servicesController@services')->name('services');
+Route::get('/services', 'ServicesController@services')->name('services');

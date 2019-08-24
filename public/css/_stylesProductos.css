@@ -425,8 +425,4 @@ footer li a:hover {
   .detalles {
     width: 50%;
   }
-
-  .cardFooter{
-    background: -webkit-linear-gradient(0deg #1c3643 0, #273b47 40%, #1e5372);
-  }
 }

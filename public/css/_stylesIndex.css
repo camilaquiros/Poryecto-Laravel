@@ -38,8 +38,6 @@ nav {
 .menutop-header {
   margin-bottom: 0;
   font-weight: 600;
-  font-size: 0.8em;
-  /*background: linear-gradient(90deg, #1c3643 0, #273b47 25%, #1e5372);*/
   background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
   display: inline-block;
   align-items: center;
@@ -113,7 +111,7 @@ nav {
 }
 
 .menutop-header li a, #text {
-  color: white;
+  color: rgba(1,1,1,0.5);
 }
 
 /*segundo menu de la nav*/
@@ -133,7 +131,7 @@ nav {
   border-radius: 4px;
   padding: 10px;
   text-decoration: none;
-  color: rgba(1,1,1,0.7);
+  color: rgba(1,1,1,0.9);
   list-style: none;
   font-family: "Livvic";
   font-weight: 400;
@@ -175,24 +173,28 @@ nav {
 }
 
 .contenedor-productosgato {
-  position: relative;
   display: flex;
+  flex-direction: column;
+  background-size: cover;
   margin-top: 10px;
-  align-self: center;
-  height: 350px;
+  height: 30vh;
+  justify-content: space-between;
+  text-align: right;
 }
 
-.contenedor-productosgato:hover {
-  box-shadow: 7px 8px 11px 3px rgba(120, 144, 156, 0.6);
+#catProducts{
+  background-image: url("/img/gatomobile.jpeg");
 }
 
-.contenedor-productosgato img {
-  width: 100%;
-  height: 100%;
+#newsProducts{
+  background-image: url("/img/recienllegadosmobile.jpeg");
+}
+
+#dogProducts{
+  background-image: url("/img/perromobile.jpeg");
 }
 
 .descripcion-carta {
-  position: absolute;
   font-weight: bold;
   width: 100%;
   text-decoration: none;
@@ -200,74 +202,45 @@ nav {
   padding: 5px;
   text-align: center;
   font-size: 1.2em;
-  transform: translateY(-50%);
-  top: 20%;
 }
 
 .centrado {
-  transform: translateY(-50%);
-  top: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
-.mas-Productos {
-  position: absolute;
-  bottom: 10%;
-  right: 35%;
-}
-
 .mas-Productos a, .verTodosServicios {
   background-color: rgba(76, 175, 80, 0.8);
-  padding: 8px;
-  border-radius: 3%;
+  padding: 4px;
+  border-radius: 4%;
   color: #fff;
   font-family: "Staatliches";
-  transition: all 0.2s;
 }
 
-.verTodosServicios:hover, .mas-Productos a:hover {
-  color: rgba(38, 50, 56, 1);
-  text-decoration: none;
+.mas-Productos a{
+  padding: 10px;
 }
 
 /*cajas productos novedades*/
-.head-novedades {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.option-list {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-
-.option-list li {
-  list-style: none;
-  background-color: rgba(76, 175, 80, 1);
+.seccion-novedades h4 {
+  background-color: rgba(76, 175, 80, 0.8);
   color: #fff;
-  font-family: "Paytone One";
-  padding: 5px 10px;
-  transition: all 0.2s;
+  padding: 20px;
+  font-family: "Lalezar";
+  font-size: 25px;
+  text-align: center;
 }
 
-.option-list li:hover {
-  background-color: rgba(76, 175, 80, 0.7);
-  padding: 5px 40px;
+/*productos novedades*/
+.cardsProduct {
+  align-items: center;
 }
 
 .oneproduct-card {
-  background-color: transparent;
-  padding: 1em;
-}
-
-.cardsProduct {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-bottom: 20px;
-  border-bottom: solid grey 1px;
+  margin: 5%;
+  width: 70%;
+  box-shadow: 1px 2px px -2px #1c3643;
+  background-color: rgba(236,239,241 ,0.4);
 }
 
 .nextPrevFlechas {
@@ -279,30 +252,39 @@ nav {
 }
 
 .oneproduct-card-body {
-  text-align: center;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  text-align: center;
 }
 
-.mas-productosNovedades {
-  border: 1.5px solid rgba(0, 150, 136, 1);
-  padding: 0.5em 0.7em;
-  border-radius: 5px;
-  color: rgba(84, 110, 122, 1);
-  transition: all 0.2s;
-}
-
-.mas-productosNovedades:hover {
-  background-color: rgba(0, 150, 136, 1);
+.mas-productosNovedades{
+  margin-left: 20%;
+  margin-bottom: 10%;
+  width: 60%;
+  background-color: rgba(0, 150, 136, 0.8);
   color: white;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0.5em 0.7em;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 /*servicios*/
+.nuestrosServicios{
+  background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tituloServicios {
+  display: flex;
+  margin-bottom: 1em !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .seccionServiciosImagenes {
   display: flex;
   flex-direction: row;
@@ -311,45 +293,31 @@ nav {
   text-align: center;
 }
 
-.tituloServicios {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .tituloServicios h3{
   font-size:1.2em;
   font-weight: bold;
   transition: 0.2s;
-  padding: 10px;
-}
-
-.tituloServicios h3:hover{
-  /*background-color: rgba(1,1,1,0.3);
-  color: white;*/
+  padding: 8px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .serviciocard {
   background-size: cover;
-  height: 200px;
+  height: 20vh;
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: black;
-  border-radius: 30px;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
 .serviciocard h3{
   width: 100%;
   font-family: 'Merriweather Sans';
-  background: -webkit-linear-gradient(left, #95ca3e 0%, rgb(149, 202, 62, 0.6) 40%, rgb(133, 198, 56, 0.6) 50%);
+  background-color: rgba(76, 175, 80, 0.4);
   color: white;
   font-size: 1.2em;
   padding: 10px;
@@ -359,20 +327,20 @@ nav {
 }
 
 #servicio1{
-  background-image: linear-gradient(to right, rgba(229,115,115 ,0.5), rgba(255, 255, 255, 0)), url("/storage/Servicios/clinicaVet.jpg");
+  background-image: linear-gradient(to left, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/gatoExamen.jpg");
   filter:brightness(0.9);
 }
 
 #servicio2{
-  background-image: linear-gradient(to top, rgba(192,202,51 ,0.6), rgba(255, 255, 255, 0)), url("/storage/Servicios/gatoExamen.jpg");
+  background-image: linear-gradient(to right, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/paseo.jpg");
 }
 
 #servicio3 {
-  background-image: linear-gradient(to left, rgba(38,198,218 ,0.4), rgba(255, 255, 255, 0)), url("/storage/Servicios/paseo-perro.jpg");
+  background-image: linear-gradient(to right, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/Peluqueria.jpg");
 }
 
 #servicio4{
-  background-image: linear-gradient(to left, rgba(63,81,181,0.4), rgba(255, 255, 255, 0)), url("/storage/Servicios/Peluqueria.jpg");
+  background-image: linear-gradient(to left, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/clinicaVet.jpg");
 }
 
 footer {
@@ -380,8 +348,30 @@ footer {
   margin-top: 30px;
 }
 
+@media (min-width: 500px) {
+  .contenedor-productosgato {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    margin-top: 10px;
+    height: 40vh;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+  .serviciocard{
+    border-radius: 5px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 45%;
+    height: 30vh;
+  }
+}
+
 @media (min-width: 600px) {
-  .menutop-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
+  .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -399,15 +389,15 @@ footer {
     margin: 10px;
   }
 
-  .menutop-header li, .menutop-header a, #text {
+  .menutop-header li a, .menutop-header a, #text {
     text-decoration: none;
-    color: black;
+    font-family: "Work Sans";
+    color: #fff;
   }
 
   .celular {
     width: auto;
   }
-
 
   .listaContinuacion img{
     width: 20%;
@@ -455,6 +445,7 @@ footer {
     padding: 15px;
   }
 
+/*cartas presentacion de productos*/
   .cartas-presentacion {
     width: 100%;
     display: flex;
@@ -466,52 +457,137 @@ footer {
 
   .contenedor-productosgato {
     width: 32%;
-  }
-
-  .nextPrevFlechas {
-    display: block;
-    font-size: 40px;
-  }
-
-  .oneproduct-card {
-    width: 22%;
-  }
-
-  .head-novedades {
+    position: relative;
     display: flex;
+    margin-top: 10px;
+    align-self: center;
+    height: 350px;
+  }
+
+  .contenedor-productosgato:hover {
+    box-shadow: 7px 8px 11px 3px rgba(120, 144, 156, 0.6);
+  }
+
+  #catProducts{
+    background-image: url("/img/gatitoo.jpeg");
+  }
+
+  #newsProducts{
+    background-image: url("/img/pañueloyellow.jpeg");
+  }
+
+  #dogProducts{
+    background-image: url("/img/perrito.jpeg");
+  }
+
+  .descripcion-carta {
+    position: absolute;
+    font-weight: bold;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
     text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px;
+    font-size: 1.2em;
+    transform: translateY(-50%);
+    top: 20%;
   }
 
-  .head-novedades h4 {
-    margin-bottom: 15px;
+  .centrado {
+    transform: translateY(-50%);
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
   }
 
-  .head-novedades ul {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+  .mas-Productos {
+    position: absolute;
+    bottom: 10%;
+    right: 35%;
   }
 
-  .option-list li {
-    list-style: none;
-    background-color: rgba(76, 175, 80, 1);
+  .mas-Productos a, .verTodosServicios {
+    background-color: rgba(76, 175, 80, 0.8);
+    padding: 8px;
+    border-radius: 2%;
     color: #fff;
-    font-family: "Paytone One";
-    padding: 5px 10px;
+    font-family: "Staatliches";
     transition: all 0.2s;
-    display: inline-flex;
   }
 
-  .option-list li:hover {
-    background-color: rgba(76, 175, 80, 0.7);
-    padding: 5px 40px;
+  .verTodosServicios:hover, .mas-Productos a:hover {
+    color: rgba(38, 50, 56, 1);
+    text-decoration: none;
+  }
+
+/*productos novedades*/
+
+.cardsProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.oneproduct-card{
+  width: 25%;
+  margin: 10px;
+}
+
+.oneproduct-card img {
+  width: 100%;
+}
+
+.oneproduct-card-body {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.mas-productosNovedades {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid rgba(0, 150, 136, 1);
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+  color: rgba(84, 110, 122, 1);
+  transition: all 0.2s;
+}
+
+.mas-productosNovedades:hover {
+  background-color: rgba(0, 150, 136, 1);
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+}
+
+/*servicios*/
+  .nuestrosServicios{
+    background: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
   }
 
   .tituloServicios {
-    padding: 1em 1em;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between !important;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-size: 20px !important;
+  }
+
+  .tituloServicios h3{
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .tituloServicios h3:hover{
+    color: rgba(76, 175, 80, 0.8);
   }
 
   .seccionServiciosImagenes {
@@ -520,12 +596,12 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 80%;
-    margin-left: 10%;
   }
 
-  .ServiciosImagenes{
+  .seccionServiciosImagenes{
     justify-content: center;
-    width: 70%;
+    width: 90%;
+    justify-content: space-around;
   }
 
   .serviciocard{
@@ -543,9 +619,14 @@ footer {
     font-size: 1.5em;
   }
 
-  .nuestrosServicios{
-    /*background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/
-    width: 100%;
+  .serviciocard{
+    border-radius: 5px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 45%;
+    height: 30vh;
   }
 
 }

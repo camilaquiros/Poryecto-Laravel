@@ -56,18 +56,15 @@
 
       <!-- CARTAS PRESENTACION -->
       <section class="cartas-presentacion">
-        <div class="contenedor-productosgato">
-          <img src="img/gatitoo.jpeg" alt="imagen de gato">
+        <div class="contenedor-productosgato" id="catProducts">
           <span class="descripcion-carta">Hacé feliz a tu gato</span>
           <span class="mas-Productos"><a href="/cats">Ver productos</a></span>
         </div>
-        <div class="contenedor-productosgato">
-          <img src="img/pañueloyellow.jpeg" alt="imagen de gato">
+        <div class="contenedor-productosgato" id="newsProducts">
           <span class="descripcion-carta centrado">¡Recién llegados!</span>
           <span class="mas-Productos"><a href="#">Ver productos</a></span>
         </div>
-        <div class="contenedor-productosgato">
-          <img src="img/perrito.jpeg" alt="imagen de gato">
+        <div class="contenedor-productosgato" id="dogProducts">
           <span class="descripcion-carta">Productos para tu perro</span>
           <span class="mas-Productos"><a href="/dogs">Ver productos</a></span>
         </div>
@@ -75,9 +72,7 @@
 
       <!-- HEADER PRODUCTOS NOVEDADES -->
       <section class="seccion-novedades">
-        <div class="head-novedades">
           <h4>Productos Destacados</h4>
-        </div>
 
         <!-- PRODUCTOS NOVEDADES -->
 
