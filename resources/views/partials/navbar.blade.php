@@ -67,18 +67,14 @@
     <ul class="menu-header">
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mascotas</a>
         <div class="dropdown-menu dropright">
-          <a id = "perros" class="dropdown-item" href="/dogs" data-toggle="dropdown">Perros</a>
+          @foreach ($categories as $category)
+          <a id = "perros" class="dropdown-item" href="/products/category/{{$category->id}}" data-toggle="dropdown">{{$category->name}}</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               @foreach ($subcategories as $subcategory)
-              <a class="dropdown-item" href="/dogs/{{$subcategory->name}}">{{$subcategory->name}}</a>
+              <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a>
               @endforeach
               </div>
-          <a class="dropdown-item" href="/cats" data-toggle="dropdown">Gatos</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              @foreach ($subcategories as $subcategory)
-              <a class="dropdown-item" href="#">{{$subcategory->name}}</a>
-              @endforeach
-              </div>
+          @endforeach
         </div>
       </li>
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
@@ -92,7 +88,7 @@
       <li><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           @foreach ($subcategories as $subcategory)
-          <a class="dropdown-item" href="/{{$subcategory->name}}">{{$subcategory->name}}</a>
+          <a class="dropdown-item" href="/products/subcategory/{{$subcategory->id}}">{{$subcategory->name}}</a>
           @endforeach
           <a class="dropdown-item" href="/products">Ver todos los productos</a>
         </div>
