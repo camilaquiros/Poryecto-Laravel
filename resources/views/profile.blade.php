@@ -30,14 +30,36 @@
   <hr>
   <div class="personalInformation">
     <div class="">
-      <p>Nombre : {{ Auth::user()->full_name }}</p>
-
+      <label> Tu nombre</label>
+      <input type="text" name="" value={{ Auth::user()->full_name }}>
     </div>
-    <p>Nombre : {{ Auth::user()->full_name }}</p>
-    <p>Usuario : {{ Auth::user()->userName }}</p>
-    <p>Pais : {{ Auth::user()->country }}</p>
-    <p>Provincia : {{ Auth::user()->state }}</p>
-    <p>Email : {{ Auth::user()->email }}</p>
+    <div class="">
+      <label> Nombre de usuario </label>
+      <input type="text" name="" value={{ Auth::user()->full_name }}>
+    </div>
+    <div class="">
+      <label> Pais de nacimiento</label>
+      <input type="text" name="" value={{ Auth::user()->country }}>
+    </div>
+    <div class="">
+      <label> Provincia </label>
+      <input type="text" name="" value={{ Auth::user()->state }}>
+    </div>
+    <div class="">
+      <label> E-mail </label>
+      <input type="text" name="" value={{ Auth::user()->email }}>
+    </div>
+    <div class="">
+      <label> Dirección de envio </label>
+      <input type="text" name="" value={{ Auth::user()->shippingAdress }}>
+    </div>
+    <div class="">
+      <label> Telefono personal </label>
+      <input type="text" name="" value={{ Auth::user()->shippingAdress }}>
+    </div>
+    <div class="editProfile">
+      <span><a class="" href="#">EDITAR</a></span>
+    </div>
   </div>
 </div>
 @endsection
