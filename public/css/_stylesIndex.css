@@ -338,6 +338,7 @@ nav {
   height: 200px;
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: black;
@@ -353,6 +354,7 @@ nav {
   font-size: 1.2em;
   padding: 10px;
   text-align: center;
+
 
 }
 
@@ -531,7 +533,6 @@ footer {
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     width: 45%;
   }
 }
