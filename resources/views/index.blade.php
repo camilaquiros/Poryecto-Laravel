@@ -118,7 +118,7 @@
 
           <div class="seccionServiciosImagenes">
             @foreach ($servicesIndex as $service)
-            <div class="serviciocard" id="servicio{{$service->id}}">
+            <div class="serviciocard">
                 <h3>{{$service->name}}</h3>
             </div>
             @endforeach

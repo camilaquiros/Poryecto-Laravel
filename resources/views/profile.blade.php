@@ -26,9 +26,13 @@
 </ul>
 
 <div class="showUserInformationBox">
+  <h2>Informacion Personal</h2>
+  <hr>
   <div class="personalInformation">
-    <h2>Informacion Personal</h2>
-    <hr>
+    <div class="">
+      <p>Nombre : {{ Auth::user()->full_name }}</p>
+
+    </div>
     <p>Nombre : {{ Auth::user()->full_name }}</p>
     <p>Usuario : {{ Auth::user()->userName }}</p>
     <p>Pais : {{ Auth::user()->country }}</p>

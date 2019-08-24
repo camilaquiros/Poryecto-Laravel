@@ -68,6 +68,7 @@
 .showUserInformationBox {
   width: 100%;
   margin: 2em;
+  border: 1px solid red;
 }
 
 .listMenuProfile li:hover {
