@@ -357,6 +357,9 @@ footer li a:hover {
     padding: 20px;
     flex-direction: row;
   }
+.imagen-producto {
+  width: 50%;
+}
 
   .contactoRedes {
     display: flex;

@@ -30,7 +30,7 @@ class HomeController extends Controller
         return view('index');
     }
     public function productsIndex(){
-      $productsIndex = Product::orderBy('id')->take(4)
+      $productsIndex = Product::orderBy('id')->take(6)
       ->get();
       $servicesIndex = Service::orderBy('name')->take(4)
       ->get();
