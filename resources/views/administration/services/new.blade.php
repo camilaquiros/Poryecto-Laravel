@@ -12,7 +12,7 @@
 
 			<div class="row">
 
-				<div class="col-6">
+				<div class="col-10">
 					<div class="form-group">
 						<label>Nombre del servicio:</label>
 						<input type="text" name="name" class="form-control" value="{{ old('name') }}">
@@ -22,7 +22,7 @@
 					</div>
 				</div>
 
-				<div class="col-6">
+				<div class="col-10">
 					<div class="form-group">
 						<label>Descripcion:</label>
 						<input type="text" name="description" class="form-control" value="{{ old('description') }}">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 
-        <div class="col-6">
+        <div class="col-10">
           <div class="form-group">
             <label>Categoria:</label>
             <select class="form-control" name="category_id">
@@ -47,7 +47,7 @@
           </div>
         </div>
 
-				<div class="col-6">
+				<div class="col-10">
 					<label>Imagen del servicio:</label>
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" name="image">

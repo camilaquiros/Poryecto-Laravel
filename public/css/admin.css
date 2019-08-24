@@ -621,6 +621,7 @@ pre code {
 
 .row {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
@@ -10688,4 +10689,3 @@ a.text-dark:focus {
   text-decoration: none;
   color: white;
 }
-
