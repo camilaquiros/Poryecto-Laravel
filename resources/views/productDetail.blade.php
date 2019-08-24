@@ -13,7 +13,7 @@
     <section class="productosDetalle">
       <div class= "img-magnifier-container">
         <!-- TRAIGO IMAGEN -->
-        <img src="/storage/productos/{{ $productToFind->image }}" alt="dasdad" class = "imagen-producto">
+        <img src="/storage/productos/{{ $productToFind->image }}" alt="dasdad" class = "imagen-producto" class = "zoom" data-magnify-src="/storage/productos/{{ $productToFind->image }}">
       </div>
       <!-- TRAIGO DATOS -->
       <div class="detalles">
@@ -30,4 +30,5 @@
     </section>
 
 @endsection
+
 <script src="/js/detailproducts.js"></script>
