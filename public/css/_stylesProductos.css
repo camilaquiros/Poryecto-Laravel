@@ -6,6 +6,16 @@ body {
   min-height: 100vh
 }
 
+.imagen-producto {
+  width: 40vw;
+  margin-top: 15px;
+  float: left;
+  align-content: center;
+  border: 3px solid rgba(76, 175, 80, 1);
+  border-radius: 65px 65px 65px 65px;
+
+
+}
 .containerProductos {
   display: flex;
   flex-wrap: wrap;
@@ -304,6 +314,17 @@ footer li a:hover {
 }
 
 @media (min-width:600px) {
+  .imagen-producto {
+    width: 40vw;
+    float: left;
+    align-content: center;
+    margin-top: 15px;
+    border: 3px solid rgba(76, 175, 80, 1);
+    border-radius: 65px 65px 65px 65px;
+
+
+  }
+
 
   .leftNav{
     display: flex;
@@ -425,4 +446,17 @@ footer li a:hover {
   .detalles {
     width: 50%;
   }
+  .imagen-producto {
+    width: 23vw;
+    float: left;
+    align-content: center;
+    border: 3px solid rgba(76, 175, 80, 1);
+    border-radius: 65px 65px 65px 65px;
+    margin-top: 15px;
+
+
+  }
+
+
+
 }

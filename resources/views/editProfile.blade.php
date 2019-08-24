@@ -24,55 +24,6 @@
   <li >Favoritos <br> <i class="fas fa-star"></i></li>
 </ul>
 
-{{--<div class="showUserInformationBox">
-  <h2 id ='persInfo'>Informacion Personal</h2>
-  <hr>
-  <div class="personalInformation">
-    <div class="">
-      <label> Tu nombre</label>
-      <input type="text" name="" value={{ Auth::user()->full_name }}>
-    </div>
-    <div class="">
-      <label> Nombre de usuario </label>
-      <input type="text" name="" value={{ Auth::user()->username }}>
-    </div>
-    <div class="">
-      <label> Telefono personal </label>
-      <input type="text" name="" value={{ Auth::user()->shippingAdress }}>
-    </div>
-    <div class="editProfile">
-      <span><a class="" href="#">EDITAR</a></span>
-    </div>
-  </div>
-</div>
-
-<div class="showUserInformationBox">
-  <div class="personalInformation">
-  <h2 id ='address'>Direcciones</h2>
-<div class="">
-  <label> E-mail </label>
-  <input type="text" name="" value={{ Auth::user()->email }}>
-</div>
-<div class="">
-  <label> Dirección de envio </label>
-  <input type="text" name="" value={{ Auth::user()->shippingAdress }}>
-</div>
-<div class="editProfile">
-  <span><a class="" href="#">EDITAR</a></span>
-</div>
-</div>
-</div>
-
-<div class="showUserInformationBox">
-  <div class="personalInformation">
-  <h2 id ='favourites'>Favoritos</h2>
-<div class="">
-</div>
-<div class="editProfile">
-  <span><a class="" href="#">EDITAR</a></span>
-</div>
-</div>
-</div>--}}
 <div class="showUserInformationBox">
   <h2>Editar Perfil</h2>
   <hr>
@@ -90,11 +41,8 @@
         <input type="text" name="username" class="form-control" id="username" value={{ Auth::user()->username }}>
       </div>
       <div class="form-group">
-        <label > Pais de nacimiento</label>
-        <select id="country-list" name="country" value= "{{old("country")}}" class="form-control  @error('country') is-invalid @enderror">
-          <div class="invalid-feedback">
-           <!-- Mensaje de error -->
-          </div>
+        <label> Pais de nacimiento</label>
+        <select id="country-list" name="country" value={{ old('country', Auth::user()->country) }} class="form-control  @error('country') is-invalid @enderror">
 
           <option value="">{{ Auth::user()->country }}</option>
           </select>

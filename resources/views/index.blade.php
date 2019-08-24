@@ -1,5 +1,6 @@
 {{-- Para usar la plantilla template.blade.php --}}
 @extends('template')
+
 {{-- Llenando de información los @yield() --}}
 {{-- @section('bodyClass', 'class=bg-olive') --}}
 
@@ -56,7 +57,7 @@
       <!-- CARTAS PRESENTACION -->
       <section class="cartas-presentacion">
         <div class="contenedor-productosgato" id="catProducts">
-          <span class="descripcion-carta">Hacé feliz a tu gato</span>
+          <span class="descripcion-carta centrado">Hacé feliz a tu gato</span>
           <span class="mas-Productos"><a href="/cats">Ver productos</a></span>
         </div>
         <div class="contenedor-productosgato" id="newsProducts">
@@ -64,7 +65,7 @@
           <span class="mas-Productos"><a href="#">Ver productos</a></span>
         </div>
         <div class="contenedor-productosgato" id="dogProducts">
-          <span class="descripcion-carta">Productos para tu perro</span>
+          <span class="descripcion-carta centrado">Productos para tu perro</span>
           <span class="mas-Productos"><a href="/dogs">Ver productos</a></span>
         </div>
       </section>
