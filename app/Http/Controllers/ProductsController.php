@@ -58,6 +58,8 @@ class ProductsController extends Controller
     return view('products', compact('products', 'subcategories'));
   }
 
+  /* PRODUCTOS POR MASCOTAS PERRO / GATO*/
+
   public function dogs() {
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("category_id", "=", "1")
@@ -73,40 +75,7 @@ class ProductsController extends Controller
     return view('products', compact('products', 'subcategories'));
   }
 
-  public function food() {
-    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    $products = Product::where("subcategory_id", "=", "1")
-      ->get();
-    return view('products', compact('products', 'subcategories'));
-  }
-
-  public function accesories() {
-    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    $products = Product::where("subcategory_id", "=", "2")
-      ->get();
-    return view('products', compact('products', 'subcategories'));
-  }
-
-  public function hygiene() {
-    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    $products = Product::where("subcategory_id", "=", "4")
-      ->get();
-    return view('products', compact('products', 'subcategories'));
-  }
-
-  public function snacks() {
-    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    $products = Product::where("subcategory_id", "=", "3")
-      ->get();
-    return view('products', compact('products', 'subcategories'));
-  }
-
-  public function health() {
-    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    $products = Product::where("subcategory_id", "=", "5")
-      ->get();
-    return view('products', compact('products', 'subcategories'));
-  }
+  /*PRODUCTOS POR SUBCATEGORIA Y PERRO*/
 
   public function dogsFood() {
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
@@ -143,6 +112,7 @@ class ProductsController extends Controller
     return view('products', compact('products', 'subcategories'));
   }
 
+/*SUBCATEGORIA Y GATO*/
   public function catsFood() {
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("category_id", "=", "2") ->where ("subcategory_id", "=", "1")

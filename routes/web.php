@@ -121,10 +121,10 @@ Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
 //filter perros
 Route::get('/dogs', 'ProductsController@dogs')->name('dogs');
-Route::get('/dogs/Accesorios', 'ProductsController@dogsAccesorios')->name('dogsAccesorios');
-Route::get('/dogs/Alimentos', 'ProductsController@dogsAlimentos')->name('dogsAlimentos');
-Route::get('/dogs/Estetica e higiene', 'ProductsController@dogsEstetica e higiene')->name('dogsEstetica e higiene');
-Route::get('/dogs/Salud', 'ProductsController@dogsSalud')->name('dogsSalud');
+Route::get('/dogs/accesories', 'ProductsController@dogsAccesories')->name('dogsAccesorios');
+Route::get('/dogs/food', 'ProductsController@dogsFood')->name('dogsAlimentos');
+Route::get('/dogs/Estetica e higiene', 'ProductsController@dogsHygiene')->name('dogsEstetica e higiene');
+Route::get('/dogs/Salud', 'ProductsController@dogsHealth')->name('dogsSalud');
 Route::get('/dogs/Snacks', 'ProductsController@dogsSnacks')->name('dogsSnacks');
 
 //filter gatos
@@ -136,19 +136,19 @@ Route::get('/cats/Salud', 'ProductsController@catsSalud')->name('catsSalud');
 Route::get('/cats/Snacks', 'ProductsController@catsSnacks')->name('catsSnacks');
 
 //filter alimentos
-Route::get('/Alimentos', 'ProductsController@Alimentos')->name('Alimentos');
+Route::get('/Alimentos', 'SubCategoryController@productsFood')->name('alimentos');
 
 //filter accesorios
-Route::get('/Accesorios', 'ProductsController@Accesorios')->name('Accesorios');
+Route::get('/Accesorios', 'SubCategoryController@productsAccesories')->name('accesorios');
 
 //filter higiene
-Route::get('/Estetica e higiene', 'ProductsController@Estetica e higiene')->name('Estetica e higiene');
+Route::get('/Etetica e higiene', 'SubCategoryController@productsCare')->name('esteticaHigiene');
 
 //filter salud
-Route::get('/Salud', 'ProductsController@Salud')->name('Salud');
+Route::get('/Salud', 'SubCategoryController@productsHealth')->name('salud');
 
 //filter Snacks
-Route::get('/Snacks', 'ProductsController@Snacks')->name('Snacks');
+Route::get('/Snacks', 'SubCategoryController@productsSnacks')->name('snacks');
 
 //SERVICIOS:
 //Ruta lista Servicios
