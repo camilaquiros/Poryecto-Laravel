@@ -9,39 +9,31 @@
 
 @section('mainContent')
 
-
 <div class="containerProductos">
-    <div class="leftNav nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <div class="">
-        <a href="/dogs" class="d-flex justify-content-between align-items-center">Perros <i class="fas fa-chevron-right"></i></a>
-          <ul class="list-group list-group-flush">
-            @foreach ($subcategories as $subcategory)
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a class="dropdown-item" href="/dogs/{{$subcategory->name}}">{{$subcategory->name}}</a></li>
-              @endforeach
-
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <select class="custom-select" id="selectOrder">
-                  <option>Ordenar</option>
-                  <option value="PRICE_DESC">Precio menor a mayor</option>
-                  <option value="PRICE_ASC">Precio mayor a menor</option>
-                  <option value="RATING_ASC">Rating menor a mayor</option>
-                  <option value="RATING_DESC">Rating mayor a menor</option>
-                </select>
-              </li>
-          </ul>
-      </div>
-
+    <div class="leftNav nav flex-row nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <ul>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <select class="custom-select" id="selectOrder">
+            <option>Ordenar</option>
+            <option value="PRICE_DESC">Precio menor a mayor</option>
+            <option value="PRICE_ASC">Precio mayor a menor</option>
+            <option value="RATING_ASC">Rating menor a mayor</option>
+            <option value="RATING_DESC">Rating mayor a menor</option>
+          </select>
+        </li>
+      </ul>
+        @foreach ($categories as $category)
           <div class="">
-            <a href="/cats" class="d-flex justify-content-between align-items-center">Gatos <i class="fas fa-chevron-right"></i></a>
+            <a href="/products/category/{{$category->id}}" class="d-flex justify-content-between align-items-center">{{$category->name}} <i class="fas fa-chevron-right"></i></a>
               <ul class="list-group list-group-flush">
                 @foreach ($subcategories as $subcategory)
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/cats/{{$subcategory->name}}">{{$subcategory->name}}</a></li>
+                <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
                 @endforeach
               </ul>
           </div>
-    </div>
+        @endforeach
+      </div>
     <!-- PRODUCTOS -->
     <section class="productosLista">
             @foreach ($products as $product)
@@ -58,15 +50,15 @@
 
                   <div class="card-footer text-center">
                       <input type="hidden" id="product_id" value="" class="btn btn-patitas" value="{{$product->id}}"><a href="#" id="agregar-favoritos">Agregar a favoritos</a>
-                    </div>
+                  </div>
                   <div class="card-footer text-center cardFooter">
                       <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
-                    </div>
                   </div>
-                </div>
-            @endforeach
+                  </div>
             </div>
+            @endforeach
     </section>
+  </div>
 @endsection
 
 <script type="text/javascript" src="/js/jquery.min.js"></script>

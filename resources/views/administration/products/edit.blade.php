@@ -105,7 +105,7 @@
 				<div class="col-6">
 					<div class="form-group">
 						<label>Rating:</label>
-						<input type="text" name="rating" class="form-control">
+						<input type="text" name="rating" class="form-control" value="{{ old('rating', $productToEdit->price) }}">
 						@error ('rating')
 							<i style="color: red;"> {{ $errors->first('rating') }}</i>
 						@enderror

@@ -38,7 +38,7 @@
             <select class="form-control" name="category_id">
               <option value="">Elegí una categoria</option>
               @foreach ($categories as $category)
-                <option value="{{ $category->id }}"> {{ $category->name }}</option>
+                <option value="{{ $category->id }}" {{old('category_id') == $category->id ? 'selected' : null }}> {{ $category->name }}</option>
               @endforeach
             </select>
 						@error ('category_id')
@@ -53,7 +53,7 @@
             <select class="form-control" name="subcategory_id">
               <option value="">Elegí una subcategoria</option>
               @foreach ($subcategories as $subcategory)
-                <option value="{{ $subcategory->id }}"> {{ $subcategory->name }}</option>
+                <option value="{{ $subcategory->id }}" {{old('subcategory_id') == $subcategory->id ? 'selected' : null }}> {{ $subcategory->name }}</option>
               @endforeach
             </select>
 						@error ('subcategory_id')
@@ -67,8 +67,13 @@
 						<label>Oferta:</label>
             <select class="form-control" name="offer">
               <option value="">¿El producto está en oferta?</option>
-                <option value="1">Sí</option>
-                <option value="0">No</option>
+							@if (old('offer') == 1)
+								<option value="1" selected>Sí</option>
+								<option value="0">No</option>
+							@elseif (old('offer') == 0)
+								<option value="1">Si</option>
+								<option value="0" selected>No</option>
+							@endif
             </select>
 						@error ('offer')
 							<i style="color: red;"> {{ $errors->first('offer') }}</i>
@@ -79,7 +84,7 @@
         <div class="col-6">
 					<div class="form-group">
 						<label>Precio:</label>
-						<input type="text" name="price" class="form-control">
+						<input type="text" name="price" class="form-control" value="{{ old('price') }}">
 						@error ('price')
 							<i style="color: red;"> {{ $errors->first('price') }}</i>
 						@enderror
@@ -89,7 +94,7 @@
 				<div class="col-6">
 					<div class="form-group">
 						<label>Rating:</label>
-						<input type="text" name="rating" class="form-control">
+						<input type="text" name="rating" class="form-control" value="{{ old('rating') }}">
 						@error ('rating')
 							<i style="color: red;"> {{ $errors->first('rating') }}</i>
 						@enderror
