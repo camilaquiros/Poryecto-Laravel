@@ -27,7 +27,7 @@ class RemoveCategoryFromServices extends Migration
     public function down()
     {
         Schema::table('services', function (Blueprint $table) {
-          $table->unsignedBigInteger('category_id')->after('description')->nullable();
+          $table->unsignedBigInteger('category_id')->after('longDescription')->nullable();
           $table->foreign('category_id')->references('id')->on('categories');
         });
     }
