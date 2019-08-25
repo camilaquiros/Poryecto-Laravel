@@ -8,25 +8,23 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('pageTitle')</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Styles -->
     <link href="/css/admin.css" rel="stylesheet">
+    <!-- Styles -->
 </head>
 <body>
   <div class="admin-view">
       <div class="admin-sidebar">
         <img src="/img/Logo-Patitas.png" alt="">
         <ul>
-          <li><a href="/administration/products">Productos</a></li>
-          <li><a href="/administration/products/new">Crear producto</a></li>
-          <li><a href="#">SubCategorias</a></li>
+          
         </ul>
       </div>
       <div class="admin-content">
         @yield('content')
       </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
