@@ -104,7 +104,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 47%;
   margin-bottom: 20px;
 
 }
@@ -356,7 +356,7 @@ footer li a:hover {
   }
 
   .productCard {
-    width: 30%;
+    width: 45%;
     margin: 10px;
   }
 

@@ -95,17 +95,17 @@
 
       <!-- carrousel celular-->
 
-      <div class="containerCarouselCelular">
+      <div class="containerCarouselCelular cardsProduct">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active carruselProductos">
       <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
       <p class="card-title">{{$product->title}}</p>
       <p class="card-text">{{$product->price}}</p>
       <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
     </div>
     @foreach ($productsIndexCelu as $product)
-    <div class="carousel-item">
+    <div class="carousel-item carruselProductos">
       <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
       <p class="card-title">{{$product->title}}</p>
       <p class="card-text">{{$product->price}}</p>

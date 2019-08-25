@@ -43,11 +43,11 @@
         @endif
         <li><a href="/faqs">Ayuda</a>
         </li>
-        <li>
+        <li class="registrado">
           <div class="dropdown downProfile">
-            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:220px">
+            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="/storage/Avatars/{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
-                Hola, {{ Auth::user()->full_name }}!
+                Hola, {{ Auth::user()->username }}!
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/profile">Perfil</a>
@@ -65,11 +65,11 @@
 
     <!-- BARRA DE NAVEGACION DESKTOP Y TABLET -->
     <ul class="menu-header">
-      <li class="dropdown"><a href="#" data-toggle="dropdown">Mascotas</a>
-        <div class="dropdown-menu dropright">
+      <li class="dropdown mascotas"><a href="#" data-toggle="dropdown">Mascotas</a>
+        <div class="dropdown-menu dropright category">
           @foreach ($categories as $category)
           <a class="dropdown-item" href="/products/category/{{$category->id}}">{{$category->name}}</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <div class="dropdown-menu subcategory" aria-labelledby="dropdownMenuLink">
               @foreach ($subcategories as $subcategory)
               <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a>
               @endforeach

@@ -39,13 +39,14 @@ nav {
   margin-bottom: 0;
   font-weight: 600;
   background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
-  display: inline-block;
+  display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
   width: 100%;
 }
 
-.menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .tituloServicios {
+.menu-header, .cardsProduct, .tituloServicios {
   display: flex;
   flex-direction: column;
 }
@@ -75,26 +76,24 @@ nav {
   justify-content: center;
 }
 
-.listaContinuacion {
-  align-items: flex-end;
-  display: flex;
+.listaContinuacion  {
+  display: inline-flex;
   flex-wrap: wrap;
-}
-
-.listaContinuacion li {
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
 }
 
 .listaContinuacion a {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  color: white !important;
 }
 
 .listaContinuacion img {
   border-radius: 100%;
-  width: 5%;
-  display: block;
+  width: 10%;
   margin: 5px;
 }
 
@@ -146,7 +145,7 @@ nav {
 
 .searchBar {
   margin-top: 1em;
-  width: 300px;
+  margin-bottom: 1em;
 }
 
 .searchBar button {
@@ -176,10 +175,12 @@ nav {
   display: flex;
   flex-direction: column;
   background-size: cover;
-  margin-top: 10px;
+  margin-bottom: 10px;
   height: 30vh;
   justify-content: space-between;
   text-align: right;
+  position: relative;
+
 }
 
 #catProducts{
@@ -209,7 +210,16 @@ nav {
   color: white;
 }
 
-.mas-Productos a, .verTodosServicios {
+.mas-Productos a {
+  background-color: rgba(76, 175, 80, 0.8);
+  padding: 4px;
+  border-radius: 4%;
+  color: #fff;
+  font-family: "Staatliches";
+  display: inline-block;
+}
+
+.verTodosServicios {
   background-color: rgba(76, 175, 80, 0.8);
   padding: 4px;
   border-radius: 4%;
@@ -236,42 +246,46 @@ nav {
   align-items: center;
 }
 
-.oneproduct-card {
-  margin: 5%;
-  width: 70%;
+.carruselProductos{
+  width: 95%;
   box-shadow: 1px 2px px -2px #1c3643;
   background-color: rgba(236,239,241 ,0.4);
 }
 
-.nextPrevFlechas {
-  display: none;
+.carruselProductos p, .carruselProductos a  {
+  text-align: center;
 }
+
+.carruselProductos a {
+  display: block;
+}
+
 
 .oneproduct-card img {
   width: 100%;
 }
 
-.oneproduct-card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.mas-productosNovedades{
-  margin-left: 20%;
-  margin-bottom: 10%;
-  width: 60%;
+.mas-productosNovedades {
   background-color: rgba(0, 150, 136, 0.8);
   color: white;
   padding: 0.5em 0.7em;
   text-decoration: none;
   border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+
 }
 
 .containerCarouselDesktop{
   display: none;
 }
+
+.containerCarouselCelular {
+  margin-bottom: 20px;
+  margin-left: 4%;
+}
+
+.carousel-control-preious, .
 
 /*servicios*/
 .nuestrosServicios{
@@ -376,22 +390,46 @@ footer {
 }
 
 @media (min-width: 600px) {
-  .menutop-header, .menu-header, .listaContinuacion, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
+  .menutop-header, .menu-header, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
   }
 
+  .logoNv {
+    width: 30%;
+  }
+
+  .searchBar {
+    width: 30%;
+  }
+
+  .listaContinuacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+
+    .listaContinuacion a{
+      margin-right: 50px;
+      width: 100%;
+    }
+
+    .listaContinuacion img{
+      width: 10%;
+    }
+
+  .celular {
+    width: 30%;
+  }
+
   .menu-header{
     justify-content: flex-start;
     flex-direction: row;
-  }
-
-  .menutop-header li {
-    list-style: none;
-    display: inline-block;
-    margin: 10px;
   }
 
   .menutop-header li a, .menutop-header a, #text {
@@ -400,17 +438,12 @@ footer {
     color: #fff;
   }
 
-  .celular {
-    width: auto;
-  }
-
-  .dropdown:hover .dropdown-menu {
+  .mascotas:hover .category {
     display: block;
   }
 
-
-  .listaContinuacion img{
-    width: 20%;
+  .category:hover .subcategory {
+    display: block;
   }
 
   .hamburger {
@@ -538,21 +571,12 @@ footer {
   justify-content: space-between;
 }
 
-.oneproduct-card{
-  width: 25%;
-  margin: 10px;
-}
-
-.oneproduct-card img {
-  width: 100%;
-}
-
 .oneproduct-card-body {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .mas-productosNovedades {
@@ -562,6 +586,8 @@ footer {
   border-radius: 5px;
   color: rgba(84, 110, 122, 1);
   transition: all 0.2s;
+  display: block;
+  margin: 0;
 }
 
 .mas-productosNovedades:hover {
@@ -637,7 +663,37 @@ footer {
 
 }
 
-@media only screen and (min-width : 1000px) {
+@media only screen and (min-width : 850px) {
+
+  .menutop-header {
+    justify-content: space-around;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .logoNv {
+    width: 20%;
+  }
+
+  .searchBar{
+    width: 25%;
+  }
+
+  .celular {
+    width: 35%;
+  }
+
+  .listaContinuacion {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .registrado {
+    width: 200px;
+  }
+
 
   .slider p {
     font-size: 1.5em;
