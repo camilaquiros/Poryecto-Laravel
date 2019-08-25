@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Favorite;
 
-class favoritosController extends Controller
+class FavoriteController extends Controller
 {
-  public function __construct(){
-    $this->middleware(['auth']);
-  }
     /**
      * Display a listing of the resource.
      *
@@ -17,9 +13,6 @@ class favoritosController extends Controller
      */
     public function index()
     {
-      $user = Auth::user();
-      $favorites = Favorite::where('user_id', '=', $user ->id)->orderby('id', 'desc');
-      return view('profile', compact('user', 'favorites'));
         //
     }
 
@@ -41,15 +34,7 @@ class favoritosController extends Controller
      */
     public function store(Request $request)
     {
-    $this->validate($request, array(
-      'user_id'=>'required',
-      'product_id'=>'required'
-    ));
-    $favorite = new Favorite;
-    $favorite->user_id = $request->user_id;
-    $favorite->product_id = $request->product_id;
-    $favorite->save();
-    return redirect()->back()->with('flash_message', 'Item, ' . $favorite->product->title. ' Lo agregamos a tu lista de favoritos');
+        //
     }
 
     /**
@@ -94,10 +79,6 @@ class favoritosController extends Controller
      */
     public function destroy($id)
     {
-      $favorite = Favorite::findOrFail($id);
-      $favorite->delete();
-      return redirect()->route('profile')
-      ->with('flash_message', 'Eliminaste el producto de tu lista de favoritos');
         //
     }
 }
