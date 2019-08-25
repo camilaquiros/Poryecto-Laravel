@@ -12,7 +12,7 @@ class User extends Authenticatable
   public $fillable = [
       'full_name', 'username', 'country','state', 'email', 'password', 'avatar'
   ];
-    use Notifiable;
+use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -38,4 +38,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function favorites()
+    {
+      return $this->belongsToMany(Product::class);
+    }
+
 }

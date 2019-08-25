@@ -3,7 +3,7 @@
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/products">Productos</a></li>
-    <li><a href="#">Servicios</a></li>
+    <li><a href="/services">Servicios</a></li>
     <li><a href="/faqs">Preguntas Frecuentes</a></li>
     @if (Auth::guest())
       <li><a href="/register">Registro</a></li>

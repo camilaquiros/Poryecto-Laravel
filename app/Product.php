@@ -24,4 +24,8 @@ class Product extends Model
 	{
 		return $this->belongsTo(SubCategory::class);
 	}
+  public function favorites()
+  {
+    return $this->belongsToMany(User::class);
+  }
 }

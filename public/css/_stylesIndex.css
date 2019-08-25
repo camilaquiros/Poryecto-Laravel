@@ -269,6 +269,10 @@ nav {
   border-radius: 5px;
 }
 
+.containerCarouselDesktop{
+  display: none;
+}
+
 /*servicios*/
 .nuestrosServicios{
   background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/
@@ -399,6 +403,11 @@ footer {
   .celular {
     width: auto;
   }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
 
   .listaContinuacion img{
     width: 20%;
@@ -561,6 +570,14 @@ footer {
   padding-left: 1em;
   padding-right: 1em;
   text-decoration: none;
+}
+
+.containerCarouselCelular {
+  display: none;
+}
+
+.containerCarouselDesktop {
+  display: block;
 }
 
 /*servicios*/
