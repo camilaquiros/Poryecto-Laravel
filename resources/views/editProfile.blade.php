@@ -44,7 +44,7 @@
         <label> Pais de nacimiento</label>
         <select id="country-list" name="country" value={{ old('country', Auth::user()->country) }} class="form-control  @error('country') is-invalid @enderror">
 
-          <option value="">{{ Auth::user()->country }}</option>
+          <option value="{{Auth::user()->country}}" selected>{{ Auth::user()->country }}</option>
           </select>
           @error('country')
             <span class="invalid-feedback" role="alert">

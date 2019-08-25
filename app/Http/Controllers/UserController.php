@@ -15,14 +15,8 @@ class UserController extends Controller
 
  public function updateUserProfile( Request $request)
  {
-  $userToUpdate = User::find(auth()->user()->id);
-  $userToUpdate->full_name = $request['full_name'];
-  $userToUpdate->username = $request['username'];
-  $userToUpdate->country = $request['country'];
-  $userToUpdate->state = $request['state'];
-  $userToUpdate->email = $request['email'];
-  $userToUpdate->shipping_address = $request['shipping_address'];
-  $userToUpdate->save();
+  $userToUpdate = User::find(auth()->user()->id)
+  ->update($request->all());
   return redirect('/profile');
 }
 }
