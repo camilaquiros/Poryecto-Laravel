@@ -109,6 +109,7 @@
       <span><a class="" href="{{ route("editUserProfile", Auth::user()->id) }}">EDITAR</a></span>
     </div>
   </div>
+
 </div>
 
 @endsection

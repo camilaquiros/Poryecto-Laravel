@@ -49,11 +49,14 @@
                   </div>
 
                   <div class="card-footer text-center">
-                    <!-- <form action="{{route('favorites.store')}}" id="contact_form" method="post">
+@auth
+                    <form action="{{route('favorites.store')}}" id="contact_form" method="post">
   {{csrf_field()}}
-  <input name="user_id" type="text" value="{{Auth::user()->id}}" />
-  <input name="product_id" type="text" value="{{$product->id}}" />
-</form> -->
+  <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
+  <input name="product_id" type="hidden" value="{{$product->id}}">
+  <button type="submit"  class="btn btn-patitas" name="Favorites">Agregar a favoritos</button>
+</form>
+@endauth
                   </div>
                   <div class="card-footer text-center cardFooter">
                       <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
