@@ -40,7 +40,7 @@ use Notifiable;
     ];
     public function favorites()
     {
-      return $this->belongsToMany(Product::class);
+      return $this->hasMany(Favorite::class);
     }
 
 }

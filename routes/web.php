@@ -193,3 +193,4 @@ Route::get('/services', 'ServicesController@services')->name('services');
 //USUARIOS - EDITAR//
 Route::get('/profile/edit', 'UserController@editUserProfile')->name('editUserProfile');
 Route::put('/profile/edit', 'UserController@updateUserProfile')->name('updateUserProfile');
+Route::resource('/favorites', 'FavoritesController', ['except' => ['create', 'edit', 'show', 'update']]);
