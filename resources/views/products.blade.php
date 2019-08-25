@@ -49,7 +49,11 @@
                   </div>
 
                   <div class="card-footer text-center">
-                      <input type="hidden" id="product_id" value="" class="btn btn-patitas" value="{{$product->id}}"><a href="#" id="agregar-favoritos">Agregar a favoritos</a>
+                    <!-- <form action="{{route('favorites.store')}}" id="contact_form" method="post">
+  {{csrf_field()}}
+  <input name="user_id" type="text" value="{{Auth::user()->id}}" />
+  <input name="product_id" type="text" value="{{$product->id}}" />
+</form> -->
                   </div>
                   <div class="card-footer text-center cardFooter">
                       <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
