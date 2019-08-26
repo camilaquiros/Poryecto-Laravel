@@ -20,7 +20,7 @@ class FavoriteController extends Controller
     public function index()
     {
       $user = Auth::user();
-      $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc');
+      $favorites = Favorite::where("user_id", "=", $user->id)->get();
       return view('favorites', compact('user', 'favorites'));
         //
     }
@@ -43,30 +43,30 @@ class FavoriteController extends Controller
      */
      public function store(Request $request)
      {
- $this->validate($request, array(
-  'user_id'=>'required',
-  'product_id' =>'required',
- ));
+       $this->validate($request, array(
+        'user_id'=>'required',
+        'product_id' =>'required',
+       ));
 
- $status=Favorite::where('user_id',Auth::user()->id)
- ->where('product_id',$request->product_id)
- ->first();
+       $status=Favorite::where('user_id',Auth::user()->id)
+       ->where('product_id',$request->product_id)
+       ->first();
 
- if(isset($status->user_id) and isset($request->product_id))
-    {
-        return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
-    }
-    else
-    {
-        $favorite = new Favorite;
+       if(isset($status->user_id) and isset($request->product_id))
+          {
+              return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
+          }
+          else
+          {
+              $favorite = new Favorite;
 
-        $favorite->user_id = $request->user_id;
-        $favorite->product_id = $request->product_id;
-        $favorite->save();
+              $favorite->user_id = $request->user_id;
+              $favorite->product_id = $request->product_id;
+              $favorite->save();
 
-        return redirect()->back()->with('flash_message',
-                      'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
-    }
+              return redirect()->back()->with('flash_message',
+                            'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
+          }
 
  }
     /**

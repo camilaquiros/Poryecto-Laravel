@@ -1,5 +1,5 @@
 {{-- Para usar la plantilla template.blade.php --}}
-@extends('template')
+@extends('profileLayout')
 
 {{-- Llenando de información los @yield() --}}
 {{-- @section('bodyClass', 'class=bg-olive') --}}
@@ -7,23 +7,7 @@
 @section('pageTitle', 'Perfil')
 {{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
 
-@section('mainContent')
-
-<div class="profileBox">
-
-  <div class="dataImage">
-    <img src="/storage/Avatars/{{ Auth::user()->avatar }}" alt="Avatar Seleccionado">
-  </div>
-  <div class="dataTitle">
-    <h2>Hola, {{ Auth::user()->full_name }}.</h2>
-  </div>
-</div>
-<ul class="listMenuProfile">
-  <li href=#persInfo >Informacion Personal <br> <i class="fas fa-user-check"></i></li>
-  <li href=#address>Direcciones <br> <i class="fas fa-map-marker-alt"></i></li>
-  <li >Favoritos <br> <i class="fas fa-star"></i></li>
-</ul>
-
+@section('profileContent')
 <div class="showUserInformationBox">
   <h2>Editar Perfil</h2>
   <hr>

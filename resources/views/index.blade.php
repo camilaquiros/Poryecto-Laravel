@@ -77,7 +77,7 @@
         <!-- PRODUCTOS NOVEDADES -->
 
 
-        <!-- <div class="cardsProduct">
+        {{-- <div class="cardsProduct">
           <div class="nextPrevFlechas"><i class="fas fa-arrow-circle-left flechas"></i></div>
           @foreach ($productsIndex as $product)
           <article class="oneproduct-card">
@@ -90,7 +90,7 @@
           </article>
           @endforeach
         </div>
-      </section> -->
+      </section> --}}
 
 
       <!-- carrousel celular-->
@@ -98,17 +98,11 @@
       <div class="containerCarouselCelular cardsProduct">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active carruselProductos">
-      <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
-      <p class="card-title">{{$product->title}}</p>
-      <p class="card-text">{{$product->price}}</p>
-      <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
-    </div>
     @foreach ($productsIndexCelu as $product)
     <div class="carousel-item carruselProductos">
       <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
       <p class="card-title">{{$product->title}}</p>
-      <p class="card-text">{{$product->price}}</p>
+      <p class="card-text">${{$product->price}}</p>
       <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
     </div>
     @endforeach
@@ -136,7 +130,7 @@
                 @foreach ($productsIndex as $product)
                 <div class="col-sm oneproduct-card-body"><img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
                   <p class="card-title">{{$product->title}}</p>
-                  <p class="card-text">{{$product->price}}</p>
+                  <p class="card-text">${{$product->price}}</p>
                   <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
                 </div>
                 @endforeach

@@ -80,17 +80,17 @@ class RegisterController extends Controller
      */
     public function create(array $data)
     {
-
-        $user = User::create([
-            'full_name' => $data['fullName'],
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'country' => $data['country'],
-            'avatar' => $data['avatar'],
-            'state' =>$data['state']
-                  ]);
-
+        $userData = [];
+        $userData['full_name'] = $data['fullName'];
+        $userData['username'] = $data['username'];
+        $userData['email'] = $data['email'];
+        $userData['password'] = Hash::make($data['password']);
+        $userData['country'] = $data['country'];
+        $userData['avatar'] = $data['avatar'];
+        if (isset($data['state'])) {
+          $userData['state'] = $data['state'];
+        }
+        $user = User::create($userData);
         return $user;
     }
 }
