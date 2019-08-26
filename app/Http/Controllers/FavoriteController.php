@@ -20,8 +20,8 @@ class FavoriteController extends Controller
     public function index()
     {
       $user = Auth::user();
-      $favorites = Favorite::where("user_id", "=", $user->id)->get();
-      return view('favorites', compact('user', 'favorites'));
+      $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
+      return view('profile', compact('user', 'favorites'));
         //
     }
 
@@ -54,7 +54,7 @@ class FavoriteController extends Controller
 
        if(isset($status->user_id) and isset($request->product_id))
           {
-              return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
+              return redirect('profile')->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
           }
           else
           {

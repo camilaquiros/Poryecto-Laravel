@@ -62,7 +62,7 @@
         </div>
         <div class="contenedor-productosgato" id="newsProducts">
           <span class="descripcion-carta centrado">¡Recién llegados!</span>
-          <span class="mas-Productos"><a href="#">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/newArrivals">Ver productos</a></span>
         </div>
         <div class="contenedor-productosgato" id="dogProducts">
           <span class="descripcion-carta centrado">Productos para tu perro</span>
