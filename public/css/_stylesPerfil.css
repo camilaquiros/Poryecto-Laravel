@@ -132,27 +132,11 @@ ul, ol, li, a {
   color: #555;
 }
 
-.editProfile{
-  text-align: right;
-}
-
-.editProfile a{
-  width: 30%;
-  color: rgba(76, 175, 80, 0.8);
-  padding: 10px;
-  transition: 0.3s;
-}
-
-.editProfile a:hover {
-  color: #fff;
-  background-color: rgba(76, 175, 80, 0.6);
-  border-radius: 5px;
-  }
-
 .personalInformationEdit{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 90%;
+  margin: auto;
 }
 
 .personalInformationEdit label{

@@ -107,7 +107,7 @@ header {
   align-items: center;
   width: 90%;
   margin-bottom: 20px;
-  height: 500px;
+  height: 560px;
 }
 
 .btn-patitas {
@@ -135,6 +135,18 @@ header {
 .productCard h5 a {
   font-family: 'Livvic';
   font-weight: 400;
+}
+
+.imagenLista a{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.card-footer form{
+  margin: 0;
 }
 
 .titulo {
@@ -336,10 +348,6 @@ footer li a:hover {
     font-weight: 200;
   }
 
-  .lista {
-    width: 30%;
-  }
-
   .imagen {
     width: 95%;
     z-index: -1;
@@ -399,21 +407,12 @@ footer li a:hover {
     margin: 20px 0px 0px 50px;
   }
 
-  .lista {
-    width: 22%;
-  }
-
   .productosDetalle {
     flex-direction: row;
     justify-content: space-around;
   }
 
   .productCard {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     width: 30%;
     margin-bottom: 1em;
     background-color: white;
@@ -421,8 +420,6 @@ footer li a:hover {
   }
 
   .productCard img{
-     width: 70%;
-     height: 160px;
   }
 
   .productosLista{

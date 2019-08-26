@@ -42,7 +42,9 @@
     <section class="productosLista">
             @foreach ($products as $product)
             <div class="productCard card-deck lista">
-                <a class="imagenLista mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $product->image }}"></a>
+              <div class="imagenLista">
+                <a class="mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $product->image }}"></a>
+              </div>
                 <div class="productosListaInfo">
                   <div class="ratingTotal">
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor
@@ -54,7 +56,7 @@
 
                   <div class="card-footer text-center">
 @auth
-                    <form action="{{route('favorites.store')}}" id="contact_form" method="post">
+                    <form action="{{route('profile.store')}}" id="contact_form" method="post">
   {{csrf_field()}}
   <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
   <input name="product_id" type="hidden" value="{{$product->id}}">

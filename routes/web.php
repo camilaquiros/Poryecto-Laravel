@@ -12,7 +12,7 @@ Route::get('/faqs', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('user');
-Route::resource('favorites', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
+Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 
 //NOSOTROS//
