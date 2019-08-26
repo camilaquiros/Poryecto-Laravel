@@ -15,10 +15,14 @@
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <select class="custom-select" id="selectOrder">
             <option>Ordenar</option>
+            <option value="TITLE_ASC">A-Z</option>
+            <option value="TITLE_DESC">Z-A</option>
             <option value="PRICE_DESC">Precio menor a mayor</option>
             <option value="PRICE_ASC">Precio mayor a menor</option>
             <option value="RATING_ASC">Rating menor a mayor</option>
             <option value="RATING_DESC">Rating mayor a menor</option>
+            <option value="CREATED_AT_ASC">Mas viejo al mas nuevo</option>
+            <option value="CREATED_AT_DESC">Mas nuevo al mas viejo</option>
           </select>
         </li>
       </ul>

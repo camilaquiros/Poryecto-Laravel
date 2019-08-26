@@ -14,6 +14,12 @@ class ProductsController extends Controller
 	{
     if (isset($_GET['orderBy'])) {
       switch ($_GET['orderBy']) {
+        case 'TITLE_ASC':
+          $products = Product::orderBy('title', 'ASC')->get();
+          break;
+        case 'TITLE_DESC':
+          $products = Product::orderBy('title', 'DESC')->get();
+          break;
         case 'PRICE_DESC':
           $products = Product::orderBy('price', 'ASC')->get();
           break;
@@ -25,6 +31,12 @@ class ProductsController extends Controller
           break;
         case 'RATING_DESC':
           $products = Product::orderBy('rating', 'DESC')->get();
+          break;
+        case 'CREATED_AT_ASC':
+          $products = Product::orderBy('created_at', 'ASC')->get();
+          break;
+        case 'CREATED_AT_DESC':
+          $products = Product::orderBy('created_at', 'DESC')->get();
           break;
         default:
           $products = Product::all();
@@ -76,10 +88,20 @@ class ProductsController extends Controller
   }
 
   public function offer() {
+    $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where("offer", "=", "1")
     ->orderBy('price', 'ASC')
     ->get();
-    return view('products', compact('products', 'subcategories'));
+    return view('products', compact('products', 'categories', 'subcategories'));
+  }
+
+  public function new() {
+    $categories = Category::orderBy('name', 'ASC')->get();
+    $subcategories = SubCategory::orderBy('name', 'ASC')->get();
+    $products = Product::orderBy('created_at', 'DESC')->take(6)
+    ->orderBy('price', 'ASC')
+    ->get();
+    return view('products', compact('products', 'categories', 'subcategories'));
   }
 }

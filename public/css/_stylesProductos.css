@@ -22,6 +22,7 @@ body {
   flex-direction: row;
   margin: 20px;
   justify-content: space-around;
+  align-items: flex-start;
   max-width: 1200px;
   margin-bottom: 20px;
   width: 100%;
@@ -71,7 +72,7 @@ header {
 .productosLista {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 20px;
   width: 90%;
 }
@@ -104,9 +105,9 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 47%;
+  width: 90%;
   margin-bottom: 20px;
-
+  height: 500px;
 }
 
 .btn-patitas {
@@ -321,15 +322,12 @@ footer li a:hover {
     margin-top: 15px;
     border: 3px solid rgba(76, 175, 80, 1);
     border-radius: 65px 65px 65px 65px;
-
-
   }
-
-
   .leftNav{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: flex-start;
     width: 25%;
   }
 
@@ -353,6 +351,8 @@ footer li a:hover {
 
   .productosLista {
     width: 70%;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .productCard {

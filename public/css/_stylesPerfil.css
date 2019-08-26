@@ -1,6 +1,15 @@
  @import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap');
 
+ .containerPerfil {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0;
+   width: 100%;
+   margin-bottom: 30px;
+ }
+
 .profileBox::before {
   content: "";
   display: block;
@@ -44,16 +53,17 @@
 }
 
 .listMenuProfile {
-
+  display: flex;
+  flex-wrap: wrap;
   background-image: linear-gradient(90deg, #02C2AF 0, #009687 25%, #054943);
   justify-content: space-around;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   text-align: center;
   width: 100%;
-  justify-content: space-around;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+  flex-direction: column;
 }
 
 .listMenuProfile li {
@@ -70,70 +80,6 @@
   width: 100%;
 }
 
-.listMenuProfile li:hover {
-  background-color: #212121;
-  color: #EEEEEE;
-  cursor: pointer;
-}
-
-.loginSection h2, .loginSection label {
-  font-family: 'Nunito'
-}
-
-.loginSection {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  padding: 1em;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border: 1px solid rgba(1, 1, 1, 0.15);
-}
-
-.containerPerfil {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  max-width: 1200px;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-header {
-  width: 100%;
-}
-
-#perfilSection {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.loginSection h2, .loginSection label {
-  font-family: 'Nunito'
-}
-
-.loginSection {
-  width: 90%;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  padding: 1em;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border: 1px solid rgba(1, 1, 1, 0.15);
-}
-
-.invalid-feedback {
-  display: inherit !important;
-}
-
-.btn-green {
-  background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
-  font-family: 'Poppins';
-}
-
 ul, ol, li, a {
   text-decoration: none;
   padding: 0;
@@ -141,188 +87,112 @@ ul, ol, li, a {
   list-style-type: none;
 }
 
-.InfoPersonal h4 {
-  text-align: center;
-  font-size: 20px;
+.barra a {
+  border-radius: .25rem;
 }
 
-.InfoPersonal h4 {
-  text-align: center;
-  font-size: 30px;
-}
-
-.avatar {
-  width: 100%;
+.contenido {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.avatar img {
-  border-radius: 100%;
-  width: 80%;
-}
-
-.selecAvatar span {
-  font-size: 10px;
-}
-
-.infoDirecciones p {
-  display: none;
-}
-
-.form-check {
-  margin-bottom: 15px;
-}
-
-.ingreso {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.registroLogin {
-  width: 100%;
+.personalInformation{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  border: 3px solid #e3e4e6;
+  border-radius: 3px;
 }
 
-.registroLogin p {
-  margin: 0;
+.personalInformation div{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Quicksand";
+  font-size: 1.1em;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.personalInformation label{
+  margin-bottom: 0;
+  font-weight: 400;
+  font-family: "Quicksand";
+  color: black;
 }
 
-.registroLogin a {
-  font-weight: bold;
+.personalInformation input{
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  font-weight: 400;
+  color: #555;
 }
 
-.registroLogin a:hover {
-  color: rgb(149, 202, 62);
-  text-decoration: none;
+.editProfile{
+  text-align: right;
 }
+
+.editProfile a{
+  width: 30%;
+  color: rgba(76, 175, 80, 0.8);
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.editProfile a:hover {
+  color: #fff;
+  background-color: rgba(76, 175, 80, 0.6);
+  border-radius: 5px;
+  }
+
+.personalInformationEdit{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.personalInformationEdit label{
+  font-weight: 600;
+  font-family: "Quicksand";
+  color: black;
+}
+
+.personalInformationEdit button{
+  width: 100%;
+}
+
+
+
+
 
 @media (min-width:600px) {
-  #perfilSection {
-    justify-content: flex-start;
-  }
-
-  #perfilSection h2 {}
-
-  .infoPrincipal {
-    width: 100%;
-    margin-top: 30px;
-    position: relative;
-  }
 
   .listMenuProfile {
-    display: flex;
-  }
-
-  .avatar {
-    justify-content: flex-end;
-    position: absolute;
-    z-index: 1;
-    top: -5%;
-    right: 5%;
-  }
-
-  .avatar img {
-    width: 25%;
-    border: solid 4px rgba(255, 179, 0, 1);
-    top: 100%;
-  }
-
-  .card {
-    border: solid 2px rgba(255, 179, 0, 1);
-  }
-
-  .loginSection {
-    width: 80%;
-  }
-
-  .registroLogin {
-    width: 50%;
-    margin-bottom: 0;
+    flex-direction: row;
   }
 
   .showUserInformationBox {
-    width: 100%;
-    margin: 4em 6em;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
   }
 
-  .personalInformation{
-    display: flex;
+  .personalInformation {
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 50%;
-    justify-content: space-around;
-    border: 3px solid #e3e4e6;
-    border-radius: 3px;
+    justify-content: flex-start;
   }
 
-  .personalInformation div{
-    width: 42%;
-    display: flex;
-    flex-direction: column;
-    font-family: "Quicksand";
-    font-size: 1.1em;
-    margin-top: 5%;
-    margin-bottom: 2%;
-  }
-  .personalInformation label{
-    margin-bottom: 0;
-    font-weight: 400;
-    font-family: "Quicksand";
-    color: black;
+  .personalInformation div {
+    width: 45%;
+    padding-left: 5%;
   }
 
-  .personalInformation input{
-    width: 100%;
-    border: none;
-    font-size: 1em;
-    font-weight: 400;
-    color: #555;
-  }
-
-  .editProfile{
-    text-align: right;
-  }
-
-  .editProfile a{
-    width: 30%;
-    color: rgba(76, 175, 80, 0.8);
-    padding: 10px;
-    transition: 0.3s;
-  }
-
-  .editProfile a:hover {
-    color: #fff;
-    background-color: rgba(76, 175, 80, 0.6);
-    border-radius: 5px;
-    }
-
-  .personalInformationEdit{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-  }
-
-  .personalInformationEdit label{
-    font-weight: 600;
-    font-family: "Quicksand";
-    color: black;
-  }
-
-  .personalInformationEdit button{
-    width: 100%;
-  }
-
-  }
-
-@media (min-width:800px) {
-  .loginSection {
-    width: 50%;
-  }
 }
+
+@media (min-width:800px){
+
+  }
