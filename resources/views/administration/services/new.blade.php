@@ -25,7 +25,7 @@
 				<div class="col-10">
 					<div class="form-group">
 						<label>Descripcion:</label>
-						<input type="text" name="description" class="form-control" value="{{ old('description') }}">
+						<input type="text" name="longDescription" class="form-control" value="{{ old('description') }}">
 						@error ('description')
 							<i style="color: red;"> {{ $errors->first('description') }}</i>
 						@enderror

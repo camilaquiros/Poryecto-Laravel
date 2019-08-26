@@ -138,7 +138,7 @@ class AdministrationController extends Controller
     'image' => 'required | mimes:jpg,png,jpeg',
   ], [
     'name.required' => 'El nombre del servicio es obligatorio',
-    'description.required' => 'El servicio debe tener una breve descripcion',
+    'longDescription.required' => 'El servicio debe tener una breve descripcion',
     'category_id.required' => 'Seleccione la categoria a la que pertenece el servicio nuevo',
     'image.mimes' => 'La imagen debe ser un formato jpg, png o jpeg',
     'image.required' => 'El servicio debe tener una imagen principal',
@@ -147,7 +147,7 @@ class AdministrationController extends Controller
   $serviceSaved = Service::create($request->all());
   $imagen = $request["image"];
   $imagenFinal = uniqid("img_") . "." . $imagen->extension();
-  $request->file('image')->move(public_path('/img/Servicios'),$imagenFinal); //(arreglar)//
+  $request->storePubliclyAs("public/Servicios",$imagenFinal);
   $serviceSaved->image = $imagenFinal;
   $serviceSaved->save();
 
