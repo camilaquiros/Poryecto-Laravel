@@ -129,7 +129,7 @@
       <br>
 
       <img src="img/error-favoritos.png" alt="no hay favoritos">
-         @elseif (Auth::user()->favorite->count() > 0)
+         @else (Auth::user()->favorite->count() > 0)
       <section class="productosLista">
               @foreach ($favorites as $favorite)
               <div class="productCard card-deck lista">
@@ -153,7 +153,7 @@
 
               @endforeach
       </section>
-      @endelseif
+
       @endif
     </div>
   </div>
