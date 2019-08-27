@@ -132,7 +132,12 @@
 
   <div class="tab-pane fade showUserInformationBox favorites" id="favorites" role="tabpanel" aria-labelledby="contact-tab">
     <div class="favorites-profile">
-      @if (Auth::user()->favorite->count() > 0)
+      @if (Auth::user()->favorite->count() <= 0)
+      <br>
+      <br>
+
+      <img src="img/error-favoritos.png" alt="no hay favoritos">
+         @elseif (Auth::user()->favorite->count() > 0)
       <section class="productosLista">
               @foreach ($favorites as $favorite)
               <div class="productCard card-deck lista">
@@ -153,8 +158,10 @@
                     </div>
                     </div>
               </div>
+
               @endforeach
       </section>
+      @endelseif
       @endif
     </div>
   </div>
