@@ -76,9 +76,10 @@ class ProductsController extends Controller
   }
 
   public function search(){
+    $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where('title', 'like', '%' . $_GET['query'] . '%')->get();
-    return view('products', compact('products', 'subcategories'));
+    return view('products', compact('products', 'subcategories', 'categories'));
   }
 
   public function show ($id){

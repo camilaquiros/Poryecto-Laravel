@@ -7,13 +7,7 @@
 	<div class="container" style="margin-top:30px; margin-bottom: 30px;">
 		<h2>Editando el producto: {{ $productToEdit->title }}</h2>
 
-		@if ($errors)
-			@foreach ($errors->all() as $error)
-				<p style="color: red;">{{ $error }}</p>
-			@endforeach
-		@endif
-
-		<form action="/administration/products/{{ $productToEdit->id }}" method="post">
+		<form action="/administration/products/{{ $productToEdit->id }}" method="post" enctype="multipart/form-data">
 			@csrf
 			{{ method_field('put') }}
 
@@ -29,10 +23,10 @@
 					</div>
 				</div>
 
-        <div class="col-6">
+				<div class="col-7">
 					<div class="form-group">
 						<label>Descripcion:</label>
-						<input type="text" name="description" class="form-control" value="{{ old('description', $productToEdit->description) }}">
+						<textarea name="description" rows="7" cols="20" class="form-control" value="{{ old('description', $productToEdit->description) }}">{{$productToEdit->description}}</textarea>
 						@error ('description')
 							<i style="color: red;"> {{ $errors->first('description') }}</i>
 						@enderror
@@ -105,7 +99,7 @@
 				<div class="col-6">
 					<div class="form-group">
 						<label>Rating:</label>
-						<input type="text" name="rating" class="form-control" value="{{ old('rating', $productToEdit->price) }}">
+						<input type="text" name="rating" class="form-control" value="{{ old('rating', $productToEdit->rating) }}">
 						@error ('rating')
 							<i style="color: red;"> {{ $errors->first('rating') }}</i>
 						@enderror

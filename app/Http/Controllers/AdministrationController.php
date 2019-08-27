@@ -34,7 +34,7 @@ class AdministrationController extends Controller
     //productos ADMIN
     public function listProducts()
     {
-      $products = Product::all();
+      $products = Product::orderBy('title')->get();
       return view('administration.products.list', compact("products"));
     }
 
@@ -59,21 +59,19 @@ class AdministrationController extends Controller
 			'category_id' => 'required',
       'offer' => 'required',
       'price' => 'required | numeric',
-			'image' => 'required | image',
-			'image' => 'required | mimes:jpg,png,jpeg',
+			'image' => 'required | image | mimes:jpg,png,jpeg',
       'subcategory_id' => 'required',
-      'rating' => 'required'
+      'rating' => 'required | integer | between:1,5',
 		], [
-			'title.required' => 'El nombre del producto es obligatorio',
-      'description.required' => 'El producto debe tener una descripcion',
-			'category_id.required' => 'Selecciona una categoria',
-      'subcategory_id.required' => 'Selecciona la subcategoria del producto',
-      'image.mimes' => 'El producto debe ser un formato jpg,png o jpeg',
+      'required' => 'Este campo es obligatorio',
+      'image.mimes' => 'La imagen del producto debe ser un formato jpg,png o jpeg',
+ 			'numeric' => 'Este campo solo admite numeros',
+      'rating.between' => 'Indique un numero del 1 al 5',
+      'image.mimes' => 'la imagen debe ser formato: jpg,png o jpeg',
 			'price.numeric' => 'El precio solo admite números',
-      'price.required' => 'El campo precio es obligatorio',
-      'image.required' => 'El producto debe tener una imagen',
-      'offer.required' => '¿Tiene el producto una oferta?'
-
+      'integer' => 'Este campo solo admite numeros',
+      'rating.digits_between' => 'Debe contener un numero entre 1 y 5',
+      'image' => 'Este campo debe ser de tipo imagen'
 		]);
 
 		$productSaved = Product::create($request->all());
@@ -96,6 +94,21 @@ class AdministrationController extends Controller
 
    public function updateProduct ($id, Request $request)
 	 {
+     $request->validate([
+      'title' => 'required',
+ 			'description' => 'required',
+ 			'category_id' => 'required',
+      'offer' => 'required',
+      'price' => 'required | numeric',
+      'subcategory_id' => 'required',
+      'rating' => 'required | integer | between:1,5',
+ 		], [
+ 			'required' => 'Este campo es obligatorio',
+      'image.mimes' => 'La imagen del producto debe ser un formato jpg,png o jpeg',
+ 			'integer' => 'Este campo solo admite numeros',
+      'rating.between' => 'Indique un numero del 1 al 5',
+ 		]);
+
 		$productToUpdate = Product::find($id);
 		$productToUpdate->title = $request['title'];
 		$productToUpdate->description = $request['description'];
@@ -104,6 +117,19 @@ class AdministrationController extends Controller
 		$productToUpdate->offer = $request['offer'];
 		$productToUpdate->price = $request['price'];
     $productToUpdate->rating = $request['rating'];
+    if($request->hasFile('image')) {
+        //compruebo si ya exite la imagen del producto
+      if (\Storage::exists($productToUpdate->image))
+        {
+             // aquí la borro
+             \Storage::delete($productToUpdate->image);
+        }
+        $imagen = $request->file('image');
+        $nombreImagen = uniqid("img_") . "." . $imagen->extension();
+        $imagen->storePubliclyAs("public/productos", $nombreImagen);
+        $productToUpdate->image = $nombreImagen;
+    }
+
 		$productToUpdate->save();
 		return redirect('/administration/products');
 	}
@@ -115,6 +141,18 @@ class AdministrationController extends Controller
     return redirect('/administration/products');
   }
 
+  public function searchByCategory($id){
+    $products = Product::where('category_id', '=', $id)->orderBy('title')->get();
+    $category = Category::where('id', $id)->firstOrFail();
+    return view('administration.products.ByCategory', compact('products', 'category'));
+  }
+
+  public function searchBySubCategory($id){
+    $products = Product::where('subcategory_id', '=', $id)->orderBy('category_id')->get();
+    $subcategory = SubCategory::where('id', $id)->firstOrFail();
+    return view('administration.products.BySubCategory', compact('products', 'subcategory'));
+  }
+
   //servicios ADMIN
   public function listServices()
   {
@@ -124,7 +162,6 @@ class AdministrationController extends Controller
 
   public function newService()
   {
-    $categories = Category::orderBy('name')->get();
     return view('administration.services.new',compact('categories'));
   }
 
@@ -133,21 +170,17 @@ class AdministrationController extends Controller
   $request->validate([
     'name' => 'required',
     'description' => 'required',
-    'category_id' => 'required',
     'image' => 'required | image',
     'image' => 'required | mimes:jpg,png,jpeg',
   ], [
-    'name.required' => 'El nombre del servicio es obligatorio',
-    'longDescription.required' => 'El servicio debe tener una breve descripcion',
-    'category_id.required' => 'Seleccione la categoria a la que pertenece el servicio nuevo',
+    'required' => 'Este campo es obligatorio',
     'image.mimes' => 'La imagen debe ser un formato jpg, png o jpeg',
-    'image.required' => 'El servicio debe tener una imagen principal',
   ]);
 
   $serviceSaved = Service::create($request->all());
   $imagen = $request["image"];
   $imagenFinal = uniqid("img_") . "." . $imagen->extension();
-  $request->storePubliclyAs("public/Servicios",$imagenFinal);
+  $imagen->storePubliclyAs("public/Servicios",$imagenFinal);
   $serviceSaved->image = $imagenFinal;
   $serviceSaved->save();
 
@@ -163,10 +196,29 @@ class AdministrationController extends Controller
 
  public function updateService ($id, Request $request)
  {
+  $request->validate([
+     'name' => 'required',
+     'description' => 'required',
+   ], [
+     'required' => 'Este campo es obligatorio',
+     'alpha_num' => 'Este campo solo admite caracteres alfanumericos'
+   ]);
+
   $serviceToUpdate = Service::find($id);
   $serviceToUpdate->name = $request['name'];
-  $serviceToUpdate->description = $request['description'];
-  $serviceToUpdate->category_id = $request['category_id'];
+  $serviceToUpdate->longDescription = $request['longDescription'];
+  if($request->hasFile('image')) {
+      //compruebo si ya exite la imagen del producto
+    if (\Storage::exists($serviceToUpdate->image))
+      {
+           // aquí la borro
+           \Storage::delete($serviceToUpdate->image);
+      }
+      $imagen = $request->file('image');
+      $nombreImagen = uniqid("img_") . "." . $imagen->extension();
+      $imagen->storePubliclyAs("public/Servicios", $nombreImagen);
+      $serviceToUpdate->image = $nombreImagen;
+  }
   $serviceToUpdate->save();
   return redirect('/administration/services');
 }

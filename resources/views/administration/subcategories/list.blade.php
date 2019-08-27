@@ -7,7 +7,6 @@
     <tr>
       <th scope="col">Nombre de subcategoria</th>
       <th scope="col">Productos asociados</th>
-      <th scope="col">Servicios asociados</th>
       <th scope="col">Opciones</th>
     </tr>
   </thead>
@@ -15,10 +14,18 @@
     @foreach ($subcategories as $subcategory)
     <tr>
       <td>{{$subcategory->name}}</td>
-      <td>Listado productos</td>
-      <td>Listado servicios</td>
-      <td><a href="/administration/subcategories/{{$subcategory->id}}">Editar</a> <a href="/administration/subcategories/delete/{{$subcategory->id}}">Eliminar</a> </td>
-    </tr>
+      @if($subcategory->products())
+        <td><a href="/administration/products/subcategory/{{$subcategory->id}}">Listado de productos</a></td>
+      @else
+        <td>No tiene productos relacionados</td>
+      @endif
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a href="/administration/subcategories/{{$subcategory->id}}" class="btn btn-info">Editar</a>
+           <a href="/administration/subcategories/delete/{{$subcategory->id}}" class="btn btn-dark">Eliminar</a>
+        </div>
+      </td>
+   </tr>
     @endforeach
   </tbody>
 </table>

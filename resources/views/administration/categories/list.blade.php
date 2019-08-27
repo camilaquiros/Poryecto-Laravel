@@ -7,22 +7,24 @@
     <tr>
       <th scope="col">Nombre de categoria</th>
       <th scope="col">Productos asociados</th>
-      <th scope="col">Servicios asociados</th>
-      <th scope="col">Opciones</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     @foreach ($categories as $category)
     <tr>
       <td>{{$category->name}}</td>
-        @forelse ($category->products as $product)
-          <td>{{ $product->gettitle() }}</td> <br>
-        @empty
+        @if($category->products())
+          <td><a href="/administration/products/category/{{$category->id}}">Listado de productos</a></td>
+        @else
           <td>No tiene productos relacionados</td>
-        @endforelse
-      
-      <td>Listado servicios</td>
-      <td><a href="/administration/categories/{{$category->id}}">Editar</a> <a href="/administration/categories/delete/{{$category->id}}">Eliminar</a> </td>
+        @endif
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a href="/administration/categories/{{$category->id}}" class="btn btn-info">Editar</a>
+           <a href="/administration/categories/delete/{{$category->id}}" class="btn btn-dark">Eliminar</a>
+        </div>
+      </td>
     </tr>
     @endforeach
   </tbody>

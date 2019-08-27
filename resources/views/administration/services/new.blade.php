@@ -12,7 +12,7 @@
 
 			<div class="row">
 
-				<div class="col-10">
+				<div class="col-8">
 					<div class="form-group">
 						<label>Nombre del servicio:</label>
 						<input type="text" name="name" class="form-control" value="{{ old('name') }}">
@@ -22,32 +22,17 @@
 					</div>
 				</div>
 
-				<div class="col-10">
+				<div class="col-8">
 					<div class="form-group">
 						<label>Descripcion:</label>
-						<input type="text" name="longDescription" class="form-control" value="{{ old('description') }}">
-						@error ('description')
-							<i style="color: red;"> {{ $errors->first('description') }}</i>
+						<textarea name="longDescription" rows="10" cols="20" class="form-control" value="{{ old('longDescription') }}"></textarea>
+						@error ('longDescription')
+							<i style="color: red;"> {{ $errors->first('longDescription') }}</i>
 						@enderror
 					</div>
 				</div>
 
-        <div class="col-10">
-          <div class="form-group">
-            <label>Categoria:</label>
-            <select class="form-control" name="category_id">
-              <option value="">Elegí la categoria a la que pertenece</option>
-              @foreach ($categories as $category)
-                <option value="{{ $category->id }}"> {{ $category->name }}</option>
-              @endforeach
-            </select>
-						@error ('category_id')
-							<i style="color: red;"> {{ $errors->first('category_id') }}</i>
-						@enderror
-          </div>
-        </div>
-
-				<div class="col-10">
+				<div class="col-8">
 					<label>Imagen del servicio:</label>
 					<div class="custom-file">
 						<input type="file" class="custom-file-input" name="image">

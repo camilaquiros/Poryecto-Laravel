@@ -1,13 +1,12 @@
 @extends('layouts.admin')
 @section('pageTitle', 'Admin - Listado de productos')
 @section('content')
-<h1>Productos de Patitas</h1>
 <table class="table table-striped">
   <thead>
+    <h1>Productos de {{$category->name}}</h1>
     <tr>
       <th scope="col">Producto</th>
       <th scope="col">Precio</th>
-      <th scope="col">Categoria</th>
       <th scope="col">Subcategoria</th>
       <th scope="col"></th>
     </tr>
@@ -18,12 +17,6 @@
       <td>{{$product->title}}</td>
       <td>$ {{$product->price}}</td>
 
-      @if ($product->category)
-			    <td>{{ $product->category->name }} </td>
-			@else
-					<td>N/A</td>
-			@endif
-
       @if ($product->subcategory)
 			    <td>{{ $product->subcategory->name }} </td>
 			@else
@@ -32,9 +25,8 @@
       <td>
         <div class="btn-group" role="group" aria-label="Basic example">
           <a href="{{ route("editProduct", $product->id) }}" class="btn btn-info">Editar</a>
-          <a href="{{ route("deleteProduct", $product->id) }}" class="btn btn-dark">Eliminar</a>
-          </div>
-        </td>
+          <a href="{{ route("deleteProduct", $product->id) }}" class="btn btn-dark">Eliminar</a> </td>
+        </div>
     </tr>
     @endforeach
   </tbody>

@@ -21,8 +21,8 @@ class AppServiceProvider extends ServiceProvider
       view()->composer('partials.navbar', function($view){
         $products = Product::all();
         $services = Service::all();
-        $categories = Category::all();
-        $subcategories = SubCategory::all();
+        $categories = Category::orderBy("name")->get();
+        $subcategories = SubCategory::orderBy("name")->get();
         //attach the categories to the view.
         $view->with(compact('products', 'services', 'categories','subcategories'));
       });

@@ -22,10 +22,10 @@
 					</div>
 				</div>
 
-				<div class="col-6">
+				<div class="col-7">
 					<div class="form-group">
 						<label>Descripcion:</label>
-						<input type="text" name="description" class="form-control" value="{{ old('description') }}">
+						<textarea name="description" rows="7" cols="20" class="form-control" value="{{ old('description') }}">{{ old('description')}}</textarea>
 						@error ('description')
 							<i style="color: red;"> {{ $errors->first('description') }}</i>
 						@enderror
