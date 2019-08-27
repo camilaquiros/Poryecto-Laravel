@@ -63,10 +63,6 @@
         <label> Dirección de envio </label>
         <input type="text" name="" value="{{ Auth::user()->shipping_address }}">
       </div>
-      <div class="">
-        <label> Telefono personal </label>
-        <input type="text" name="" value="{{ Auth::user()->phoneNumber}}">
-      </div>
     </div>
   </div>
 
@@ -116,10 +112,6 @@
           <div class="form-group">
             <label for="shipping_address"> Dirección de envio </label>
             <input type="text" name="shipping_address" class="form-control" id="shipping_address" value="{{ Auth::user()->shipping_address }}">
-          </div>
-          <div class="form-group">
-            <label for="phoneNumber"> Telefono personal </label>
-            <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value="{{ Auth::user()->phoneNumber}}">
           </div>
 
           <button type="submit" class="btn btn-success" class="updateProfile">GUARDAR CAMBIOS</button>
