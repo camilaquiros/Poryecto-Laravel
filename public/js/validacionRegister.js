@@ -1,11 +1,11 @@
 window.addEventListener('load', function(){
 	//console.log('hola');
 	var elFormulario = document.querySelector('.formulario');
-	//console.log(elFormulario);
+	console.log(elFormulario);
 	var losCampos = Array.from(elFormulario.elements).filter(function (unCampo) {
 		return unCampo.name != "avatar";
 	});
-	// console.log(losCampos);
+	console.log(losCampos);
 
 	losCampos.pop();
 	losCampos.pop();
@@ -19,9 +19,10 @@ window.addEventListener('load', function(){
 
 	losCampos.forEach(function (unCampo) {
 	var divError = null;
-	if (unCampo.name !== 'null') {
+	if (unCampo.name !== 'file') {
 			divError = unCampo.nextElementSibling;
 		}
+
 
 		unCampo.addEventListener('blur', function () {
 			var valorDelCampo = unCampo.value.trim();
@@ -64,6 +65,18 @@ window.addEventListener('load', function(){
 						this.classList.add('invalid-feedback');
 						divError.style.display = 'block';
 						divError.innerText = `La contraseña debe contener como mínimo 8 caracteres`;
+						errores[this.name] = true;
+					}
+					else if (this.value.indexOf("DH") < 0) {
+						this.classList.add('invalid-feedback');
+						divError.style.display = 'block';
+						divError.innerText = `La contraseña debe contener DH`;
+						errores[this.name] = true;
+					}
+					else if (this.value.indexOf(" ") > 0) {
+						this.classList.add('invalid-feedback');
+						divError.style.display = 'block';
+						divError.innerText = `La contraseña no puede contener espacios`;
 						errores[this.name] = true;
 					}
 					contrasena = this.value;
