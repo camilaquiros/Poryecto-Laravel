@@ -69,7 +69,7 @@
       </div>
       <div class="">
         <label> Telefono personal </label>
-        <input type="text" name="" value=2345678>
+        <input type="text" name="" value="">
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
           </div>
           <div class="form-group">
             <label> Pais de nacimiento</label>
-            <select id="country-list" name="country" value="" class="form-control  @error('country') is-invalid @enderror">
+            <select id="country-list" name="country" value="{{ Auth::user()->country}}" class="form-control  @error('country') is-invalid @enderror">
               <option value="">Seleccione un país</option>
               </select>
               @error('country')
@@ -104,7 +104,7 @@
           </div>
           <div class="form-group">
             <label for="state"> Provincia </label>
-            <select id="state-list" name="state" value= "" class="form-control  @error('state') is-invalid @enderror" >
+            <select id="state-list" name="state" value= "{{ Auth::user()->state}}" class="form-control  @error('state') is-invalid @enderror" >
               <option value="">Seleccione una provincia</option>
               </select>
               @error('state')
@@ -123,7 +123,7 @@
           </div>
           <div class="form-group">
             <label for="phoneNumber"> Telefono personal </label>
-            <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value=2345678>
+            <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value="{{ Auth::user()->phoneNumber}}">
           </div>
 
           <button type="submit" class="btn btn-success" class="updateProfile">GUARDAR CAMBIOS</button>
