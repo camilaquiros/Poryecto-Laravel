@@ -76,7 +76,7 @@
   justify-content: center;
 }
 
-.showUserInformationBox {
+.infopersonal {
   width: 100%;
 }
 
@@ -89,11 +89,14 @@ ul, ol, li, a {
 
 .barra a {
   border-radius: .25rem;
+  color: white;
 }
 
 .contenido {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 .personalInformation{
@@ -135,7 +138,7 @@ ul, ol, li, a {
 .personalInformationEdit{
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -149,9 +152,17 @@ ul, ol, li, a {
   width: 100%;
 }
 
+.favorites {
+  width: 90%;
+  margin: 0;
+}
 
-
-
+.favorites-profile {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 @media (min-width:600px) {
 
@@ -159,8 +170,8 @@ ul, ol, li, a {
     flex-direction: row;
   }
 
-  .showUserInformationBox {
-    width: 90%;
+  .infopersonal {
+    width: 50%;
     margin: auto;
     margin-top: 20px;
   }
@@ -173,6 +184,10 @@ ul, ol, li, a {
   .personalInformation div {
     width: 45%;
     padding-left: 5%;
+  }
+
+  .favorites_profile{
+    justify-content: flex-start;
   }
 
 }

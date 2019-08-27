@@ -26,7 +26,7 @@
       </div>
       <div class="form-group">
         <label> Pais de nacimiento</label>
-        <select id="country-list" name="country" value={{ old('country', Auth::user()->country) }} class="form-control  @error('country') is-invalid @enderror">
+        <select id="country-list" name="country" value={{ old('country', Auth::user()->country)}} class="form-control  @error('country') is-invalid @enderror">
 
           <option value="{{Auth::user()->country}}" selected>{{ Auth::user()->country }}</option>
           </select>
@@ -50,7 +50,7 @@
       </div>
       <div class="form-group">
         <label for="phoneNumber"> Telefono personal </label>
-        <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value=2345678>
+        <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" value="">
       </div>
 
       <button type="submit" class="btn btn-success" class="updateProfile">GUARDAR CAMBIOS</button>

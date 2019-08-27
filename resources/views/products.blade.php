@@ -45,25 +45,41 @@
               <div class="imagenLista">
                 <a class="mt-1" href="{{route('show', $product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $product->image }}"></a>
               </div>
+              @if($product->offer == 1)
+                <p class="oferta">-30%</p>
+              @endif
+
+              <div class="favoritos">
+              @auth
+                <form action="{{route('profile.store')}}" id="contact_form" method="post">
+              {{csrf_field()}}
+              <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
+              <input name="product_id" type="hidden" value="{{$product->id}}">
+              <button type="submit" name="favorito" class="favorito">
+                @if(1)
+                <i class="fas fa-heart"></i>
+                @else
+                <i class="far fa-heart"></i>
+                @endif
+              </button>
+              </form>
+              @endauth
+              </div>
+
                 <div class="productosListaInfo">
                   <div class="ratingTotal">
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor
                   </div>
                   <div class="card-body text-center">
                       <h5 class="card-title titleCard"><a class="titulo" href="/{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
+                      @if($product->offer == 1)
+                      <p class="card-text priceCard">$ {{($product->price) * 0.7}}</p>
+                      @else
                       <p class="card-text priceCard">$ {{$product->price}}</p>
+                      @endif
                   </div>
 
-                  <div class="card-footer text-center">
-@auth
-                    <form action="{{route('profile.store')}}" id="contact_form" method="post">
-  {{csrf_field()}}
-  <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
-  <input name="product_id" type="hidden" value="{{$product->id}}">
-  <button type="submit"  class="btn btn-patitas" name="Favorites">Agregar a favoritos</button>
-</form>
-@endauth
-                  </div>
+
                   <div class="card-footer text-center cardFooter">
                       <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
                   </div>

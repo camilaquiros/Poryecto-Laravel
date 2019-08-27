@@ -58,7 +58,7 @@
       <section class="cartas-presentacion">
         <div class="contenedor-productosgato" id="catProducts">
           <span class="descripcion-carta centrado">Hacé feliz a tu gato</span>
-          <span class="mas-Productos"><a href="/cats">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/products/category/2">Ver productos</a></span>
         </div>
         <div class="contenedor-productosgato" id="newsProducts">
           <span class="descripcion-carta centrado">¡Recién llegados!</span>
@@ -66,7 +66,7 @@
         </div>
         <div class="contenedor-productosgato" id="dogProducts">
           <span class="descripcion-carta centrado">Productos para tu perro</span>
-          <span class="mas-Productos"><a href="/dogs">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/products/category/1">Ver productos</a></span>
         </div>
       </section>
 
@@ -155,11 +155,11 @@
           </div>
 
           <a class="carousel-control-prev" href="#multi_item" role="button" data-slide="prev">
-            <div class="carousel-control-prev-icon" aria-hidden="true"></div>
+            <div class="flecha" aria-hidden="true"><i class="fas fa-arrow-circle-left"></i></div>
             <div class="sr-only">Previous</div>
           </a>
           <a class="carousel-control-next" href="#multi_item" role="button" data-slide="next">
-            <div class="carousel-control-next-icon" aria-hidden="true"></div>
+            <div class="flecha" aria-hidden="true"><i class="fas fa-arrow-circle-right"></i></div>
             <div class="sr-only">Next</div>
           </a>
         </div>
@@ -176,12 +176,15 @@
           </div>
 
           <div class="seccionServiciosImagenes">
-            @foreach ($servicesIndex as $service)
-            <div class="serviciocard">
-                <h3>{{$service->name}}</h3>
+            @foreach ($services as $service)
+            <div class="serviciocard" id="servicio{{$service->id}}">
+              <a href="/services/#{{$service->name}}">
+              <h3>{{$service->name}}</h3>
+              </a>
             </div>
             @endforeach
           </div>
+          
         </section>
     </div>
   </div>

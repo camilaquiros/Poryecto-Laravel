@@ -38,7 +38,9 @@ class HomeController extends Controller
       ->get();
       $servicesIndex = Service::orderBy('name')->take(4)
       ->get();
-      return view ('index', compact('productsIndex', 'productsIndex2','productsIndexCelu', 'servicesIndex' ));
+      $services = Service::all();
+      
+      return view ('index', compact('productsIndex', 'productsIndex2','productsIndexCelu', 'servicesIndex','services' ));
     }
 
 }

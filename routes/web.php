@@ -9,9 +9,6 @@ Route::get('/faqs', function () {
 });
 
 //PREGUNTAS PERFIL//
-Route::get('/profile', function () {
-    return view('profile');
-})->middleware('user');
 Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 
@@ -111,5 +108,5 @@ Route::get('/products/{id}', 'ProductsController@show')->name('show');
 Route::get('/services', 'ServicesController@services')->name('services');
 
 //USUARIOS - EDITAR//
-Route::get('/profile/edit', 'UserController@editUserProfile')->name('editUserProfile');
-Route::put('/profile/edit', 'UserController@updateUserProfile')->name('updateUserProfile');
+Route::get('/profile#edit', 'UserController@editUserProfile')->name('editUserProfile');
+Route::put('/profile', 'UserController@update')->name('updateUserProfile');

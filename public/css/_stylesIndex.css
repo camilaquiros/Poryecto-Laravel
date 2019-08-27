@@ -260,6 +260,29 @@ nav {
   display: block;
 }
 
+.carousel-control-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.carousel-control-prev {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flecha i {
+  color: rgba(0, 150, 136, 0.5);
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.flecha i:hover {
+  transform: scale(3);
+  color: rgb(0, 150, 136);
+}
 
 .oneproduct-card img {
   width: 100%;
