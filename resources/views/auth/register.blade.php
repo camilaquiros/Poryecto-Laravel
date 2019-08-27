@@ -59,6 +59,13 @@
                             <div class="invalid-feedback">
                              <!-- Mensaje de error -->
                             </div>
+                            @error('country')
+                             <span class="invalid-feedback" role="alert">
+                                 <strong>{{ $message }}</strong>
+                             </span>
+                         @enderror
+                       </div>
+                     </div>
 
                             <option value="">Seleccione un país</option>
                             </select>
