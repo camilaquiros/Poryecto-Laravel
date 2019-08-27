@@ -76,7 +76,7 @@
   justify-content: center;
 }
 
-.infopersonalInformationBox {
+.infopersonal {
   width: 100%;
 }
 
@@ -170,7 +170,7 @@ ul, ol, li, a {
     flex-direction: row;
   }
 
-  .infopersonalInformationBox {
+  .infopersonal {
     width: 50%;
     margin: auto;
     margin-top: 20px;
