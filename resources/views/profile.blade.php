@@ -27,10 +27,10 @@
 
 <ul class="nav nav-tabs listMenuProfile" id="myTab" role="tablist">
   <li class="nav-item barra">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="true">Informacion Personal <i class="fas fa-user-check"></i></a>
+    <a class="nav-link" id="home-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="false">Informacion Personal <i class="fas fa-user-check"></i></a>
   </li>
   <li class="nav-item barra">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Editar Perfil <i class="fas fa-edit"></i></a>
+    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="true">Editar Perfil <i class="fas fa-edit"></i></a>
   </li>
   <li class="nav-item barra">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">Favoritos <i class="fas fa-heart"></i></a>
@@ -39,7 +39,7 @@
 
 
 <div class="tab-content contenido" id="myTabContent">
-  <div class="tab-pane fade  show active showUserInformationBox infopersonal" id="persInfo" role="tabpanel" aria-labelledby="home-tab">
+  <div class="tab-pane fade showUserInformationBox infopersonal" id="persInfo" role="tabpanel" aria-labelledby="home-tab">
     <h2>Informacion Personal</h2>
     <hr>
     <div class="personalInformation">
@@ -75,7 +75,7 @@
   </div>
 
 
-  <div class="tab-pane fade showUserInformationBox infopersonal" id="edit" role="tabpanel" aria-labelledby="profile-tab">
+  <div class="tab-pane fade show active showUserInformationBox infopersonal" id="edit" role="tabpanel" aria-labelledby="profile-tab">
       <h2>Editar Perfil</h2>
       <hr>
       <div class="personalInformationEdit">
