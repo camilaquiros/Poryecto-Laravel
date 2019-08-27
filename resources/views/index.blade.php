@@ -176,12 +176,15 @@
           </div>
 
           <div class="seccionServiciosImagenes">
-            @foreach ($servicesIndex as $service)
-            <div class="serviciocard">
-                <h3>{{$service->name}}</h3>
+            @foreach ($services as $service)
+            <div class="serviciocard" id="servicio{{$service->id}}">
+              <a href="/services/#{{$service->name}}">
+              <h3>{{$service->name}}</h3>
+              </a>
             </div>
             @endforeach
           </div>
+          
         </section>
     </div>
   </div>
