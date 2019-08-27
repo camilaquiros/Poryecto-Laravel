@@ -21,10 +21,6 @@
   </div>
 </div>
 
-
-
-
-
 <ul class="nav nav-tabs listMenuProfile" id="myTab" role="tablist">
   <li class="nav-item barra">
     <a class="nav-link" id="home-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="false">Informacion Personal <i class="fas fa-user-check"></i></a>
@@ -69,7 +65,7 @@
       </div>
       <div class="">
         <label> Telefono personal </label>
-        <input type="text" name="" value="">
+        <input type="text" name="" value="{{ Auth::user()->phoneNumber}}">
       </div>
     </div>
   </div>
