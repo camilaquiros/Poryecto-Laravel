@@ -58,7 +58,7 @@
       <section class="cartas-presentacion">
         <div class="contenedor-productosgato" id="catProducts">
           <span class="descripcion-carta centrado">Hacé feliz a tu gato</span>
-          <span class="mas-Productos"><a href="/cats">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/products/category/2">Ver productos</a></span>
         </div>
         <div class="contenedor-productosgato" id="newsProducts">
           <span class="descripcion-carta centrado">¡Recién llegados!</span>
@@ -66,7 +66,7 @@
         </div>
         <div class="contenedor-productosgato" id="dogProducts">
           <span class="descripcion-carta centrado">Productos para tu perro</span>
-          <span class="mas-Productos"><a href="/dogs">Ver productos</a></span>
+          <span class="mas-Productos"><a href="/products/category/1">Ver productos</a></span>
         </div>
       </section>
 
