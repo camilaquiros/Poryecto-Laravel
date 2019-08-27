@@ -56,19 +56,19 @@
                         <div class="form-group">
                           <label><b>País de origen:</b></label>
                           <select id="country-list" name="country" class="form-control  @error('country') is-invalid @enderror">
-                            <div class="invalid-feedback">
-                             <!-- Mensaje de error -->
-                            </div>
-                            @error('country')
+                            <!-- @error('country')
                              <span class="invalid-feedback" role="alert">
                                  <strong>{{ $message }}</strong>
                              </span>
-                         @enderror
+                         @enderror -->
                        </div>
                      </div>
 
                             <option value="">Seleccione un país</option>
                             </select>
+                            <div class="invalid-feedback">
+                             <!-- Mensaje de error -->
+                            </div>
                             @error('country')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -90,6 +90,9 @@
                             <option value="">Seleccione una provincia</option>
 
                           </select>
+                          <div class="invalid-feedback">
+                           <!-- Mensaje de error -->
+                          </div>
                           @error('state')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
