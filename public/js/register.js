@@ -5,28 +5,30 @@ $(document).ready(function(){
     return response.json();
   })
   .then(function(countries) {
-    for (var i = 0; i < countries.length; i++) {
+    for (var country of countries) {
       var optionCountry = document.createElement('option');
-      optionCountry.innerHTML = countries[i].name;
-      optionCountry.value = countries[i].alpha2Code;
-      countryList.appendChild(optionCountry);
+	    var nameCountry = document.createTextNode(country.name)
+	    optionCountry.value = country.name;
+      optionCountry.append(nameCountry);
+    	countryList.appendChild(optionCountry);
     }
   });
 
   countryList.addEventListener('change', function(e){
     let stateList = document.getElementById('state-list');
-    if (e.target.value == 'AR') {
+    if (e.target.value == 'Argentina') {
         stateList.disabled = false;
-        fetch('https://dev.digitalhouse.com/api/getProvincias')
+        fetch('https://apis.datos.gob.ar/georef/api/provincias')
         .then(function(response) {
           return response.json();
         })
         .then(function(statesArgentina) {
-          const states = statesArgentina.data;
-          for (var i = 0; i < states.length; i++) {
+          const states = statesArgentina.provincias;
+          for (var state of states) {
             var optionState = document.createElement('option');
-            optionState.innerHTML = states[i].state;
-            optionState.value = states[i].state;
+            var nameState = document.createTextNode(state.nombre)
+            optionState.value = state.nombre;
+            optionState.append(nameState);
             stateList.appendChild(optionState);
           }
         });

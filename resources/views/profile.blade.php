@@ -1,5 +1,5 @@
 {{-- Para usar la plantilla template.blade.php --}}
-@extends('profileLayout')
+@extends('template')
 
 {{-- Llenando de información los @yield() --}}
 {{-- @section('bodyClass', 'class=bg-olive') --}}
@@ -27,10 +27,10 @@
 
 <ul class="nav nav-tabs listMenuProfile" id="myTab" role="tablist">
   <li class="nav-item barra">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="true">Informacion Personal <i class="fas fa-user-check"></i></a>
+    <a class="nav-link" id="home-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="false">Informacion Personal <i class="fas fa-user-check"></i></a>
   </li>
   <li class="nav-item barra">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Editar Perfil <i class="fas fa-edit"></i></a>
+    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="true">Editar Perfil <i class="fas fa-edit"></i></a>
   </li>
   <li class="nav-item barra">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">Favoritos <i class="fas fa-heart"></i></a>
@@ -39,7 +39,7 @@
 
 
 <div class="tab-content contenido" id="myTabContent">
-  <div class="tab-pane fade show active showUserInformationBox" id="persInfo" role="tabpanel" aria-labelledby="home-tab">
+  <div class="tab-pane fade showUserInformationBox infopersonal" id="persInfo" role="tabpanel" aria-labelledby="home-tab">
     <h2>Informacion Personal</h2>
     <hr>
     <div class="personalInformation">
@@ -75,27 +75,26 @@
   </div>
 
 
-  <div class="tab-pane fade showUserInformationBox" id="edit" role="tabpanel" aria-labelledby="profile-tab">
+  <div class="tab-pane fade show active showUserInformationBox infopersonal" id="edit" role="tabpanel" aria-labelledby="profile-tab">
       <h2>Editar Perfil</h2>
       <hr>
       <div class="personalInformationEdit">
-        <form method="post" action="/profile/edit">
+        <form method="post" action="/profile#edit">
           @csrf
           {{ method_field('put') }}
 
           <div class="form-group">
             <label for="full_name">Nombre</label>
-            <input type="text" name="full_name" class="form-control" id="full_name" value={{ old('full_name', Auth::user()->full_name) }}>
+            <input type="text" name="full_name" class="form-control" id="full_name" value="{{ old('full_name', Auth::user()->full_name) }}">
           </div>
           <div class="form-group">
             <label for="username">Nombre de Usuario</label>
-            <input type="text" name="username" class="form-control" id="username" value={{ Auth::user()->username }}>
+            <input type="text" name="username" class="form-control" id="username" value="{{ Auth::user()->username }}">
           </div>
           <div class="form-group">
             <label> Pais de nacimiento</label>
-            <select id="country-list" name="country" value={{ old('country', Auth::user()->country) }} class="form-control  @error('country') is-invalid @enderror">
-
-              <option value="{{Auth::user()->country}}" selected>{{ Auth::user()->country }}</option>
+            <select id="country-list" name="country" value="" class="form-control  @error('country') is-invalid @enderror">
+              <option value="">Seleccione un país</option>
               </select>
               @error('country')
                 <span class="invalid-feedback" role="alert">
@@ -105,15 +104,22 @@
           </div>
           <div class="form-group">
             <label for="state"> Provincia </label>
-            <input type="text" name="state" class="form-control" id="state" value={{ Auth::user()->state }}>
+            <select id="state-list" name="state" value= "" class="form-control  @error('state') is-invalid @enderror" >
+              <option value="">Seleccione una provincia</option>
+              </select>
+              @error('state')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror
           </div>
           <div class="form-group">
             <label for="email"> E-mail </label>
-            <input type="text" name="email" class="form-control" id="email" value={{ Auth::user()->email }}>
+            <input type="text" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
           </div>
           <div class="form-group">
             <label for="shipping_address"> Dirección de envio </label>
-            <input type="text" name="shipping_address" class="form-control" id="shipping_address" value={{ Auth::user()->shipping_address }}>
+            <input type="text" name="shipping_address" class="form-control" id="shipping_address" value="{{ Auth::user()->shipping_address }}">
           </div>
           <div class="form-group">
             <label for="phoneNumber"> Telefono personal </label>
@@ -125,11 +131,10 @@
 
       </div>
     </div>
-    <script src="/js/register.js" ></script>
 
 
 
-  <div class="tab-pane fade showUserInformationBox" id="favorites" role="tabpanel" aria-labelledby="contact-tab">
+  <div class="tab-pane fade showUserInformationBox favorites" id="favorites" role="tabpanel" aria-labelledby="contact-tab">
     <div class="favorites-profile">
       @if (Auth::user()->favorite->count() > 0)
       <section class="productosLista">
@@ -160,5 +165,8 @@
 </div>
 
 </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/register.js" ></script>
 
 @endsection

@@ -155,11 +155,11 @@
           </div>
 
           <a class="carousel-control-prev" href="#multi_item" role="button" data-slide="prev">
-            <div class="carousel-control-prev-icon" aria-hidden="true"></div>
+            <div class="flecha" aria-hidden="true"><i class="fas fa-arrow-circle-left"></i></div>
             <div class="sr-only">Previous</div>
           </a>
           <a class="carousel-control-next" href="#multi_item" role="button" data-slide="next">
-            <div class="carousel-control-next-icon" aria-hidden="true"></div>
+            <div class="flecha" aria-hidden="true"><i class="fas fa-arrow-circle-right"></i></div>
             <div class="sr-only">Next</div>
           </a>
         </div>

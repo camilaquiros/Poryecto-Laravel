@@ -25,6 +25,13 @@ class FavoriteController extends Controller
         //
     }
 
+    public function index2()
+    {
+      $user = Auth::user();
+      $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
+      return view('products', compact('user', 'favorites'));
+        //
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -54,7 +61,7 @@ class FavoriteController extends Controller
 
        if(isset($status->user_id) and isset($request->product_id))
           {
-              return redirect('profile')->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
+              return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
           }
           else
           {
@@ -64,8 +71,7 @@ class FavoriteController extends Controller
               $favorite->product_id = $request->product_id;
               $favorite->save();
 
-              return redirect()->back()->with('flash_message',
-                            'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
+              return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
           }
 
  }
@@ -114,7 +120,7 @@ class FavoriteController extends Controller
       $favorite = Favorite::findOrFail($id);
         $favorite->delete();
 
-        return redirect()->route('favorites')
+        return redirect()->route('profile#favorites')
             ->with('flash_message',
              'Eliminamos el producto de tu lista de favoritos');
     }
