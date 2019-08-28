@@ -21,6 +21,8 @@ $factory->define(Avatar::class, function (Faker $faker) {
         'sinBarbaM.jpg',
         'chicoLargo.jpg',
         'perro2.jpg',
+        'chicaColorada.jpg',
+        'gatoGris.jpg'
       ]),
     ];
 });
