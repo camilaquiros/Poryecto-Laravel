@@ -52,7 +52,7 @@ class RegisterController extends Controller
             'fullName' => ['required', 'string', 'max:255'],
             'username' => ['required', 'alpha_dash', 'max:20', 'min:5', 'unique:users,username'],
             'email' => ['required', 'email', 'unique:users,email'],
-            'password' => ['required', 'min:8', 'confirmed'],
+            'password' => ['required', 'min:8', 'confirmed', 'regex:^DH^'],
             'password_confirmation' => ['required',  'min:8'],
             //'password_confirmation' => ['required',  'min:8', 'same:password', 'required_with:password'],
             'country' => ['required'],
@@ -67,7 +67,8 @@ class RegisterController extends Controller
           'email' => 'Usá el formato nombre@ejemplo.com.',
           'unique' => 'Este dato ya se encuentra registrado',
           'confirmed' => 'Las contraseñas no coinciden',
-          'min' => 'Este campo debe tener como mínimo :min caracteres'
+          'min' => 'Este campo debe tener como mínimo :min caracteres',
+          'password.regex' => 'La contraseña debe contener DH'
         ]);
 
     }
@@ -90,7 +91,7 @@ class RegisterController extends Controller
           $userData['state'] = $data['state'];
         }
         $userData['avatar'] = $data['avatar'];
-        
+
         $user = User::create($userData);
         return $user;
     }

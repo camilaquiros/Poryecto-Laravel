@@ -1,2 +1,0 @@
-[2019-08-27 15:21:06] local.ERROR: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
- (SQL: select * from information_schema.tables where table_schema = patitas and table_name = migrations and table_type = 'BASE TABLE')  
