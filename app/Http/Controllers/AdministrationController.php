@@ -162,16 +162,15 @@ class AdministrationController extends Controller
 
   public function newService()
   {
-    return view('administration.services.new',compact('categories'));
+    return view('administration.services.new');
   }
 
   public function storeService(Request $request){
 
   $request->validate([
     'name' => 'required',
-    'description' => 'required',
-    'image' => 'required | image',
-    'image' => 'required | mimes:jpg,png,jpeg',
+    'longDescription' => 'required',
+    'image' => 'required | image | mimes:jpg,png,jpeg',
   ], [
     'required' => 'Este campo es obligatorio',
     'image.mimes' => 'La imagen debe ser un formato jpg, png o jpeg',
@@ -180,7 +179,7 @@ class AdministrationController extends Controller
   $serviceSaved = Service::create($request->all());
   $imagen = $request["image"];
   $imagenFinal = uniqid("img_") . "." . $imagen->extension();
-  $imagen->storePubliclyAs("public/Servicios",$imagenFinal);
+  $imagen->storePubliclyAs("public/Servicios", $imagenFinal);
   $serviceSaved->image = $imagenFinal;
   $serviceSaved->save();
 

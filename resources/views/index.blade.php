@@ -85,7 +85,7 @@
             <div class="oneproduct-card-body">
               <p class="card-title">{{$product->title}}</p>
               <p class="card-text">{{$product->price}}</p>
-              <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+              <a href="/products/{{$product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
             </div>
           </article>
           @endforeach
@@ -103,7 +103,7 @@
       <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
       <p class="card-title">{{$product->title}}</p>
       <p class="card-text">${{$product->price}}</p>
-      <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+      <a href="/products/{{$product->id}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
     </div>
     @endforeach
   </div>
@@ -131,7 +131,7 @@
                 <div class="col-sm oneproduct-card-body"><img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
                   <p class="card-title">{{$product->title}}</p>
                   <p class="card-text">${{$product->price}}</p>
-                  <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+                  <a href="/products/{{$product->id}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
                 </div>
                 @endforeach
 
@@ -145,7 +145,7 @@
                 <div class="col-sm oneproduct-card-body"><img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
                   <p class="card-title">{{$product->title}}</p>
                   <p class="card-text">{{$product->price}}</p>
-                  <a href="{{route('show', $product->id)}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
+                  <a href="/products/{{$product->id}}" class="mas-productosNovedades">Ver Ahora <i class="fas fa-angle-double-right"></i></a>
                 </div>
                 @endforeach
               </div>
@@ -184,7 +184,7 @@
             </div>
             @endforeach
           </div>
-          
+
         </section>
     </div>
   </div>

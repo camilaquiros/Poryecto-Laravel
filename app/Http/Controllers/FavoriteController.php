@@ -21,11 +21,11 @@ class FavoriteController extends Controller
     {
       $user = Auth::user();
       $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      return view('profile', compact('user', 'favorites'));
+      return view('favorites', compact('user', 'favorites'));
         //
     }
 
-    public function index2()
+    public function like()
     {
       $user = Auth::user();
       $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
@@ -118,10 +118,9 @@ class FavoriteController extends Controller
     public function destroy($id)
     {
       $favorite = Favorite::findOrFail($id);
-        $favorite->delete();
+      $favorite->delete();
 
-        return redirect()->route('profile#favorites')
-            ->with('flash_message',
+        return redirect()->back()->with('flash_message',
              'Eliminamos el producto de tu lista de favoritos');
     }
 }

@@ -26,17 +26,29 @@
           </select>
         </li>
       </ul>
-        @foreach ($categories as $category)
-          <div class="">
-            <a href="/products/category/{{$category->id}}" class="d-flex justify-content-between align-items-center">{{$category->name}} <i class="fas fa-chevron-right"></i></a>
-              <ul class="list-group list-group-flush">
-                @foreach ($subcategories as $subcategory)
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
-                @endforeach
-              </ul>
-          </div>
-        @endforeach
+        @if(isset($currentCategory))
+            <div>
+              <a href="/products/category/{{$currentCategory->id}}" class="d-flex justify-content-between align-items-center">{{$currentCategory->name}} <i class="fas fa-chevron-right"></i></a>
+                <ul class="list-group list-group-flush">
+                  @foreach ($subcategories as $subcategory)
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <a class="dropdown-item" href="/products/category/{{$currentCategory->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
+                  @endforeach
+                </ul>
+            </div>
+        @else
+          @foreach ($categories as $category)
+            <div>
+              <a href="/products/category/{{$category->id}}" class="d-flex justify-content-between align-items-center">{{$category->name}} <i class="fas fa-chevron-right"></i></a>
+                <ul class="list-group list-group-flush">
+                  @foreach ($subcategories as $subcategory)
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
+                  @endforeach
+                </ul>
+            </div>
+          @endforeach
+        @endif
       </div>
     <!-- PRODUCTOS -->
     <section class="productosLista">
@@ -51,16 +63,22 @@
 
               <div class="favoritos">
               @auth
-                <form action="{{route('profile.store')}}" id="contact_form" method="post">
+                <form action="{{action('FavoriteController@store')}}" id="contact_form" method="post">
               {{csrf_field()}}
               <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
               <input name="product_id" type="hidden" value="{{$product->id}}">
               <button type="submit" name="favorito" class="favorito">
-                @if(1)
                 <i class="fas fa-heart"></i>
-                @else
+              </button>
+              </form>
+              @endauth
+              @auth
+                <form action="{{action('FavoriteController@destroy')}}" id="contact_form" method="post">
+              {{csrf_field()}}
+              <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
+              <input name="product_id" type="hidden" value="{{$product->id}}">
+              <button type="submit" name="favorito" class="favorito">
                 <i class="far fa-heart"></i>
-                @endif
               </button>
               </form>
               @endauth
@@ -71,12 +89,8 @@
                       @for($i = 1; $i<=$product->rating; $i++) <i class="fas fa-paw"></i> @endfor
                   </div>
                   <div class="card-body text-center">
-                      <h5 class="card-title titleCard"><a class="titulo" href="/{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
-                      @if($product->offer == 1)
-                      <p class="card-text priceCard">$ {{($product->price) * 0.7}}</p>
-                      @else
+                      <h5 class="card-title titleCard"><a class="titulo" href="{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
                       <p class="card-text priceCard">$ {{$product->price}}</p>
-                      @endif
                   </div>
 
 

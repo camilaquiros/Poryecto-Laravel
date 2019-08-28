@@ -8,6 +8,8 @@ use App\Product;
 use App\Service;
 use App\Category;
 use App\SubCategory;
+use Auth;
+use App\User;
 
 class AppServiceProvider extends ServiceProvider
 {

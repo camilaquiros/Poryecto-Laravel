@@ -119,7 +119,7 @@ window.addEventListener('load', function(){
 
 		if (Object.keys(errores).length > 0) {
 			alert('Campos vacíos');
-			//console.log(errores);
+			console.log(errores);
 			event.preventDefault();
 		}
 	})

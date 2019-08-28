@@ -52,9 +52,10 @@ class ProductsController extends Controller
 
   public function listCategory($categoryID){
     $products = Product::where('category_id', '=', $categoryID)->get();
+    $currentCategory = Category::where('id', '=', $categoryID)->firstOrFail();
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    return view('products', compact('products', 'subcategories', 'categories'));
+    return view('products', compact('products', 'subcategories', 'categories', 'currentCategory'));
   }
 
   public function listSubCategory($SubCategoryID){

@@ -8,8 +8,8 @@ Route::get('/faqs', function () {
     return view('faqs');
 });
 
-//Favoritos//
-Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
+// //Favoritos//
+// Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 
 //NOSOTROS//
@@ -100,17 +100,18 @@ Route::get('/products/offer', 'ProductsController@offer')->name('offer');
 //Lista recien llegados
 Route::get('/newArrivals', 'ProductsController@new')->name('new');
 //Ruta detalle producto
-Route::get('/products/{id}', 'ProductsController@show')->name('show');
+Route::get('/products/{id}', 'ProductsController@show')->name('showProduct');
 
 
 //SERVICIOS:
 //Ruta lista Servicios
 Route::get('/services', 'ServicesController@services')->name('services');
 
-//USUARIOS - EDITAR//
-Route::get('/profile#edit', 'UserController@editUserProfile')->name('editUserProfile');
-Route::put('/profile', 'UserController@update')->name('updateUserProfile');
+//PERFIL
+Route::get('/profile/edit', 'UserController@edit')->name('editUser');
+Route::put('/profile/edit', 'UserController@update')->name('updateUser');
+Route::get('/profile/favorites', 'FavoriteController@index')->name('favorites');
+Route::get('/profile/pets', 'PhotoController@uploadForm');
+Route::post('/profile/pets', 'PhotoController@uploadSubmit');
 
-// //FOTOS mascotas
-Route::get('/profile#pets', 'PetsController@create')->middleware('auth');
-Route::post('/profile#pets', 'PetsController@store');
+Route::get('/profile/{id}', 'UserController@show')->name('showUser');

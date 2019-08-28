@@ -50,7 +50,7 @@
                 Hola, {{ Auth::user()->username }}!
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/profile">Perfil</a>
+              <a class="dropdown-item" href="/profile/{{Auth::user()->id}}">Perfil</a>
               <form action="/logout" method="post">
 								@csrf
 								<button type="submit" class="dropdown-item">Cerrar sesion</button>

@@ -30,7 +30,9 @@
           <!-- RESPUESTA 1 -->
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
-              Somos Patitas de Ciudad, el primer petshop integral que te ofrece los mejores productos para tus mascotas y el mejor servicio para su cuidado
+              Somos <a href= "/nosotros"> Patitas de Ciudad</a>, el primer petshop integral que te ofrece los mejores productos para tus mascotas y el mejor servicio para su cuidado
+
+
             </div>
           </div>
         </div>
@@ -130,7 +132,7 @@
           </div>
           <!-- RESPUESTA 7 -->
           <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-            <div class="card-body"> Podés contactarte por mail a patitas@deciudad.com y por teléfono de lunes a viernes de 9 a 20 hs al 0800-12334455
+            <div class="card-body"> Podés contactarte por mail a patitas@deciudad.com y por teléfono de lunes a viernes de 9 a 20 hs al 0810-220-8383 (vete)
             </div>
           </div>
         </div>
