@@ -11,7 +11,6 @@
 
 <div class="containerProductos">
     <div class="leftNav nav flex-row nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      {{count($favoritesProductsId)}}
       <ul>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <select class="custom-select" id="selectOrder">
@@ -36,7 +35,7 @@
                   <a class="dropdown-item" href="/products/category/{{$currentCategory->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
                   @endforeach
                 </ul>
-            </div>          
+            </div>
         @else
           @foreach ($categories as $category)
             <div>

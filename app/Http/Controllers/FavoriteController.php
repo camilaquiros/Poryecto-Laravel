@@ -59,19 +59,17 @@ class FavoriteController extends Controller
        ->where('product_id',$request->product_id)
        ->first();
 
-       if(isset($status->user_id) and isset($request->product_id))
+       if(isset($status->user_id))
           {
-              return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
+            return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
           }
           else
           {
-              $favorite = new Favorite;
-
-              $favorite->user_id = $request->user_id;
-              $favorite->product_id = $request->product_id;
-              $favorite->save();
-
-              return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
+            $favorite = new Favorite;
+            $favorite->user_id = $request->user_id;
+            $favorite->product_id = $request->product_id;
+            $favorite->save();
+            return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
           }
 
  }
