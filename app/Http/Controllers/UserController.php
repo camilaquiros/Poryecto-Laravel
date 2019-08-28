@@ -12,13 +12,12 @@ class UserController extends Controller
 {
   public function editUserProfile()
   {
-    $userToEdit = User::find(auth()->user()->id);
+    $userToEdit = User::find(\Auth::user()->id);
     return view('profile', compact('userToEdit'));
  }
 
  public function update( Request $request)
  {
-
    $rules =  [
        'username' => 'required|alpha_dash|max:20|min:5|unique:users,username',
        'email' => 'required|email|unique:users,email',
@@ -39,14 +38,14 @@ class UserController extends Controller
    $validator = \Validator::make(Input::all(),$rules,$messages);
 
 		if($validator->fails()){
-
-			return Redirect::to('/profile#edit')
+			return Redirect::to('/profile')
 				->withErrors($validator)
 				->withInput(Input::except('password'));
 		} else{
-  $userToUpdate = User::find(auth()->user()->id)
-  ->update($request->all());
-  return redirect('/profile');
-}
-}
+      $userToUpdate = User::find(\Auth::user()->id);
+      $userToUpdate->full_name = $request->input('full_name');
+      $userToUpdate->save();
+      return redirect('/profile');
+    }
+  }
 }

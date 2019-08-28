@@ -70,18 +70,24 @@
   <div class="tab-pane fade show active showUserInformationBox infopersonal" id="edit" role="tabpanel" aria-labelledby="profile-tab">
       <h2>Editar Perfil</h2>
       <hr>
+      @if ($errors)
+        @foreach ($errors->all() as $error)
+         {{ $error }} <br>
+        @endforeach
+      @endif
       <div class="personalInformationEdit">
-        <form method="post" action="/profile#edit">
+        <form method="POST" action="/profile/edit">
           @csrf
+
           {{ method_field('put') }}
 
           <div class="form-group">
             <label for="full_name">Nombre</label>
-            <input type="text" name="full_name" class="form-control" id="full_name" value="{{ old('full_name', Auth::user()->full_name) }}">
+            <input type="text" disabled name="full_name" class="form-control" id="full_name" value="{{ old('full_name', Auth::user()->full_name) }}">
           </div>
           <div class="form-group">
             <label for="username">Nombre de Usuario</label>
-            <input type="text" name="username" class="form-control" id="username" value="{{ Auth::user()->username }}">
+            <input type="text" disabled name="username" class="form-control" id="username" value="{{ Auth::user()->username }}">
           </div>
           <div class="form-group">
             <label> Pais de nacimiento</label>

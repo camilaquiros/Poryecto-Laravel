@@ -108,5 +108,5 @@ Route::get('/products/{id}', 'ProductsController@show')->name('show');
 Route::get('/services', 'ServicesController@services')->name('services');
 
 //USUARIOS - EDITAR//
-Route::get('/profile#edit', 'UserController@editUserProfile')->name('editUserProfile');
-Route::put('/profile', 'UserController@update')->name('updateUserProfile');
+Route::get('/profile', 'UserController@editUserProfile')->name('editUserProfile');
+Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile');
