@@ -21,8 +21,8 @@
             <option value="PRICE_ASC">Precio mayor a menor</option>
             <option value="RATING_ASC">Rating menor a mayor</option>
             <option value="RATING_DESC">Rating mayor a menor</option>
-            <option value="CREATED_AT_ASC">Mas viejo al mas nuevo</option>
-            <option value="CREATED_AT_DESC">Mas nuevo al mas viejo</option>
+            <option value="CREATED_AT_ASC">Lo más viejo</option>
+            <option value="CREATED_AT_DESC">Lo más reciente</option>
           </select>
         </li>
       </ul>

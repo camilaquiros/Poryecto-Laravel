@@ -24,14 +24,6 @@ class FavoriteController extends Controller
       return view('profile', compact('user', 'favorites'));
         //
     }
-
-    public function index2()
-    {
-      $user = Auth::user();
-      $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      return view('products', compact('user', 'favorites'));
-        //
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -61,7 +53,8 @@ class FavoriteController extends Controller
 
        if(isset($status->user_id))
           {
-            return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
+            $status->delete();
+            return redirect()->back();
           }
           else
           {
