@@ -26,17 +26,29 @@
           </select>
         </li>
       </ul>
-        @foreach ($categories as $category)
-          <div class="">
-            <a href="/products/category/{{$category->id}}" class="d-flex justify-content-between align-items-center">{{$category->name}} <i class="fas fa-chevron-right"></i></a>
-              <ul class="list-group list-group-flush">
-                @foreach ($subcategories as $subcategory)
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
-                @endforeach
-              </ul>
-          </div>
-        @endforeach
+        @if(isset($currentCategory))
+            <div>
+              <a href="/products/category/{{$currentCategory->id}}" class="d-flex justify-content-between align-items-center">{{$currentCategory->name}} <i class="fas fa-chevron-right"></i></a>
+                <ul class="list-group list-group-flush">
+                  @foreach ($subcategories as $subcategory)
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <a class="dropdown-item" href="/products/category/{{$currentCategory->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
+                  @endforeach
+                </ul>
+            </div>          
+        @else
+          @foreach ($categories as $category)
+            <div>
+              <a href="/products/category/{{$category->id}}" class="d-flex justify-content-between align-items-center">{{$category->name}} <i class="fas fa-chevron-right"></i></a>
+                <ul class="list-group list-group-flush">
+                  @foreach ($subcategories as $subcategory)
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a></li>
+                  @endforeach
+                </ul>
+            </div>
+          @endforeach
+        @endif
       </div>
     <!-- PRODUCTOS -->
     <section class="productosLista">
