@@ -1,11 +1,7 @@
-{{-- Para usar la plantilla template.blade.php --}}
+
 @extends('template')
 
-{{-- Llenando de información los @yield() --}}
-{{-- @section('bodyClass', 'class=bg-olive') --}}
-
 @section('pageTitle', 'Productos')
-{{-- Como solo nos interesa mandar un string al yield, podemos pasar dicho string como 2do parámetro de la función @section() --}}
 
 @section('mainContent')
 
@@ -89,7 +85,8 @@
 
 
                   <div class="card-footer text-center cardFooter">
-                      <button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
+                    <p class="btn-holder"><a href="/addToCart/{{$product->id}}" class="btn btn-warning btn-block text-center" role="button">Añadir al carrito <i class="fas fa-shopping-basket"></i></a></p>
+                    {{--<button type="submit" class="btn btn-patitas" value="{{$product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>--}}
                   </div>
                   </div>
             </div>

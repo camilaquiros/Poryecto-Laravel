@@ -102,6 +102,12 @@ Route::get('/newArrivals', 'ProductsController@new')->name('new');
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
+//Agregar al carrito
+
+Route::get('/cart', 'ProductsController@cart');
+
+Route::get('/addToCart/{id}', 'ProductsController@addToCart');
+
 
 //SERVICIOS:
 //Ruta lista Servicios

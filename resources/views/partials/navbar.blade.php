@@ -51,6 +51,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/profile">Perfil</a>
+              <a class="dropdown-item" href="/cart">Carrito</a>
+
               <form action="/logout" method="post">
 								@csrf
 								<button type="submit" class="dropdown-item">Cerrar sesion</button>
