@@ -16,7 +16,7 @@ class UserController extends Controller
     return view('profile', compact('userToEdit'));
  }
 
- public function update( Request $request)
+ public function update(Request $request)
  {
    $rules =  [
        'username' => 'required|alpha_dash|max:20|min:5|unique:users,username',
@@ -44,6 +44,10 @@ class UserController extends Controller
 		} else{
       $userToUpdate = User::find(\Auth::user()->id);
       $userToUpdate->full_name = $request->input('full_name');
+      $userToUpdate->country = $request->input('country');
+      $userToUpdate->state = $request->input('state');
+      $userToUpdate->email = $request->input('email');
+      $userToUpdate->shipping_address = $request->input('shipping_address');
       $userToUpdate->save();
       return redirect('/profile');
     }
