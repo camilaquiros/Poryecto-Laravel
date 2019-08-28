@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
   public $table = "users";
   public $fillable = [
-      'full_name', 'username', 'country','state', 'email', 'password', 'avatar'
+      'full_name', 'username', 'country','state', 'email', 'password', 'avatar','pets'
   ];
 use Notifiable;
 
@@ -40,6 +40,10 @@ use Notifiable;
     ];
     public function favorite(){
          return $this->hasMany(Favorite::class);
+      }
+
+    public function pets(){
+           return $this->hasMany(Pet::class);
       }
 
 }

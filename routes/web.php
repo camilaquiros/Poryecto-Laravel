@@ -8,7 +8,7 @@ Route::get('/faqs', function () {
     return view('faqs');
 });
 
-//PREGUNTAS PERFIL//
+//Favoritos//
 Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 
@@ -110,3 +110,7 @@ Route::get('/services', 'ServicesController@services')->name('services');
 //USUARIOS - EDITAR//
 Route::get('/profile#edit', 'UserController@editUserProfile')->name('editUserProfile');
 Route::put('/profile', 'UserController@update')->name('updateUserProfile');
+
+// //FOTOS mascotas
+Route::get('/profile#pets', 'PetsController@create')->middleware('auth');
+Route::post('/profile#pets', 'PetsController@store');

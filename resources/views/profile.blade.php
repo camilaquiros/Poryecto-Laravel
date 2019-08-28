@@ -23,13 +23,16 @@
 
 <ul class="nav nav-tabs listMenuProfile" id="myTab" role="tablist">
   <li class="nav-item barra">
-    <a class="nav-link" id="home-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="false">Informacion Personal <i class="fas fa-user-check"></i></a>
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#persInfo" role="tab" aria-controls="persInfo" aria-selected="false">Informacion Personal <i class="fas fa-user-check"></i></a>
   </li>
   <li class="nav-item barra">
-    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="true">Editar Perfil <i class="fas fa-edit"></i></a>
+    <a class="nav-link active" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="true">Editar Perfil <i class="fas fa-edit"></i></a>
   </li>
   <li class="nav-item barra">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">Favoritos <i class="fas fa-heart"></i></a>
+    <a class="nav-link" id="favorites-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">Favoritos <i class="fas fa-heart"></i></a>
+  </li>
+  <li class="nav-item barra">
+    <a class="nav-link" id="pets-tab" data-toggle="tab" href="#pets" role="tab" aria-controls="pets" aria-selected="false"><i class="fas fa-cat"></i> Tus mascotas <i class="fas fa-dog fa-flip-horizontal"></i></a>
   </li>
 </ul>
 
@@ -139,13 +142,20 @@
                 <div class="imagenLista">
                   <a class="mt-1" href="{{route('show', $favorite->product->id)}}"><img class="card-img-top" src="/storage/productos/{{ $favorite->product->image }}"></a>
                   </div>
+                  @if($favorite->product->offer == 1)
+                    <p class="oferta">-30%</p>
+                  @endif
                   <div class="productosListaInfo">
                     <div class="ratingTotal">
                         @for($i = 1; $i<=$favorite->product->rating; $i++) <i class="fas fa-paw"></i> @endfor
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title titleCard"><a class="titulo" href="/{{route('show', $favorite->product->id)}}"> {{ $favorite->product->title }} </a></h5>
+                        @if($favorite->product->offer == 1)
+                        <p class="card-text priceCard">$ {{($favorite->product->price) * 0.7}}</p>
+                        @else
                         <p class="card-text priceCard">$ {{$favorite->product->price}}</p>
+                        @endif
                     </div>
 
                     <div class="card-footer text-center cardFooter">
@@ -158,6 +168,27 @@
       @endif
     </div>
   </div>
+
+
+  <div class="tab-pane fade showUserInformationBox pets" id="pets" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="pets-profile">
+      <form action="/profile" method="post" enctype="multipart/form-data">
+        @csrf
+      <label>Mostranos fotos de tus mascotas!:</label>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" name="pets">
+          <label class="custom-file-label">Choose file...</label>
+        </div>
+        @error ('poster')
+          <i style="color: red;"> {{ $errors->first('poster') }}</i>
+        @enderror
+        <button type="submit" class="btn btn-patitas">GUARDAR FOTOS</button>
+      </form>
+    </div>
+  </div>
+
+
+
 </div>
 
 </div>
