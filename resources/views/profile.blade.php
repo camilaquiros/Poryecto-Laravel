@@ -41,27 +41,27 @@
     <div class="personalInformation">
       <div class="">
         <label> Tu nombre</label>
-        <input type="text" name="" value="{{ Auth::user()->full_name }}">
+        <p>{{ Auth::user()->full_name }}</p>
       </div>
       <div class="">
         <label> Nombre de usuario </label>
-        <input type="text" name="" value="{{ Auth::user()->username }}">
+        <p>{{ Auth::user()->username }}</p>
       </div>
       <div class="">
         <label> Pais de nacimiento</label>
-        <input type="text" name="" value="{{ Auth::user()->country}}">
+        <p>{{ Auth::user()->country }}</p>
       </div>
       <div class="">
         <label> Provincia </label>
-        <input type="text" name="" value="{{ Auth::user()->state }}">
+        <p>{{ Auth::user()->state }}</p>
       </div>
       <div class="">
         <label> E-mail </label>
-        <input type="text" name="" value="{{ Auth::user()->email }}">
+        <p>{{ Auth::user()->email }}</p>
       </div>
       <div class="">
         <label> Dirección de envio </label>
-        <input type="text" name="" value="{{ Auth::user()->shipping_address }}">
+        <p>{{ Auth::user()->shipping_address }}</p>
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@
 
           <div class="form-group">
             <label for="full_name">Nombre</label>
-            <input type="text" disabled name="full_name" class="form-control" id="full_name" value="{{ old('full_name', Auth::user()->full_name) }}">
+            <input type="text" name="full_name" class="form-control" id="full_name" value="{{ old('full_name', Auth::user()->full_name) }}">
           </div>
           <div class="form-group">
             <label for="username">Nombre de Usuario</label>
