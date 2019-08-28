@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
 use App\SubCategory;
+use App\Favorite;
+use Auth;
 
 class ProductsController extends Controller
 {
@@ -47,7 +49,10 @@ class ProductsController extends Controller
     }
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-		return view('products', compact('products', 'subcategories', 'categories'));
+    // Pendiente verificar autenticacion
+    $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+    $favorites = $favorites->toArray();
+		return view('products', compact('products', 'subcategories', 'categories', 'favorites'));
 	}
 
   public function listCategory($categoryID){

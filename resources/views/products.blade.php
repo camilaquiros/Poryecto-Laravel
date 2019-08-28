@@ -68,10 +68,10 @@
               <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
               <input name="product_id" type="hidden" value="{{$product->id}}">
               <button type="submit" name="favorito" class="favorito">
-                @if(1)
-                <i class="fas fa-heart"></i>
-                @else
+                @if(in_array($product->offer, $favorites))
                 <i class="far fa-heart"></i>
+                @else
+                <i class="fas fa-heart"></i>
                 @endif
               </button>
               </form>
