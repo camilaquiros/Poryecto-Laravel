@@ -72,11 +72,7 @@
                   </div>
                   <div class="card-body text-center">
                       <h5 class="card-title titleCard"><a class="titulo" href="{{route('show', $product->id)}}"> {{ $product->title }} </a></h5>
-                      @if($product->offer == 1)
-                      <p class="card-text priceCard">$ {{($product->price) * 0.7}}</p>
-                      @else
                       <p class="card-text priceCard">$ {{$product->price}}</p>
-                      @endif
                   </div>
 
 
