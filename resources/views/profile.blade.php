@@ -31,6 +31,9 @@
   <li class="nav-item barra">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">Favoritos <i class="fas fa-heart"></i></a>
   </li>
+  <li class="nav-item barra">
+<a class="nav-link" id="pets-tab" data-toggle="tab" href="#pets" role="tab" aria-controls="pets" aria-selected="false"><i class="fas fa-cat"></i> Tus mascotas <i class="fas fa-dog fa-flip-horizontal"></i></a>
+</li>
 </ul>
 
 
@@ -113,7 +116,7 @@
           </div>
           <div class="form-group">
             <label for="email"> E-mail </label>
-            <input type="text" name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
+            <input type="text" name="email" disabled class="form-control" id="email" value="{{ Auth::user()->email }}">
           </div>
           <div class="form-group">
             <label for="shipping_address"> Dirección de envio </label>
@@ -136,7 +139,7 @@
 
       <img src="img/error-favoritos.png" alt="no hay favoritos">
          @else (Auth::user()->favorite->count() > 0)
-      <section class="productosLista">
+      <div class="productosLista">
               @foreach ($favorites as $favorite)
               <div class="productCard card-deck lista">
                 <div class="imagenLista">
@@ -158,13 +161,64 @@
               </div>
 
               @endforeach
-      </section>
+      </div>
 
       @endif
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="tab-pane fade showUserInformationBox pets" id="pets" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="pets-profile">
+		<form action="/profile" method="post" enctype="multipart/form-data">
+                @csrf
+        <label>Subi fotos de tus mascotas!:</label>
+        <div class="custom-file photo">
+          <input type="file" class="custom-file-input" name="photo">
+          <label class="custom-file-label ">Choose file...</label>
+        </div>
+        <br>
+        @error ('photo')
+          <i style="color: red;"> {{ $errors->first('photo') }}</i>
+        @enderror
+        <button type="submit" class="btn btn-patitas photo">GUARDAR</button>
+  </form>
+
+<div class="photos">
+  <h3>Mis mascotas</h3>
+  @foreach ($photos as $photo)
+ <img src="storage/mascotas/{{ $photo->photo }}" alt="">
+ @endforeach
 </div>
 
+
+</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 </div>
 
 <script src="js/jquery.min.js"></script>
