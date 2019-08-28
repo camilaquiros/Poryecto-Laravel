@@ -116,7 +116,7 @@
           </div>
           <div class="form-group">
             <label for="email"> E-mail </label>
-            <input type="text" name="email" disabled class="form-control" id="email" value="{{ Auth::user()->email }}">
+            <input type="text" disabled name="email" class="form-control" id="email" value="{{ Auth::user()->email }}">
           </div>
           <div class="form-group">
             <label for="shipping_address"> Dirección de envio </label>
