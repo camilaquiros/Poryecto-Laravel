@@ -11,6 +11,7 @@
 
 <div class="containerProductos">
     <div class="leftNav nav flex-row nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      {{count($favoritesProductsId)}}
       <ul>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <select class="custom-select" id="selectOrder">
@@ -68,10 +69,10 @@
               <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
               <input name="product_id" type="hidden" value="{{$product->id}}">
               <button type="submit" name="favorito" class="favorito">
-                @if(in_array($product->offer, $favorites))
-                <i class="far fa-heart"></i>
+                @if(in_array($product->id,$favoritesProductsId))
+                  <i class="fas fa-heart"></i>
                 @else
-                <i class="fas fa-heart"></i>
+                  <i class="far fa-heart"></i>
                 @endif
               </button>
               </form>

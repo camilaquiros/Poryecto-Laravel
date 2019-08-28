@@ -50,9 +50,12 @@ class ProductsController extends Controller
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     // Pendiente verificar autenticacion
+    $favoritesProductsId = [];
     $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
-    $favorites = $favorites->toArray();
-		return view('products', compact('products', 'subcategories', 'categories', 'favorites'));
+    foreach ($favorites as $favorite) {
+      $favoritesProductsId[] = $favorite->product_id;
+    }
+		return view('products', compact('products', 'subcategories', 'categories', 'favoritesProductsId'));
 	}
 
   public function listCategory($categoryID){
