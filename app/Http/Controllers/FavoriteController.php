@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Favorite;
 use Auth;
+use App\Pet;
 
 
 class FavoriteController extends Controller
@@ -21,7 +22,8 @@ class FavoriteController extends Controller
     {
       $user = Auth::user();
       $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      return view('profile', compact('user', 'favorites'));
+      $photos = Pet::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
+      return view('profile', compact('user', 'favorites', 'photos'));
         //
     }
     /**

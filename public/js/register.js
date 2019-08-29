@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.addEventListener('load', function(){
   const countryList = document.getElementById('country-list');
   fetch('https://restcountries.eu/rest/v2/regionalbloc/usan')
   .then(function(response) {

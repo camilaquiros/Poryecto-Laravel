@@ -465,10 +465,6 @@ footer {
     display: block;
   }
 
-  .category:hover .subcategory {
-    display: block;
-  }
-
   .hamburger {
     display: none;
   }

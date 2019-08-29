@@ -9,7 +9,7 @@ Route::get('/faqs', function () {
 });
 
 //PREGUNTAS PERFIL//
-Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
+Route::resource('/products', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 
 //NOSOTROS//
@@ -116,3 +116,8 @@ Route::get('/services', 'ServicesController@services')->name('services');
 //USUARIOS - EDITAR//
 #Route::get('/profile', 'UserController@editUserProfile')->name('editUserProfile');
 Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile');
+
+
+//Pets
+Route::get('/profile', 'FavoriteController@index');
+Route::post('/profile', 'PhotoController@upload');
