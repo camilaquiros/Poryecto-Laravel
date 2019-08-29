@@ -1,6 +1,9 @@
  @import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap');
 
+ .error-favoritos, .mascotas-perfil{
+   width: 75%;
+ }
  .containerPerfil {
    display: flex;
    flex-wrap: wrap;
@@ -196,7 +199,10 @@ ul, ol, li, a {
   border: dotted 4px #95ca3e;
 }
 
+
 @media (min-width:600px) {
+
+
 
   .listMenuProfile {
     flex-direction: row;
@@ -225,5 +231,6 @@ ul, ol, li, a {
 }
 
 @media (min-width:800px){
+
 
   }

@@ -137,7 +137,7 @@
       <br>
       <br>
 
-      <img src="img/error-favoritos.png" alt="no hay favoritos">
+      <img class= "error-favoritos" src="img/error-favoritos.png" alt="no hay favoritos">
          @else (Auth::user()->favorite->count() > 0)
       <div class="productosLista">
               @foreach ($favorites as $favorite)
@@ -192,11 +192,17 @@
         <button type="submit" class="btn btn-patitas photo">GUARDAR</button>
   </form>
 
+  @if (count($photos) <= 0)
+  <img class= "mascotas-perfil" src="img/mascotas-perfil.png" alt="no hay favoritos">
+     @else
+
 <div class="photos">
   <h3>Mis mascotas</h3>
+
   @foreach ($photos as $photo)
  <img src="storage/mascotas/{{ $photo->photo }}" alt="">
  @endforeach
+ @endif
 </div>
 
 
