@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
   const countryList = document.getElementById('country-list');
-  fetch('https://restcountries.eu/rest/v2/regionalbloc/usan')
+  fetch('https://restcountries.eu/rest/v2/all')
   .then(function(response) {
     return response.json();
   })
