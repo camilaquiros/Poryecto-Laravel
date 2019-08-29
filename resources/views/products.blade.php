@@ -67,8 +67,6 @@
                 <i class="fas fa-heart"></i>
               </button>
               </form>
-              @endauth
-              @auth
                 <form action="{{action('FavoriteController@destroy', ['id' => Auth::user()->id])}}" id="contact_form" method="post">
               {{csrf_field()}}
               <input name="user_id" type="hidden" value="{{Auth::user()->id}}">

@@ -9,7 +9,7 @@ Route::get('/faqs', function () {
 });
 
 //PREGUNTAS PERFIL//
-Route::resource('/products', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
+Route::resource('/products', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']])->middleware('user');
 
 Route::get('/nosotros', 'ServicesController@servicesUs')->name('servicesUs');
 
@@ -73,10 +73,10 @@ Route::put('/administration/subcategories/{id}', 'AdministrationController@updat
 //ELIMINAR//
 Route::get('/administration/subcategories/delete/{id}', 'AdministrationController@deleteSubcategory')->name('deleteSubcategory')->middleware('admin');
 
-
 //PRODUCTOS:
 //Ruta lista productos
 Route::get('/products', 'ProductsController@index')->name('products');
+
 // Listar Producto por categoria
 Route::get('/products/category/{categoryID}', 'ProductsController@listCategory')->name('products');
 // Listar Producto Por Subcategoria
@@ -106,6 +106,10 @@ Route::get('/services', 'ServicesController@services')->name('services');
 
 //USUARIOS - EDITAR//
 #Route::get('/profile', 'UserController@editUserProfile')->name('editUserProfile');
-Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile')->middleware('user');
 Route::get('/profile', 'FavoriteController@index')->middleware('user');
+Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile')->middleware('user');
+
+
+//Pets
+Route::get('/profile', 'FavoriteController@index')->middleware('user');;
 Route::post('/profile', 'PhotoController@upload')->middleware('user');

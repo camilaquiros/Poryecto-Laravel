@@ -27,12 +27,9 @@
         <p>{{ $productToFind->description }}</p>
         <h4>$ {{ $productToFind->price }}</h4>
       </div>
-      <div class="card-footer text-center cardFooter">
+      <div class="carrito">
         <p class="btn-holder"><a href="/addToCart/{{$productToFind->id}}" class="btn btn-warning btn-block text-center" role="button">Añadir al carrito <i class="fas fa-shopping-basket"></i></a></p>
-        {{--<button type="submit" class="btn btn-patitas" value="{{$productToFind->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>--}}
       </div>
     </section>
 
 @endsection
-
-<script src="/js/detailproducts.js"></script>

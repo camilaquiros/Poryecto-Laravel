@@ -264,12 +264,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  width: 3%;
 }
 
 .carousel-control-prev {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  width: 3%;
 }
 
 .flecha i {
@@ -308,11 +310,9 @@ nav {
   margin-left: 4%;
 }
 
-.carousel-control-preious, .
-
 /*servicios*/
 .nuestrosServicios{
-  background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/
+  /* background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/ */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -339,7 +339,7 @@ nav {
   font-weight: bold;
   transition: 0.2s;
   padding: 8px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(76, 175, 80, 0.8);
 }
 
 .serviciocard {

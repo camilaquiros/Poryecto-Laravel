@@ -45,8 +45,8 @@ use Notifiable;
          return $this->hasMany(Favorite::class);
       }
 
-    public function pets(){
+      public function pets(){
            return $this->hasMany(Pet::class);
-      }
+        }
 
 }
