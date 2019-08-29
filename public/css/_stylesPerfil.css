@@ -1,6 +1,9 @@
  @import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap');
 
+ .error-favoritos, .mascotas-perfil{
+   width: 75%;
+ }
  .containerPerfil {
    display: flex;
    flex-wrap: wrap;
@@ -164,7 +167,42 @@ ul, ol, li, a {
   justify-content: center;
 }
 
+.pets-profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.photo {
+  margin: 10px;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+}
+
+.photos h3{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photos img{
+  width: 30%;
+  margin: 10px;
+  border-radius: 10px;
+  border: dotted 4px #95ca3e;
+}
+
+
 @media (min-width:600px) {
+
+
 
   .listMenuProfile {
     flex-direction: row;
@@ -193,5 +231,6 @@ ul, ol, li, a {
 }
 
 @media (min-width:800px){
+
 
   }

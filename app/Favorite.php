@@ -7,9 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Favorite extends Model
 {
-  use SoftDeletes;
   protected $table = "favorites";
-  protected $dates = ['deleted_at'];
 
     public function user(){
        return $this->belongsTo(User::class);

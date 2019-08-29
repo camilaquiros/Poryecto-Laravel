@@ -14,9 +14,7 @@ class User extends Authenticatable
   public $fillable = [
       'full_name', 'username', 'country','state', 'email', 'password', 'avatar','pets'
   ];
-  protected $dates = ['deleted_at'];
 use Notifiable;
-use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -42,7 +40,7 @@ use SoftDeletes;
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+
     public function favorite(){
          return $this->hasMany(Favorite::class);
       }

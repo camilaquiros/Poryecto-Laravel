@@ -1,64 +1,48 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Validator,Redirect,Response,File;
 use App\User;
 use App\Pet;
 use Auth;
-
+use App\Favorite;
 class PhotoController extends Controller
 {
-
   public function __construct() {
         $this->middleware(['auth']);
     }
-
     public function index()
     {
-      $user = Auth::user();
-      $photos = Pet::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      return view('petsProfile', compact('user', 'photos'));
     }
 
-  public function uploadForm()
-{
-return view('petsProfile');
-}
-public function uploadSubmit(Request $request)
-{
-$this->validate($request, [
-'photos'=>'required',
-]);
-if($request->hasFile('photos'))
-{
-$allowedfileExtension=['jpg','jpeg','png'];
-$files = $request->file('photos');
-foreach($files as $file){
-$filename = $file->getClientOriginalName();
-$extension = $file->getClientOriginalExtension();
-$check=in_array($extension,$allowedfileExtension);
+    public function upload(Request $request)
+	{
+		// Validamos
+		$request->validate([
+			'photo' => 'required | image | mimes:jpeg,png,jpg,gif,svg',
+			// 'poster' => 'required | mimes:jpg,png,jpeg',
+		], [
+    'required' => 'Este campo es obligatorio',
+    'image' =>'Debes subir una imagen',
+  ]);
 
-if($check)
-{
-$user = Auth::user();
-foreach ($request->photos as $photo) {
-$filename = $photo->store('public/mascotas');
+		// Forma para guardar #3
+		$photoSaved = Pet::create($request->all());
 
-Pet::create([
-'photo' => $filename,
-'user_id' => $user->id,
-]);
-}
-echo "Upload Successfully";
-}
-else
-{
-echo '<div class="alert alert-warning"><strong>Warning!</strong> Sorry Only Upload png , jpg , doc</div>';
-}
-}
-}
-}
-}
-?>
+		$imagen = $request["photo"];
+
+		// Armo un nombre único para este archivo
+		$imagenFinal = uniqid("img_") . "." . $imagen->extension();
+
+		// Subo el archivo en la carpeta elegida
+		$imagen->storePubliclyAs("public/mascotas", $imagenFinal);
+
+		// Le asigno la imagen a la película que guardamos
+		$photoSaved->photo = $imagenFinal;
+    $photoSaved->user_id = \Auth::user()->id;
+		$photoSaved->save();
+
+		// Redireccionamos
+		return redirect('/profile');
+	}
+  }

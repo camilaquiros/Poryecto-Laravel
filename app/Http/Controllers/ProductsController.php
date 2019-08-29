@@ -103,6 +103,7 @@ class ProductsController extends Controller
       ['subcategory_id','=', $SubCategoryID],
       ['category_id','=', $categoryID],
       ])->get();
+
     if(Auth::guest()){
         return view('products', compact('products', 'subcategories', 'categories'));
       } else {
@@ -143,7 +144,16 @@ class ProductsController extends Controller
     $products = Product::where("offer", "=", "1")
     ->orderBy('price', 'ASC')
     ->get();
-    return view('products', compact('products', 'categories', 'subcategories'));
+    if(Auth::guest()){
+      return view('products', compact('products', 'subcategories', 'categories'));
+    } else {
+      $favoritesProductsId = [];
+      $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+      foreach ($favorites as $favorite) {
+        $favoritesProductsId[] = $favorite->product_id;
+      }
+      return view('products', compact('products', 'subcategories', 'categories', 'favoritesProductsId'));
+    }
   }
 
   public function new() {
@@ -154,4 +164,66 @@ class ProductsController extends Controller
     ->get();
     return view('products', compact('products', 'categories', 'subcategories'));
   }
+
+  public function cart()
+   {
+       return view('cart');
+   }
+
+  public function addToCart($id) {
+    //buscamos el producto
+    $product = Product::find($id);
+
+    //comprobamos si existe el producto
+    if(!$product) {
+      abort(404);
+    }
+
+    //comprobamos si hay un carrito de compras en la session
+    $cart = session()->get('cart');
+
+    // Si el carrito está vacío, entonces tratamos el artículo como el primer producto y lo insertamos junto con la cantidad y el precio.
+    if(!$cart) {
+      $cart = [
+        $id => [
+        "name" => $product->title,
+        "quantity" => 1,
+        "price" => $product->price,
+        "image" => $product->image
+      ]
+    ];
+      session()->put('cart', $cart);
+      return redirect()->back();
+    }
+
+    // Si el carro no está vacio comprobamos si el producto ya existe e incrementamos su cantidad.
+    if(isset($cart[$id])) {
+      $cart[$id]['quantity']++;
+      session()->put('cart', $cart);
+      return redirect('/cart');
+    }
+
+    //Si el producto no exite en el carro lo agregamos con cantidad 1
+      $cart[$id] = [
+        "name" => $product->title,
+        "quantity" => 1,
+        "price" => $product->price,
+        "image" => $product->image
+        ];
+
+        session()->put('cart', $cart);
+        return redirect('/cart');
+    }
+
+    public function removeCart($productID)
+    {
+        if($productID) {
+            $cart = session()->get('cart');
+            if(isset($cart[$productID])) {
+                unset($cart[$productID]);
+                session()->put('cart', $cart);
+            }
+        }
+        return redirect()->back()->with('flash_message', 'El producto ha sido removido de tu carrito');
+    }
 }

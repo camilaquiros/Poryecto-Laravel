@@ -17,7 +17,7 @@
       <div class="hamburger dropdown">
         <a href="#" role="button" id="hamburger dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Mascotas</a>
+        <a class="dropdown-item" href="/products">Mascotas</a>
     <a class="dropdown-item" href="/services">Servicios</a>
     <a class="dropdown-item" href="/products">Productos</a>
     <a class="dropdown-item" href="/products/offer">Ofertas</a>
@@ -50,7 +50,9 @@
                 Hola, {{ Auth::user()->username }}!
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/profile/{{Auth::user()->id}}">Perfil</a>
+              <a class="dropdown-item" href="/profile">Perfil</a>
+              <a class="dropdown-item" href="/cart">Carrito <span class="ml-2 badge badge-pill badge-info">{{session('cart') !== null ? count(session('cart')) : ''}}</span></a>
+
               <form action="/logout" method="post">
 								@csrf
 								<button type="submit" class="dropdown-item">Cerrar sesion</button>
@@ -68,7 +70,7 @@
       <li class="dropdown mascotas"><a href="#" data-toggle="dropdown">Mascotas</a>
         <div class="dropdown-menu dropright category">
           @foreach ($categories as $category)
-          <a class="dropdown-item" href="/products/category/{{$category->id}}">{{$category->name}}</a>
+          <a class="dropdown-item" data-toggle="dropdown" href="/products/category/{{$category->id}}">{{$category->name}}</a>
               <div class="dropdown-menu subcategory" aria-labelledby="dropdownMenuLink">
               @foreach ($subcategories as $subcategory)
               <a class="dropdown-item" href="/products/category/{{$category->id}}/{{$subcategory->id}}">{{$subcategory->name}}</a>

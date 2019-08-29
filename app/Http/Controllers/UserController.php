@@ -22,7 +22,7 @@ class UserController extends Controller
     return view('editProfile', compact('userToEdit'));
  }
 
- public function update( Request $request)
+ public function update(Request $request)
  {
       $userToUpdate = User::find(\Auth::user()->id);
       $userToUpdate->full_name = $request->input('full_name');
@@ -30,14 +30,6 @@ class UserController extends Controller
       $userToUpdate->state = $request->input('state');
       $userToUpdate->shipping_address = $request->input('shipping_address');
       $userToUpdate->save();
-      return redirect('/profile/'. $userToUpdate->id);
-    }
-
-  public function destroy($id) {
-    $user = User::findOrFail($id);
-    $user->delete();
-
-      return redirect()->back()->with('flash_message',
-           'Eliminamos el producto de tu lista de favoritos');
+      return redirect('/profile');
   }
 }

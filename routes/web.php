@@ -8,20 +8,12 @@ Route::get('/faqs', function () {
     return view('faqs');
 });
 
-//Favoritos//
-Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
+//PREGUNTAS PERFIL//
+Route::resource('/products', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
-
-//NOSOTROS//
-Route::get('/nosotros', function () {
-    return view('nosotros');
-});
-
-//LISTADO DE SERVICIOS//
 Route::get('/nosotros', 'ServicesController@servicesUs')->name('servicesUs');
 
 Auth::routes();
-// Route::post('/register', 'RegisterController@create');
 
 //ADMINISTRADOR-PRODUCTO//
 Route::get('/administration', 'AdministrationController@index')->name('administration')->middleware('admin');
@@ -102,16 +94,18 @@ Route::get('/newArrivals', 'ProductsController@new')->name('new');
 //Ruta detalle producto
 Route::get('/products/{id}', 'ProductsController@show')->name('showProduct');
 
+//Agregar al carrito
+Route::get('/cart', 'ProductsController@cart');
+Route::get('/addToCart/{id}', 'ProductsController@addToCart')->middleware('user');
+Route::get('/cartRemove/{productID}', 'ProductsController@removeCart');
+
 
 //SERVICIOS:
 //Ruta lista Servicios
 Route::get('/services', 'ServicesController@services')->name('services');
 
-//PERFIL
-Route::get('/profile/edit', 'UserController@edit')->name('editUser');
-Route::put('/profile/edit', 'UserController@update')->name('updateUser');
-Route::get('/profile/favorites', 'FavoriteController@index')->name('favorites');
-Route::get('/profile/pets', 'PhotoController@uploadForm');
-Route::post('/profile/pets', 'PhotoController@uploadSubmit');
-
-Route::get('/profile/{id}', 'UserController@show')->name('showUser');
+//USUARIOS - EDITAR//
+#Route::get('/profile', 'UserController@editUserProfile')->name('editUserProfile');
+Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile')->middleware('user');
+Route::get('/profile', 'FavoriteController@index')->middleware('user');
+Route::post('/profile', 'PhotoController@upload')->middleware('user');

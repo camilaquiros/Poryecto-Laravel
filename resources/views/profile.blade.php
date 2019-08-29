@@ -34,6 +34,9 @@
   <li class="nav-item barra">
     <a class="nav-link" id="pets-tab" data-toggle="tab" href="#pets" role="tab" aria-controls="pets" aria-selected="false"><i class="fas fa-cat"></i> Tus mascotas <i class="fas fa-dog fa-flip-horizontal"></i></a>
   </li>
+  <li class="nav-item barra">
+<a class="nav-link" id="pets-tab" data-toggle="tab" href="#pets" role="tab" aria-controls="pets" aria-selected="false"><i class="fas fa-cat"></i> Tus mascotas <i class="fas fa-dog fa-flip-horizontal"></i></a>
+</li>
 </ul>
 
 
@@ -44,27 +47,27 @@
     <div class="personalInformation">
       <div class="">
         <label> Tu nombre</label>
-        <input type="text" name="" value="{{ Auth::user()->full_name }}">
+        <p>{{ Auth::user()->full_name }}</p>
       </div>
       <div class="">
         <label> Nombre de usuario </label>
-        <input type="text" name="" value="{{ Auth::user()->username }}">
+        <p>{{ Auth::user()->username }}</p>
       </div>
       <div class="">
         <label> Pais de nacimiento</label>
-        <input type="text" name="" value="{{ Auth::user()->country}}">
+        <p>{{ Auth::user()->country }}</p>
       </div>
       <div class="">
         <label> Provincia </label>
-        <input type="text" name="" value="{{ Auth::user()->state }}">
+        <p>{{ Auth::user()->state }}</p>
       </div>
       <div class="">
         <label> E-mail </label>
-        <input type="text" name="" value="{{ Auth::user()->email }}">
+        <p>{{ Auth::user()->email }}</p>
       </div>
       <div class="">
         <label> Dirección de envio </label>
-        <input type="text" name="" value="{{ Auth::user()->shipping_address }}">
+        <p>{{ Auth::user()->shipping_address }}</p>
       </div>
     </div>
   </div>
@@ -137,9 +140,9 @@
       <br>
       <br>
 
-      <img src="img/error-favoritos.png" alt="no hay favoritos">
+      <img class= "error-favoritos" src="img/error-favoritos.png" alt="no hay favoritos">
          @else (Auth::user()->favorite->count() > 0)
-      <section class="productosLista">
+      <div class="productosLista">
               @foreach ($favorites as $favorite)
               <div class="productCard card-deck lista">
                 <div class="imagenLista">
@@ -168,33 +171,70 @@
               </div>
 
               @endforeach
-      </section>
+      </div>
 
       @endif
     </div>
   </div>
 
 
+
+
+
+
+
+
+
+
   <div class="tab-pane fade showUserInformationBox pets" id="pets" role="tabpanel" aria-labelledby="contact-tab">
     <div class="pets-profile">
-      <form action="{{url('profile')}}" method="post" enctype="multipart/form-data">
-        {{csrf_field()}}
-      <label>Mostranos fotos de tus mascotas!:</label>
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" name="pets">
-          <label class="custom-file-label">Choose file...</label>
+		<form action="/profile" method="post" enctype="multipart/form-data">
+                @csrf
+        <label>Subi fotos de tus mascotas!:</label>
+        <div class="custom-file photo">
+          <input type="file" class="custom-file-input" name="photo">
+          <label class="custom-file-label ">Choose file...</label>
         </div>
-        <ul>
-      </ul>
-        <button type="submit" class="btn btn-patitas">GUARDAR FOTOS</button>
-      </form>
+        <br>
+        @error ('photo')
+          <i style="color: red;"> {{ $errors->first('photo') }}</i>
+        @enderror
+        <button type="submit" class="btn btn-patitas photo">GUARDAR</button>
+  </form>
+
+  @if (count($photos) <= 0)
+  <img class= "mascotas-perfil" src="img/mascotas-perfil.png" alt="no hay favoritos">
+     @else
+
+<div class="photos">
+  <h3>Mis mascotas</h3>
+
+  @foreach ($photos as $photo)
+ <img src="storage/mascotas/{{ $photo->photo }}" alt="">
+ @endforeach
+ @endif
+</div>
+
+
+</div>
     </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 </div>
-
 </div>
 
 <script src="js/jquery.min.js"></script>
