@@ -51,7 +51,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/profile">Perfil</a>
-              <a class="dropdown-item" href="/cart">Carrito</a>
+              <a class="dropdown-item" href="/cart">Carrito <span class="ml-2 badge badge-pill badge-info">{{session('cart') !== null ? count(session('cart')) : ''}}</span></a>
 
               <form action="/logout" method="post">
 								@csrf

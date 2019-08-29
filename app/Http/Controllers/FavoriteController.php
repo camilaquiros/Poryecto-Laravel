@@ -56,7 +56,7 @@ class FavoriteController extends Controller
        if(isset($status->user_id))
           {
             $status->delete();
-            return redirect()->back();
+            return redirect()->back(); //flash_message//
           }
           else
           {
@@ -64,57 +64,8 @@ class FavoriteController extends Controller
             $favorite->user_id = $request->user_id;
             $favorite->product_id = $request->product_id;
             $favorite->save();
-            return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
+            return redirect()->back();//flash_message//
           }
 
- }
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-      $favorite = Favorite::findOrFail($id);
-        $favorite->delete();
-
-        return redirect()->route('profile#favorites')
-            ->with('flash_message',
-             'Eliminamos el producto de tu lista de favoritos');
-    }
+      }
 }

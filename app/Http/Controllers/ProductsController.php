@@ -200,7 +200,8 @@ class ProductsController extends Controller
     if(isset($cart[$id])) {
       $cart[$id]['quantity']++;
       session()->put('cart', $cart);
-      return redirect()->back();                                }
+      return redirect('/cart');
+    }
 
     //Si el producto no exite en el carro lo agregamos con cantidad 1
       $cart[$id] = [
@@ -211,6 +212,18 @@ class ProductsController extends Controller
         ];
 
         session()->put('cart', $cart);
-        return redirect()->back();
+        return redirect('/cart');
     }
-  }
+
+    public function removeCart($productID)
+    {
+        if($productID) {
+            $cart = session()->get('cart');
+            if(isset($cart[$productID])) {
+                unset($cart[$productID]);
+                session()->put('cart', $cart);
+            }
+        }
+        return redirect()->back()->with('flash_message', 'El producto ha sido removido de tu carrito');
+    }
+}
