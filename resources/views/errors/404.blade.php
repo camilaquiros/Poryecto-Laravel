@@ -6,6 +6,8 @@
     <link href="/css/app.css" rel="stylesheet">
 	</head>
 	<body>
+<marquee direction="right">Hola Javi</marquee>
+<marquee direction="left">Hola Maru</marquee>
 <div class="error">
   <img src="img/404.jpg" alt="">
   <h1>OH NO!</h1>
