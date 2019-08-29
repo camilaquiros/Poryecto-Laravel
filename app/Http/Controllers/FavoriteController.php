@@ -56,7 +56,7 @@ class FavoriteController extends Controller
        if(isset($status->user_id))
           {
             $status->delete();
-            return redirect()->back();
+            return redirect()->back()->with('flash_message', 'El producto ha sido removido de tu lista de favoritos.');
           }
           else
           {
@@ -64,7 +64,7 @@ class FavoriteController extends Controller
             $favorite->user_id = $request->user_id;
             $favorite->product_id = $request->product_id;
             $favorite->save();
-            return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
+            return redirect()->back()->with('flash_message', 'El producto '. $favorite->product->title.' se ha agregado a tu lista de favoritos.');
           }
 
  }
