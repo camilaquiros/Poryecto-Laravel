@@ -1,6 +1,6 @@
 window.addEventListener('load', function(){
   const countryList = document.getElementById('country-list');
-  fetch('https://restcountries.eu/rest/v2/regionalbloc/usan')
+  fetch('https://restcountries.eu/rest/v2/all')
   .then(function(response) {
     return response.json();
   })
@@ -18,17 +18,16 @@ window.addEventListener('load', function(){
     let stateList = document.getElementById('state-list');
     if (e.target.value == 'Argentina') {
         stateList.disabled = false;
-        fetch('https://apis.datos.gob.ar/georef/api/provincias')
+        fetch('https://dev.digitalhouse.com/api/getProvincias')
         .then(function(response) {
           return response.json();
         })
         .then(function(statesArgentina) {
-          const states = statesArgentina.provincias;
-          for (var state of states) {
+          const states = statesArgentina.data;
+          for (var i = 0; i < states.length; i++) {
             var optionState = document.createElement('option');
-            var nameState = document.createTextNode(state.nombre)
-            optionState.value = state.nombre;
-            optionState.append(nameState);
+            optionState.innerHTML = states[i].state;
+            optionState.value = states[i].state;
             stateList.appendChild(optionState);
           }
         });

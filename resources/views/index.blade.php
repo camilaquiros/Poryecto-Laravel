@@ -98,8 +98,8 @@
       <div class="containerCarouselCelular cardsProduct">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    @foreach ($productsIndexCelu as $product)
-    <div class="carousel-item carruselProductos">
+    @foreach ($productsIndexCelu as $key=>$product)
+    <div class="carousel-item {{$key == 0 ? 'active' : '' }} carruselProductos">
       <img class="d-block w-100" src="/storage/productos/{{$product->image}}" alt="{{$product->title}}">
       <p class="card-title">{{$product->title}}</p>
       <p class="card-text">${{$product->price}}</p>
@@ -107,11 +107,11 @@
     </div>
     @endforeach
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <a class="carousel-control-prev flecha" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next flecha" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -184,7 +184,7 @@
             </div>
             @endforeach
           </div>
-          
+
         </section>
     </div>
   </div>
