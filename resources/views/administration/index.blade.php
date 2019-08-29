@@ -16,11 +16,11 @@
     </div>
 
     <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <a class="card-header" href="#">Categorias</a>
+        <a class="card-header" href="/administration/categories">Categorias</a>
     </div>
 
     <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <a class="card-header" href="#">Subcategorias</a>
+        <a class="card-header" href="/administration/subcategories">Subcategorias</a>
     </div>
   </section>
 @endsection
