@@ -21,7 +21,7 @@ class MiddlewareUser
                return $next($request);
         }
 
-       return redirect('/login');
+       return redirect('login');
       }
     }
 }

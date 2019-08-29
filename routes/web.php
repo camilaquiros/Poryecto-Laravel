@@ -11,17 +11,9 @@ Route::get('/faqs', function () {
 //PREGUNTAS PERFIL//
 Route::resource('/products', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']])->middleware('user');
 
-
-//NOSOTROS//
-Route::get('/nosotros', function () {
-    return view('nosotros');
-});
-
-//LISTADO DE SERVICIOS//
 Route::get('/nosotros', 'ServicesController@servicesUs')->name('servicesUs');
 
 Auth::routes();
-// Route::post('/register', 'RegisterController@create');
 
 //ADMINISTRADOR-PRODUCTO//
 Route::get('/administration', 'AdministrationController@index')->name('administration')->middleware('admin');
@@ -103,10 +95,9 @@ Route::get('/newArrivals', 'ProductsController@new')->name('new');
 Route::get('/products/{id}', 'ProductsController@show')->name('show');
 
 //Agregar al carrito
-
 Route::get('/cart', 'ProductsController@cart');
-
-Route::get('/addToCart/{id}', 'ProductsController@addToCart');
+Route::get('/addToCart/{id}', 'ProductsController@addToCart')->middleware('user');
+Route::get('/cartRemove/{productID}', 'ProductsController@removeCart');
 
 
 //SERVICIOS:
@@ -115,7 +106,8 @@ Route::get('/services', 'ServicesController@services')->name('services');
 
 //USUARIOS - EDITAR//
 #Route::get('/profile', 'UserController@editUserProfile')->name('editUserProfile');
-Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile')->middleware('user');;
+Route::get('/profile', 'FavoriteController@index')->middleware('user');
+Route::put('/profile/edit', 'UserController@update')->name('updateUserProfile')->middleware('user');
 
 
 //Pets
