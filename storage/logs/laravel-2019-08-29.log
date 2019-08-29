@@ -853,3 +853,15 @@
 #50 {main}
 >>>>>>> 989a41a1085014a26ecba3b90859e87950b6fd94
 "} 
+[2019-08-29 19:34:09] local.ERROR: Class 'Intervention\Image\ImageServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Intervention\\Image\\ImageServiceProvider' not found at /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:208)
+[stacktrace]
+#0 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Intervention\\\\Im...')
+#1 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(584): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 /home/luispereira/Proyecto-Laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 /home/luispereira/Proyecto-Laravel/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 

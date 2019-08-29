@@ -49,7 +49,6 @@ class ProductsController extends Controller
         }
         $categories = Category::orderBy('name', 'ASC')->get();
         $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-        // Pendiente verificar autenticacion
         if (Auth::guest()) {
             return view('products', compact('products', 'subcategories', 'categories'));
         } else {
@@ -191,14 +190,14 @@ class ProductsController extends Controller
 
         // Si el carrito está vacío, entonces tratamos el artículo como el primer producto y lo insertamos junto con la cantidad y el precio.
         if (!$cart) {
-            $cart = [
-        $id => [
-        "name" => $product->title,
-        "quantity" => 1,
-        "price" => $product->price,
-        "image" => $product->image
-      ]
-    ];
+              $cart = [
+              $id => [
+                "name" => $product->title,
+                "quantity" => 1,
+                "price" => $product->price,
+                "image" => $product->image
+              ]
+          ];
             session()->put('cart', $cart);
             return redirect()->back();
         }
