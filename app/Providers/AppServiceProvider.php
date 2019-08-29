@@ -20,14 +20,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-      view()->composer('partials.navbar', function($view){
-        $products = Product::all();
-        $services = Service::all();
-        $categories = Category::orderBy("name")->get();
-        $subcategories = SubCategory::orderBy("name")->get();
-        //attach the categories to the view.
-        $view->with(compact('products', 'services', 'categories','subcategories'));
-      });
+        view()->composer('partials.navbar', function ($view) {
+            $products = Product::all();
+            $services = Service::all();
+            $categories = Category::orderBy("name")->get();
+            $subcategories = SubCategory::orderBy("name")->get();
+            //attach the categories to the view.
+            $view->with(compact('products', 'services', 'categories', 'subcategories'));
+        });
     }
 
     /**
@@ -38,6 +38,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-
     }
 }

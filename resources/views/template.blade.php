@@ -18,9 +18,9 @@
     @include('partials.navbar')
     {{-- @include('partials/navbar.blade.php') --}}
     @if (session()->has('flash_message'))
-        <div class="alert alert-info mb-2 mt-4">
-            {{ session('flash_message') }}
-        </div>
+    <div class="alert alert-info mb-2 mt-4">
+        {{ session('flash_message') }}
+    </div>
     @endif
     {{-- Dejamos un espacio vacío para insertar el contenido de cada una de las views --}}
     @yield('mainContent')

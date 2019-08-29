@@ -14,7 +14,7 @@ class AddColumnStateToUser extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->string('state')->after('country');
+            $table->string('state')->after('country');
         });
     }
 

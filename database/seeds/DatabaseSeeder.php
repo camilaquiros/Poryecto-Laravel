@@ -18,12 +18,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
         $this->truncateTables([
             //'products',
             //'services',
-            'categories',
-            'subcategories',
+            //'categories',
+            //'subcategories',
             'products_users',
             //'users',
             'avatars',
@@ -48,7 +47,6 @@ class DatabaseSeeder extends Seeder
       //   $oneProduct->subcategory()->associate($subcategories->random(1)->first()->id);
       //   $oneProduct->save();
       // };c9b1c36c8caeabda8347106e58f70033dd0265ca
-
     }
 
     public function truncateTables(array $tables)
@@ -61,5 +59,4 @@ class DatabaseSeeder extends Seeder
 
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;');
     }
-
 }

@@ -16,10 +16,10 @@ class MiddlewareAdmin
      */
     public function handle($request, Closure $next)
     {
-      $user = \Auth::user();
-              if (!Auth::user()->is_admin == 1) {
-                  return redirect("/");
-              }
-              return $next($request);
+        $user = \Auth::user();
+        if (!Auth::user()->is_admin == 1) {
+            return redirect("/");
+        }
+        return $next($request);
     }
 }

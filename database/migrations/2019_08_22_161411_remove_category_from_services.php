@@ -14,8 +14,8 @@ class RemoveCategoryFromServices extends Migration
     public function up()
     {
         Schema::table('services', function (Blueprint $table) {
-          $table->dropForeign('services_category_id_foreign');
-          $table->dropColumn('category_id');
+            $table->dropForeign('services_category_id_foreign');
+            $table->dropColumn('category_id');
         });
     }
 
@@ -27,8 +27,8 @@ class RemoveCategoryFromServices extends Migration
     public function down()
     {
         Schema::table('services', function (Blueprint $table) {
-          $table->unsignedBigInteger('category_id')->after('longDescription')->nullable();
-          $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedBigInteger('category_id')->after('longDescription')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 }

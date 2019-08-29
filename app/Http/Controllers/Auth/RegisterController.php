@@ -48,7 +48,9 @@ class RegisterController extends Controller
      */
     public function validator(array $data)
     {
-        return Validator::make($data, [
+        return Validator::make(
+            $data,
+            [
             'fullName' => ['required', 'string', 'max:255'],
             'username' => ['required', 'alpha_dash', 'max:20', 'min:5', 'unique:users,username'],
             'email' => ['required', 'email', 'unique:users,email'],
@@ -58,7 +60,7 @@ class RegisterController extends Controller
             'country' => ['required'],
             'avatar' => ['required'],
         ],
-        [
+            [
           'required' => 'Este campo es obligatorio',
           'alpha' => 'Este campo debe contener solo letras',
           'numeric'=> 'Este campo debe contener solo números',
@@ -69,8 +71,8 @@ class RegisterController extends Controller
           'confirmed' => 'Las contraseñas no coinciden',
           'min' => 'Este campo debe tener como mínimo :min caracteres',
           'password.regex' => 'La contraseña debe contener DH'
-        ]);
-
+        ]
+        );
     }
 
     /**
@@ -88,12 +90,11 @@ class RegisterController extends Controller
         $userData['password'] = Hash::make($data['password']);
         $userData['country'] = $data['country'];
         if (isset($data['state'])) {
-          $userData['state'] = $data['state'];
+            $userData['state'] = $data['state'];
         }
         $userData['avatar'] = $data['avatar'];
 
         $user = User::create($userData);
         return $user;
     }
-
 }

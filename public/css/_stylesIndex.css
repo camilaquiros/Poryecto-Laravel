@@ -7,543 +7,192 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lexend+Tera|Libre+Franklin|Merriweather+Sans&display=swap');
 
-
 * {
-  box-sizing: border-box;
-  font-family: 'Livvic';
+    box-sizing: border-box;
+    font-family: 'Livvic';
 }
 
 body, .index {
-  font-family: 'Nunito';
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-
+    font-family: 'Nunito';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .containerIndex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  align-items: center;
-  max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1000px;
 }
 
 nav {
-  width: 100%;
+    width: 100%;
 }
 
 .menutop-header {
-  margin-bottom: 0;
-  font-weight: 600;
-  background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 100%;
+    margin-bottom: 0;
+    font-weight: 600;
+    background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
 }
 
 .menu-header, .cardsProduct, .tituloServicios {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .celular {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
-  align-items: center;
-  margin-bottom: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .hamburger {
-  background-color: #95ca3e;
-  font-size: 20px;
-  padding: 10px;
+    background-color: #95ca3e;
+    font-size: 20px;
+    padding: 10px;
 }
 
-#hamburger{
-  color: white;
+#hamburger {
+    color: white;
 }
 
-.hamburger a{
-  display: flex;
-  justify-content: center;
+.hamburger a {
+    display: flex;
+    justify-content: center;
 }
 
-.listaContinuacion  {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 50%;
+.listaContinuacion {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
 }
 
 .listaContinuacion a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white !important;
 }
 
 .listaContinuacion img {
-  border-radius: 100%;
-  width: 10%;
-  margin: 5px;
+    border-radius: 100%;
+    width: 10%;
+    margin: 5px;
 }
 
 .downProfile .dropdown-toggle {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .downProfile a {
-  color: white !important;
+    color: white !important;
 }
 
 .downProfile .dropdown-item {
-  color: black !important;
+    color: black !important;
 }
 
 .menutop-header li a, #text {
-  color: rgba(1,1,1,0.5);
+    color: rgba(1, 1, 1, 0.5);
 }
 
 /*segundo menu de la nav*/
 .menu-header {
-  font-size: 0.9em;
-  box-shadow: 1px 2px 8px -2px rgba(0, 77, 64, 1);
-  display: none;
-  align-items: center;
-  padding: 20px 0;
-  margin-top: 10px;
-  /*background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);*/
-  background-color: white;
+    font-size: 0.9em;
+    box-shadow: 1px 2px 8px -2px rgba(0, 77, 64, 1);
+    display: none;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 10px;
+    /*background: linear-gradient(90deg, #F5980C 0, #FFB300 25%, #FFD36B);*/
+    background-color: white;
 }
 
 .menu-header li a {
-  background-color: rgba(102, 187, 106, 0, 5);
-  border-radius: 4px;
-  padding: 10px;
-  text-decoration: none;
-  color: rgba(1,1,1,0.9);
-  list-style: none;
-  font-family: "Livvic";
-  font-weight: 400;
+    background-color: rgba(102, 187, 106, 0, 5);
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(1, 1, 1, 0.9);
+    list-style: none;
+    font-family: "Livvic";
+    font-weight: 400;
 }
 
 .menu-header li a:hover {
-  font-weight: bold;
-  color: white;
-  background: -webkit-linear-gradient(left, #95ca3e 0%, rgb(149, 202, 62, 0.6) 40%, rgb(133, 198, 56, 0.6) 50%);
-  transition: 0.3s;
+    font-weight: bold;
+    color: white;
+    background: -webkit-linear-gradient(left, #95ca3e 0%, rgb(149, 202, 62, 0.6) 40%, rgb(133, 198, 56, 0.6) 50%);
+    transition: 0.3s;
 }
 
 .searchBar {
-  margin-top: 1em;
-  margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .searchBar button {
-  background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
-  border-radius: 0 !important;
-  border-top-right-radius: 5px !important;
-  border-bottom-right-radius: 5px !important;
-  color: white !important;
+    background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
+    border-radius: 0 !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    color: white !important;
 }
 
 .homeLogo a img {
-  height: 6em;
+    height: 6em;
 }
 
 .slider {
-  display: none;
+    display: none;
 }
 
 /*Cartas presentacion*/
 .cartas-presentacion {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .contenedor-productosgato {
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  margin-bottom: 10px;
-  height: 30vh;
-  justify-content: space-between;
-  text-align: right;
-  position: relative;
-
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    margin-bottom: 10px;
+    height: 30vh;
+    justify-content: space-between;
+    text-align: right;
+    position: relative;
 }
 
-#catProducts{
-  background-image: url("/img/gatomobile.jpeg");
+#catProducts {
+    background-image: url("/img/gatomobile.jpeg");
 }
 
-#newsProducts{
-  background-image: url("/img/recienllegadosmobile.jpeg");
+#newsProducts {
+    background-image: url("/img/recienllegadosmobile.jpeg");
 }
 
-#dogProducts{
-  background-image: url("/img/perromobile.jpeg");
+#dogProducts {
+    background-image: url("/img/perromobile.jpeg");
 }
 
 .descripcion-carta {
-  font-weight: bold;
-  width: 100%;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 5px;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-.centrado {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-.mas-Productos a {
-  background-color: rgba(76, 175, 80, 0.8);
-  padding: 4px;
-  border-radius: 4%;
-  color: #fff;
-  font-family: "Staatliches";
-  display: inline-block;
-}
-
-.verTodosServicios {
-  background-color: rgba(76, 175, 80, 0.8);
-  padding: 4px;
-  border-radius: 4%;
-  color: #fff;
-  font-family: "Staatliches";
-}
-
-.mas-Productos a{
-  padding: 10px;
-}
-
-/*cajas productos novedades*/
-.seccion-novedades h4 {
-  background-color: rgba(76, 175, 80, 0.8);
-  color: #fff;
-  padding: 20px;
-  font-family: "Lalezar";
-  font-size: 25px;
-  text-align: center;
-}
-
-/*productos novedades*/
-.cardsProduct {
-  align-items: center;
-}
-
-.carruselProductos{
-  width: 95%;
-  box-shadow: 1px 2px px -2px #1c3643;
-  background-color: rgba(236,239,241 ,0.4);
-}
-
-.carruselProductos p, .carruselProductos a  {
-  text-align: center;
-}
-
-.carruselProductos a {
-  display: block;
-}
-
-.carousel-control-next {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  width: 3%;
-}
-
-.carousel-control-prev {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 3%;
-}
-
-.flecha i {
-  color: rgba(0, 150, 136, 0.5);
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
-}
-
-.flecha i:hover {
-  transform: scale(3);
-  color: rgb(0, 150, 136);
-}
-
-.oneproduct-card img {
-  width: 100%;
-}
-
-.mas-productosNovedades {
-  background-color: rgba(0, 150, 136, 0.8);
-  color: white;
-  padding: 0.5em 0.7em;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
-  text-align: center;
-
-}
-
-.containerCarouselDesktop{
-  display: none;
-}
-
-.containerCarouselCelular {
-  margin-bottom: 20px;
-  margin-left: 4%;
-}
-
-/*servicios*/
-.nuestrosServicios{
-  /* background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/ */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tituloServicios {
-  display: flex;
-  margin-bottom: 1em !important;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.seccionServiciosImagenes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.tituloServicios h3{
-  font-size:1.2em;
-  font-weight: bold;
-  transition: 0.2s;
-  padding: 8px;
-  color: rgba(76, 175, 80, 0.8);
-}
-
-.serviciocard {
-  background-size: cover;
-  height: 20vh;
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.serviciocard h3{
-  width: 100%;
-  font-family: 'Merriweather Sans';
-  background-color: rgba(76, 175, 80, 0.4);
-  color: white;
-  font-size: 1.2em;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-
-
-}
-
-.serviciocard:nth-child(1){
-  background-image: linear-gradient(to left, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/clinicaVet.jpg");
-  filter:brightness(0.9);
-}
-
-.serviciocard:nth-child(2){
-  background-image: linear-gradient(to right, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/gatoExamen.jpg");
-}
-
-.serviciocard:nth-child(3){
-  background-image: linear-gradient(to right, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/paseo.jpg");
-}
-
-.serviciocard:nth-child(4){
-  background-image: linear-gradient(to left, rgba(1,1,1,0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/Peluqueria.jpg");
-}
-
-footer {
-  width: 100%;
-  margin-top: 30px;
-}
-
-@media (min-width: 500px) {
-  .contenedor-productosgato {
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    margin-top: 10px;
-    height: 40vh;
-    justify-content: space-between;
-    text-align: right;
-  }
-
-  .serviciocard{
-    border-radius: 5px;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 45%;
-    height: 30vh;
-  }
-}
-
-@media (min-width: 600px) {
-  .menutop-header, .menu-header, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .logoNv {
-    width: 30%;
-  }
-
-  .searchBar {
-    width: 30%;
-  }
-
-  .listaContinuacion {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    width: 100%;
-  }
-
-
-    .listaContinuacion a{
-      margin-right: 50px;
-      width: 100%;
-    }
-
-    .listaContinuacion img{
-      width: 10%;
-    }
-
-  .celular {
-    width: 30%;
-  }
-
-  .menu-header{
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-
-  .menutop-header li a, .menutop-header a, #text {
-    text-decoration: none;
-    font-family: "Work Sans";
-    color: #fff;
-  }
-
-  .mascotas:hover .category {
-    display: block;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .menu-header {
-    padding: 16px 0 16px 32px;
-    margin: 0;
-    display: flex;
-  }
-
-  .slider {
-    margin-top: 1em;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .slider img {
-    width: 100%;
-    height: 400px;
-  }
-
-  .slider p {
-    position: absolute;
-    background-color: rgba(38, 50, 56, 0.2);
-    font-family: "Paytone One";
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    font-size: 1.15em;
-    text-align: center;
-    color: #fff;
-    transform: translateY(-50%);
-    top: 50%;
-    width: 100%;
-    padding: 15px;
-  }
-
-/*cartas presentacion de productos*/
-  .cartas-presentacion {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-
-  .contenedor-productosgato {
-    width: 32%;
-    position: relative;
-    display: flex;
-    margin-top: 10px;
-    align-self: center;
-    height: 350px;
-  }
-
-  .contenedor-productosgato:hover {
-    box-shadow: 7px 8px 11px 3px rgba(120, 144, 156, 0.6);
-  }
-
-  #catProducts{
-    background-image: url("/img/gatitoo.jpeg");
-  }
-
-  #newsProducts{
-    background-image: url("/img/pañueloyellow.jpeg");
-  }
-
-  #dogProducts{
-    background-image: url("/img/perrito.jpeg");
-  }
-
-  .descripcion-carta {
-    position: absolute;
     font-weight: bold;
     width: 100%;
     text-decoration: none;
@@ -551,175 +200,514 @@ footer {
     padding: 5px;
     text-align: center;
     font-size: 1.2em;
-    transform: translateY(-50%);
-    top: 20%;
-  }
-
-  .centrado {
-    transform: translateY(-50%);
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-  }
-
-  .mas-Productos {
-    position: absolute;
-    bottom: 10%;
-    right: 35%;
-  }
-
-  .mas-Productos a, .verTodosServicios {
-    background-color: rgba(76, 175, 80, 0.8);
-    padding: 8px;
-    border-radius: 2%;
-    color: #fff;
-    font-family: "Staatliches";
-    transition: all 0.2s;
-  }
-
-  .verTodosServicios:hover, .mas-Productos a:hover {
-    color: rgba(38, 50, 56, 1);
-    text-decoration: none;
-  }
-
-/*productos novedades*/
-
-.cardsProduct {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
-.oneproduct-card-body {
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+.centrado {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.mas-Productos a {
+    background-color: rgba(76, 175, 80, 0.8);
+    padding: 4px;
+    border-radius: 4%;
+    color: #fff;
+    font-family: "Staatliches";
+    display: inline-block;
+}
+
+.verTodosServicios {
+    background-color: rgba(76, 175, 80, 0.8);
+    padding: 4px;
+    border-radius: 4%;
+    color: #fff;
+    font-family: "Staatliches";
+}
+
+.mas-Productos a {
+    padding: 10px;
+}
+
+/*cajas productos novedades*/
+.seccion-novedades h4 {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: #fff;
+    padding: 20px;
+    font-family: "Lalezar";
+    font-size: 25px;
+    text-align: center;
+}
+
+/*productos novedades*/
+.cardsProduct {
+    align-items: center;
+}
+
+.carruselProductos {
+    width: 95%;
+    box-shadow: 1px 2px px -2px #1c3643;
+    background-color: rgba(236, 239, 241, 0.4);
+}
+
+.carruselProductos p, .carruselProductos a {
+    text-align: center;
+}
+
+.carruselProductos a {
+    display: block;
+}
+
+.carousel-control-next {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 3%;
+}
+
+.carousel-control-prev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 3%;
+}
+
+.flecha i {
+    color: rgba(0, 150, 136, 0.5);
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.flecha i:hover {
+    transform: scale(3);
+    color: rgb(0, 150, 136);
+}
+
+.oneproduct-card img {
+    width: 100%;
 }
 
 .mas-productosNovedades {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1.5px solid rgba(0, 150, 136, 1);
-  padding: 0.5em 0.7em;
-  border-radius: 5px;
-  color: rgba(84, 110, 122, 1);
-  transition: all 0.2s;
-  display: block;
-  margin: 0;
-}
-
-.mas-productosNovedades:hover {
-  background-color: rgba(0, 150, 136, 1);
-  color: white;
-  padding-left: 1em;
-  padding-right: 1em;
-  text-decoration: none;
-}
-
-.containerCarouselCelular {
-  display: none;
+    background-color: rgba(0, 150, 136, 0.8);
+    color: white;
+    padding: 0.5em 0.7em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
 }
 
 .containerCarouselDesktop {
-  display: block;
+    display: none;
+}
+
+.containerCarouselCelular {
+    margin-bottom: 20px;
+    margin-left: 4%;
 }
 
 /*servicios*/
-  .nuestrosServicios{
-    background: none;
-    width: 100%;
+.nuestrosServicios {
+    /* background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);*/
+    */ width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
-  }
+}
 
-  .tituloServicios {
+.tituloServicios {
     display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between !important;
-    flex-direction: row;
+    margin-bottom: 1em !important;
+    text-align: center;
     text-transform: uppercase;
-    font-size: 20px !important;
-  }
+}
 
-  .tituloServicios h3{
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .tituloServicios h3:hover{
-    color: rgba(76, 175, 80, 0.8);
-  }
-
-  .seccionServiciosImagenes {
+.seccionServiciosImagenes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 80%;
-  }
+    text-align: center;
+}
 
-  .seccionServiciosImagenes{
-    justify-content: center;
+.tituloServicios h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.2s;
+    padding: 8px;
+    color: rgba(76, 175, 80, 0.8);
+}
+
+.serviciocard {
+    background-size: cover;
+    height: 20vh;
     width: 90%;
-    justify-content: space-around;
-  }
-
-  .serviciocard{
-    border-radius: 5px;
-    margin-left: 10px;
     display: flex;
-    flex-direction: column;
-    width: 45%;
-  }
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-  .serviciocard a{
+.serviciocard h3 {
     width: 100%;
-    height: 100%;
-  }
+    font-family: 'Merriweather Sans';
+    background-color: rgba(76, 175, 80, 0.4);
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
 
+.serviciocard:nth-child(1) {
+    background-image: linear-gradient(to left, rgba(1, 1, 1, 0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/clinicaVet.jpg");
+    filter: brightness(0.9);
+}
+
+.serviciocard:nth-child(2) {
+    background-image: linear-gradient(to right, rgba(1, 1, 1, 0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/gatoExamen.jpg");
+}
+
+.serviciocard:nth-child(3) {
+    background-image: linear-gradient(to right, rgba(1, 1, 1, 0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/paseo.jpg");
+}
+
+.serviciocard:nth-child(4) {
+    background-image: linear-gradient(to left, rgba(1, 1, 1, 0.7), rgba(255, 255, 255, 0)), url("/storage/Servicios/Peluqueria.jpg");
+}
+
+footer {
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media (min-width: 500px) {
+    .contenedor-productosgato {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        margin-top: 10px;
+        height: 40vh;
+        justify-content: space-between;
+        text-align: right;
+    }
+
+    .serviciocard {
+        border-radius: 5px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 45%;
+        height: 30vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .menutop-header, .menu-header, .cardsProduct, .seccionServiciosImagenes, .tituloServicios {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .logoNv {
+        width: 30%;
+    }
+
+    .searchBar {
+        width: 30%;
+    }
+
+    .listaContinuacion {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .listaContinuacion a {
+        margin-right: 50px;
+        width: 100%;
+    }
+
+    .listaContinuacion img {
+        width: 10%;
+    }
+
+    .celular {
+        width: 30%;
+    }
+
+    .menu-header {
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .menutop-header li a, .menutop-header a, #text {
+        text-decoration: none;
+        font-family: "Work Sans";
+        color: #fff;
+    }
+
+    .mascotas:hover .category {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu-header {
+        padding: 16px 0 16px 32px;
+        margin: 0;
+        display: flex;
+    }
+
+    .slider {
+        margin-top: 1em;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .slider p {
+        position: absolute;
+        background-color: rgba(38, 50, 56, 0.2);
+        font-family: "Paytone One";
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        font-size: 1.15em;
+        text-align: center;
+        color: #fff;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 100%;
+        padding: 15px;
+    }
+
+    /*cartas presentacion de productos*/
+    .cartas-presentacion {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .contenedor-productosgato {
+        width: 32%;
+        position: relative;
+        display: flex;
+        margin-top: 10px;
+        align-self: center;
+        height: 350px;
+    }
+
+    .contenedor-productosgato:hover {
+        box-shadow: 7px 8px 11px 3px rgba(120, 144, 156, 0.6);
+    }
+
+    #catProducts {
+        background-image: url("/img/gatitoo.jpeg");
+    }
+
+    #newsProducts {
+        background-image: url("/img/pañueloyellow.jpeg");
+    }
+
+    #dogProducts {
+        background-image: url("/img/perrito.jpeg");
+    }
+
+    .descripcion-carta {
+        position: absolute;
+        font-weight: bold;
+        width: 100%;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 5px;
+        text-align: center;
+        font-size: 1.2em;
+        transform: translateY(-50%);
+        top: 20%;
+    }
+
+    .centrado {
+        transform: translateY(-50%);
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    .mas-Productos {
+        position: absolute;
+        bottom: 10%;
+        right: 35%;
+    }
+
+    .mas-Productos a, .verTodosServicios {
+        background-color: rgba(76, 175, 80, 0.8);
+        padding: 8px;
+        border-radius: 2%;
+        color: #fff;
+        font-family: "Staatliches";
+        transition: all 0.2s;
+    }
+
+    .verTodosServicios:hover, .mas-Productos a:hover {
+        color: rgba(38, 50, 56, 1);
+        text-decoration: none;
+    }
+
+    /*productos novedades*/
+    .cardsProduct {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .oneproduct-card-body {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mas-productosNovedades {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1.5px solid rgba(0, 150, 136, 1);
+        padding: 0.5em 0.7em;
+        border-radius: 5px;
+        color: rgba(84, 110, 122, 1);
+        transition: all 0.2s;
+        display: block;
+        margin: 0;
+    }
+
+    .mas-productosNovedades:hover {
+        background-color: rgba(0, 150, 136, 1);
+        color: white;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-decoration: none;
+    }
+
+    .containerCarouselCelular {
+        display: none;
+    }
+
+    .containerCarouselDesktop {
+        display: block;
+    }
+
+    /*servicios*/
+    .nuestrosServicios {
+        background: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .tituloServicios {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between !important;
+        flex-direction: row;
+        text-transform: uppercase;
+        font-size: 20px !important;
+    }
+
+    .tituloServicios h3 {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .tituloServicios h3:hover {
+        color: rgba(76, 175, 80, 0.8);
+    }
+
+    .seccionServiciosImagenes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    .seccionServiciosImagenes {
+        justify-content: center;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .serviciocard {
+        border-radius: 5px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    .serviciocard a {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media only screen and (min-width : 850px) {
+    .menutop-header {
+        justify-content: space-around;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
 
-  .menutop-header {
-    justify-content: space-around;
-    padding-top: 1%;
-    padding-bottom: 1%;
-  }
+    .logoNv {
+        width: 20%;
+    }
 
-  .logoNv {
-    width: 20%;
-  }
+    .searchBar {
+        width: 25%;
+    }
 
-  .searchBar{
-    width: 25%;
-  }
+    .celular {
+        width: 35%;
+    }
 
-  .celular {
-    width: 35%;
-  }
+    .listaContinuacion {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
-  .listaContinuacion {
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
+    .registrado {
+        width: 200px;
+    }
 
-  .registrado {
-    width: 200px;
-  }
+    .slider p {
+        font-size: 1.5em;
+    }
 
-
-  .slider p {
-    font-size: 1.5em;
-  }
-
-  .serviciocard{
-    height: 30vh;
-  }
-
+    .serviciocard {
+        height: 30vh;
+    }
 }

@@ -14,8 +14,8 @@ class AddNullableFromUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->string('country')->after('full_name')->nullable()->change();
-      });
+            $table->string('country')->after('full_name')->nullable()->change();
+        });
     }
 
     /**

@@ -1,244 +1,239 @@
  @import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600&display=swap');
 
- .error-favoritos, .mascotas-perfil{
-   width: 75%;
+ .error-favoritos, .mascotas-perfil {
+     width: 75%;
  }
+
  .containerPerfil {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   margin: 0;
-   width: 100%;
-   margin-bottom: 30px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 0;
+     width: 100%;
+     margin-bottom: 30px;
  }
 
-.profileBox::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: -webkit-linear-gradient(bottom, #263238, #86bed9);
-  opacity: 0.8;
-}
+ .profileBox::before {
+     content: "";
+     display: block;
+     position: absolute;
+     z-index: -1;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: -webkit-linear-gradient(bottom, #263238, #86bed9);
+     opacity: 0.8;
+ }
 
-.dataImage {
-  max-width: 15%;
-}
+ .dataImage {
+     max-width: 15%;
+ }
 
-.dataTitle {
-  color: white;
-}
+ .dataTitle {
+     color: white;
+ }
 
-.profileBox {
-  font-family: 'Nunito';
-  z-index: 1;
-  position: relative;
-  padding: 1em;
-  display: inline-block;
-   background-image: url('/img/3.png');
-  background-position: bottom;
-  width: 100%;
-  background-size: contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+ .profileBox {
+     font-family: 'Nunito';
+     z-index: 1;
+     position: relative;
+     padding: 1em;
+     display: inline-block;
+     background-image: url('/img/3.png');
+     background-position: bottom;
+     width: 100%;
+     background-size: contain;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
 
-.profileBox img {
-  width: 100%;
-  border-radius: 100%;
-}
+ .profileBox img {
+     width: 100%;
+     border-radius: 100%;
+ }
 
-.listMenuProfile {
-  display: flex;
-  flex-wrap: wrap;
-  background-image: linear-gradient(90deg, #02C2AF 0, #009687 25%, #054943);
-  justify-content: space-around;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  text-align: center;
-  width: 100%;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  flex-direction: column;
-}
+ .listMenuProfile {
+     display: flex;
+     flex-wrap: wrap;
+     background-image: linear-gradient(90deg, #02C2AF 0, #009687 25%, #054943);
+     justify-content: space-around;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     text-align: center;
+     width: 100%;
+     border-bottom-right-radius: 15px;
+     border-bottom-left-radius: 15px;
+     flex-direction: column;
+ }
 
-.listMenuProfile li {
-  padding: 0.3em 0.5em;
-  border-radius: 15px;
-  transition: all .2s;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+ .listMenuProfile li {
+     padding: 0.3em 0.5em;
+     border-radius: 15px;
+     transition: all .2s;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
 
-.infopersonal {
-  width: 100%;
-}
+ .infopersonal {
+     width: 100%;
+ }
 
-ul, ol, li, a {
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
+ ul, ol, li, a {
+     text-decoration: none;
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+ }
 
-.barra a {
-  border-radius: .25rem;
-  color: white;
-}
+ .barra a {
+     border-radius: .25rem;
+     color: white;
+ }
 
-.contenido {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
+ .contenido {
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     justify-content: center;
+ }
 
-.personalInformation{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 95%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #e3e4e6;
-  border-radius: 3px;
-}
+ .personalInformation {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     width: 95%;
+     margin: auto;
+     justify-content: center;
+     align-items: center;
+     border: 3px solid #e3e4e6;
+     border-radius: 3px;
+ }
 
-.personalInformation div{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  font-family: "Quicksand";
-  font-size: 1.1em;
-  margin-top: 5%;
-  margin-bottom: 2%;
-}
-.personalInformation label{
-  margin-bottom: 0;
-  font-weight: 400;
-  font-family: "Quicksand";
-  color: black;
-}
+ .personalInformation div {
+     width: 90%;
+     display: flex;
+     flex-direction: column;
+     font-family: "Quicksand";
+     font-size: 1.1em;
+     margin-top: 5%;
+     margin-bottom: 2%;
+ }
 
-.personalInformation input{
-  width: 100%;
-  border: none;
-  font-size: 1em;
-  font-weight: 400;
-  color: #555;
-}
+ .personalInformation label {
+     margin-bottom: 0;
+     font-weight: 400;
+     font-family: "Quicksand";
+     color: black;
+ }
 
-.personalInformationEdit{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: auto;
-}
+ .personalInformation input {
+     width: 100%;
+     border: none;
+     font-size: 1em;
+     font-weight: 400;
+     color: #555;
+ }
 
-.personalInformationEdit label{
-  font-weight: 600;
-  font-family: "Quicksand";
-  color: black;
-}
+ .personalInformationEdit {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin: auto;
+ }
 
-.personalInformationEdit button{
-  width: 100%;
-}
+ .personalInformationEdit label {
+     font-weight: 600;
+     font-family: "Quicksand";
+     color: black;
+ }
 
-.favorites {
-  width: 90%;
-  margin: 0;
-}
+ .personalInformationEdit button {
+     width: 100%;
+ }
 
-.favorites-profile {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+ .favorites {
+     width: 90%;
+     margin: 0;
+ }
 
-.pets-profile {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-  margin-top: 20px;
-  width: 95%;
-}
+ .favorites-profile {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
 
-.photo {
-  margin: 10px;
-}
+ .pets-profile {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: auto;
+     margin-top: 20px;
+     width: 95%;
+ }
 
-.photos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-}
+ .photo {
+     margin: 10px;
+ }
 
-.titulofoto{
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
-  display: block;
-}
+ .photos {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+     align-items: flex-start;
+     width: 100%;
+ }
 
-.photos img{
-  width: 30%;
-  margin: 10px;
-  border-radius: 10px;
-  border: dotted 4px #95ca3e;
-}
+ .titulofoto {
+     width: 100%;
+     text-align: center;
+     margin-bottom: 20px;
+     display: block;
+ }
 
+ .photos img {
+     width: 30%;
+     margin: 10px;
+     border-radius: 10px;
+     border: dotted 4px #95ca3e;
+ }
 
-@media (min-width:600px) {
+ @media (min-width:600px) {
+     .listMenuProfile {
+         flex-direction: row;
+     }
 
+     .infopersonal {
+         width: 50%;
+         margin: auto;
+         margin-top: 20px;
+     }
 
+     .personalInformation {
+         flex-direction: row;
+         justify-content: flex-start;
+     }
 
-  .listMenuProfile {
-    flex-direction: row;
-  }
+     .personalInformation div {
+         width: 45%;
+         padding-left: 5%;
+     }
 
-  .infopersonal {
-    width: 50%;
-    margin: auto;
-    margin-top: 20px;
-  }
+     .favorites_profile {
+         justify-content: flex-start;
+     }
+ }
 
-  .personalInformation {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .personalInformation div {
-    width: 45%;
-    padding-left: 5%;
-  }
-
-  .favorites_profile{
-    justify-content: flex-start;
-  }
-
-}
-
-@media (min-width:800px){
-
-  .pet-profile, .photos{
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-}
+ @media (min-width:800px) {
+     .pet-profile, .photos {
+         max-width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+     }
+ }

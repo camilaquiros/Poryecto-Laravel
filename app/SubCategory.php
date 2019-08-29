@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubCategory extends Model
 {
-  protected $table = 'subcategories';
-  protected $fillable = ['name'];
+    protected $table = 'subcategories';
+    protected $fillable = ['name'];
 
-  public function products()
-  {
-    return $this->hasMany(Product::class);
-  }
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

@@ -7,10 +7,10 @@ use App\Favorite;
 use Auth;
 use App\Pet;
 
-
 class FavoriteController extends Controller
 {
-  public function __construct() {
+    public function __construct()
+    {
         $this->middleware(['auth']);
     }
     /**
@@ -20,10 +20,10 @@ class FavoriteController extends Controller
      */
     public function index()
     {
-      $user = Auth::user();
-      $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      $photos = Pet::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      return view('profile', compact('user', 'favorites', 'photos'));
+        $user = Auth::user();
+        $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
+        $photos = Pet::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
+        return view('profile', compact('user', 'favorites', 'photos'));
         //
     }
 
@@ -43,30 +43,26 @@ class FavoriteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-     public function store(Request $request)
-     {
-       $this->validate($request, array(
+    public function store(Request $request)
+    {
+        $this->validate($request, array(
         'user_id'=>'required',
         'product_id' =>'required',
        ));
 
-       $status=Favorite::where('user_id',Auth::user()->id)
-       ->where('product_id',$request->product_id)
+        $status=Favorite::where('user_id', Auth::user()->id)
+       ->where('product_id', $request->product_id)
        ->first();
 
-       if(isset($status->user_id))
-          {
+        if (isset($status->user_id)) {
             $status->delete();
             return redirect()->back()->with('flash_message', 'El producto ha sido removido de tu lista de favoritos.');
-          }
-          else
-          {
+        } else {
             $favorite = new Favorite;
             $favorite->user_id = $request->user_id;
             $favorite->product_id = $request->product_id;
             $favorite->save();
             return redirect()->back()->with('flash_message', 'El producto '. $favorite->product->title.' se ha agregado a tu lista de favoritos.');
-          }
-
-      }
+        }
+    }
 }

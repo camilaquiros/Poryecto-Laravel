@@ -26,7 +26,7 @@ class DeleteDescriptionFromServices extends Migration
     public function down()
     {
         Schema::table('services', function (Blueprint $table) {
-              $table->text('description');
+            $table->text('description');
         });
     }
 }

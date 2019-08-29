@@ -29,18 +29,18 @@ class HomeController extends Controller
     {
         return view('index');
     }
-    public function productsIndex(){
-      $productsIndex = Product::orderBy('id')->take(4)
+    public function productsIndex()
+    {
+        $productsIndex = Product::orderBy('id')->take(4)
       ->get();
-      $productsIndex2 = Product::orderBy('id')->where('id', '>', 4)->take(4)
+        $productsIndex2 = Product::orderBy('id')->where('id', '>', 4)->take(4)
       ->get();
-      $productsIndexCelu = Product::orderBy('id')->where('id', '>', 1)->take(8)
+        $productsIndexCelu = Product::orderBy('id')->where('id', '>', 1)->take(8)
       ->get();
-      $servicesIndex = Service::orderBy('name')->take(4)
+        $servicesIndex = Service::orderBy('name')->take(4)
       ->get();
-      $services = Service::all();
-      
-      return view ('index', compact('productsIndex', 'productsIndex2','productsIndexCelu', 'servicesIndex','services' ));
-    }
+        $services = Service::all();
 
+        return view('index', compact('productsIndex', 'productsIndex2', 'productsIndexCelu', 'servicesIndex', 'services'));
+    }
 }

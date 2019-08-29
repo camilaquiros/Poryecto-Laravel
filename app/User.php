@@ -9,12 +9,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
-
-  public $table = "users";
-  public $fillable = [
+    public $table = "users";
+    public $fillable = [
       'full_name', 'username', 'country','state', 'email', 'password', 'avatar','pets'
   ];
-use Notifiable;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -41,12 +40,13 @@ use Notifiable;
         'email_verified_at' => 'datetime',
     ];
 
-    public function favorite(){
-         return $this->hasMany(Favorite::class);
-      }
+    public function favorite()
+    {
+        return $this->hasMany(Favorite::class);
+    }
 
-      public function pets(){
-           return $this->hasMany(Pet::class);
-        }
-
+    public function pets()
+    {
+        return $this->hasMany(Pet::class);
+    }
 }
