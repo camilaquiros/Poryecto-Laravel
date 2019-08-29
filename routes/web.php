@@ -8,8 +8,8 @@ Route::get('/faqs', function () {
     return view('faqs');
 });
 
-// //Favoritos//
-// Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
+//Favoritos//
+Route::resource('/profile', 'FavoriteController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 
 //NOSOTROS//

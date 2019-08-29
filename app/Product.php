@@ -24,6 +24,7 @@ class Product extends Model
 	{
 		return $this->belongsTo(SubCategory::class);
 	}
+  
   public function favorite(){
      return $this->hasMany(Favorite::class);
   }

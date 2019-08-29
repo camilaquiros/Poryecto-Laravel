@@ -25,13 +25,6 @@ class FavoriteController extends Controller
         //
     }
 
-    public function like()
-    {
-      $user = Auth::user();
-      $favorites = Favorite::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
-      return view('products', compact('user', 'favorites'));
-        //
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -59,19 +52,18 @@ class FavoriteController extends Controller
        ->where('product_id',$request->product_id)
        ->first();
 
-       if(isset($status->user_id) and isset($request->product_id))
+       if(isset($status->user_id))
           {
-              return redirect()->back()->with('flash_messaged', 'Este producto ya se encuentra en tu lista de favoritos');
+            $status->delete();
+            return redirect()->back();
           }
           else
           {
-              $favorite = new Favorite;
-
-              $favorite->user_id = $request->user_id;
-              $favorite->product_id = $request->product_id;
-              $favorite->save();
-
-              return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
+            $favorite = new Favorite;
+            $favorite->user_id = $request->user_id;
+            $favorite->product_id = $request->product_id;
+            $favorite->save();
+            return redirect()->back()->with('flash_message', 'Item, '. $favorite->product->title.' Agregamos el producto a tu lista de favoritos.');
           }
 
  }

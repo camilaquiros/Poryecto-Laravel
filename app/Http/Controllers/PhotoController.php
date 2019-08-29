@@ -10,6 +10,18 @@ use Auth;
 
 class PhotoController extends Controller
 {
+
+  public function __construct() {
+        $this->middleware(['auth']);
+    }
+
+    public function index()
+    {
+      $user = Auth::user();
+      $photos = Pet::where("user_id", "=", $user->id)->orderby('id', 'desc')->get();
+      return view('petsProfile', compact('user', 'photos'));
+    }
+
   public function uploadForm()
 {
 return view('petsProfile');
@@ -30,12 +42,13 @@ $check=in_array($extension,$allowedfileExtension);
 
 if($check)
 {
-$user= Auth::user();
+$user = Auth::user();
 foreach ($request->photos as $photo) {
 $filename = $photo->store('public/mascotas');
+
 Pet::create([
-'user_id' => $request["user_id"],
-'photo' => $filename
+'photo' => $filename,
+'user_id' => $user->id,
 ]);
 }
 echo "Upload Successfully";

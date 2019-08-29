@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
 use App\SubCategory;
+use App\Favorite;
+use Auth;
 
 class ProductsController extends Controller
 {
@@ -47,7 +49,17 @@ class ProductsController extends Controller
     }
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-		return view('products', compact('products', 'subcategories', 'categories'));
+    // Pendiente verificar autenticacion
+    if(Auth::guest()){
+      return view('products', compact('products', 'subcategories', 'categories'));
+    } else {
+      $favoritesProductsId = [];
+      $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+      foreach ($favorites as $favorite) {
+        $favoritesProductsId[] = $favorite->product_id;
+      }
+      return view('products', compact('products', 'subcategories', 'categories', 'favoritesProductsId'));
+    }
 	}
 
   public function listCategory($categoryID){
@@ -55,14 +67,32 @@ class ProductsController extends Controller
     $currentCategory = Category::where('id', '=', $categoryID)->firstOrFail();
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
-    return view('products', compact('products', 'subcategories', 'categories', 'currentCategory'));
+    if(Auth::guest()){
+      return view('products', compact('products', 'subcategories', 'categories', 'currentCategory'));
+    } else {
+      $favoritesProductsId = [];
+      $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+      foreach ($favorites as $favorite) {
+        $favoritesProductsId[] = $favorite->product_id;
+      }
+      return view('products', compact('products', 'subcategories', 'categories', 'currentCategory', 'favoritesProductsId'));
+    }
   }
 
   public function listSubCategory($SubCategoryID){
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where('subcategory_id', '=', $SubCategoryID)->get();
-    return view('products', compact('products', 'subcategories', 'categories'));
+    if(Auth::guest()){
+      return view('products', compact('products', 'subcategories', 'categories'));
+    } else {
+      $favoritesProductsId = [];
+      $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+      foreach ($favorites as $favorite) {
+        $favoritesProductsId[] = $favorite->product_id;
+      }
+      return view('products', compact('products', 'subcategories', 'categories', 'favoritesProductsId'));
+    }
   }
 
   public function listSubCategoryProducts($categoryID, $SubCategoryID){
@@ -73,14 +103,32 @@ class ProductsController extends Controller
       ['subcategory_id','=', $SubCategoryID],
       ['category_id','=', $categoryID],
       ])->get();
-    return view('products', compact('products', 'subcategories', 'categories'));
+    if(Auth::guest()){
+        return view('products', compact('products', 'subcategories', 'categories'));
+      } else {
+        $favoritesProductsId = [];
+        $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+        foreach ($favorites as $favorite) {
+          $favoritesProductsId[] = $favorite->product_id;
+        }
+        return view('products', compact('products', 'subcategories', 'categories', 'favoritesProductsId'));
+      }
   }
 
   public function search(){
     $categories = Category::orderBy('name', 'ASC')->get();
     $subcategories = SubCategory::orderBy('name', 'ASC')->get();
     $products = Product::where('title', 'like', '%' . $_GET['query'] . '%')->get();
-    return view('products', compact('products', 'subcategories', 'categories'));
+    if(Auth::guest()){
+      return view('products', compact('products', 'subcategories', 'categories'));
+    } else {
+      $favoritesProductsId = [];
+      $favorites = Favorite::select('product_id')->where("user_id", "=", Auth::user()->id)->get();
+      foreach ($favorites as $favorite) {
+        $favoritesProductsId[] = $favorite->product_id;
+      }
+      return view('products', compact('products', 'subcategories', 'categories', 'favoritesProductsId'));
+    }
   }
 
   public function show ($id){

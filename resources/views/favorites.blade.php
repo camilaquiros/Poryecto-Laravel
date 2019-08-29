@@ -21,22 +21,43 @@
           <div class="productCard card-deck lista">
             <div class="imagenLista">
               <a class="mt-1" href="/products/{{$favorite->product->id}}"><img class="card-img-top" src="/storage/productos/{{ $favorite->product->image }}"></a>
-              </div>
-              @if($favorite->product->offer == 1)
-                <p class="oferta">-30%</p>
-              @endif
+            </div>
+            @if($favorite->product->offer == 1)
+              <p class="oferta">-30%</p>
+            @endif
+
+            <div class="favoritos">
+            @auth
+              <form action="{{action('FavoriteController@store')}}" id="contact_form" method="post">
+            {{csrf_field()}}
+            <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
+            <input name="product_id" type="hidden" value="{{$favorite->product->id}}">
+            <button type="submit" name="favorito" class="favorito">
+              <i class="fas fa-heart"></i>
+            </button>
+            </form>
+            @endauth
+            @auth
+              <form action="{{action('FavoriteController@destroy', ['id' => $user->id])}}" id="contact_form" method="post">
+            {{csrf_field()}}
+            <input name="user_id" type="hidden" value="{{Auth::user()->id}}">
+            <input name="product_id" type="hidden" value="{{$favorite->product->id}}">
+            <button type="submit" name="favorito" class="favorito">
+              <i class="far fa-heart"></i>
+            </button>
+            </form>
+            @endauth
+            </div>
+
               <div class="productosListaInfo">
                 <div class="ratingTotal">
                     @for($i = 1; $i<=$favorite->product->rating; $i++) <i class="fas fa-paw"></i> @endfor
                 </div>
                 <div class="card-body text-center">
                     <h5 class="card-title titleCard"><a class="titulo" href="/products/{{$favorite->product->id}}"> {{ $favorite->product->title }} </a></h5>
-                    @if($favorite->product->offer == 1)
-                    <p class="card-text priceCard">$ {{($favorite->product->price) * 0.7}}</p>
-                    @else
                     <p class="card-text priceCard">$ {{$favorite->product->price}}</p>
-                    @endif
                 </div>
+
 
                 <div class="card-footer text-center cardFooter">
                     <button type="submit" class="btn btn-patitas" value="{{$favorite->product->id}}">Añadir al carrito <i class="fas fa-shopping-basket"></i></button>
