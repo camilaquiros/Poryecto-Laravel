@@ -53,10 +53,10 @@ window.addEventListener('load', function(){
 					}
 				}
 				if (this.name === 'username' ) {
-					if ( this.value.length < 8 ) {
+					if ( this.value.length < 5 ) {
 						this.classList.add('invalid-feedback');
 						divError.style.display = 'block';
-						divError.innerText = `El usuario debe contener como mínimo 8 caracteres`;
+						divError.innerText = `El usuario debe contener como mínimo 5 caracteres`;
 						errores[this.name] = true;
 					}
 				}

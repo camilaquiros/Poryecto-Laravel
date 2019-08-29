@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         $subcategories = factory(SubCategory::class)->times(5)->create();
         //factory(Service::class)->times(4)->create();
         //factory(User::class)->times(10)->create();
-        $avatars = factory(Avatar::class)->times(13)->create();
+        $avatars = factory(Avatar::class)->times(15)->create();
 
         /*foreach ($products as $oneProduct) {
         $oneProduct->category()->associate($categories->random(1)->first()->id);

@@ -195,12 +195,25 @@
 <div class="photos">
   <h3>Mis mascotas</h3>
   @foreach ($photos as $photo)
- <img src="storage/mascotas/{{ $photo->photo }}" alt="">
+ <img id="{{$photo->id}}" src="storage/mascotas/{{ $photo->photo }}" alt="mi mascota">
  @endforeach
 </div>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+    @foreach ($photos as $photo)
+  <img class="modal-content" id="{{$photo->photo}}">
+ @endforeach
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
 </div>
+
+
     </div>
 
 
@@ -223,5 +236,6 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/register.js" ></script>
+<script src="js/profile.js"></script>
 
 @endsection
