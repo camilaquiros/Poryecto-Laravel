@@ -1,17 +1,17 @@
 window.addEventListener('load', function(){
 	//console.log('hola');
 	var elFormulario = document.querySelector('.formulario');
-	console.log(elFormulario);
+	// console.log(elFormulario);
 	var losCampos = Array.from(elFormulario.elements).filter(function (unCampo) {
 		return unCampo.name != "avatar";
 	});
-	console.log(losCampos);
+	// console.log(losCampos);
 
 	losCampos.pop();
 	losCampos.pop();
 	losCampos.pop();
 	losCampos.pop();
-	console.log(losCampos);
+	// console.log(losCampos);
 
 	var regexEmail = /\S+@\S+\.\S+/;
 	var errores = {};
@@ -27,7 +27,7 @@ window.addEventListener('load', function(){
 		unCampo.addEventListener('blur', function () {
 			var valorDelCampo = unCampo.value.trim();
 
-			console.log(this);
+			// console.log(this);
 
 			if (valorDelCampo === '') {
 				this.classList.add('invalid-feedback');
@@ -53,10 +53,10 @@ window.addEventListener('load', function(){
 					}
 				}
 				if (this.name === 'username' ) {
-					if ( this.value.length < 8 ) {
+					if ( this.value.length < 5 ) {
 						this.classList.add('invalid-feedback');
 						divError.style.display = 'block';
-						divError.innerText = `El usuario debe contener como mínimo 8 caracteres`;
+						divError.innerText = `El usuario debe contener como mínimo 5 caracteres`;
 						errores[this.name] = true;
 					}
 				}
@@ -119,7 +119,7 @@ window.addEventListener('load', function(){
 
 		if (Object.keys(errores).length > 0) {
 			alert('Campos vacíos');
-			console.log(errores);
+			// console.log(errores);
 			event.preventDefault();
 		}
 	})
