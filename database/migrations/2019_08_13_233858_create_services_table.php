@@ -35,10 +35,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::table('services', function (Blueprint $table) {
-            $table->dropForeign('services_category_id_foreign');
-            $table->dropColumn('category_id');
-        });
 
         Schema::dropIfExists('services');
     }

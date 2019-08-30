@@ -33,13 +33,7 @@ class CreateFavoritesTable extends Migration
      */
     public function down()
     {
-        Schema::table('favorites', function (Blueprint $table) {
-            $table->dropForeign('products_users_user_id_foreign');
-            $table->dropColumn('user_id');
 
-            $table->dropForeign('products_users_product_id_foreign');
-            $table->dropColumn('product_id');
-        });
-        Schema::dropIfExists('products_users');
+        Schema::dropIfExists('favorites');
     }
 }
