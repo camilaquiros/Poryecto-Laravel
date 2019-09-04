@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use Validator;
 use Redirect;
 use Response;
-use File;
 use App\User;
 use App\Pet;
 use Auth;
